@@ -1,0 +1,354 @@
+{
+    "translation_version": {
+        "message": "0"
+    },
+    "run": {
+        "message": "Run"
+    },
+    "tabFiles": {
+        "message": "Input Files"
+    },
+    "tabWelcome": {
+        "message": "Welcome"
+    },
+    "tabMap": {
+        "message": "Map"
+    },
+    "tabOSM": {
+        "message": "OSM"
+    },
+    "tabConfig": {
+        "message": "Configuration"
+    },
+    "tabAdvConfig": {
+        "message": "Adv. Configuration"
+    },
+    "welcome":
+    {
+        "message": "Welcome to Route Sanitizer"
+    },
+    "welcomeDoc": {
+        "message": "Route Sanitizer, the de-identification tool described in this document, provides a graphical user interface to the connected vehicle de-identification algorithm.  It uses the Electron fromework so it will run on different computing platforms. The basic de-identification strategy used is trip redaction: portions of a vehicle trajectory are removed. It does not alter the individual BSM records it retains. The algorithm integrates external map information to better protect against “inference attacks” by intelligently obfuscating locations, or introducing uncertainty. It also uses some novel mechanisms to detect locations that individuals may consider private. The tool aims to err on the side of privacy, but provides numerous parameters that allow the practitioner to adjust the sensitivity of the private location detectors, as well as, parameters to adjust how much of the data is removed around those locations thereby making the re-identification more and more uncertain."
+    },
+    "filesHeader": {
+        "message": "Current Input Files"
+    },
+    "configHeader": {
+        "message": "Current Configuration"
+    },
+    "loadFile": {
+        "message": "Load Files"
+    },
+    "removeFile": {
+        "message": "Remove Files"
+    },
+    "loadKML": {
+        "message": "Load KML"
+    },
+    "centerMap": {
+        "message": "Center Map"
+    },
+    "osmSetup": {
+        "message": "OSM to Quad"
+    },
+    "osmLoad": {
+        "message": "Load OSM"
+    },
+    "osmOutput": {
+        "message": "Quad Output"
+    },
+    "osmSWLat": {
+        "message": "Southwest latitude (-84.0 to 84.0 degrees)"
+    },
+    "osmSWLng": {
+        "message": "Southwest longitude (-180.0 to 180.0 degrees)"
+    },
+    "osmNELat": {
+        "message": "Northeast latitude (-84.0 to 84.0 degrees)"
+    },
+    "osmNELng": {
+        "message": "Northeast longitude (-180.0 to 180.0 degrees)"
+    },
+    "osmBounds": {
+        "message": "Find OSM Bounds"
+    },
+    "osmToQuad": {
+        "message": "Convert"
+    },
+    "loadConfigFile": {
+        "message": "Load Config File"
+    },
+    "configurationIO": {
+        "message": "I/O"
+    },
+    "fieldsIO": {
+        "message": "CSV Fields Names"
+    },
+    "configurationButtonOutDir": {
+        "message": "Output Directory"
+    },
+    "configurationButtonQuadFile": {
+        "message": "Quad File"
+    },
+    "configurationButtonLogFile": {
+        "message": "Log File"
+    },
+    "configurationLatField": {
+        "message": "Latitude field"
+    },
+    "configurationLngField": {
+        "message": "Longitude field"
+    },
+    "configurationHeadingField": {
+        "message": "Heading field"
+    },
+    "configurationSpeedField": {
+        "message": "Speed field"
+    },
+    "configurationTimeField": {
+        "message": "Gentime field"
+    },
+    "configurationUIDFields": {
+        "message": "Trip ID fields"
+    },
+    "configurationMapfit": {
+        "message": "Map-Fit"
+    },
+    "configurationImplicitFitWidth": {
+        "message": "Implicit map-fit width"
+    },
+    "configurationFitExt": {
+        "message": "Map-fit extension length (minimum 0.0 meters)"
+    },
+    "configurationWidthScaleToggle": {
+        "message": "Enable map-fit width scaling"
+    },
+    "configurationWidthScale": {
+        "message": "Map-fit width scale factor (minimum 1.0)"
+    },
+    "configurationHeadingGroups": {
+        "message": "Implicit heading groups (minimum 12)"
+    },
+    "configurationMinEdgeTrippoints": {
+        "message": "Minimum implicit edge trippoints (minimum 0)"
+    },
+    "configurationCriticalIntervals": {
+        "message": "Critical Intervals"
+    },
+    "configurationTAMaxQ": {
+        "message": "Turnaround area queue max size (minimum 1)"
+    },
+    "configurationTAAreaWidth": {
+        "message": "Turnaround area width (minimum 1.0 meters)"
+    },
+    "configurationTAMaxSpeed": {
+        "message": "Turnaround max speed (minimum 0.0 m/s)"
+    },
+    "configurationTAHeadingDelta": {
+        "message": "Turnaround heading delta (minimum 45.0 degrees, maximum 360.0 degrees)"
+    },
+    "configurationStopMaxTime": {
+        "message": "Stop maximum time (minimum 1 second)"
+    },
+    "configurationStopMinDistance": {
+        "message": "Stop min distance (minimum 1.0 meters)"
+    },
+    "configurationStopMaxSpeed": {
+        "message": "Stop max speed (minimum 0.0 m/s)"
+    },
+    "configurationPrivacyIntervals": {
+        "message": "Privacy Intervals"
+    },
+    "configurationAdvPrivacyIntervals": {
+        "message": "Privacy Intervals (Advanced)"
+    },
+    "configurationPrivacyMinDirectDistance": {
+        "message": "Minimum direct distance (minimum 0.0 meters)"
+    },
+    "configurationPrivacyMinManhattanDistance": {
+        "message": "Minimum Manhattan distance (minimum 0.0 meters)"
+    },
+    "configurationPrivacyMinOutdegree": {
+        "message": "Minimum out degree (minimum 0)"
+    },
+    "configurationPrivacyMaxDirectDistance": {
+        "message": "Maximum direct distance"
+    },
+    "configurationPrivacyMaxManhattanDistance": {
+        "message": "Maximum Manhattan distance"
+    },
+    "configurationPrivacyMaxOutdegree": {
+        "message": "Maximum out degree"
+    },
+    "configurationPrivacyRandDirectDistance":
+    {
+        "message": "Direct distance random factor [0 - 1]."
+    },
+    "configurationPrivacyRandManhattanDistance":
+    {
+        "message": "Manhattan distance random factor [0 - 1]."
+    },
+    "configurationPrivacyRandOutDegreeDistance":
+    {
+        "message": "Out degree random factor [0 - 1]."
+    },
+    "configurationKML": {
+        "message": "KML Options"
+    },
+    "configurationKMLEnable": {
+        "message": "Ouput KML files"
+    },
+    "configurationKMLDrawQuad": {
+        "message": "Include quad tree output"
+    },
+    "configurationSave": {
+        "message": "Save Configuration"
+    },
+    "configurationLoad": {
+        "message": "Load Configuration"
+    },
+    "helpRun": {
+        "message": "Run the de-identification algorithm."
+    },
+    "helpRemoveFile": {
+        "message": "Remove selected file from de-identification."
+    },
+    "helpLoadFile": {
+        "message": "Load a file for de-identification."
+    },
+    "helpLoadKML": {
+        "message": "Load a KML file into into the map."
+    },
+    "helpCenterMap": {
+        "message": "Center the map based off the bounds (See OSM tab)."
+    },
+    "helpLoadOSM": {
+        "message": "Load an OSM file for conversion to quad file."
+    },
+    "helpQuadFile": {
+        "message": "Choose an output file to store the quad."
+    },
+    "helpOSMBoundsToggle": {
+        "message": "Enable quad bounds. Filters out OSM ways that do not fall within the bounds."
+    },
+    "helpOSMSWLAT": {
+        "message": "Southwest latitude of the OSM bounds."
+    },
+    "helpOSMSWLNG": {
+        "message": "Southwest longitude of the OSM bounds."
+    },
+    "helpOSMNELAT": {
+        "message": "Northeast latitude of the OSM bounds."
+    },
+    "helpOSMNELNG": {
+        "message": "Northeast longitude of the OSM bounds."
+    },
+    "helpOSMFindBounds": {
+        "message": "Find the bounds of the OSM file."
+    },
+    "helpOSMConvert": {
+        "message": "Convert the OSM file to a quad file."
+    },
+    "helpConfigOutDir": {
+        "message": "Choose an a directory to store the de-identification results. This creates a new sub-directory in the chosen location."
+    },
+    "helpConfigQuad": {
+        "message": "Choose a quad file to use during de-identification."
+    },
+    "helpConfigLog": {
+        "message": "Choose a log file to use during de-identification."
+    },
+    "helpConfigLatField": {
+        "message": "CSV field containing the latitude value. Value must be decimal degrees."
+    },
+    "helpConfigLngField": {
+        "message": "CSV field containing the longitude value. Value must be decimal degrees."
+    },
+    "helpConfigHeadingField": {
+        "message": "CSV field containing the heading value. Value must be decimal degrees."
+    },
+    "helpConfigSpeedField": {
+        "message": "CSV field containing the speed value. Value must be in meters per second."
+    },
+    "helpConfigTimeField": {
+        "message": "CSV field containing the generation time value. Value must be in microseconds."
+    },
+    "helpConfigUIDFields": {
+        "message": "Comma separated list of fields that uniquely identify a trip within a file. These values are used to find single trajectories within a multi-trip file."
+    },
+    "helpConfigMFExt": {
+        "message": "The distance (in meters) the the map-fit areas will be extended."
+    },
+    "helpConfigMFToggleScale": {
+        "message": "Scale the map-fit area widths based off road types. Disabling scaling will use a constant width for all areas."
+    },
+    "helpConfigMFScale": {
+        "message": "The scaling factor used to determine the width of the map-fit areas. The computed width is the scaling factor multiplied by the road type width."
+    },
+    "helpConfigHeadingGroups": {
+        "message": "The number of heading groups used in the implicit map-fit."
+    },
+    "helpConfigMinEdgeTripPoints": {
+        "message": "The mininum number of trip points needed to create an implicit edge."
+    },
+    "helpConfigTAMaxQ": {
+        "message": "The maximum number of areas that can be in the turnaround queue."
+    },
+    "helpConfigTAAreaWidth": {
+        "message": "The width (in meters) of the turnaround areas."
+    },
+    "helpConfigTAMaxSpeed": {
+        "message": "The maximum speed (in meters per second) that a trip point can be going to be considered in a turnaround."
+    },
+    "helpConfigTAHeadingDelta": {
+        "message": "The change in heading (in degrees) needed to be considered an explicit turnaround. Explicit turnarounds occur when the trajectory returns to a an explicit map-fit area with heading change greater than or equal to this value."
+    },
+    "helpConfigStopMaxTime": {
+        "message": "The maximum time (in seconds) needed for a trajectory to be considered stopped."
+    },
+    "helpConfigStopMinDist": {
+        "message": "The minimum distance (in meters) needed for a trajectory to be considered stopped."
+    },
+    "helpConfigStopMaxSpeed": {
+        "message": "The maximum speed (in meters per second) needed for a trajectory to be considered stopped."
+    },
+    "helpConfigMinDirectDist": {
+        "message": "The minimum direct distance (in meters) needed for a privacy interval."
+    },
+    "helpConfigMinManhattanDist": {
+        "message": "The minimum Manhattan distance (in meters) needed for a privacy interval."
+    },
+    "helpConfigMinOutDegree": {
+        "message": "The minimum out degree need for a privacy interval."
+    },
+    "helpConfigMaxDirectDist": {
+        "message": "The maximum direct distance (in meters) needed for a privacy interval."
+    },
+    "helpConfigMaxManhattanDist": {
+        "message": "The maximum Manhattan distance (in meters) needed for a privacy interval."
+    },
+    "helpConfigMaxOutDegree": {
+        "message": "The maximum out degree needed for a privacy interval."
+    },
+    "helpConfigRandDirectDistance": {
+        "message": "The randomness factor for the minimum direct distance."
+    },
+    "helpConfigRandManhattanDistance": {
+        "message": "The randomness factor for the minimum Manhattan distance."
+    },
+    "helpConfigRandOutDegree": {
+        "message": "The randomness factor mulitplier for the minimum out degree."
+    },
+    "helpConfigKMLOutput": {
+        "message": "Enable the output of KML files."
+    },
+    "helpConfigKMLDrawQuad": {
+        "message": "Include the quad boundaries in the KML output."
+    },
+    "helpConfigLoad": {
+        "message": "Load a configuration from a file."
+    },
+    "helpConfigSave": {
+        "message": "Save the configuration to a file."
+    }
+}

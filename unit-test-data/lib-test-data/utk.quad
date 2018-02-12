@@ -1,0 +1,7 @@
+type,id,geography,attributes
+edge,1,1;35.9525;-83.932434:2;35.948878;-83.92808100000001,way_type=secondary:way_id=1
+edge,2,3;35.950715;-83.934971:1;35.9525;-83.932434,way_type=secondary:way_id=2
+edge,3,4;35.953302;-83.931344:1;35.9525;-83.932434,way_type=secondary:way_id=3
+edge,4,5;35.952175;-83.936688:3;35.950715;-83.934971,way_type=secondary:way_id=4
+edge,5,6;35.949813;-83.93621400000001:7;35.948272;-83.934421,way_type=secondary:way_id=5
+edge,6,6;35.949813;-83.93621400000001:3;35.950715;-83.934971,way_type=secondary:way_id=6

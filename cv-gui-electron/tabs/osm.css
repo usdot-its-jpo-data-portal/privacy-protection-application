@@ -1,0 +1,183 @@
+/*******************************************************************************
+ * Copyright 2018 UT-Battelle, LLC
+ * All rights reserved
+ * Route Sanitizer, version 0.9
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * For issues, question, and comments, please submit a issue via GitHub.
+ *******************************************************************************/
+.tab-osm .file_bar {
+    margin-bottom: 5px;
+    float: left;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+.file_bar .btn a { 
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: #59aa29;
+    border-radius: 3px;
+    border: 1px solid #4c8829;
+    color: #fff;
+    float: left;
+    font-family: 'open_sansbold', Arial;
+    font-size: 12px;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.25);
+    display: block;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    padding: 0px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.file_bar .file_field { 
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    float: right;
+    padding-right: 9px;
+}
+
+.file_bar .btn a:hover {
+    background-color: #336699;
+    transition: all ease 0.2s;
+}
+
+.file_bar .btn a:active {
+    background-color: #003366;
+    transition: all ease 0.0s;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.35);
+}
+
+.tab-osm table {
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+}
+
+.tab-osm table, .tab-osm table th, .tab-osm table td {
+    padding: 0px;
+    padding-left: 0px;
+    text-align: left;
+}
+
+.tab-osm table th {
+    padding-left: 3px;
+    padding: 3px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-osm table td {
+    padding-left: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-osm .number:last-child {
+    border-bottom: none;
+}
+
+.tab-osm table tr td:first-child {
+    text-align: left;
+    width: 55px;
+}
+
+.tab-osm table td {
+    padding: 5px 3px;
+}
+
+.tab-osm table thead tr:first-child {
+    background-color: #ececec;
+}
+
+.tab-osm {
+    position: relative;
+}
+
+.tab-osm .groupTitle {
+    padding: 0 0 5px 0;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.tab-osm .number input {
+    width: 130px;
+    padding-left: 3px;
+    height: 20px;
+    line-height: 20px;
+    text-align: left;
+    border: 1px solid silver;
+    border-radius: 3px;
+    margin-right: 11px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.tab-osm .number .disabled {
+    background-color: #ececec;
+}
+
+.tab-osm .number span {
+    margin-left: 55px;
+}
+
+.tab-osm .checkbox span {
+    margin-left: 5px;
+}
+
+.tab-osm .input {
+    float: left;
+}
+
+.tab-osm .numberspacer {
+    float: left;
+    width: 90px;
+    height: 21px;
+}
+
+.tab-osm .number,
+.tab-osm .checkbox,
+.tab-osm .select
+ {
+    margin-bottom: 5px;
+    clear: left;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    float: left;
+}
+
+.convert_progress_border {
+    margin-left: 20px;
+    height: 28px;
+    width: calc(100% - 275px);
+    border-radius: 3px;
+    border: 1px solid #ff9933;
+    color: #fff;
+    float: left;
+}
+
+.convert_progress_fill {
+    height: 28px;
+    width: 0px;
+    background-color: #ff9933;
+    border-radius: 3px;
+    color: #fff;
+    float: left;
+}

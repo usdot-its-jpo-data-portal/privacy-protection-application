@@ -1,0 +1,184 @@
+<!--
+/*******************************************************************************
+ * Copyright 2018 UT-Battelle, LLC
+ * All rights reserved
+ * Route Sanitizer, version 0.9
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * For issues, question, and comments, please submit a issue via GitHub.
+ *******************************************************************************/
+ -->
+
+<!DOCTYPE html>
+<div class="tab-configuration toolbar_fixed_bottom">
+    <div class="content_wrapper">
+        <div class="gui_box grey">
+            <div class="gui_box_titlebar">
+                <div class="spacer_box_title" i18n="configurationIO"></div>
+            </div>
+            <div class="spacer_box">
+                <table cellpadding="0" cellspacing="0">
+                    <tbody class="features esc">
+                        <!-- table generated here -->
+                    </tbody>
+                </table>
+                <div class="file_bar cf_tip" i18n_title="helpConfigOutDir">
+                    <div class="btn">
+                        <a class="out_dir_btn" href="#" i18n="configurationButtonOutDir"></a>
+                    </div>
+                    <div class="file_field out_dir">None</div>
+                </div>
+                <div class="file_bar cf_tip" i18n_title="helpConfigQuad">
+                    <div class="btn">
+                        <a class="quad_file_btn" href="#" i18n="configurationButtonQuadFile"></a>
+                    </div>
+                    <div class="file_field quad_file">None</div>
+                </div>
+                <div class="file_bar cf_tip" i18n_title="helpConfigLog">
+                    <div class="btn">
+                        <a class="log_file_btn" href="#" i18n="configurationButtonLogFile"></a>
+                    </div>
+                    <div class="file_field log_file">None</div>
+                </div>
+            </div>
+        </div>
+        <div class="gui_box grey">
+            <div class="gui_box_titlebar">
+                <div class="spacer_box_title" i18n="fieldsIO"></div>
+            </div>
+            <div class="spacer_box">
+                <table cellpadding="0" cellspacing="0">
+                    <tbody class="features esc">
+                        <!-- table generated here -->
+                    </tbody>
+                </table>
+                <div class="number cf_tip" i18n_title="helpConfigLatField">
+                    <label>
+                        <div class="textspacer">
+                            <input type="text" name="lat-field" />
+                        </div>
+                        <span i18n="configurationLatField"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigLngField">
+                    <label>
+                        <div class="textspacer">
+                            <input type="text" name="lng-field" />
+                        </div>
+                        <span i18n="configurationLngField"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigHeadingField">
+                    <label>
+                        <div class="textspacer">
+                            <input type="text" name="heading-field" />
+                        </div>
+                        <span i18n="configurationHeadingField"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigSpeedField">
+                    <label>
+                        <div class="textspacer">
+                            <input type="text" name="speed-field" />
+                        </div>
+                        <span i18n="configurationSpeedField"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigTimeField">
+                    <label>
+                        <div class="textspacer">
+                            <input type="text" name="time-field" />
+                        </div>
+                        <span i18n="configurationTimeField"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigUIDFields">
+                    <label>
+                        <div class="textspacer">
+                            <input type="text" name="uid-fields" />
+                        </div>
+                        <span i18n="configurationUIDFields"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="gui_box grey">
+            <div class="gui_box_titlebar">
+                <div class="spacer_box_title" i18n="configurationKML"></div>
+            </div>
+            <div class="spacer_box">
+                <table cellpadding="0" cellspacing="0">
+                    <tbody class="features esc">
+                        <!-- table generated here -->
+                    </tbody>
+                </table>
+                <div class="checkbox cf_tip" i18n_title="helpConfigKMLOutput">
+                    <div class="numberspacer">
+                        <input type="checkbox" name="kml-output" class="toggle" />
+                    </div>
+                    <label> <span i18n="configurationKMLEnable"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="gui_box grey">
+            <div class="gui_box_titlebar">
+                <div class="spacer_box_title" i18n="configurationPrivacyIntervals"></div>
+            </div>
+            <div class="spacer_box">
+                <table cellpadding="0" cellspacing="0">
+                    <tbody class="features esc">
+                        <!-- table generated here -->
+                    </tbody>
+                </table>
+                <div class="number cf_tip" i18n_title="helpConfigMaxDirectDist">
+                    <label> <input type="number" name="max-direct-distance"  /> 
+                        <span i18n="configurationPrivacyMaxDirectDistance"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigRandDirectDistance">
+                    <label> <input type="number" name="rand-direct-distance" /> 
+                        <span i18n="configurationPrivacyRandDirectDistance"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigMaxManhattanDist">
+                    <label> <input type="number" name="max-manhattan-distance" /> 
+                        <span i18n="configurationPrivacyMaxManhattanDistance"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigRandManhattanDistance">
+                    <label> <input type="number" name="rand-manhattan-distance" /> 
+                        <span i18n="configurationPrivacyRandManhattanDistance"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigMaxOutDegree">
+                    <label> <input type="number" name="max-out-degree"  /> 
+                        <span i18n="configurationPrivacyMaxOutdegree"></span>
+                    </label>
+                </div>
+                <div class="number cf_tip" i18n_title="helpConfigRandOutDegree">
+                    <label> <input type="number" name="rand-out-degree" /> 
+                        <span i18n="configurationPrivacyRandOutDegreeDistance"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content_toolbar">
+        <div class="btn load_btn">
+            <a class="load cf_tip" href="#" i18n="configurationLoad" i18n_title="helpConfigLoad"></a>
+            <a class="save cf_tip" href="#" i18n="configurationSave" i18n_title="helpConfigSave"></a>
+        </div>
+    </div>
+</div>

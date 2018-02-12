@@ -1,0 +1,18 @@
+{
+  "cmake-js": {
+    "runtime": "electron",
+    "runtimeVersion": "1.7.12",
+    "arch": "x64"
+  },
+  "dependencies": {
+    "cmake-js": "^3.6.1",
+    "nan": "^2.8.0"
+  },
+  "scripts": {
+    "install": "cmake-js compile"
+  },
+  "devDependencies": {
+    "electron": "1.7.12",
+    "electron-packager": "^10.1.2"
+  }
+}
