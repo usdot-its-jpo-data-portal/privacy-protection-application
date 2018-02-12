@@ -115,7 +115,7 @@ steps on your computer (local client):
 ## Create A Pull Request
 
 1. After you have pushed your `enhancement` branch to your GitHub account, issue a pull request on GitHub. Details on how to perform a [pull request](https://help.github.com/articles/using-pull-requests) are on GitHub.
-1. If the pull request is closing an issue, include a comment with `fixes #issue\_number`.  This comment will close the issue when the pull request is merged.  For more information see [here](https://github.com/blog/1506-closing-issues-via-pull-requests).
+1. If the pull request is closing an issue, include a comment with `fixes #issue_number`.  This comment will close the issue when the pull request is merged.  For more information see [here](https://github.com/blog/1506-closing-issues-via-pull-requests).
 1. One of the main project developers will review your pull request and either merge it, or send you feedback. **Do not merge your own pull request.** Code review is essential. If you have not received feedback on your pull request in a timely fashion, contact us via email.
 1. Once your pull request has been reviewed and merged (possibly closing an issue), your enhancement will now be part of the privacy protection application project `master` branch.
 1. On your client machine, you can delete your branch.
@@ -145,14 +145,11 @@ steps on your computer (local client):
   also install the required Node Package Manager (`npm`). See below for more information. On OS X, Node.js can also be installed
   using MacPorts and Brew.
     - (Ubuntu Install of Node.js)
-
         ```bash
         $ curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
         $ sudo apt install -y nodejs
         ```
-
-    - The final command will install `node\_version.h` in `/usr/include/node/`
-
+    - The final command will install `node_version.h` in `/usr/include/node/`
 - If building on Windows, [Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) are needed. You may run into [this issue](https://stackoverflow.com/questions/33743493/why-visual-studio-2015-cant-run-exe-file-ucrtbased-dll). We found that having Win10 SDK installed fixed the issue on our system.
 - We built the Windows application using cmake generated Nmake files. Other build environments were not tested.
 
