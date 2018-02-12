@@ -21,8 +21,8 @@ tool.
 
 # Getting Involved
 
-This project is one effort, sponsored by the U.S. Department of Transportation, to limit the risk of traveler
-identification in mobility data that will aid the research community. To project [factsheet](https://www.its.dot.gov/factsheets/pdf/Managing_ITS_DataPrivacyRisk.pdf) contains more information. You can become involved in this project in several
+This project, sponsored by the U.S. Department of Transportation, limits the risk of traveler
+identification when using valuable mobility data that will aid the research community. To project [factsheet](https://www.its.dot.gov/factsheets/pdf/Managing_ITS_DataPrivacyRisk.pdf) contains more information. You can become involved in this project in several
 ways:
 
 - **Pull the code and try it out!**  The [instructions](#introduction) that immediately follow will get you started.  [Build](#building-the-privacy-protection-application) instructions are also provided.  Let us know if you need help.
