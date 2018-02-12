@@ -134,7 +134,7 @@ steps on your computer (local client):
 # Release Notes
 
 ## Initial Release
-- Release of the GUI and the CLI for public use and evaluation.
+- [v1.0](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/releases/tag/v1.0): Release of the GUI and the CLI for public use and evaluation.
 
 # Dependancies and Prerequisites
 
