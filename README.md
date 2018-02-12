@@ -29,7 +29,7 @@ ways:
     - Github has [instructions](https://help.github.com/articles/signing-up-for-a-new-github-account) for setting up an account and getting started with repositories.
 - If you would like to improve this code base or the documentation, [fork the project](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application#fork-destination-box) and submit a pull request (see the next section).
 - If you find a problem with the code or the documentation, please submit an [issue](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/issues/new).
-- If the PPA does not solve your mobility data privacy problem, please submit an [issue](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/issues/new) and prefix the issue title with [New Feature]. We would like to help.
+- If the PPA does not solve your mobility data privacy problem, please submit an [issue](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/issues/new) and prefix the issue title with **[New Feature]**. We would like to help.
 
 ## Introduction
 
@@ -48,10 +48,10 @@ understanding of the code base *and* we catch problems before they enter `master
 
 ## Initial Setup
 
-- If you do not have one yet, create a personal (or organization) account on GitHub (assume your account name is `<your-github-account-name>`).
-- Log into your personal (or organization) account.
-- Fork [private-protection-application](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/fork) into your personal GitHub account.
-- On your computer (local client), clone the master branch from you GitHub account :
+1. If you do not have one yet, create a personal (or organization) account on GitHub (assume your account name is `<your-github-account-name>`).
+1. Log into your personal (or organization) account.
+1. Fork [private-protection-application](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/fork) into your personal GitHub account.
+1. On your computer (local client), clone the master branch from you GitHub account:
 ```bash
 $ git clone https://github.com/<your-github-account-name>/privacy-protection-appliation.git
 ```
@@ -64,50 +64,72 @@ $ git clone https://github.com/<your-github-account-name>/privacy-protection-app
 
 ## Development in Your Fork
 
-As an example, assume you are enhancing the existing code or documentation, or working on an [issue](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/issues).  Complete the following steps on your computer (local client):
+As an example, assume you are enhancing the existing code or documentation, or working on an
+[issue](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/issues).  Complete the following
+steps on your computer (local client):
 
 1. Add an upstream remote repository pointing to the Privacy Protection Application project repository.
-    ```git remote add upstream https://github.com/usdot-its-jpo-data-portal/privacy-protection-application.git```  
+    ```bash
+    $ git remote add upstream https://github.com/usdot-its-jpo-data-portal/privacy-protection-application.git
+    ```
 1. Pull from the upstream remote repository to get the latest master branch.
-    ```git pull --rebase upstream master```
+    ```bash
+    $ git pull --rebase upstream master
+    ```
 1. Create a branch on your client (your forked repository).
-    ```git branch enhancement```
+    ```bash
+    $ git branch enhancement
+    ```
    where ```enhancement``` is the name you want to use for the branch.
-2. Switch to this branch
-    ```git checkout enhancement```
-3. Make the changes need to enhance the code. Note that before doing a pull request (below) you also want to ensure that any changes that have been accepted upstream can be integrated with any changes you are making now, so perform the following command in your forked repository branch prior to issuing a pull request:
-    ```git pull upstream master```
-4. When you have completed coding and integrating the upstream code, run the unit tests on your client in your build directory.
+1. Switch to this branch
+    ```bash
+    $ git checkout enhancement
+    ```
+1. Make the changes need to enhance the code. Note that before doing a pull request (below) you also want to ensure that any changes that have been accepted upstream can be integrated with any changes you are making now, so perform the following command in your forked repository branch prior to issuing a pull request:
+    ```bash
+    $ git pull upstream master
+    ```
+1. When you have completed coding and integrating the upstream code, run the unit tests on your client in your build directory.
     ```bash
     $ cd ${BUILD_DIR}/cv-lib-test
     $ ./cvlib_tests
     ```
 1. When all the tests pass you can **add, commit, and push your updates to your `enchancement` branch in your fork.** Follow these steps:
     1. Check which files have been changed
-        ```git status```
+        ```bash
+        $ git status
+        ```
     1. Add the files that changed based on your enhancement, or that you want to include in the pull request.
-       ```git add <file1> <file2>```
+        ```bash
+        $ git add <file1> <file2>
+        ```
     1. Commit the files with a message describing the enhancement or bug fix.
-       ```git commit -m "improved this aspect of the code."```
+        ```bash
+        $ git commit -m "improved this aspect of the code."
+        ```
     1. Push the branch changes (enhancements) to your GitHub account:
-       ```git push origin enhancement```
+        ```bash
+        $ git push origin enhancement
+        ```
 
 ## Create A Pull Request
 
-- After you have pushed your `enhancement` branch to your GitHub account, issue a pull request on GitHub. Details on how to perform a [pull request](https://help.github.com/articles/using-pull-requests) are on GitHub.
-- If the pull request is closing an issue, include a comment with ```fixes #issue_number```.  This comment will close the issue when the pull request is merged.  For more information see [here](https://github.com/blog/1506-closing-issues-via-pull-requests).
-- One of the main project developers will review your pull request and either merge it, or send you feedback. **Do not merge your own pull request.** Code review is essential. If you have not received feedback on your pull request in a timely fashion, contact us via email.
-- Once your pull request has been reviewed and merged (possibly closing an issue), your enhancement will now be part of the privacy protection application project ```master``` branch.
-- On your client machine, you can delete your branch.
-  ```git branch -d enhancement```
-- Pull from the privacy protection application project's ```master``` branch to have your changes reflected in your local (laptop/desktop) `master` branch:
-```bash
-$ git checkout master
-$ git pull --rebase upstream master
-```
-- To include these in your fork's master branch, push them to your GitHub account.
-  ```git push origin master```
-- At this point the three master branches (one on organization, one on your GitHub account, and one on your client) are all in sync.
+1. After you have pushed your `enhancement` branch to your GitHub account, issue a pull request on GitHub. Details on how to perform a [pull request](https://help.github.com/articles/using-pull-requests) are on GitHub.
+1. If the pull request is closing an issue, include a comment with `fixes #issue\_number`.  This comment will close the issue when the pull request is merged.  For more information see [here](https://github.com/blog/1506-closing-issues-via-pull-requests).
+1. One of the main project developers will review your pull request and either merge it, or send you feedback. **Do not merge your own pull request.** Code review is essential. If you have not received feedback on your pull request in a timely fashion, contact us via email.
+1. Once your pull request has been reviewed and merged (possibly closing an issue), your enhancement will now be part of the privacy protection application project `master` branch.
+1. On your client machine, you can delete your branch.
+    ```bash
+    $ git branch -d enhancement
+    ```
+1. Pull from the privacy protection application project's `master` branch to have your changes reflected in your local (laptop/desktop) `master` branch:
+    ```bash
+    $ git checkout master
+    $ git pull --rebase upstream master
+    ```
+1. To include these in your fork's master branch, push them to your GitHub account.
+    ```git push origin master```
+1. At this point the three master branches (one on organization, one on your GitHub account, and one on your client) are all in sync.
 
 # Release Notes
 
@@ -129,15 +151,16 @@ $ git pull --rebase upstream master
         $ sudo apt install -y nodejs
         ```
 
-    - The final command will install `node_version.h` in `/usr/include/node/`
+    - The final command will install `node\_version.h` in `/usr/include/node/`
 
 - If building on Windows, [Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) are needed. You may run into [this issue](https://stackoverflow.com/questions/33743493/why-visual-studio-2015-cant-run-exe-file-ucrtbased-dll). We found that having Win10 SDK installed fixed the issue on our system.
 - We built the Windows application using cmake generated Nmake files. Other build environments were not tested.
-# Building the Privacy Protection Application
-The following procedure outlines a fresh install after the above dependencies have been installed.  It builds both the command line tool and the graphical user interface form of the application. By following the procedures the repository will reside in the `$PPA_BASE_DIR`. An out of source build directory, `$PPA_BUILD_DIR`), will also be created.
 
-```bash
-```
+# Building the Privacy Protection Application
+
+The following procedure outlines a fresh install after the above dependencies have been installed.  It builds both the
+command line tool and the graphical user interface form of the application. By following the procedures the repository
+will reside in the `$PPA_BASE_DIR`. An out of source build directory, `$PPA_BUILD_DIR`), will also be created.
 
 The command line tool executable will be located in `$PPA_BUILD_DIR`.
 
@@ -146,68 +169,46 @@ The command line tool executable will be located in `$PPA_BUILD_DIR`.
 - good direction on node installation on linux: https://nodejs.org/en/download/package-manager/
 - installed nan and it didn't work.
 
-
 1. Install Node.js if not installed (see [Dependencies](#dependancies-and-prerequisites)). You can check for installation using these version commands:
-
     ```bash
     $ node -v
     $ npm -v
     ```
-
 1. Make a directory (`$PPA_BASE_DIR`) where the repository will be cloned and clone the repository. 
-
     ```bash    
     $ git clone https://github.com/usdot-its-jpo-data/privacy-protection-application ${PPA_BASE_DIR}
     ```
-
 1. Make a directory (`$PPA_BUILD_DIR`) to build the application (and CLI tool). Out of source builds are recommended.
-   
     ```bash 
     $ mkdir ${PPA_BUILD_DIR}
     ```
-
 1. Using Node Package Manager (`npm`), install the following build tools and dependencies:
-
     - Install the CMake-like build system for Node.js called [Cmake.js](https://github.com/cmake-js/cmake-js)
-
         ```bash
         $ sudo npm install --save -g cmake-js
         ```
-
     - Install the [Electron Package Manager](https://github.com/electron-userland/electron-packager)
-
         ```bash
         $ sudo npm install  --save-dev -g electron-packager
         ```
-
     - Install [Electron](https://github.com/electron/electron). Running the install command in the `PPA_BASE_DIR` avoids an error on linux.
-
         ```bash
         $ cd ${PPA_BASE_DIR}
         $ npm install  --save-dev --save-exact electron
         ```
-
     - Using [Native Abstractions for Node.js](https://www.npmjs.com/package/nan). Running the install command in the `PPA_BASE_DIR` avoids an error on linux.
-   
         ```bash
         $ cd ${PPA_BASE_DIR}
         $ npm install --save nan
         ```
-
 1. The file `package.json` must be in the `$PPA_BASE_DIR` to build using `cmake-js`. *It should be included when you clone the repository.*
-
 1. Make a directory (`$PPA_APP_DIR`) to install the application.
-
 1. Build the tools. This will build both the GUI and CLI tools.
-
     ```bash
     $ cmake-js -d ${PPA_BASE_DIR} -O ${PPA_BUILD_DIR} -a x64 -r electron -v 1.4.15
-    
     // the command line tool is built at this point.
-    
     $ electron-packager --icon=${PPA_BUILD_DIR}/cv-gui-electron/${PPA_BUILD_DIR}/Release/electron-app/images/${OS_IMAGE} --overwrite --out ${PPA_APP_DIR} --electron-version=1.7.12 ${PPA_BUILD_DIR}/cv-gui-electron/${PPA_BUILD_DIR}/Release/electron-app
     ```
-
     Where (`$OS_IMAGE`) is the images type for your operating system. (Windows = *.ico, OSX = *.icns, Linux = *.png). Make sure to substitute your architecture (x64 above) and Electron version (1.4.15 above) in previous commands.
 
 # Post Build Installation
