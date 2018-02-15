@@ -1,0 +1,5 @@
+# Software Releases
+
+- V1.0 is the initial release. It includes a GUI of the tool and a command line interface.  The tools was designed to
+  process BSM data from connected vehicle deployments, but could be modified to handle alternative datasets.
+

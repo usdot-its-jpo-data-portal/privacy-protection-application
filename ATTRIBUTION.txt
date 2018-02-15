@@ -1,21 +1,28 @@
-GUI:
-    Node.js frameworks and libraries:
+# There have been many contributors to this project.
+
+- Thanks to members of Noblis for their early contributions.
+- Thanks to members of Volpe for their engagement with potential users, data analysis, and vetting.
+- Thanks to members of MITRE for their reverse engineering work.
+- Thanks to members of UMTRI for data and comparitive analysis of original and de-identified data.
+- Thanks to the ITS-JPO for sponsoring this work.
+
+# Third Party Code that Makes These Applications Work.
+
+Node.js frameworks and libraries:
         node: https://github.com/nodesource/distributions/blob/master/LICENSE.md
         electron: https://github.com/electron/electron/blob/master/LICENSE
         cmake-js: https://github.com/cmake-js/cmake-js/blob/master/LICENSE
         nan: https://github.com/nodejs/nan/blob/master/LICENSE.md
         v8 (javascript engine): https://github.com/v8/v8/blob/master/LICENSE
         electron-packager: https://github.com/electron-userland/electron-packager/blob/master/LICENSE
-    Javascript libraries:
+Javascript libraries:
         geoxml3 https://github.com/geocodezip/geoxml3 multiple licenses Apache License, Version 2.0
         jquery https://github.com/jquery/jquery/blob/master/LICENSE.txt
         sax.js https://github.com/isaacs/sax-js/blob/master/LICENSE
         switchery.js https://github.com/abpetkov/switchery (MIT License)
         jbox https://github.com/StephanWagner/jBox (MIT License)
 
+Unit Testing
     catch https://github.com/catchorg/Catch2.git
-
-CV-lib:
-    No third party licenses.
 
 * The GUI links with the CV-lib via the v8 library.
