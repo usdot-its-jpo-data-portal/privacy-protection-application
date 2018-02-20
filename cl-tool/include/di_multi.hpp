@@ -106,7 +106,6 @@ namespace DIMulti {
             Quad::Ptr quad_ptr_;
             std::vector<std::shared_ptr<instrument::PointCounter>> counters_;
 
-            //trajectory::Trajectory DeIdentify(trajectory::Trajectory& traj, const std::string& uid) const;
             trajectory::Trajectory DeIdentify(trajectory::Trajectory& traj, const std::string& uid, std::shared_ptr<instrument::PointCounter> pc ) const;
     };
 }

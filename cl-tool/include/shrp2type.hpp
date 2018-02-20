@@ -17,32 +17,36 @@
  *
  * For issues, question, and comments, please submit a issue via GitHub.
  *******************************************************************************/
-#ifndef CTES_TRACKTYPES_HPP
-#define CTES_TRACKTYPES_HPP
+#ifndef CTES_SHRP2_HPP
+#define CTES_SHRP2_HPP
 
 #include "instrument.hpp"
 #include "trajectory.hpp"
+#include "config.hpp"
 
 namespace track_types {
 
-    const std::string kCSVHeader = "RxDevice,FileId,TxDevice,Gentime,TxRandom,MsgCount,DSecond,Latitude,Longitude,Elevation,Speed,Heading,Ax,Ay,Az,Yawrate,PathCount,RadiusOfCurve,Confidence";
-    const uint32_t kNFields = 19;
-    
     /**
      * \brief Instances of this class build trajectories from the BSMP1 dataset.
      */
-    class BSMP1CSVTrajectoryFactory : public trajectory::TrajectoryFactory {
+    class SHRP2Reader : public trajectory::TrajectoryFactory {
         public:
 
             /**
-             * \brief Default constructor.
+             * \brief Build and return a BSMP1 UID
+             *
+             * The UID is constructed from the first two fields in each record.
+             *
+             * \param line the trip point record from the file that contains the UID information.
+             * \throws out_of_range if the number of fields in the record exceeds what is expected for BSMP1.
              */
-            BSMP1CSVTrajectoryFactory(void);
+            static const std::string make_uid(const std::string& infilename);
+
 
             /**
-             * \brief Default constructor.
+             * \brief Default SHRP2 Trajectory Reader
              */
-            BSMP1CSVTrajectoryFactory( std::shared_ptr<instrument::PointCounter> counter );
+            SHRP2Reader( const Config::DIConfig& conf, std::shared_ptr<instrument::PointCounter> counter = nullptr );
 
             /**
              * \brief Build a Trajectory instance from an input file.
@@ -60,19 +64,10 @@ namespace track_types {
              */
             const std::string get_uid(void) const;
 
-            /**
-             * \brief Build and return a BSMP1 UID
-             *
-             * The UID is constructed from the first two fields in each record.
-             *
-             * \param line the trip point record from the file that contains the UID information.
-             * \throws out_of_range if the number of fields in the record exceeds what is expected for BSMP1.
-             */
-            static const std::string make_uid(const std::string& line);
-
         private:
-            uint64_t index_;
-            std::string uid_;
+            uint64_t index_;                ///< the current index into the trip.
+            std::string uid_;               ///< unique identifier for this trip.
+            const Config::DIConfig& conf_;  ///< The configuration for processing.
             std::shared_ptr<instrument::PointCounter> counter_; ///< pointer to the counter.
 
             /**
@@ -85,10 +80,11 @@ namespace track_types {
             trajectory::Point::Ptr make_point(const std::string& line);
     };
 
+
     /**
-     * \brief Instances of this class write trajectories in the BSMP1 form.
+     * \brief Instances of this class write trajectories in the SHRP2 form.
      */
-    class BSMP1CSVTrajectoryWriter : public trajectory::TrajectoryWriter {
+    class SHRP2Writer : public trajectory::TrajectoryWriter {
         public:
 
             /**
@@ -97,7 +93,7 @@ namespace track_types {
              * \param output directory in which to store the file containing the trajectory data; file names are based
              * on the unique id of the trajectory.
              */
-            BSMP1CSVTrajectoryWriter(const std::string& output);
+            SHRP2Writer(const std::string& output, const Config::DIConfig& conf);
 
             /**
              * \brief Write a trajectory to a file named based on the trajectories unique id (uid).
@@ -111,7 +107,8 @@ namespace track_types {
             void write_trajectory(const trajectory::Trajectory& traj, const std::string& uid, bool strip_cr) const;
 
         private:
-            std::string output_;            ///> The output directory.
+            std::string output_;            ///< The output directory.
+            const Config::DIConfig& conf_;  ///< The configuration for processing.
     };
 }
 

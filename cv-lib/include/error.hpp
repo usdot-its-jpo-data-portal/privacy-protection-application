@@ -49,19 +49,8 @@ class ErrorCorrector
          */
         void correct_error(trajectory::Trajectory& traj, const std::string& uid);
 
-        /**
-         * \brief Examine sample_size points from the beginning and ending of the traj and remove those points that were
-         * found to be inaccurate.  When points are removed, the trip is re-indexed.  A count of the erroneous points is
-         * stored in the point_counter.
-         *
-         * \param The trajectory to examine.
-         * \param The UID of the trajectory.
-         */
-        // void correct_error(trajectory::Trajectory& traj, const std::string& uid, instrument::PointCounter& point_counter);
-
     private:
         void remove_points(trajectory::Trajectory& traj, uint64_t start, uint64_t end, const std::string& uid);
-        // void remove_points(trajectory::Trajectory& traj, uint64_t start, uint64_t end, const std::string& uid, instrument::PointCounter& point_counter);
         void correct_indices(trajectory::Trajectory& traj);
 
         uint64_t sample_size_;
