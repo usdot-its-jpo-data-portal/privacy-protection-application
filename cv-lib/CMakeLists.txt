@@ -19,7 +19,7 @@ set(CVLIB_SRC "src/quad.cpp"
               "src/trajectory.cpp"
               "src/critical.cpp"
               "src/privacy.cpp"
-              "src/bsmp1.cpp"
+              "src/tracktypes.cpp"
               "src/instrument.cpp"
               "src/error.cpp")
 
@@ -33,7 +33,7 @@ add_custom_command(TARGET CVLib PRE_BUILD COMMAND ${CMAKE_COMMAND} -E make_direc
 # Configure and copy the headers.
 configure_file("${CVLIB_CURRENT_DIR}/cvlib.hpp.in" "${CVLIB_OUT_INCLUDE_DIR}/cvlib.hpp")
 configure_file("${CVLIB_INCLUDE_DIR}/shapes.hpp" "${CVLIB_OUT_INCLUDE_DIR}/shapes.hpp" COPYONLY)
-configure_file("${CVLIB_INCLUDE_DIR}/bsmp1.hpp" "${CVLIB_OUT_INCLUDE_DIR}/bsmp1.hpp" COPYONLY)
+configure_file("${CVLIB_INCLUDE_DIR}/tracktypes.hpp" "${CVLIB_OUT_INCLUDE_DIR}/tracktypes.hpp" COPYONLY)
 configure_file("${CVLIB_INCLUDE_DIR}/critical.hpp" "${CVLIB_OUT_INCLUDE_DIR}/critical.hpp" COPYONLY)
 configure_file("${CVLIB_INCLUDE_DIR}/entity.hpp" "${CVLIB_OUT_INCLUDE_DIR}/entity.hpp" COPYONLY)
 configure_file("${CVLIB_INCLUDE_DIR}/kml.hpp" "${CVLIB_OUT_INCLUDE_DIR}/kml.hpp" COPYONLY)

@@ -34,6 +34,7 @@ include_directories(${CVLIB_INCLUDE})
 # Add the exectable.
 set(CVTOOL_TARGET "cv_di")
 add_executable(${CVTOOL_TARGET} 
+               "${CVTOOL_CURRENT_DIR}/src/shrp2type.cpp" 
                "${CVTOOL_CURRENT_DIR}/src/cv_di.cpp" 
                "${CVTOOL_CURRENT_DIR}/src/tool.cpp"
                "${CVTOOL_CURRENT_DIR}/src/di_multi.cpp"

@@ -267,7 +267,7 @@ namespace trajectory {
     using Trajectory  = std::vector<Point::Ptr>;
     using Index       = Trajectory::size_type;
     using Iterator    = Trajectory::iterator;
-    using CIterator    = Trajectory::const_iterator;
+    using CIterator   = Trajectory::const_iterator;
     using RevIterator = Trajectory::reverse_iterator;
 
     /**
@@ -371,6 +371,7 @@ namespace trajectory {
      * \brief Abstract base class for classes that must create a trajectory from a file.
      */
     class TrajectoryFactory {
+        public:
 
         /**
          * \brief Pure virtual methods for making a trajectory install from a file.
@@ -378,12 +379,20 @@ namespace trajectory {
          * \param input the trip file that contains the point records.
          */
         virtual const Trajectory make_trajectory(const std::string& input) = 0;
+
+        /**
+         * \brief Return the current trajectory unique identifier.
+         *
+         * \return the UID as a string.
+         */
+        virtual const std::string get_uid(void) const = 0;
     };
 
     /**
      * \brief Abstract base class for classes that write trajectories to a file.
      */
     class TrajectoryWriter {
+        public:
 
         /**
          * \brief Write a trajectory to a file named based on the trajectories unique id (uid).

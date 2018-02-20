@@ -150,7 +150,7 @@ class DeIdentifier
          * \param point_counter a statistics aggregator.
          * \return The de-identified trajectory.
          */
-        const trajectory::Trajectory& de_identify( const trajectory::Trajectory& traj,  instrument::PointCounter& point_counter);
+        const trajectory::Trajectory& de_identify( const trajectory::Trajectory& traj,  std::shared_ptr<instrument::PointCounter> point_counter);
     private:
         trajectory::Trajectory new_traj;
 };

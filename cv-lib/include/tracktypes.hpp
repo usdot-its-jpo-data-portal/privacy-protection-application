@@ -17,13 +17,13 @@
  *
  * For issues, question, and comments, please submit a issue via GitHub.
  *******************************************************************************/
-#ifndef CTES_BSMP1_HPP
-#define CTES_BSMP1_HPP
+#ifndef CTES_TRACKTYPES_HPP
+#define CTES_TRACKTYPES_HPP
 
 #include "instrument.hpp"
 #include "trajectory.hpp"
 
-namespace BSMP1 {
+namespace track_types {
 
     const std::string kCSVHeader = "RxDevice,FileId,TxDevice,Gentime,TxRandom,MsgCount,DSecond,Latitude,Longitude,Elevation,Speed,Heading,Ax,Ay,Az,Yawrate,PathCount,RadiusOfCurve,Confidence";
     const uint32_t kNFields = 19;
@@ -38,6 +38,11 @@ namespace BSMP1 {
              * \brief Default constructor.
              */
             BSMP1CSVTrajectoryFactory(void);
+
+            /**
+             * \brief Default constructor.
+             */
+            BSMP1CSVTrajectoryFactory( std::shared_ptr<instrument::PointCounter> counter );
 
             /**
              * \brief Build a Trajectory instance from an input file.
@@ -56,7 +61,7 @@ namespace BSMP1 {
              * \return a Trajectory instance (a vector of pointers to Point instances).
              * \throws invalid argument if the file cannot be opened or it doesn't have a header.
              */
-            const trajectory::Trajectory make_trajectory(const std::string& input, instrument::PointCounter& point_counter);
+            //const trajectory::Trajectory make_trajectory(const std::string& input, instrument::PointCounter& point_counter);
 
             /**
              * \brief Return the current trajectory unique identifier.
@@ -77,9 +82,8 @@ namespace BSMP1 {
 
         private:
             uint64_t index_;
-            uint64_t line_number_;
             std::string uid_;
-
+            std::shared_ptr<instrument::PointCounter> counter_; ///< pointer to the counter.
 
             /**
              * \brief Using the provided point record from an input file, make and return a shared pointer to the Point instance.
@@ -99,7 +103,8 @@ namespace BSMP1 {
              * \throws out_of_range if the number of fields in the record exceeds expectations, the geolocation latitude
              * and longitude is out of range, and heading is outside of the interval: [0,360].
              */
-            trajectory::Point::Ptr make_point(const std::string& line, instrument::PointCounter& point_counter); };
+            // trajectory::Point::Ptr make_point(const std::string& line, instrument::PointCounter& point_counter); 
+    };
 
     /**
      * \brief Instances of this class write trajectories in the BSMP1 form.

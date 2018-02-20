@@ -667,20 +667,20 @@ const trajectory::Trajectory& DeIdentifier::de_identify( const trajectory::Traje
     return new_traj;
 }
 
-const trajectory::Trajectory& DeIdentifier::de_identify( const trajectory::Trajectory& traj, instrument::PointCounter& point_counter )
+const trajectory::Trajectory& DeIdentifier::de_identify( const trajectory::Trajectory& traj, std::shared_ptr<instrument::PointCounter> point_counter )
 {
     for (auto& tp : traj)
     {
         if (tp->is_critical())
         {
-            point_counter.n_ci_points++;           
+            point_counter->n_ci_points++;           
  
             continue;
         }
 
         if (tp->is_private())
         {
-            point_counter.n_pi_points++;           
+            point_counter->n_pi_points++;           
 
             continue;
         }

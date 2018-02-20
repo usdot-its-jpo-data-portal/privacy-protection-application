@@ -17,15 +17,25 @@
  *
  * For issues, question, and comments, please submit a issue via GitHub.
  *******************************************************************************/
-#include "bsmp1.hpp"
+#include "tracktypes.hpp"
 #include "utilities.hpp"
 
 #include <fstream>
+#include <regex>
+#include <iterator>
 
-namespace BSMP1 {
-    BSMP1CSVTrajectoryFactory::BSMP1CSVTrajectoryFactory() :
-        index_(0),
-        line_number_(0)
+namespace track_types {
+
+    BSMP1CSVTrajectoryFactory::BSMP1CSVTrajectoryFactory()
+        : index_(0)
+        , uid_{}
+        , counter_{nullptr}
+        {}
+
+    BSMP1CSVTrajectoryFactory::BSMP1CSVTrajectoryFactory( std::shared_ptr<instrument::PointCounter> counter )
+        : index_(0)
+        , uid_{}
+        , counter_{ counter }
         {}
 
     const std::string BSMP1CSVTrajectoryFactory::make_uid(const std::string& line) {
@@ -42,68 +52,33 @@ namespace BSMP1 {
         StrVector parts = string_utilities::split(line, ',');
 
         if (parts.size() != kNFields) {
+            if ( counter_ != nullptr ) counter_->n_invalid_field_points++;
             throw std::out_of_range("BSMP1 CSV: invalid number of fields");
         }
 
         double lat = std::stod(parts[7]);
 
         if (lat > 80.0 || lat < -84.0) {
+            if ( counter_ != nullptr ) counter_->n_invalid_geo_points++;
             throw std::out_of_range("BSMP1 CSV: bad latitude: " + parts[7]);
         }
 
         double lon = std::stod(parts[8]);
 
         if (lon >= 180.0 || lon <= -180.0) {
+            if ( counter_ != nullptr ) counter_->n_invalid_geo_points++;
             throw std::out_of_range("BSMP1 CSV: bad longitude: " + parts[8]);
         }
 
         if (lat == 0.0 && lon == 0.0) {
+            if ( counter_ != nullptr ) counter_->n_invalid_geo_points++;
             throw std::out_of_range("BSMP1 CSV: equator point");
         }
 
         double heading = std::stod(parts[11]);
 
         if (heading > 360.0 || heading < 0.0) {
-            throw std::out_of_range("BSMP1 CSV: bad heading: " + parts[11]);
-        }
-
-        double speed = std::stod(parts[10]);
-        uint64_t gentime = std::stoull(parts[3]);
-
-        return std::make_shared<trajectory::Point>(line, gentime, lat, lon, heading, speed, index_++);
-    }
-
-    trajectory::Point::Ptr BSMP1CSVTrajectoryFactory::make_point(const std::string& line, instrument::PointCounter& point_counter) {
-        StrVector parts = string_utilities::split(line, ',');
-
-        if (parts.size() != kNFields) {
-            point_counter.n_invalid_field_points++;
-            throw std::out_of_range("BSMP1 CSV: invalid number of fields");
-        }
-
-        double lat = std::stod(parts[7]);
-
-        if (lat > 80.0 || lat < -84.0) {
-            point_counter.n_invalid_geo_points++;
-            throw std::out_of_range("BSMP1 CSV: bad latitude: " + parts[7]);
-        }
-
-        double lon = std::stod(parts[8]);
-
-        if (lon >= 180.0 || lon <= -180.0) {
-            point_counter.n_invalid_geo_points++;
-            throw std::out_of_range("BSMP1 CSV: bad longitude: " + parts[8]);
-        }
-
-        if (lat == 0.0 && lon == 0.0) {
-            point_counter.n_invalid_geo_points++;
-            throw std::out_of_range("BSMP1 CSV: equator point");
-        }
-
-        double heading = std::stod(parts[11]);
-
-        if (heading > 360.0 || heading < 0.0) {
-            point_counter.n_invalid_heading_points++;
+            if ( counter_ != nullptr ) counter_->n_invalid_heading_points++;
             throw std::out_of_range("BSMP1 CSV: bad heading: " + parts[11]);
         }
 
@@ -130,11 +105,11 @@ namespace BSMP1 {
             throw std::invalid_argument("BSMP1 CSV: " + input + " is empty!");
         }
 
+        // uses a data record to determine the UID.
         uid_ = make_uid(line); 
         
         do {
-            line_number_++;
-    
+            if ( counter_ ) counter_->n_points++;
             try {
                 traj.push_back(make_point(line));
             } catch (std::exception&) {
@@ -143,45 +118,7 @@ namespace BSMP1 {
         } while (std::getline(file, line));
 
         file.close();
-
-        // NRVO / copy elision.
-        return traj;
-    }
-
-    const trajectory::Trajectory BSMP1CSVTrajectoryFactory::make_trajectory(const std::string& input, instrument::PointCounter& point_counter) {
-        std::string line;
-        trajectory::Trajectory traj;
-        std::ifstream file(input);
-
-        if (file.fail()) {
-            throw std::invalid_argument("Could not open BSMP1 CSV file: " + input);
-        }
-
-        if (!std::getline(file, line)) {
-            throw std::invalid_argument("BSMP1 CSV: " + input + " missing header!");
-        }
-
-        if (!std::getline(file, line)) {
-            throw std::invalid_argument("BSMP1 CSV: " + input + " is empty!");
-        }
-
-        uid_ = make_uid(line); 
-        
-        do {
-            point_counter.n_points++;
-            line_number_++;
-    
-            try {
-                traj.push_back(make_point(line, point_counter));
-            } catch (std::exception&) {
-                continue;
-            }
-        } while (std::getline(file, line));
-
-        file.close();
-
-        // NRVO // copy elision
-        return traj;
+        return traj;    // NRVO copy elision.
     }
 
     const std::string BSMP1CSVTrajectoryFactory::get_uid() const {

@@ -38,7 +38,7 @@ class ErrorCorrector
          *
          * \param sample_size The number of points to use for detecting anomolies.
          */
-        ErrorCorrector(uint64_t sample_size);
+        ErrorCorrector(uint64_t sample_size, std::shared_ptr<instrument::PointCounter> pc = nullptr);
 
         /**
          * \brief Examine sample_size points from the beginning and ending of the traj and remove those points that were
@@ -57,11 +57,11 @@ class ErrorCorrector
          * \param The trajectory to examine.
          * \param The UID of the trajectory.
          */
-        void correct_error(trajectory::Trajectory& traj, const std::string& uid, instrument::PointCounter& point_counter);
+        // void correct_error(trajectory::Trajectory& traj, const std::string& uid, instrument::PointCounter& point_counter);
 
     private:
         void remove_points(trajectory::Trajectory& traj, uint64_t start, uint64_t end, const std::string& uid);
-        void remove_points(trajectory::Trajectory& traj, uint64_t start, uint64_t end, const std::string& uid, instrument::PointCounter& point_counter);
+        // void remove_points(trajectory::Trajectory& traj, uint64_t start, uint64_t end, const std::string& uid, instrument::PointCounter& point_counter);
         void correct_indices(trajectory::Trajectory& traj);
 
         uint64_t sample_size_;
@@ -69,6 +69,7 @@ class ErrorCorrector
         geo::EdgeCPtr current_eptr_;
         geo::EdgeCPtr previous_eptr_;
         std::vector<trajectory::Point> edge_pts_;
+        std::shared_ptr<instrument::PointCounter> pc_;
 };
 
 #endif

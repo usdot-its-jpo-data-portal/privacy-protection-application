@@ -22,10 +22,11 @@
 #include <algorithm>
 #include <cmath>
 
-ErrorCorrector::ErrorCorrector(uint64_t sample_size) :
-    sample_size_(sample_size),
-    is_explicit_edge_(false),
-    current_eptr_(nullptr)
+ErrorCorrector::ErrorCorrector(uint64_t sample_size, std::shared_ptr<instrument::PointCounter> pc ) 
+    : sample_size_(sample_size)
+    , is_explicit_edge_(false)
+    , current_eptr_(nullptr)
+    , pc_{ pc }
 {}
 
 void ErrorCorrector::correct_error(trajectory::Trajectory& traj, const std::string& uid) {
@@ -37,34 +38,62 @@ void ErrorCorrector::correct_error(trajectory::Trajectory& traj, const std::stri
 
     if (traj.size() <= sample_size_) {
         correct_indices(traj);
-
         return;
     }
 
     remove_points(traj, traj.size() - sample_size_, traj.size(), uid);
-
     correct_indices(traj);
 }
 
-void ErrorCorrector::correct_error(trajectory::Trajectory& traj, const std::string& uid, instrument::PointCounter& point_counter) {
-    if (traj.size() <= 1) {
-        return;
-    }
+// void ErrorCorrector::correct_error(trajectory::Trajectory& traj, const std::string& uid, instrument::PointCounter& point_counter) {
+//     if (traj.size() <= 1) {
+//         return;
+//     }
+// 
+//     remove_points(traj, 0, sample_size_, uid, point_counter);
+// 
+//     if (traj.size() <= sample_size_) {
+//         correct_indices(traj);
+// 
+//         return;
+//     }
+// 
+//     remove_points(traj, traj.size() - sample_size_, traj.size(), uid, point_counter);
+// 
+//     correct_indices(traj);
+// }
 
-    remove_points(traj, 0, sample_size_, uid, point_counter);
+// void ErrorCorrector::remove_points(trajectory::Trajectory& traj, uint64_t start, uint64_t end, const std::string& uid) {
+//     std::vector<double> lats;
+//     std::vector<double> lons;
+// 
+//     for (uint64_t i = start; i < traj.size() && i < end; ++i) {
+//         lats.push_back(traj[i]->lat);
+//         lons.push_back(traj[i]->lon);
+//     }
+// 
+//     std::sort(lats.begin(), lats.end());
+//     std::sort(lons.begin(), lons.end());
+// 
+//     uint64_t med_index = sample_size_ / 2;
+//     double med_lat = lats[med_index];
+//     double med_lon = lons[med_index];
+// 
+//     double time_est = (static_cast<double>(lats.size()) / 2.0) * 0.1;
+// 
+//     for (uint64_t i = start; i < traj.size() && i < end;) {
+//         double distance = geo::Location::distance(traj[i]->lat, traj[i]->lon, med_lat, med_lon);
+// 
+//         // 44.7 m/s = 100 mph (a heuristic)
+//         if (distance / time_est > 44.7) {
+//             traj.erase(traj.begin() + i);
+//         } else {
+//             ++i;
+//         }
+//     }
+// }
 
-    if (traj.size() <= sample_size_) {
-        correct_indices(traj);
-
-        return;
-    }
-
-    remove_points(traj, traj.size() - sample_size_, traj.size(), uid, point_counter);
-
-    correct_indices(traj);
-}
-
-void ErrorCorrector::remove_points(trajectory::Trajectory& traj, uint64_t start, uint64_t end, const std::string& uid) {
+void ErrorCorrector::remove_points(trajectory::Trajectory& traj, uint64_t start, uint64_t end, const std::string& uid ) {
     std::vector<double> lats;
     std::vector<double> lons;
 
@@ -79,36 +108,6 @@ void ErrorCorrector::remove_points(trajectory::Trajectory& traj, uint64_t start,
     uint64_t med_index = sample_size_ / 2;
     double med_lat = lats[med_index];
     double med_lon = lons[med_index];
-
-    double time_est = (static_cast<double>(lats.size()) / 2.0) * 0.1;
-
-    for (uint64_t i = start; i < traj.size() && i < end;) {
-        double distance = geo::Location::distance(traj[i]->lat, traj[i]->lon, med_lat, med_lon);
-
-        // 44.7 m/s = 100 mph (a heuristic)
-        if (distance / time_est > 44.7) {
-            traj.erase(traj.begin() + i);
-        } else {
-            ++i;
-        }
-    }
-}
-
-void ErrorCorrector::remove_points(trajectory::Trajectory& traj, uint64_t start, uint64_t end, const std::string& uid, instrument::PointCounter& point_counter) {
-    std::vector<double> lats;
-    std::vector<double> lons;
-
-    for (uint64_t i = start; i < traj.size() && i < end; ++i) {
-        lats.push_back(traj[i]->lat);
-        lons.push_back(traj[i]->lon);
-    }
-
-    std::sort(lats.begin(), lats.end());
-    std::sort(lons.begin(), lons.end());
-
-    uint64_t med_index = sample_size_ / 2;
-    double med_lat = lats[med_index];
-    double med_lon = lons[med_index];
     double time_est = (static_cast<double>(lats.size()) / 2.0) * 0.1;
 
     for (uint64_t i = start; i < traj.size() && i < end;) {
@@ -116,7 +115,7 @@ void ErrorCorrector::remove_points(trajectory::Trajectory& traj, uint64_t start,
 
         if (distance / time_est > 44.7) {
             traj.erase(traj.begin() + i);
-            point_counter.n_error_points++;
+            if ( pc_ != nullptr ) pc_->n_error_points++;
         } else {
             ++i;
         }

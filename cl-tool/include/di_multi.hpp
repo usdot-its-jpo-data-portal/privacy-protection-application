@@ -4,6 +4,8 @@
 #include "config.hpp"
 #include "cvlib.hpp"
 #include "multi_thread.hpp"
+#include "shrp2type.hpp"
+#include "tracktypes.hpp"
 
 namespace DIMulti {
     using IFSTPtr = std::shared_ptr<std::ifstream>;
@@ -104,8 +106,8 @@ namespace DIMulti {
             Quad::Ptr quad_ptr_;
             std::vector<std::shared_ptr<instrument::PointCounter>> counters_;
 
-            trajectory::Trajectory DeIdentify(trajectory::Trajectory& traj, const std::string& uid) const;
-            trajectory::Trajectory DeIdentify(trajectory::Trajectory& traj, const std::string& uid, instrument::PointCounter& point_counter) const;
+            //trajectory::Trajectory DeIdentify(trajectory::Trajectory& traj, const std::string& uid) const;
+            trajectory::Trajectory DeIdentify(trajectory::Trajectory& traj, const std::string& uid, std::shared_ptr<instrument::PointCounter> pc ) const;
     };
 }
 

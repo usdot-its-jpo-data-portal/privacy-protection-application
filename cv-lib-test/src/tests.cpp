@@ -838,7 +838,7 @@ TEST_CASE("DI Algorithm", "[map match][intersection count][critical interval][pr
 
     // map matching, intersection counting, critical intervals
     SECTION("Feature Detection") {
-        BSMP1::BSMP1CSVTrajectoryFactory factory;
+        track_types::BSMP1CSVTrajectoryFactory factory;
         trajectory::Trajectory traj = factory.make_trajectory("unit-test-data/lib-test-data/utk_test.csv");
         MapFitter mf(qptr, 1.0, .5);
         mf.fit(traj);
@@ -904,7 +904,7 @@ TEST_CASE("DI Algorithm", "[map match][intersection count][critical interval][pr
     }
 
     SECTION("Out Degree Max") {
-        BSMP1::BSMP1CSVTrajectoryFactory factory;
+        track_types::BSMP1CSVTrajectoryFactory factory;
         trajectory::Trajectory traj = factory.make_trajectory("unit-test-data/lib-test-data/utk_test.csv");
         MapFitter mf(qptr, 1.0, .5);
         mf.fit(traj);
@@ -952,7 +952,7 @@ TEST_CASE("DI Algorithm", "[map match][intersection count][critical interval][pr
     }
 
     SECTION("Direct Distance Max") {
-        BSMP1::BSMP1CSVTrajectoryFactory factory;
+        track_types::BSMP1CSVTrajectoryFactory factory;
         trajectory::Trajectory traj = factory.make_trajectory("unit-test-data/lib-test-data/utk_test.csv");
         MapFitter mf(qptr, 1.0, .5);
         mf.fit(traj);
@@ -1000,7 +1000,7 @@ TEST_CASE("DI Algorithm", "[map match][intersection count][critical interval][pr
     }
 
     SECTION("Manhattan Distance Max") {
-        BSMP1::BSMP1CSVTrajectoryFactory factory;
+        track_types::BSMP1CSVTrajectoryFactory factory;
         trajectory::Trajectory traj = factory.make_trajectory("unit-test-data/lib-test-data/utk_test.csv");
         MapFitter mf(qptr, 1.0, .5);
         mf.fit(traj);
@@ -1048,7 +1048,7 @@ TEST_CASE("DI Algorithm", "[map match][intersection count][critical interval][pr
     }
 
     SECTION("Min Metrics") {
-        BSMP1::BSMP1CSVTrajectoryFactory factory;
+        track_types::BSMP1CSVTrajectoryFactory factory;
         trajectory::Trajectory traj = factory.make_trajectory("unit-test-data/lib-test-data/utk_test.csv");
         MapFitter mf(qptr, 1.0, .5);
         mf.fit(traj);
@@ -1096,7 +1096,7 @@ TEST_CASE("DI Algorithm", "[map match][intersection count][critical interval][pr
     }
 
     SECTION("DI") {
-        BSMP1::BSMP1CSVTrajectoryFactory factory;
+        track_types::BSMP1CSVTrajectoryFactory factory;
         trajectory::Trajectory traj = factory.make_trajectory("unit-test-data/lib-test-data/utk_test.csv");
         MapFitter mf(qptr, 1.0, .5);
         mf.fit(traj);
@@ -1144,9 +1144,9 @@ TEST_CASE("DI Algorithm", "[map match][intersection count][critical interval][pr
     }
 
     SECTION("Error And Point Counter") {
-        BSMP1::BSMP1CSVTrajectoryFactory factory_1;
-        instrument::PointCounter point_counter_1; 
-        trajectory::Trajectory traj_1 = factory_1.make_trajectory("unit-test-data/lib-test-data/utk_test.csv", point_counter_1);
+        auto point_counter_1 = std::make_shared<instrument::PointCounter>();
+        track_types::BSMP1CSVTrajectoryFactory factory_1{ point_counter_1 };
+        trajectory::Trajectory traj_1 = factory_1.make_trajectory("unit-test-data/lib-test-data/utk_test.csv");
 
         MapFitter mf_1(qptr, 1.0, .5);
         mf_1.fit(traj_1);
@@ -1184,20 +1184,20 @@ TEST_CASE("DI Algorithm", "[map match][intersection count][critical interval][pr
         DeIdentifier di;
         di.de_identify(traj_1, point_counter_1);
 
-        CHECK(point_counter_1.n_points == 281);
-        CHECK(point_counter_1.n_invalid_field_points == 0);
-        CHECK(point_counter_1.n_invalid_geo_points == 0);
-        CHECK(point_counter_1.n_invalid_heading_points == 0);
-        CHECK(point_counter_1.n_error_points == 0);
-        CHECK(point_counter_1.n_ci_points == 21);
-        CHECK(point_counter_1.n_pi_points == 126);
+        CHECK(point_counter_1->n_points == 281);
+        CHECK(point_counter_1->n_invalid_field_points == 0);
+        CHECK(point_counter_1->n_invalid_geo_points == 0);
+        CHECK(point_counter_1->n_invalid_heading_points == 0);
+        CHECK(point_counter_1->n_error_points == 0);
+        CHECK(point_counter_1->n_ci_points == 21);
+        CHECK(point_counter_1->n_pi_points == 126);
 
-        BSMP1::BSMP1CSVTrajectoryFactory factory_2;
-        instrument::PointCounter point_counter_2; 
-        trajectory::Trajectory traj_2 = factory_2.make_trajectory("unit-test-data/lib-test-data/utk_err_test.csv", point_counter_2);
+        auto point_counter_2 = std::make_shared<instrument::PointCounter>();
+        track_types::BSMP1CSVTrajectoryFactory factory_2{ point_counter_2 };
+        trajectory::Trajectory traj_2 = factory_2.make_trajectory("unit-test-data/lib-test-data/utk_err_test.csv");
 
-        ErrorCorrector ec(50);
-        ec.correct_error(traj_2, factory_2.get_uid(), point_counter_2);
+        ErrorCorrector ec(50, point_counter_2);
+        ec.correct_error(traj_2, factory_2.get_uid());
 
         MapFitter mf_2(qptr, 1.0, .5);
         mf_2.fit(traj_2);
@@ -1230,15 +1230,15 @@ TEST_CASE("DI Algorithm", "[map match][intersection count][critical interval][pr
         
         di.de_identify(traj_2, point_counter_2);
 
-        CHECK(point_counter_2.n_points == 138);
-        CHECK(point_counter_2.n_invalid_field_points == 0);
-        CHECK(point_counter_2.n_invalid_geo_points == 3);
-        CHECK(point_counter_2.n_invalid_heading_points == 1);
-        CHECK(point_counter_2.n_error_points == 4);
-        CHECK(point_counter_2.n_ci_points == 2);
-        CHECK(point_counter_2.n_pi_points == 128);
+        CHECK(point_counter_2->n_points == 138);
+        CHECK(point_counter_2->n_invalid_field_points == 0);
+        CHECK(point_counter_2->n_invalid_geo_points == 3);
+        CHECK(point_counter_2->n_invalid_heading_points == 1);
+        CHECK(point_counter_2->n_error_points == 4);
+        CHECK(point_counter_2->n_ci_points == 2);
+        CHECK(point_counter_2->n_pi_points == 128);
 
-        instrument::PointCounter point_counter_3 = point_counter_1 + point_counter_2;
+        instrument::PointCounter point_counter_3 = (*point_counter_1) + (*point_counter_2);
 
         CHECK(point_counter_3.n_points == 419);
         CHECK(point_counter_3.n_invalid_field_points == 0);

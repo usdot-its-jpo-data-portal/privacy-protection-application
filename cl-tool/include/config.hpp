@@ -23,9 +23,24 @@
 #include "cvlib.hpp"
 
 namespace Config {
+
+    enum class TRACKTYPE : uint32_t { BSMP1 = 0, SHRP2, COUNT };
+
     class DIConfig {
         public:
             using Ptr = std::shared_ptr<DIConfig>;
+
+            // public for ease of access; used for SHRP2
+            uint32_t lat_field_idx = 0;
+            uint32_t lon_field_idx = 0;
+            uint32_t heading_field_idx = 0;
+            uint32_t speed_field_idx = 0;
+            uint32_t gentime_field_idx = 0;
+            uint32_t uid_field_idx = 0;
+            uint32_t num_fields = 19;
+
+            TRACKTYPE tracktype = TRACKTYPE::BSMP1;
+            std::string outfile_header = "";
 
             /**
              * \brief Deidentification configuration constructor.
@@ -97,6 +112,8 @@ namespace Config {
             double GetRandManhattanDistance(void) const;
             double GetRandOutDegree(void) const;
             bool IsPlotKML(void) const;
+
+            TRACKTYPE GetTrackType() const;
 
             /**
              * \brief Print out the current configuration values to an output stream.
@@ -173,6 +190,7 @@ namespace Config {
             double rand_direct_distance_        = 0.0;
             double rand_manhattan_distance_     = 0.0;
             double rand_out_degree_             = 0.0;
+
     };
 }
 

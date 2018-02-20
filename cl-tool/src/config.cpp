@@ -279,6 +279,10 @@ namespace Config {
         return plot_kml_;
     }
 
+    Config::TRACKTYPE DIConfig::GetTrackType(void) const {
+        return tracktype;
+    }
+
     DIConfig::Ptr DIConfig::ConfigFromFile(const std::string& config_file_path) {
         std::ifstream file(config_file_path);
         DIConfig::Ptr config_ptr;
@@ -288,9 +292,7 @@ namespace Config {
         }
 
         config_ptr = ConfigFromStream(file);
-
         file.close();
-
         return config_ptr;
     }
 
@@ -300,9 +302,15 @@ namespace Config {
         DIConfig::Ptr config_ptr = std::make_shared<DIConfig>();
     
         while (std::getline(stream, line)) {
-            line.erase(std::remove(line.begin(), line.end(), '\n'), line.end());
+            // take care of empty lines.
+            string_utilities::strip( line );
+            if ( line.empty() || line[0] == '#' ) { continue; }
             parts = string_utilities::split(line, ':'); 
-            
+
+            // take care of strange spaces.
+            string_utilities::strip( parts[0] );
+            string_utilities::strip( parts[1] );
+
             try {
                 if (parts[0] == "mf_fit_ext") {
                     config_ptr->SetFitExt(std::stod(parts[1]));
@@ -356,9 +364,40 @@ namespace Config {
                     config_ptr->SetQuadNELng(std::stod(parts[1]));
                 } else if (parts[0] == "plot_kml") {
                     config_ptr->TogglePlotKML(!!std::stoi(parts[1]));
+
+                // field indices and units
+                } else if (parts[0] == "outfile_header") {
+                    config_ptr->outfile_header = parts[1];
+                } else if (parts[0] == "num_fields") {
+                    config_ptr->num_fields = ( std::stoi( parts[1] ) );
+                } else if (parts[0] == "latitude_idx") {
+                    config_ptr->lat_field_idx = ( std::stoi( parts[1] ) ) - 1;
+                } else if (parts[0] == "latitude_idx") {
+                    config_ptr->lat_field_idx = ( std::stoi( parts[1] ) ) - 1;
+                } else if (parts[0] == "longitude_idx") {
+                    config_ptr->lon_field_idx = ( std::stoi( parts[1] ) ) - 1;
+                } else if (parts[0] == "heading_idx") {
+                    config_ptr->heading_field_idx = ( std::stoi( parts[1] ) ) - 1;
+                } else if (parts[0] == "speed_idx") {
+                    config_ptr->speed_field_idx = ( std::stoi( parts[1] ) ) - 1;
+                } else if (parts[0] == "time_idx") {
+                    config_ptr->gentime_field_idx = ( std::stoi( parts[1] ) ) - 1;
+                } else if (parts[0] == "uid_idx") {
+                    config_ptr->uid_field_idx = ( std::stoi( parts[1] ) ) - 1;
+                } else if (parts[0] == "tracktype") {
+
+                    config_ptr->tracktype = TRACKTYPE::BSMP1;
+                    std::string tt{ parts[1] };
+                    if ( tt == "SHRP2" ) {
+                        config_ptr->tracktype = TRACKTYPE::SHRP2;
+                    } else {
+                        std::cerr << "Defaulting speed units to meters per second: " + line << std::endl;
+                    }
+
                 } else {
                     std::cerr << "Ignoring configuration line: " + line << std::endl;
                 }
+
             } catch (std::exception&) {
                 std::cerr << "Error parsing configuration line: " + line << std::endl;
 
@@ -395,6 +434,25 @@ namespace Config {
         stream << "Rand manhattan distance: " << rand_manhattan_distance_ << std::endl; 
         stream << "Rand out degree: " << rand_out_degree_ << std::endl; 
         stream << "Plot KML: " << plot_kml_ << std::endl;
+
+        stream << "lat_field_: " << lat_field_ << std::endl;
+        stream << "lon_field_: " << lon_field_ << std::endl;
+        stream << "heading_field_: " << heading_field_ << std::endl;
+        stream << "speed_field_: " << speed_field_ << std::endl;
+        stream << "gentime_field_: " << gentime_field_ << std::endl;
+        stream << "uid_fields_: " << uid_fields_ << std::endl;
+
+        stream << "lat_field_idx: " << lat_field_idx << std::endl;
+        stream << "lon_field_idx: " << lon_field_idx << std::endl;
+        stream << "heading_field_idx: " << heading_field_idx << std::endl;
+        stream << "speed_field_idx: " << speed_field_idx << std::endl;
+        stream << "gentime_field_idx: " << gentime_field_idx << std::endl;
+        stream << "uid_field_idx: " << uid_field_idx << std::endl;
+
+        stream << "tracktype: " << static_cast<uint32_t>(tracktype) << std::endl;
+        stream << "num_fields: " << num_fields << std::endl;
+        stream << "header: " << outfile_header << std::endl;
+
         stream << "*****************************************************************************************" << std::endl;
     }
 }
