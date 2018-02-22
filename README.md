@@ -294,6 +294,10 @@ SOURCE is a text file that contains the path to a trip file on each line. As an 
 $ ./cv_di -c <configuration file> <source-file>
 ```
 
+## Particulars for SHRP2 Data
+
+
+
 # Running The Library Tests
 
 The library tests are designed to cover most of the functions and routines used in the Privacy Protection Tool. To run the compiled library tests, you need to change directory into the test directory and execute the test command:

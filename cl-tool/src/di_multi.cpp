@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <chrono>
 #include <ctime>
+#include <sys/time.h>
 
 namespace DIMulti {
     // FileInfo
@@ -117,6 +118,8 @@ namespace DIMulti {
         kml_dir_path_(kml_dir_path), 
         count_points_(count_points)
         {
+			auto t1 = std::chrono::high_resolution_clock::now();
+
             if (!config_file_path.empty()) {
                 config_ptr_ = Config::DIConfig::ConfigFromFile(config_file_path);
             } else {
@@ -135,6 +138,11 @@ namespace DIMulti {
             for (auto& edge_ptr : shape_factory.get_edges()) {
                 Quad::insert(quad_ptr_, std::dynamic_pointer_cast<const geo::Entity>(edge_ptr)); 
             }
+
+			auto t2 = std::chrono::high_resolution_clock::now();
+			std::chrono::duration<double, std::milli> dif = t2 - t1;
+			//double dif = std::chrono::duration_cast<std::chrono::seconds>( t2 - t1 ).count();
+			std::cerr << "Map building (seconds): " << dif.count() << '\n';
         }
     
     void DICSV::Init(unsigned n_used_threads) {
