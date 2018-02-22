@@ -1,13 +1,11 @@
-# Privacy Protection Algorithm (PPA) 
-This repository contains code and instructions for building two tools for
-processing vehicle trip, or trajectory, data. This tool was developed to process large databases of trips generated
-during connected vehicle pilot studies, but the **Privacy Protection Algorithm can be used on any type of moving object
-data defined as time-sequences of geolocations that also includes heading and speed.** Heading and speed can be derived
-after the initial trip record, but currently the algorithm requires time, latitude, longitude, speed, and heading as a
-minimum for processing.
+# Privacy Protection Application (PPA) 
+This repository contains code and instructions for building two tools (GUI and CLI) for
+processing vehicle trip, or trajectory, data. These tools were developed to process large databases of trips generated
+during connected vehicle pilot studies; however, the **Privacy Protection Application can be used on any type of moving object
+data defined as time-sequences of geolocations that also includes heading and speed.**
 
-The [Privacy Protection Algorithm Manual](./docs/cvdi-user-manual.md) describes the GUI tool's interface, and the
-parameter settings and their influence on algorithm operation. Users should review that material prior to using either
+The [Privacy Protection Application Manual](./docs/cvdi-user-manual.md) describes the GUI tool's interface, and the
+parameter settings and their influence on application operation. Users should review that material prior to using either
 tool.
 
 # Table of Contents
