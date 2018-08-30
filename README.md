@@ -1,4 +1,3 @@
-TODO change references to master branch to whatever we call this ..
 
 # Privacy Protection Algorithm (PPA) 
 This repository contains code and instructions for building a tool for
@@ -32,23 +31,23 @@ ways:
 
 The PPA project uses the [Pull Request Model](https://help.github.com/articles/using-pull-requests). This involves the following project components:
 
-- The Organization Privacy Protection Application Project's [master branch](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application).
-- PPA releases are made via [tags](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/releases) out of master.
+- The Organization Privacy Protection Application Project's [hmm-update branch](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application).
+- PPA releases are made via [tags](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/releases) out of hmm-update.
 - A personal GitHub account.
-- A fork of a project release tag or master branch in your personal GitHub account.
+- A fork of a project release tag or hmm-update branch in your personal GitHub account.
 
 A high level overview of our model and these components is as follows. All work will be submitted via pull requests.
 Developers will work on branches on their personal machines (local clients), push these branches to their **personal GitHub repos** and issue a pull
 request to the organization PPA project. One the project's main developers must review the Pull Request and merge it
 or, if there are issues, discuss them with the submitter. This will ensure that the developers have a better
-understanding of the code base *and* we catch problems before they enter `master`. The following process should be followed:
+understanding of the code base *and* we catch problems before they enter `hmm-update`. The following process should be followed:
 
 ## Initial Setup
 
 - If you do not have one yet, create a personal (or organization) account on GitHub (assume your account name is `<your-github-account-name>`).
 - Log into your personal (or organization) account.
 - Fork [private-protection-application](https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/fork) into your personal GitHub account.
-- On your computer (local client), clone the master branch from you GitHub account :
+- On your computer (local client), clone the hmm-update branch from you GitHub account :
 ```bash
 $ git clone https://github.com/<your-github-account-name>/privacy-protection-appliation.git
 ```
@@ -65,17 +64,17 @@ As an example, assume you are enhancing the existing code or documentation, or w
 
 1. Add an upstream remote repository pointing to the Privacy Protection Application project repository.
     ```git remote add upstream https://github.com/usdot-its-jpo-data-portal/privacy-protection-application.git```  
-1. Pull from the upstream remote repository to get the latest master branch.
-    ```git pull --rebase upstream master```
+1. Pull from the upstream remote repository to get the latest hmm-update branch.
+    ```git pull --rebase upstream hmm-update```
 1. Create a branch on your client (your forked repository).
     ```git branch enhancement```
    where ```enhancement``` is the name you want to use for the branch.
 2. Switch to this branch
     ```git checkout enhancement```
 3. Make the changes need to enhance the code. Note that before doing a pull request (below) you also want to ensure that any changes that have been accepted upstream can be integrated with any changes you are making now, so perform the following command in your forked repository branch prior to issuing a pull request:
-    ```git pull upstream master```
+    ```git pull upstream hmm-update```
 4. When you have completed coding and integrating the upstream code, run the unit tests on your client in your build directory.
-    TODO
+    See [testing](#running-unit-tests).
    
 1. When all the tests pass you can **add, commit, and push your updates to your `enchancement` branch in your fork.** Follow these steps:
     1. Check which files have been changed
@@ -92,17 +91,17 @@ As an example, assume you are enhancing the existing code or documentation, or w
 - After you have pushed your `enhancement` branch to your GitHub account, issue a pull request on GitHub. Details on how to perform a [pull request](https://help.github.com/articles/using-pull-requests) are on GitHub.
 - If the pull request is closing an issue, include a comment with ```fixes #issue_number```.  This comment will close the issue when the pull request is merged.  For more information see [here](https://github.com/blog/1506-closing-issues-via-pull-requests).
 - One of the main project developers will review your pull request and either merge it, or send you feedback. **Do not merge your own pull request.** Code review is essential. If you have not received feedback on your pull request in a timely fashion, contact us via email.
-- Once your pull request has been reviewed and merged (possibly closing an issue), your enhancement will now be part of the privacy protection application project ```master``` branch.
+- Once your pull request has been reviewed and merged (possibly closing an issue), your enhancement will now be part of the privacy protection application project ```hmm-update``` branch.
 - On your client machine, you can delete your branch.
   ```git branch -d enhancement```
-- Pull from the privacy protection application project's ```master``` branch to have your changes reflected in your local (laptop/desktop) `master` branch:
+- Pull from the privacy protection application project's ```hmm-update``` branch to have your changes reflected in your local (laptop/desktop) `hmm-update` branch:
 ```bash
-$ git checkout master
-$ git pull --rebase upstream master
+$ git checkout hmm-update
+$ git pull --rebase upstream hmm-update
 ```
-- To include these in your fork's master branch, push them to your GitHub account.
-  ```git push origin master```
-- At this point the three master branches (one on organization, one on your GitHub account, and one on your client) are all in sync.
+- To include these in your fork's hmm-update branch, push them to your GitHub account.
+  ```git push origin hmm-update```
+- At this point the three hmm-update branches (one on organization, one on your GitHub account, and one on your client) are all in sync.
 
 # Release Notes
 
