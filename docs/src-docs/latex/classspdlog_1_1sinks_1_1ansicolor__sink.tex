@@ -1,0 +1,50 @@
+\hypertarget{classspdlog_1_1sinks_1_1ansicolor__sink}{}\section{spdlog\+:\+:sinks\+:\+:ansicolor\+\_\+sink$<$ Mutex $>$ Class Template Reference}
+\label{classspdlog_1_1sinks_1_1ansicolor__sink}\index{spdlog\+::sinks\+::ansicolor\+\_\+sink$<$ Mutex $>$@{spdlog\+::sinks\+::ansicolor\+\_\+sink$<$ Mutex $>$}}
+
+
+{\ttfamily \#include $<$ansicolor\+\_\+sink.\+h$>$}
+
+Inheritance diagram for spdlog\+:\+:sinks\+:\+:ansicolor\+\_\+sink$<$ Mutex $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classspdlog_1_1sinks_1_1ansicolor__sink}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries ansicolor\+\_\+sink} (F\+I\+LE $\ast$file)\hypertarget{classspdlog_1_1sinks_1_1ansicolor__sink_af8bcfa424c86b13aa996724bc0a16e70}{}\label{classspdlog_1_1sinks_1_1ansicolor__sink_af8bcfa424c86b13aa996724bc0a16e70}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries \+\_\+sink\+\_\+it} (const \hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&msg) override\hypertarget{classspdlog_1_1sinks_1_1ansicolor__sink_acda6ffd87c39e2828bc6af700d37b0f3}{}\label{classspdlog_1_1sinks_1_1ansicolor__sink_acda6ffd87c39e2828bc6af700d37b0f3}
+
+\item 
+void {\bfseries \+\_\+flush} () override\hypertarget{classspdlog_1_1sinks_1_1ansicolor__sink_a0e933cdbf08223904d80fde32f28d569}{}\label{classspdlog_1_1sinks_1_1ansicolor__sink_a0e933cdbf08223904d80fde32f28d569}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+LE $\ast$ {\bfseries target\+\_\+file\+\_\+}\hypertarget{classspdlog_1_1sinks_1_1ansicolor__sink_abeea2ab4923f8bae0c74e0f65a1ebcd6}{}\label{classspdlog_1_1sinks_1_1ansicolor__sink_abeea2ab4923f8bae0c74e0f65a1ebcd6}
+
+\item 
+bool {\bfseries should\+\_\+do\+\_\+colors\+\_\+}\hypertarget{classspdlog_1_1sinks_1_1ansicolor__sink_a4d4ee5bb5b9953f5f150be371d8a9f0e}{}\label{classspdlog_1_1sinks_1_1ansicolor__sink_a4d4ee5bb5b9953f5f150be371d8a9f0e}
+
+\item 
+std\+::map$<$ level\+::level\+\_\+enum, std\+::string $>$ {\bfseries colors\+\_\+}\hypertarget{classspdlog_1_1sinks_1_1ansicolor__sink_a27337af3c5d95e97befd4dfc10a4ca60}{}\label{classspdlog_1_1sinks_1_1ansicolor__sink_a27337af3c5d95e97befd4dfc10a4ca60}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Mutex$>$\\*
+class spdlog\+::sinks\+::ansicolor\+\_\+sink$<$ Mutex $>$}
+
+This sink prefixes the output with an A\+N\+SI escape sequence color code depending on the severity of the message. If no color terminal detected, omit the escape codes. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/sinks/ansicolor\+\_\+sink.\+h\end{DoxyCompactItemize}

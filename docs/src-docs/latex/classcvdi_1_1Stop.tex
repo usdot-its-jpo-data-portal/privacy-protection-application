@@ -1,0 +1,163 @@
+\hypertarget{classcvdi_1_1Stop}{}\section{cvdi\+:\+:Stop Class Reference}
+\label{classcvdi_1_1Stop}\index{cvdi\+::\+Stop@{cvdi\+::\+Stop}}
+
+
+A class that detects stop behavior within a trace.  
+
+
+
+
+{\ttfamily \#include $<$cvdi.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque}
+\begin{DoxyCompactList}\small\item\em A special deque with support for detecting stops in trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Highway\+Set} = std\+::unordered\+\_\+set$<$ long $>$\hypertarget{classcvdi_1_1Stop_aa4c4800d1d37bd89d480448f4ef73c32}{}\label{classcvdi_1_1Stop_aa4c4800d1d37bd89d480448f4ef73c32}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcvdi_1_1Stop_a008996dc88e35a9f9ffd8dd1a68a9cb0}{Stop} (uint64\+\_\+t max\+\_\+time=120, double min\+\_\+distance=15.\+0, double max\+\_\+speed=2.\+5)
+\begin{DoxyCompactList}\small\item\em Construct a stop detector. \end{DoxyCompactList}\item 
+geo\+\_\+data\+::\+Interval\+::\+Ptr\+List \& \hyperlink{classcvdi_1_1Stop_a5313b4db03ad4e79f5210463a4fc48ab}{find\+\_\+stops} (const geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)
+\begin{DoxyCompactList}\small\item\em Find the critical intervals in the trace that exhibit stop behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static geo\+\_\+data\+::\+Index \hyperlink{classcvdi_1_1Stop_ac7bf3679f7efc1152ab304546a26bc4f}{set\+\_\+excluded\+\_\+highways} (const Highway\+Set \&excludes)
+\begin{DoxyCompactList}\small\item\em Set the O\+SM highway types where stops should be ignored. \end{DoxyCompactList}\item 
+static geo\+\_\+data\+::\+Index \hyperlink{classcvdi_1_1Stop_a2fde6d6b071e2113142ffda389139d01}{add\+\_\+excluded\+\_\+highway} (long highway)
+\begin{DoxyCompactList}\small\item\em Add an O\+SM highway type to the current exclude set. \end{DoxyCompactList}\item 
+static bool \hyperlink{classcvdi_1_1Stop_a3f1a66133a4ab398d4f1c24cd50d3126}{valid\+\_\+highway} (const geo\+\_\+data\+::\+Sample\+::\+Ptr sample)
+\begin{DoxyCompactList}\small\item\em Predicate that indicates this point should be considered for stop detection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Deque}\hypertarget{classcvdi_1_1Stop_a4bead8dc8bfdf62e07dd5b97a327cca1}{}\label{classcvdi_1_1Stop_a4bead8dc8bfdf62e07dd5b97a327cca1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that detects stop behavior within a trace. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cvdi\+::\+Stop@{cvdi\+::\+Stop}!Stop@{Stop}}
+\index{Stop@{Stop}!cvdi\+::\+Stop@{cvdi\+::\+Stop}}
+\subsubsection[{\texorpdfstring{Stop(uint64\+\_\+t max\+\_\+time=120, double min\+\_\+distance=15.\+0, double max\+\_\+speed=2.\+5)}{Stop(uint64_t max_time=120, double min_distance=15.0, double max_speed=2.5)}}]{\setlength{\rightskip}{0pt plus 5cm}cvdi\+::\+Stop\+::\+Stop (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{max\+\_\+time = {\ttfamily 120}, }
+\item[{double}]{min\+\_\+distance = {\ttfamily 15.0}, }
+\item[{double}]{max\+\_\+speed = {\ttfamily 2.5}}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1Stop_a008996dc88e35a9f9ffd8dd1a68a9cb0}{}\label{classcvdi_1_1Stop_a008996dc88e35a9f9ffd8dd1a68a9cb0}
+
+
+Construct a stop detector. 
+
+\hyperlink{classcvdi_1_1Stop}{Stop} detectors find stops using distance and time, not by speed alone. If speed exceeds a certain threshold OR it is on an excluded highway type, it will not be considered for stop detection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+time} & (seconds) the maximum loiter time considered as a stop \\
+\hline
+{\em min\+\_\+distance} & (meters) stops not cover more than this distance \\
+\hline
+{\em max\+\_\+speed} & (meters/second) only consider trip points whose speed is less than max speed for stops \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{cvdi\+::\+Stop@{cvdi\+::\+Stop}!add\+\_\+excluded\+\_\+highway@{add\+\_\+excluded\+\_\+highway}}
+\index{add\+\_\+excluded\+\_\+highway@{add\+\_\+excluded\+\_\+highway}!cvdi\+::\+Stop@{cvdi\+::\+Stop}}
+\subsubsection[{\texorpdfstring{add\+\_\+excluded\+\_\+highway(long highway)}{add_excluded_highway(long highway)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Index cvdi\+::\+Stop\+::add\+\_\+excluded\+\_\+highway (
+\begin{DoxyParamCaption}
+\item[{long}]{highway}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcvdi_1_1Stop_a2fde6d6b071e2113142ffda389139d01}{}\label{classcvdi_1_1Stop_a2fde6d6b071e2113142ffda389139d01}
+
+
+Add an O\+SM highway type to the current exclude set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hw} & an O\+SM highway to add to the excluded set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the set to ignore 
+\end{DoxyReturn}
+\index{cvdi\+::\+Stop@{cvdi\+::\+Stop}!find\+\_\+stops@{find\+\_\+stops}}
+\index{find\+\_\+stops@{find\+\_\+stops}!cvdi\+::\+Stop@{cvdi\+::\+Stop}}
+\subsubsection[{\texorpdfstring{find\+\_\+stops(const geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)}{find_stops(const geo_data::Sample::Trace &trace)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Interval\+::\+Ptr\+List \& cvdi\+::\+Stop\+::find\+\_\+stops (
+\begin{DoxyParamCaption}
+\item[{const geo\+\_\+data\+::\+Sample\+::\+Trace \&}]{trace}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1Stop_a5313b4db03ad4e79f5210463a4fc48ab}{}\label{classcvdi_1_1Stop_a5313b4db03ad4e79f5210463a4fc48ab}
+
+
+Find the critical intervals in the trace that exhibit stop behavior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trace} & the trace to review for stops \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of pointers to intervals; the intervals capture the stop critical intervals
+\end{DoxyReturn}
+Find the critical intervals in the provided trajectory that exhibit stop behavior.
+
+N\+O\+TE\+: const reference to container will only allow const\+\_\+iterators... \index{cvdi\+::\+Stop@{cvdi\+::\+Stop}!set\+\_\+excluded\+\_\+highways@{set\+\_\+excluded\+\_\+highways}}
+\index{set\+\_\+excluded\+\_\+highways@{set\+\_\+excluded\+\_\+highways}!cvdi\+::\+Stop@{cvdi\+::\+Stop}}
+\subsubsection[{\texorpdfstring{set\+\_\+excluded\+\_\+highways(const Highway\+Set \&excludes)}{set_excluded_highways(const HighwaySet &excludes)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Index cvdi\+::\+Stop\+::set\+\_\+excluded\+\_\+highways (
+\begin{DoxyParamCaption}
+\item[{const Highway\+Set \&}]{excludes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcvdi_1_1Stop_ac7bf3679f7efc1152ab304546a26bc4f}{}\label{classcvdi_1_1Stop_ac7bf3679f7efc1152ab304546a26bc4f}
+
+
+Set the O\+SM highway types where stops should be ignored. 
+
+This static method will clear the set first.
+
+
+\begin{DoxyParams}{Parameters}
+{\em excludes} & a constant set of O\+SM highway types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the set to ignore 
+\end{DoxyReturn}
+\index{cvdi\+::\+Stop@{cvdi\+::\+Stop}!valid\+\_\+highway@{valid\+\_\+highway}}
+\index{valid\+\_\+highway@{valid\+\_\+highway}!cvdi\+::\+Stop@{cvdi\+::\+Stop}}
+\subsubsection[{\texorpdfstring{valid\+\_\+highway(const geo\+\_\+data\+::\+Sample\+::\+Ptr sample)}{valid_highway(const geo_data::Sample::Ptr sample)}}]{\setlength{\rightskip}{0pt plus 5cm}bool cvdi\+::\+Stop\+::valid\+\_\+highway (
+\begin{DoxyParamCaption}
+\item[{const geo\+\_\+data\+::\+Sample\+::\+Ptr}]{sample}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcvdi_1_1Stop_a3f1a66133a4ab398d4f1c24cd50d3126}{}\label{classcvdi_1_1Stop_a3f1a66133a4ab398d4f1c24cd50d3126}
+
+
+Predicate that indicates this point should be considered for stop detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample} & sample trace point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the road the point is fit to is I\+M\+P\+L\+I\+C\+IT (unknown) or it is N\+OT in the blacklist
+\end{DoxyReturn}
+Predicate that returns true if the road the point is fit to is I\+M\+P\+L\+I\+C\+IT (unknown) or it is N\+OT in the blacklist. Return false if the road the trip point is on is E\+X\+P\+L\+I\+C\+IT and fit to a black list road -- we ignore stops on those roads. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi/include/cvdi.\+hpp\item 
+cvdi-\/src/cvdi/src/cvdi.\+cpp\end{DoxyCompactItemize}

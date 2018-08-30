@@ -1,0 +1,60 @@
+\hypertarget{classspdlog_1_1SPDLOG__FINAL}{}\section{spdlog\+:\+:S\+P\+D\+L\+O\+G\+\_\+\+F\+I\+N\+AL Class Reference}
+\label{classspdlog_1_1SPDLOG__FINAL}\index{spdlog\+::\+S\+P\+D\+L\+O\+G\+\_\+\+F\+I\+N\+AL@{spdlog\+::\+S\+P\+D\+L\+O\+G\+\_\+\+F\+I\+N\+AL}}
+Inheritance diagram for spdlog\+:\+:S\+P\+D\+L\+O\+G\+\_\+\+F\+I\+N\+AL\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classspdlog_1_1SPDLOG__FINAL}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class It $>$ }\\{\bfseries async\+\_\+logger} (const std\+::string \&name, const It \&begin, const It \&end, size\+\_\+t queue\+\_\+size, const async\+\_\+overflow\+\_\+policy overflow\+\_\+policy=async\+\_\+overflow\+\_\+policy\+::block\+\_\+retry, const std\+::function$<$ void()$>$ \&worker\+\_\+warmup\+\_\+cb=nullptr, const std\+::chrono\+::milliseconds \&flush\+\_\+interval\+\_\+ms=std\+::chrono\+::milliseconds\+::zero(), const std\+::function$<$ void()$>$ \&worker\+\_\+teardown\+\_\+cb=nullptr)\hypertarget{classspdlog_1_1SPDLOG__FINAL_a8d7804abd9cfdf2258beecc99e91d15d}{}\label{classspdlog_1_1SPDLOG__FINAL_a8d7804abd9cfdf2258beecc99e91d15d}
+
+\item 
+{\bfseries async\+\_\+logger} (const std\+::string \&logger\+\_\+name, sinks\+\_\+init\+\_\+list sinks, size\+\_\+t queue\+\_\+size, const async\+\_\+overflow\+\_\+policy overflow\+\_\+policy=async\+\_\+overflow\+\_\+policy\+::block\+\_\+retry, const std\+::function$<$ void()$>$ \&worker\+\_\+warmup\+\_\+cb=nullptr, const std\+::chrono\+::milliseconds \&flush\+\_\+interval\+\_\+ms=std\+::chrono\+::milliseconds\+::zero(), const std\+::function$<$ void()$>$ \&worker\+\_\+teardown\+\_\+cb=nullptr)\hypertarget{classspdlog_1_1SPDLOG__FINAL_a855d21b6ac96d191a4ed339a97d73e5d}{}\label{classspdlog_1_1SPDLOG__FINAL_a855d21b6ac96d191a4ed339a97d73e5d}
+
+\item 
+{\bfseries async\+\_\+logger} (const std\+::string \&logger\+\_\+name, sink\+\_\+ptr single\+\_\+sink, size\+\_\+t queue\+\_\+size, const async\+\_\+overflow\+\_\+policy overflow\+\_\+policy=async\+\_\+overflow\+\_\+policy\+::block\+\_\+retry, const std\+::function$<$ void()$>$ \&worker\+\_\+warmup\+\_\+cb=nullptr, const std\+::chrono\+::milliseconds \&flush\+\_\+interval\+\_\+ms=std\+::chrono\+::milliseconds\+::zero(), const std\+::function$<$ void()$>$ \&worker\+\_\+teardown\+\_\+cb=nullptr)\hypertarget{classspdlog_1_1SPDLOG__FINAL_a8eb3cb8f76b0085eef4b2a76eb4f9aeb}{}\label{classspdlog_1_1SPDLOG__FINAL_a8eb3cb8f76b0085eef4b2a76eb4f9aeb}
+
+\item 
+void {\bfseries flush} () override\hypertarget{classspdlog_1_1SPDLOG__FINAL_ad59f988274b7d8915af69b297ca632ff}{}\label{classspdlog_1_1SPDLOG__FINAL_ad59f988274b7d8915af69b297ca632ff}
+
+\item 
+virtual void {\bfseries set\+\_\+error\+\_\+handler} (log\+\_\+err\+\_\+handler) override\hypertarget{classspdlog_1_1SPDLOG__FINAL_af336d7e05074c0156f44fac525edcec9}{}\label{classspdlog_1_1SPDLOG__FINAL_af336d7e05074c0156f44fac525edcec9}
+
+\item 
+virtual log\+\_\+err\+\_\+handler {\bfseries error\+\_\+handler} () override\hypertarget{classspdlog_1_1SPDLOG__FINAL_ac78a7f969a36a69189a532af74c7de16}{}\label{classspdlog_1_1SPDLOG__FINAL_ac78a7f969a36a69189a532af74c7de16}
+
+\item 
+{\bfseries pattern\+\_\+formatter} (const std\+::string \&pattern, pattern\+\_\+time\+\_\+type pattern\+\_\+time=pattern\+\_\+time\+\_\+type\+::local)\hypertarget{classspdlog_1_1SPDLOG__FINAL_a3388a4dfd79ae9d33ef6624991ec79f6}{}\label{classspdlog_1_1SPDLOG__FINAL_a3388a4dfd79ae9d33ef6624991ec79f6}
+
+\item 
+{\bfseries pattern\+\_\+formatter} (const pattern\+\_\+formatter \&)=delete\hypertarget{classspdlog_1_1SPDLOG__FINAL_a3a25ed84ba28f3efc1e751ec61d4c497}{}\label{classspdlog_1_1SPDLOG__FINAL_a3a25ed84ba28f3efc1e751ec61d4c497}
+
+\item 
+pattern\+\_\+formatter \& {\bfseries operator=} (const pattern\+\_\+formatter \&)=delete\hypertarget{classspdlog_1_1SPDLOG__FINAL_a87ac07fbf23b47b7951108a99f29b1f5}{}\label{classspdlog_1_1SPDLOG__FINAL_a87ac07fbf23b47b7951108a99f29b1f5}
+
+\item 
+void {\bfseries format} (\hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&msg) override\hypertarget{classspdlog_1_1SPDLOG__FINAL_a2cebe817331a75c381428afb4c994989}{}\label{classspdlog_1_1SPDLOG__FINAL_a2cebe817331a75c381428afb4c994989}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries \+\_\+sink\+\_\+it} (\hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&msg) override\hypertarget{classspdlog_1_1SPDLOG__FINAL_a5388f33b58195e6327006abcdc29d3b7}{}\label{classspdlog_1_1SPDLOG__FINAL_a5388f33b58195e6327006abcdc29d3b7}
+
+\item 
+void {\bfseries \+\_\+set\+\_\+formatter} (spdlog\+::formatter\+\_\+ptr msg\+\_\+formatter) override\hypertarget{classspdlog_1_1SPDLOG__FINAL_a108a1495f9a1d7da3e69b5ef0d04051a}{}\label{classspdlog_1_1SPDLOG__FINAL_a108a1495f9a1d7da3e69b5ef0d04051a}
+
+\item 
+void {\bfseries \+\_\+set\+\_\+pattern} (const std\+::string \&pattern, pattern\+\_\+time\+\_\+type pattern\+\_\+time) override\hypertarget{classspdlog_1_1SPDLOG__FINAL_a30903420b1196a5a31ea52952e8a3750}{}\label{classspdlog_1_1SPDLOG__FINAL_a30903420b1196a5a31ea52952e8a3750}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/async\+\_\+logger.\+h\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/formatter.\+h\end{DoxyCompactItemize}

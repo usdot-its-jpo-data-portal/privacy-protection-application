@@ -1,0 +1,71 @@
+\hypertarget{classfmt_1_1File}{}\section{fmt\+:\+:File Class Reference}
+\label{classfmt_1_1File}\index{fmt\+::\+File@{fmt\+::\+File}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries R\+D\+O\+N\+LY} = F\+M\+T\+\_\+\+P\+O\+S\+IX(O\+\_\+\+R\+D\+O\+N\+LY), 
+{\bfseries W\+R\+O\+N\+LY} = F\+M\+T\+\_\+\+P\+O\+S\+IX(O\+\_\+\+W\+R\+O\+N\+LY), 
+{\bfseries R\+D\+WR} = F\+M\+T\+\_\+\+P\+O\+S\+IX(O\+\_\+\+R\+D\+WR)
+ \}\hypertarget{classfmt_1_1File_acb363a47f227d0b5821b34bb2b302dbd}{}\label{classfmt_1_1File_acb363a47f227d0b5821b34bb2b302dbd}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries File} (\hyperlink{classfmt_1_1BasicCStringRef}{C\+String\+Ref} path, int oflag)\hypertarget{classfmt_1_1File_afe222b8f1728f1d803302aacba34ab0a}{}\label{classfmt_1_1File_afe222b8f1728f1d803302aacba34ab0a}
+
+\item 
+{\bfseries File} (Proxy p) F\+M\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT\hypertarget{classfmt_1_1File_af39ee41d0516e4410f935db49bc25a70}{}\label{classfmt_1_1File_af39ee41d0516e4410f935db49bc25a70}
+
+\item 
+{\bfseries File} (\hyperlink{classfmt_1_1File}{File} \&other) F\+M\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT\hypertarget{classfmt_1_1File_aa46430b90123d6ab616599c7da79baae}{}\label{classfmt_1_1File_aa46430b90123d6ab616599c7da79baae}
+
+\item 
+\hyperlink{classfmt_1_1File}{File} \& {\bfseries operator=} (Proxy p)\hypertarget{classfmt_1_1File_a49693f3a5e0cdb33e8db1e80f3bfb66d}{}\label{classfmt_1_1File_a49693f3a5e0cdb33e8db1e80f3bfb66d}
+
+\item 
+\hyperlink{classfmt_1_1File}{File} \& {\bfseries operator=} (\hyperlink{classfmt_1_1File}{File} \&other)\hypertarget{classfmt_1_1File_a0a5735314d74ec3769077e2ae1ce960a}{}\label{classfmt_1_1File_a0a5735314d74ec3769077e2ae1ce960a}
+
+\item 
+{\bfseries operator Proxy} () F\+M\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT\hypertarget{classfmt_1_1File_ab1523e72fde1f9080a4bae41dccfd824}{}\label{classfmt_1_1File_ab1523e72fde1f9080a4bae41dccfd824}
+
+\item 
+int {\bfseries descriptor} () const F\+M\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT\hypertarget{classfmt_1_1File_a19976004ecb9edfb762b5255736fe73c}{}\label{classfmt_1_1File_a19976004ecb9edfb762b5255736fe73c}
+
+\item 
+void {\bfseries close} ()\hypertarget{classfmt_1_1File_a0f9f9adfcae772efe2cae9c60a2f23f4}{}\label{classfmt_1_1File_a0f9f9adfcae772efe2cae9c60a2f23f4}
+
+\item 
+Long\+Long {\bfseries size} () const \hypertarget{classfmt_1_1File_aea68742f4f814c97d497a8a04dfc571e}{}\label{classfmt_1_1File_aea68742f4f814c97d497a8a04dfc571e}
+
+\item 
+std\+::size\+\_\+t {\bfseries read} (void $\ast$buffer, std\+::size\+\_\+t count)\hypertarget{classfmt_1_1File_abc5028be3839fafe1e54aa44bf94cb32}{}\label{classfmt_1_1File_abc5028be3839fafe1e54aa44bf94cb32}
+
+\item 
+std\+::size\+\_\+t {\bfseries write} (const void $\ast$buffer, std\+::size\+\_\+t count)\hypertarget{classfmt_1_1File_a0af6a258b5ca604680a83bada8a836d8}{}\label{classfmt_1_1File_a0af6a258b5ca604680a83bada8a836d8}
+
+\item 
+void {\bfseries dup2} (int fd)\hypertarget{classfmt_1_1File_a45718106d65eb24d0a44dbd6ef75865c}{}\label{classfmt_1_1File_a45718106d65eb24d0a44dbd6ef75865c}
+
+\item 
+void {\bfseries dup2} (int fd, \hyperlink{classfmt_1_1ErrorCode}{Error\+Code} \&ec) F\+M\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT\hypertarget{classfmt_1_1File_a2c15a1bef5be959578969a275d470011}{}\label{classfmt_1_1File_a2c15a1bef5be959578969a275d470011}
+
+\item 
+\hyperlink{classfmt_1_1BufferedFile}{Buffered\+File} {\bfseries fdopen} (const char $\ast$mode)\hypertarget{classfmt_1_1File_ab8f1cc502c78916df5f743900ea92ad4}{}\label{classfmt_1_1File_ab8f1cc502c78916df5f743900ea92ad4}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classfmt_1_1File}{File} {\bfseries dup} (int fd)\hypertarget{classfmt_1_1File_a2521de9e7f1ee48234ddc117689a3739}{}\label{classfmt_1_1File_a2521de9e7f1ee48234ddc117689a3739}
+
+\item 
+static void {\bfseries pipe} (\hyperlink{classfmt_1_1File}{File} \&read\+\_\+end, \hyperlink{classfmt_1_1File}{File} \&write\+\_\+end)\hypertarget{classfmt_1_1File_a84143751d0471636367eddbdf1269823}{}\label{classfmt_1_1File_a84143751d0471636367eddbdf1269823}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/posix.\+h\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/posix.\+cc\end{DoxyCompactItemize}

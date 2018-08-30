@@ -1,0 +1,63 @@
+\hypertarget{classfmt_1_1BasicCStringRef}{}\section{fmt\+:\+:Basic\+C\+String\+Ref$<$ Char $>$ Class Template Reference}
+\label{classfmt_1_1BasicCStringRef}\index{fmt\+::\+Basic\+C\+String\+Ref$<$ Char $>$@{fmt\+::\+Basic\+C\+String\+Ref$<$ Char $>$}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfmt_1_1BasicCStringRef_ad79244507bdc1213e0dc6c505cf265f2}{Basic\+C\+String\+Ref} (const Char $\ast$s)
+\item 
+\hyperlink{classfmt_1_1BasicCStringRef_ab460855d19c769773de532296f9f13f9}{Basic\+C\+String\+Ref} (const std\+::basic\+\_\+string$<$ Char $>$ \&s)
+\item 
+const Char $\ast$ \hyperlink{classfmt_1_1BasicCStringRef_ae3bafa845b53339b20c4f5edb4f635f9}{c\+\_\+str} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Char$>$\\*
+class fmt\+::\+Basic\+C\+String\+Ref$<$ Char $>$}
+
+A reference to a null terminated string. It can be constructed from a C string or {\ttfamily std\+::string}.
+
+You can use one of the following typedefs for common character types\+:
+
++-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ Type $\vert$ Definition $\vert$ +=============+==========================+ $\vert$ C\+String\+Ref $\vert$ Basic\+C\+String\+Ref$<$char$>$ $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ W\+C\+String\+Ref $\vert$ Basic\+C\+String\+Ref$<$wchar\+\_\+t$>$ $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+
+
+This class is most useful as a parameter type to allow passing different types of strings to a function, for example\+:\+:
+
+template $<$typename... Args$>$ std\+::string format(C\+String\+Ref format\+\_\+str, const Args \& ... args);
+
+format(\char`\"{}\{\}\char`\"{}, 42); format(std\+::string(\char`\"{}\{\}\char`\"{}), 42);  
+
+\subsection{Constructor \& Destructor Documentation}
+\index{fmt\+::\+Basic\+C\+String\+Ref@{fmt\+::\+Basic\+C\+String\+Ref}!Basic\+C\+String\+Ref@{Basic\+C\+String\+Ref}}
+\index{Basic\+C\+String\+Ref@{Basic\+C\+String\+Ref}!fmt\+::\+Basic\+C\+String\+Ref@{fmt\+::\+Basic\+C\+String\+Ref}}
+\subsubsection[{\texorpdfstring{Basic\+C\+String\+Ref(const Char $\ast$s)}{BasicCStringRef(const Char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char$>$ {\bf fmt\+::\+Basic\+C\+String\+Ref}$<$ Char $>$\+::{\bf Basic\+C\+String\+Ref} (
+\begin{DoxyParamCaption}
+\item[{const Char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicCStringRef_ad79244507bdc1213e0dc6c505cf265f2}{}\label{classfmt_1_1BasicCStringRef_ad79244507bdc1213e0dc6c505cf265f2}
+Constructs a string reference object from a C string. \index{fmt\+::\+Basic\+C\+String\+Ref@{fmt\+::\+Basic\+C\+String\+Ref}!Basic\+C\+String\+Ref@{Basic\+C\+String\+Ref}}
+\index{Basic\+C\+String\+Ref@{Basic\+C\+String\+Ref}!fmt\+::\+Basic\+C\+String\+Ref@{fmt\+::\+Basic\+C\+String\+Ref}}
+\subsubsection[{\texorpdfstring{Basic\+C\+String\+Ref(const std\+::basic\+\_\+string$<$ Char $>$ \&s)}{BasicCStringRef(const std::basic_string< Char > &s)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char$>$ {\bf fmt\+::\+Basic\+C\+String\+Ref}$<$ Char $>$\+::{\bf Basic\+C\+String\+Ref} (
+\begin{DoxyParamCaption}
+\item[{const std\+::basic\+\_\+string$<$ Char $>$ \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicCStringRef_ab460855d19c769773de532296f9f13f9}{}\label{classfmt_1_1BasicCStringRef_ab460855d19c769773de532296f9f13f9}
+Constructs a string reference from an {\ttfamily std\+::string} object.  
+
+\subsection{Member Function Documentation}
+\index{fmt\+::\+Basic\+C\+String\+Ref@{fmt\+::\+Basic\+C\+String\+Ref}!c\+\_\+str@{c\+\_\+str}}
+\index{c\+\_\+str@{c\+\_\+str}!fmt\+::\+Basic\+C\+String\+Ref@{fmt\+::\+Basic\+C\+String\+Ref}}
+\subsubsection[{\texorpdfstring{c\+\_\+str() const }{c_str() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char$>$ const Char$\ast$ {\bf fmt\+::\+Basic\+C\+String\+Ref}$<$ Char $>$\+::c\+\_\+str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicCStringRef_ae3bafa845b53339b20c4f5edb4f635f9}{}\label{classfmt_1_1BasicCStringRef_ae3bafa845b53339b20c4f5edb4f635f9}
+Returns the pointer to a C string. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

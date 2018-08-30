@@ -1,0 +1,290 @@
+\hypertarget{classtool_1_1Option}{}\section{tool\+:\+:Option Class Reference}
+\label{classtool_1_1Option}\index{tool\+::\+Option@{tool\+::\+Option}}
+
+
+A basic command line option.  
+
+
+
+
+{\ttfamily \#include $<$tool.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtool_1_1Option_ac9f2b30a192af0e158832b0bdef9aa93}{Option} (char short\+\_\+name, const std\+::string \&long\+\_\+name, const std\+::string \&description)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classtool_1_1Option}{Option} constructor with no default value. \end{DoxyCompactList}\item 
+\hyperlink{classtool_1_1Option_aa5467959f13a00f8a560e735b4cfde72}{Option} (char short\+\_\+name, const std\+::string \&long\+\_\+name, const std\+::string \&description, const std\+::string \&default\+\_\+val)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classtool_1_1Option}{Option} constructor with a default value. \end{DoxyCompactList}\item 
+char \hyperlink{classtool_1_1Option_a2a50ad5b1599988a26375e0a1c26258c}{Get\+Short\+Name} (void) const 
+\begin{DoxyCompactList}\small\item\em Get short name of this option. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classtool_1_1Option_a79fef07bc337c275e41573572b615d29}{Get\+Long\+Name} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the long name of this option. \end{DoxyCompactList}\item 
+void \hyperlink{classtool_1_1Option_a55095d2ae73bf936c2cb944e440b84b1}{Set\+Val} (const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em Set the value of this option. \end{DoxyCompactList}\item 
+void \hyperlink{classtool_1_1Option_a4fec21690e82f26e9d875dc1267bc3c3}{Set\+Val} ()\hypertarget{classtool_1_1Option_a4fec21690e82f26e9d875dc1267bc3c3}{}\label{classtool_1_1Option_a4fec21690e82f26e9d875dc1267bc3c3}
+
+\begin{DoxyCompactList}\small\item\em Set the value of this option to true. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classtool_1_1Option_a4d06e37da415d410a18e3facbb30abc3}{Get\+String\+Val} () const 
+\begin{DoxyCompactList}\small\item\em Get the value of this option. \end{DoxyCompactList}\item 
+int \hyperlink{classtool_1_1Option_a46701faf98e40b5f6a81fe0c86865b15}{Get\+Int\+Val} () const 
+\begin{DoxyCompactList}\small\item\em Get the value of this option as an integer. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classtool_1_1Option_aeffb50df47db2627a232e8c04b0aeca3}{Get\+Uint64\+Val} () const 
+\begin{DoxyCompactList}\small\item\em Get the value of this option as an unsigned long long (unsigned 64-\/bit). \end{DoxyCompactList}\item 
+double \hyperlink{classtool_1_1Option_a2c259934e9cd770dfad1efb70a71c1f0}{Get\+Double\+Val} () const 
+\begin{DoxyCompactList}\small\item\em Get the value of this option as a double. \end{DoxyCompactList}\item 
+bool \hyperlink{classtool_1_1Option_ab7d08f16def63f9015d62dbfe06e628e}{Get\+Bool\+Val} () const 
+\begin{DoxyCompactList}\small\item\em Get the value of this option as a boolean. This returns True if the underlying string value is anything other than an empty string. Otherwise returns False. \end{DoxyCompactList}\item 
+bool \hyperlink{classtool_1_1Option_aceef342485d7f2b6c1308d7b04b1b1ea}{Is\+Flag} () const 
+\begin{DoxyCompactList}\small\item\em Get the flag status of this option. \end{DoxyCompactList}\item 
+bool \hyperlink{classtool_1_1Option_aac9058af5de2dd1c1d73367e1430c9e9}{Has\+Val} () const 
+\begin{DoxyCompactList}\small\item\em Get the value status of this option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classtool_1_1Option_a8e9bf3e5994c33fa14638743683e959d}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classtool_1_1Option}{Option} \&option)
+\begin{DoxyCompactList}\small\item\em Write an \hyperlink{classtool_1_1Option}{Option} to a stream formatted for command line help output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A basic command line option. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tool\+::\+Option@{tool\+::\+Option}!Option@{Option}}
+\index{Option@{Option}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Option(char short\+\_\+name, const std\+::string \&long\+\_\+name, const std\+::string \&description)}{Option(char short_name, const std::string &long_name, const std::string &description)}}]{\setlength{\rightskip}{0pt plus 5cm}tool\+::\+Option\+::\+Option (
+\begin{DoxyParamCaption}
+\item[{char}]{short\+\_\+name, }
+\item[{const std\+::string \&}]{long\+\_\+name, }
+\item[{const std\+::string \&}]{description}
+\end{DoxyParamCaption}
+)}\hypertarget{classtool_1_1Option_ac9f2b30a192af0e158832b0bdef9aa93}{}\label{classtool_1_1Option_ac9f2b30a192af0e158832b0bdef9aa93}
+
+
+\hyperlink{classtool_1_1Option}{Option} constructor with no default value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em short\+\_\+name} & the character used for the short name of the option \\
+\hline
+{\em long\+\_\+name} & the string used for the long name of the option \\
+\hline
+{\em description} & the string used for the description of the option \\
+\hline
+\end{DoxyParams}
+\index{tool\+::\+Option@{tool\+::\+Option}!Option@{Option}}
+\index{Option@{Option}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Option(char short\+\_\+name, const std\+::string \&long\+\_\+name, const std\+::string \&description, const std\+::string \&default\+\_\+val)}{Option(char short_name, const std::string &long_name, const std::string &description, const std::string &default_val)}}]{\setlength{\rightskip}{0pt plus 5cm}tool\+::\+Option\+::\+Option (
+\begin{DoxyParamCaption}
+\item[{char}]{short\+\_\+name, }
+\item[{const std\+::string \&}]{long\+\_\+name, }
+\item[{const std\+::string \&}]{description, }
+\item[{const std\+::string \&}]{default\+\_\+val}
+\end{DoxyParamCaption}
+)}\hypertarget{classtool_1_1Option_aa5467959f13a00f8a560e735b4cfde72}{}\label{classtool_1_1Option_aa5467959f13a00f8a560e735b4cfde72}
+
+
+\hyperlink{classtool_1_1Option}{Option} constructor with a default value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em short\+\_\+name} & the character used for the short name of the option \\
+\hline
+{\em long\+\_\+name} & the string used for the long name of the option \\
+\hline
+{\em description} & the string used for the description of the option \\
+\hline
+{\em default\+\_\+val} & the string used for the default value of the option \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tool\+::\+Option@{tool\+::\+Option}!Get\+Bool\+Val@{Get\+Bool\+Val}}
+\index{Get\+Bool\+Val@{Get\+Bool\+Val}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Get\+Bool\+Val() const }{GetBoolVal() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool tool\+::\+Option\+::\+Get\+Bool\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Option_ab7d08f16def63f9015d62dbfe06e628e}{}\label{classtool_1_1Option_ab7d08f16def63f9015d62dbfe06e628e}
+
+
+Get the value of this option as a boolean. This returns True if the underlying string value is anything other than an empty string. Otherwise returns False. 
+
+\begin{DoxyReturn}{Returns}
+the boolean value of this option 
+\end{DoxyReturn}
+\index{tool\+::\+Option@{tool\+::\+Option}!Get\+Double\+Val@{Get\+Double\+Val}}
+\index{Get\+Double\+Val@{Get\+Double\+Val}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Get\+Double\+Val() const }{GetDoubleVal() const }}]{\setlength{\rightskip}{0pt plus 5cm}double tool\+::\+Option\+::\+Get\+Double\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Option_a2c259934e9cd770dfad1efb70a71c1f0}{}\label{classtool_1_1Option_a2c259934e9cd770dfad1efb70a71c1f0}
+
+
+Get the value of this option as a double. 
+
+\begin{DoxyReturn}{Returns}
+the double value of this option 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the value cannot be converted to a double \\
+\hline
+\end{DoxyExceptions}
+\index{tool\+::\+Option@{tool\+::\+Option}!Get\+Int\+Val@{Get\+Int\+Val}}
+\index{Get\+Int\+Val@{Get\+Int\+Val}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Get\+Int\+Val() const }{GetIntVal() const }}]{\setlength{\rightskip}{0pt plus 5cm}int tool\+::\+Option\+::\+Get\+Int\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Option_a46701faf98e40b5f6a81fe0c86865b15}{}\label{classtool_1_1Option_a46701faf98e40b5f6a81fe0c86865b15}
+
+
+Get the value of this option as an integer. 
+
+\begin{DoxyReturn}{Returns}
+the integer value of this option 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the value cannot be converted to an integer \\
+\hline
+\end{DoxyExceptions}
+\index{tool\+::\+Option@{tool\+::\+Option}!Get\+Long\+Name@{Get\+Long\+Name}}
+\index{Get\+Long\+Name@{Get\+Long\+Name}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Get\+Long\+Name(void) const }{GetLongName(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& tool\+::\+Option\+::\+Get\+Long\+Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Option_a79fef07bc337c275e41573572b615d29}{}\label{classtool_1_1Option_a79fef07bc337c275e41573572b615d29}
+
+
+Get the long name of this option. 
+
+\begin{DoxyReturn}{Returns}
+the string representing the long name of this option 
+\end{DoxyReturn}
+\index{tool\+::\+Option@{tool\+::\+Option}!Get\+Short\+Name@{Get\+Short\+Name}}
+\index{Get\+Short\+Name@{Get\+Short\+Name}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Get\+Short\+Name(void) const }{GetShortName(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}char tool\+::\+Option\+::\+Get\+Short\+Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Option_a2a50ad5b1599988a26375e0a1c26258c}{}\label{classtool_1_1Option_a2a50ad5b1599988a26375e0a1c26258c}
+
+
+Get short name of this option. 
+
+\begin{DoxyReturn}{Returns}
+the character representing the short name of this option 
+\end{DoxyReturn}
+\index{tool\+::\+Option@{tool\+::\+Option}!Get\+String\+Val@{Get\+String\+Val}}
+\index{Get\+String\+Val@{Get\+String\+Val}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Get\+String\+Val() const }{GetStringVal() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& tool\+::\+Option\+::\+Get\+String\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Option_a4d06e37da415d410a18e3facbb30abc3}{}\label{classtool_1_1Option_a4d06e37da415d410a18e3facbb30abc3}
+
+
+Get the value of this option. 
+
+\begin{DoxyReturn}{Returns}
+the string value of this option 
+\end{DoxyReturn}
+\index{tool\+::\+Option@{tool\+::\+Option}!Get\+Uint64\+Val@{Get\+Uint64\+Val}}
+\index{Get\+Uint64\+Val@{Get\+Uint64\+Val}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Get\+Uint64\+Val() const }{GetUint64Val() const }}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t tool\+::\+Option\+::\+Get\+Uint64\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Option_aeffb50df47db2627a232e8c04b0aeca3}{}\label{classtool_1_1Option_aeffb50df47db2627a232e8c04b0aeca3}
+
+
+Get the value of this option as an unsigned long long (unsigned 64-\/bit). 
+
+\begin{DoxyReturn}{Returns}
+the unsigned long long value of this option 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the value cannot be converted to a long long value \\
+\hline
+\end{DoxyExceptions}
+\index{tool\+::\+Option@{tool\+::\+Option}!Has\+Val@{Has\+Val}}
+\index{Has\+Val@{Has\+Val}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Has\+Val() const }{HasVal() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool tool\+::\+Option\+::\+Has\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Option_aac9058af5de2dd1c1d73367e1430c9e9}{}\label{classtool_1_1Option_aac9058af5de2dd1c1d73367e1430c9e9}
+
+
+Get the value status of this option. 
+
+\begin{DoxyReturn}{Returns}
+true if this option has its value set, otherwise false 
+\end{DoxyReturn}
+\index{tool\+::\+Option@{tool\+::\+Option}!Is\+Flag@{Is\+Flag}}
+\index{Is\+Flag@{Is\+Flag}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Is\+Flag() const }{IsFlag() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool tool\+::\+Option\+::\+Is\+Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Option_aceef342485d7f2b6c1308d7b04b1b1ea}{}\label{classtool_1_1Option_aceef342485d7f2b6c1308d7b04b1b1ea}
+
+
+Get the flag status of this option. 
+
+\begin{DoxyReturn}{Returns}
+true if the option is a flag, otherwise false 
+\end{DoxyReturn}
+\index{tool\+::\+Option@{tool\+::\+Option}!Set\+Val@{Set\+Val}}
+\index{Set\+Val@{Set\+Val}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{Set\+Val(const std\+::string \&val)}{SetVal(const std::string &val)}}]{\setlength{\rightskip}{0pt plus 5cm}void tool\+::\+Option\+::\+Set\+Val (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{classtool_1_1Option_a55095d2ae73bf936c2cb944e440b84b1}{}\label{classtool_1_1Option_a55095d2ae73bf936c2cb944e440b84b1}
+
+
+Set the value of this option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & the string representing the new value of this option \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{tool\+::\+Option@{tool\+::\+Option}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!tool\+::\+Option@{tool\+::\+Option}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Option} \&}]{option}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classtool_1_1Option_a8e9bf3e5994c33fa14638743683e959d}{}\label{classtool_1_1Option_a8e9bf3e5994c33fa14638743683e959d}
+
+
+Write an \hyperlink{classtool_1_1Option}{Option} to a stream formatted for command line help output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream object where the point will be written \\
+\hline
+{\em pt} & the option to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the given stream object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/tool/include/tool.\+hpp\item 
+cvdi-\/src/tool/src/tool.\+cpp\end{DoxyCompactItemize}

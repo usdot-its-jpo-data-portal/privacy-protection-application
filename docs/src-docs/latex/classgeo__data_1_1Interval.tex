@@ -1,0 +1,240 @@
+\hypertarget{classgeo__data_1_1Interval}{}\section{geo\+\_\+data\+:\+:Interval Class Reference}
+\label{classgeo__data_1_1Interval}\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+
+
+An integer-\/based interval class to be used with trajectories.  
+
+
+
+
+{\ttfamily \#include $<$geo\+\_\+data.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classgeo__data_1_1Interval}{Interval} $>$\hypertarget{classgeo__data_1_1Interval_a36abd263b41898cd7253324766eb8445}{}\label{classgeo__data_1_1Interval_a36abd263b41898cd7253324766eb8445}
+
+\item 
+using {\bfseries Ptr\+List} = std\+::vector$<$ Ptr $>$\hypertarget{classgeo__data_1_1Interval_a8379b2779f3f02d47379e8b5dc693dd0}{}\label{classgeo__data_1_1Interval_a8379b2779f3f02d47379e8b5dc693dd0}
+
+\item 
+using {\bfseries Aux\+Set} = std\+::unordered\+\_\+set$<$ std\+::string $>$\hypertarget{classgeo__data_1_1Interval_aab3ed186003e96d4dee524d9aa34af62}{}\label{classgeo__data_1_1Interval_aab3ed186003e96d4dee524d9aa34af62}
+
+\item 
+using {\bfseries Aux\+Set\+Ptr} = std\+::shared\+\_\+ptr$<$ Aux\+Set $>$\hypertarget{classgeo__data_1_1Interval_a123802b451cf0337042034f32e3f3364}{}\label{classgeo__data_1_1Interval_a123802b451cf0337042034f32e3f3364}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo__data_1_1Interval_a4aeb907d55df262185dfe06dfb204aa5}{Interval} (Index \hyperlink{classgeo__data_1_1Interval_aa6803997160a6d97fe84c63440642a10}{left}, Index \hyperlink{classgeo__data_1_1Interval_af952a082fcbaba214c19b8e647e9f04e}{right}, std\+::string aux=\char`\"{}\char`\"{}, uint32\+\_\+t \hyperlink{classgeo__data_1_1Interval_a5a20c0a449ed531de53fe529dec35308}{type}=0)
+\begin{DoxyCompactList}\small\item\em Construct the interval \mbox{[}left,right\mbox{]}. \end{DoxyCompactList}\item 
+\hyperlink{classgeo__data_1_1Interval_ab5246430a8062908f45206ee48e05ec6}{Interval} (Index \hyperlink{classgeo__data_1_1Interval_aa6803997160a6d97fe84c63440642a10}{left}, Index \hyperlink{classgeo__data_1_1Interval_af952a082fcbaba214c19b8e647e9f04e}{right}, Aux\+Set\+Ptr aux\+\_\+set\+\_\+ptr, uint32\+\_\+t \hyperlink{classgeo__data_1_1Interval_a5a20c0a449ed531de53fe529dec35308}{type}=0)
+\begin{DoxyCompactList}\small\item\em Construct the interval \mbox{[}left,right\mbox{]}. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classgeo__data_1_1Interval_a5a20c0a449ed531de53fe529dec35308}{type} () const 
+\begin{DoxyCompactList}\small\item\em Get the interval type. \end{DoxyCompactList}\item 
+Index \hyperlink{classgeo__data_1_1Interval_af952a082fcbaba214c19b8e647e9f04e}{right} () const 
+\begin{DoxyCompactList}\small\item\em Get the upper bound of the interval. \end{DoxyCompactList}\item 
+Index \hyperlink{classgeo__data_1_1Interval_aa6803997160a6d97fe84c63440642a10}{left} () const 
+\begin{DoxyCompactList}\small\item\em Get the lower bound of the interval. \end{DoxyCompactList}\item 
+Aux\+Set\+Ptr \hyperlink{classgeo__data_1_1Interval_a929e1e46a0c0ad5ab22627ce6166f09a}{aux\+\_\+set} () const 
+\begin{DoxyCompactList}\small\item\em Get the auxiliary data set as a pointer. \end{DoxyCompactList}\item 
+const std\+::string \hyperlink{classgeo__data_1_1Interval_a2e87ef8f764694e616244a6e9fd1d2a1}{aux\+\_\+str} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the auxiliary data set as a single semicolon delimited string. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo__data_1_1Interval_a30406828bf5a2cc80a345b0a6a7356c6}{is\+\_\+before} (Index value) const 
+\begin{DoxyCompactList}\small\item\em Predicate\+: interval upper bound $<$= value. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo__data_1_1Interval_a64cd0e0eb27d67f9cfaf3d5355416892}{contains} (Index value) const 
+\begin{DoxyCompactList}\small\item\em Predicate\+: value in \mbox{[}lower bound, upper bound); this check uses a right open interval. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classgeo__data_1_1Interval_ac95b512584f3f7b577829ab5f2331c0f}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classgeo__data_1_1Interval}{Interval} \&interval)
+\begin{DoxyCompactList}\small\item\em Write the string form (id = x \mbox{[}lower bound, upper bound) types\+: \{ $<$aux data$>$=\char`\"{}\char`\"{}$>$ \}) of an \hyperlink{classgeo__data_1_1Interval}{Interval} to an output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An integer-\/based interval class to be used with trajectories. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!Interval@{Interval}}
+\index{Interval@{Interval}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{Interval(\+Index left, Index right, std\+::string aux="""", uint32\+\_\+t type=0)}{Interval(Index left, Index right, std::string aux="", uint32_t type=0)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Interval\+::\+Interval (
+\begin{DoxyParamCaption}
+\item[{Index}]{left, }
+\item[{Index}]{right, }
+\item[{std\+::string}]{aux = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{uint32\+\_\+t}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1Interval_a4aeb907d55df262185dfe06dfb204aa5}{}\label{classgeo__data_1_1Interval_a4aeb907d55df262185dfe06dfb204aa5}
+
+
+Construct the interval \mbox{[}left,right\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & the lower bound of the interval \\
+\hline
+{\em right} & the upper bound of the interval \\
+\hline
+{\em aux} & a description of the interval \\
+\hline
+{\em id} & a type identifier for the interval \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!Interval@{Interval}}
+\index{Interval@{Interval}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{Interval(\+Index left, Index right, Aux\+Set\+Ptr aux\+\_\+set\+\_\+ptr, uint32\+\_\+t type=0)}{Interval(Index left, Index right, AuxSetPtr aux_set_ptr, uint32_t type=0)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Interval\+::\+Interval (
+\begin{DoxyParamCaption}
+\item[{Index}]{left, }
+\item[{Index}]{right, }
+\item[{Interval\+::\+Aux\+Set\+Ptr}]{aux\+\_\+set, }
+\item[{uint32\+\_\+t}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1Interval_ab5246430a8062908f45206ee48e05ec6}{}\label{classgeo__data_1_1Interval_ab5246430a8062908f45206ee48e05ec6}
+
+
+Construct the interval \mbox{[}left,right\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & the infimum of the interval \\
+\hline
+{\em right} & the supremum of the interval \\
+\hline
+{\em aux} & a description of the interval \\
+\hline
+{\em id} & a type identifier for the interval \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!aux\+\_\+set@{aux\+\_\+set}}
+\index{aux\+\_\+set@{aux\+\_\+set}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{aux\+\_\+set() const }{aux_set() const }}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+::\+Aux\+Set\+Ptr geo\+\_\+data\+::\+Interval\+::aux\+\_\+set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Interval_a929e1e46a0c0ad5ab22627ce6166f09a}{}\label{classgeo__data_1_1Interval_a929e1e46a0c0ad5ab22627ce6166f09a}
+
+
+Get the auxiliary data set as a pointer. 
+
+\begin{DoxyReturn}{Returns}
+the set of strings that represent the auxiliary data 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!aux\+\_\+str@{aux\+\_\+str}}
+\index{aux\+\_\+str@{aux\+\_\+str}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{aux\+\_\+str(void) const }{aux_str(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string geo\+\_\+data\+::\+Interval\+::aux\+\_\+str (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Interval_a2e87ef8f764694e616244a6e9fd1d2a1}{}\label{classgeo__data_1_1Interval_a2e87ef8f764694e616244a6e9fd1d2a1}
+
+
+Get the auxiliary data set as a single semicolon delimited string. 
+
+\begin{DoxyReturn}{Returns}
+the auxiliary data set as one string 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!contains@{contains}}
+\index{contains@{contains}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{contains(\+Index value) const }{contains(Index value) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+\_\+data\+::\+Interval\+::contains (
+\begin{DoxyParamCaption}
+\item[{Index}]{value}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Interval_a64cd0e0eb27d67f9cfaf3d5355416892}{}\label{classgeo__data_1_1Interval_a64cd0e0eb27d67f9cfaf3d5355416892}
+
+
+Predicate\+: value in \mbox{[}lower bound, upper bound); this check uses a right open interval. 
+
+\begin{DoxyReturn}{Returns}
+true if lower bound $<$= value $<$ upper bound, false otherwise 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!is\+\_\+before@{is\+\_\+before}}
+\index{is\+\_\+before@{is\+\_\+before}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{is\+\_\+before(\+Index value) const }{is_before(Index value) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+\_\+data\+::\+Interval\+::is\+\_\+before (
+\begin{DoxyParamCaption}
+\item[{Index}]{value}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Interval_a30406828bf5a2cc80a345b0a6a7356c6}{}\label{classgeo__data_1_1Interval_a30406828bf5a2cc80a345b0a6a7356c6}
+
+
+Predicate\+: interval upper bound $<$= value. 
+
+\begin{DoxyReturn}{Returns}
+true if interval upper bound $<$= value 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!left@{left}}
+\index{left@{left}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{left() const }{left() const }}]{\setlength{\rightskip}{0pt plus 5cm}Index geo\+\_\+data\+::\+Interval\+::left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Interval_aa6803997160a6d97fe84c63440642a10}{}\label{classgeo__data_1_1Interval_aa6803997160a6d97fe84c63440642a10}
+
+
+Get the lower bound of the interval. 
+
+\begin{DoxyReturn}{Returns}
+the interval lower bound. 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!right@{right}}
+\index{right@{right}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{right() const }{right() const }}]{\setlength{\rightskip}{0pt plus 5cm}Index geo\+\_\+data\+::\+Interval\+::right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Interval_af952a082fcbaba214c19b8e647e9f04e}{}\label{classgeo__data_1_1Interval_af952a082fcbaba214c19b8e647e9f04e}
+
+
+Get the upper bound of the interval. 
+
+\begin{DoxyReturn}{Returns}
+the interval upper bound 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!type@{type}}
+\index{type@{type}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{type() const }{type() const }}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t geo\+\_\+data\+::\+Interval\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Interval_a5a20c0a449ed531de53fe529dec35308}{}\label{classgeo__data_1_1Interval_a5a20c0a449ed531de53fe529dec35308}
+
+
+Get the interval type. 
+
+\begin{DoxyReturn}{Returns}
+the ID of the interval 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!geo\+\_\+data\+::\+Interval@{geo\+\_\+data\+::\+Interval}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classgeo__data_1_1Interval_ac95b512584f3f7b577829ab5f2331c0f}{}\label{classgeo__data_1_1Interval_ac95b512584f3f7b577829ab5f2331c0f}
+
+
+Write the string form (id = x \mbox{[}lower bound, upper bound) types\+: \{ $<$aux data$>$=\char`\"{}\char`\"{}$>$ \}) of an \hyperlink{classgeo__data_1_1Interval}{Interval} to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & the output stream \\
+\hline
+{\em interval} & the \hyperlink{classgeo__data_1_1Interval}{Interval} to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo-\/data/include/geo\+\_\+data.\+hpp\item 
+cvdi-\/src/geo-\/data/src/geo\+\_\+data.\+cpp\end{DoxyCompactItemize}

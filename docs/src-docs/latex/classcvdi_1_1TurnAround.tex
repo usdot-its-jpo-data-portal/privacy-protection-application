@@ -1,0 +1,92 @@
+\hypertarget{classcvdi_1_1TurnAround}{}\section{cvdi\+:\+:Turn\+Around Class Reference}
+\label{classcvdi_1_1TurnAround}\index{cvdi\+::\+Turn\+Around@{cvdi\+::\+Turn\+Around}}
+
+
+A class that detects turnaround behavior within a trace.  
+
+
+
+
+{\ttfamily \#include $<$cvdi.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Area\+Index\+Pair} = std\+::pair$<$ geo\+::\+Area\+::\+Ptr, geo\+\_\+data\+::\+Index $>$\hypertarget{classcvdi_1_1TurnAround_aea706203eade818f580d5ea0675944ae}{}\label{classcvdi_1_1TurnAround_aea706203eade818f580d5ea0675944ae}
+
+\item 
+using {\bfseries Area\+Set} = std\+::unordered\+\_\+set$<$ geo\+::\+Area\+::\+Ptr $>$\hypertarget{classcvdi_1_1TurnAround_aea38a85d815e06d807bbc0d007a9ddaa}{}\label{classcvdi_1_1TurnAround_aea38a85d815e06d807bbc0d007a9ddaa}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcvdi_1_1TurnAround_ac899f9f056bc034bc1cd601a9fb007ad}{Turn\+Around} (size\+\_\+t max\+\_\+q\+\_\+size=20, double area\+\_\+width=30.\+0, double max\+\_\+speed=13.\+4112, double heading\+\_\+delta=90.\+0)
+\begin{DoxyCompactList}\small\item\em Construct a Turnaround Detector. \end{DoxyCompactList}\item 
+geo\+\_\+data\+::\+Interval\+::\+Ptr\+List \& \hyperlink{classcvdi_1_1TurnAround_aa8ecb499671af73dcd9d5b9b1d73b73d}{find\+\_\+turn\+\_\+arounds} (const geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)
+\begin{DoxyCompactList}\small\item\em Detect all turnarounds in a trace and return a list of intervals where those turnarounds exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Area\+Set {\bfseries area\+\_\+set}\hypertarget{classcvdi_1_1TurnAround_a326fbd6f6c3f034775fe0a119461151d}{}\label{classcvdi_1_1TurnAround_a326fbd6f6c3f034775fe0a119461151d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that detects turnaround behavior within a trace. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cvdi\+::\+Turn\+Around@{cvdi\+::\+Turn\+Around}!Turn\+Around@{Turn\+Around}}
+\index{Turn\+Around@{Turn\+Around}!cvdi\+::\+Turn\+Around@{cvdi\+::\+Turn\+Around}}
+\subsubsection[{\texorpdfstring{Turn\+Around(size\+\_\+t max\+\_\+q\+\_\+size=20, double area\+\_\+width=30.\+0, double max\+\_\+speed=13.\+4112, double heading\+\_\+delta=90.\+0)}{TurnAround(size_t max_q_size=20, double area_width=30.0, double max_speed=13.4112, double heading_delta=90.0)}}]{\setlength{\rightskip}{0pt plus 5cm}cvdi\+::\+Turn\+Around\+::\+Turn\+Around (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{max\+\_\+q\+\_\+size = {\ttfamily 20}, }
+\item[{double}]{area\+\_\+width = {\ttfamily 30.0}, }
+\item[{double}]{max\+\_\+speed = {\ttfamily 13.4112}, }
+\item[{double}]{heading\+\_\+delta = {\ttfamily 90.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1TurnAround_ac899f9f056bc034bc1cd601a9fb007ad}{}\label{classcvdi_1_1TurnAround_ac899f9f056bc034bc1cd601a9fb007ad}
+
+
+Construct a Turnaround Detector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+q\+\_\+size} & the maximum number of edges to retain for detecting a turnaround \\
+\hline
+{\em area\+\_\+width} & the width of boxes that encapsulate edges (in meters) \\
+\hline
+{\em max\+\_\+speed} & trip point speed below max\+\_\+speed is a turnaround property \\
+\hline
+{\em heading\+\_\+delta} & heading changes greater that heading\+\_\+delta is one turnaround property \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{cvdi\+::\+Turn\+Around@{cvdi\+::\+Turn\+Around}!find\+\_\+turn\+\_\+arounds@{find\+\_\+turn\+\_\+arounds}}
+\index{find\+\_\+turn\+\_\+arounds@{find\+\_\+turn\+\_\+arounds}!cvdi\+::\+Turn\+Around@{cvdi\+::\+Turn\+Around}}
+\subsubsection[{\texorpdfstring{find\+\_\+turn\+\_\+arounds(const geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)}{find_turn_arounds(const geo_data::Sample::Trace &trace)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Interval\+::\+Ptr\+List \& cvdi\+::\+Turn\+Around\+::find\+\_\+turn\+\_\+arounds (
+\begin{DoxyParamCaption}
+\item[{const geo\+\_\+data\+::\+Sample\+::\+Trace \&}]{trace}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1TurnAround_aa8ecb499671af73dcd9d5b9b1d73b73d}{}\label{classcvdi_1_1TurnAround_aa8ecb499671af73dcd9d5b9b1d73b73d}
+
+
+Detect all turnarounds in a trace and return a list of intervals where those turnarounds exist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trace} & the trace where turnarounds should be found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a shared pointer to a list of intervals; each interval is where a turnaround was detected 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi/include/cvdi.\+hpp\item 
+cvdi-\/src/cvdi/src/cvdi.\+cpp\end{DoxyCompactItemize}

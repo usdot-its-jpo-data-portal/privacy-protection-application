@@ -1,0 +1,167 @@
+\hypertarget{structcvdi_1_1PointCounter}{}\section{cvdi\+:\+:Point\+Counter Struct Reference}
+\label{structcvdi_1_1PointCounter}\index{cvdi\+::\+Point\+Counter@{cvdi\+::\+Point\+Counter}}
+
+
+A class to gather statistics about a trace.  
+
+
+
+
+{\ttfamily \#include $<$cvdi.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcvdi_1_1PointCounter_a60c7c3b39c50542496711d133e543cdd}{Point\+Counter} ()
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The number of points in privacy intervals. \end{quote}
+\end{DoxyCompactList}\item 
+\hyperlink{structcvdi_1_1PointCounter_a615e1568bf8f36be3afc1e2c61654001}{Point\+Counter} (uint64\+\_\+t n\+\_\+points, uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_ab329abe5fe52bd787dc2dc59afc03bc7}{n\+\_\+invalid\+\_\+field\+\_\+points}, uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_abccc4d82bf51f4cac2f8eb03b71f6b31}{n\+\_\+invalid\+\_\+geo\+\_\+points}, uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_ab051246dc41739c3f5133d58c6857617}{n\+\_\+invalid\+\_\+heading\+\_\+points}, uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_a663df3cac0f4920c7a7afc8feb002f1d}{n\+\_\+ci\+\_\+points}, uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_a6eda31fe450485d5a90403aa22dc51b9}{n\+\_\+pi\+\_\+points})
+\begin{DoxyCompactList}\small\item\em Constructor with initialization of count values. \end{DoxyCompactList}\item 
+\hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} \hyperlink{structcvdi_1_1PointCounter_a274b6da1ad2f5afb2b7d7d2fb9adf1cd}{operator+} (const \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} \&other) const 
+\begin{DoxyCompactList}\small\item\em Return a new \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} instance = this \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} + other \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter}. Values in each \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} are added together. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t {\bfseries n\+\_\+points}\hypertarget{structcvdi_1_1PointCounter_afbb269279caa378108ca6aa5f86042fe}{}\label{structcvdi_1_1PointCounter_afbb269279caa378108ca6aa5f86042fe}
+
+\item 
+uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_ab329abe5fe52bd787dc2dc59afc03bc7}{n\+\_\+invalid\+\_\+field\+\_\+points}\hypertarget{structcvdi_1_1PointCounter_ab329abe5fe52bd787dc2dc59afc03bc7}{}\label{structcvdi_1_1PointCounter_ab329abe5fe52bd787dc2dc59afc03bc7}
+
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The number of points in a trace. \end{quote}
+\end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_abccc4d82bf51f4cac2f8eb03b71f6b31}{n\+\_\+invalid\+\_\+geo\+\_\+points}\hypertarget{structcvdi_1_1PointCounter_abccc4d82bf51f4cac2f8eb03b71f6b31}{}\label{structcvdi_1_1PointCounter_abccc4d82bf51f4cac2f8eb03b71f6b31}
+
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The number of points with invalid field values. \end{quote}
+\end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_ab051246dc41739c3f5133d58c6857617}{n\+\_\+invalid\+\_\+heading\+\_\+points}\hypertarget{structcvdi_1_1PointCounter_ab051246dc41739c3f5133d58c6857617}{}\label{structcvdi_1_1PointCounter_ab051246dc41739c3f5133d58c6857617}
+
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The number of points with invalid position. \end{quote}
+\end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_a663df3cac0f4920c7a7afc8feb002f1d}{n\+\_\+ci\+\_\+points}\hypertarget{structcvdi_1_1PointCounter_a663df3cac0f4920c7a7afc8feb002f1d}{}\label{structcvdi_1_1PointCounter_a663df3cac0f4920c7a7afc8feb002f1d}
+
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The number of points with an invalid heading. \end{quote}
+\end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{structcvdi_1_1PointCounter_a6eda31fe450485d5a90403aa22dc51b9}{n\+\_\+pi\+\_\+points}\hypertarget{structcvdi_1_1PointCounter_a6eda31fe450485d5a90403aa22dc51b9}{}\label{structcvdi_1_1PointCounter_a6eda31fe450485d5a90403aa22dc51b9}
+
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The number of points in critical intervals. \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{structcvdi_1_1PointCounter_a7d38a9212813c666452f29a6bc89de6c}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} \&point\+\_\+counter)
+\begin{DoxyCompactList}\small\item\em Write a \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} to an output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to gather statistics about a trace. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cvdi\+::\+Point\+Counter@{cvdi\+::\+Point\+Counter}!Point\+Counter@{Point\+Counter}}
+\index{Point\+Counter@{Point\+Counter}!cvdi\+::\+Point\+Counter@{cvdi\+::\+Point\+Counter}}
+\subsubsection[{\texorpdfstring{Point\+Counter()}{PointCounter()}}]{\setlength{\rightskip}{0pt plus 5cm}cvdi\+::\+Point\+Counter\+::\+Point\+Counter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structcvdi_1_1PointCounter_a60c7c3b39c50542496711d133e543cdd}{}\label{structcvdi_1_1PointCounter_a60c7c3b39c50542496711d133e543cdd}
+
+
+\begin{quote}
+The number of points in privacy intervals. \end{quote}
+
+
+Default constructor.
+
+All statistics are initialized to 0. \index{cvdi\+::\+Point\+Counter@{cvdi\+::\+Point\+Counter}!Point\+Counter@{Point\+Counter}}
+\index{Point\+Counter@{Point\+Counter}!cvdi\+::\+Point\+Counter@{cvdi\+::\+Point\+Counter}}
+\subsubsection[{\texorpdfstring{Point\+Counter(uint64\+\_\+t n\+\_\+points, uint64\+\_\+t n\+\_\+invalid\+\_\+field\+\_\+points, uint64\+\_\+t n\+\_\+invalid\+\_\+geo\+\_\+points, uint64\+\_\+t n\+\_\+invalid\+\_\+heading\+\_\+points, uint64\+\_\+t n\+\_\+ci\+\_\+points, uint64\+\_\+t n\+\_\+pi\+\_\+points)}{PointCounter(uint64_t n_points, uint64_t n_invalid_field_points, uint64_t n_invalid_geo_points, uint64_t n_invalid_heading_points, uint64_t n_ci_points, uint64_t n_pi_points)}}]{\setlength{\rightskip}{0pt plus 5cm}cvdi\+::\+Point\+Counter\+::\+Point\+Counter (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{n\+\_\+points, }
+\item[{uint64\+\_\+t}]{n\+\_\+invalid\+\_\+field\+\_\+points, }
+\item[{uint64\+\_\+t}]{n\+\_\+invalid\+\_\+geo\+\_\+points, }
+\item[{uint64\+\_\+t}]{n\+\_\+invalid\+\_\+heading\+\_\+points, }
+\item[{uint64\+\_\+t}]{n\+\_\+ci\+\_\+points, }
+\item[{uint64\+\_\+t}]{n\+\_\+pi\+\_\+points}
+\end{DoxyParamCaption}
+)}\hypertarget{structcvdi_1_1PointCounter_a615e1568bf8f36be3afc1e2c61654001}{}\label{structcvdi_1_1PointCounter_a615e1568bf8f36be3afc1e2c61654001}
+
+
+Constructor with initialization of count values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+points} & initial number of point value \\
+\hline
+{\em n\+\_\+invalid\+\_\+field\+\_\+points} & initial number of points with invalid fields \\
+\hline
+{\em n\+\_\+invalid\+\_\+geo\+\_\+points} & initial number of points that have invalid G\+PS coordinates \\
+\hline
+{\em n\+\_\+invalid\+\_\+heading\+\_\+points} & initial number of points that have invalid headings \\
+\hline
+{\em n\+\_\+ci\+\_\+points} & initial number of points in a critical interval \\
+\hline
+{\em n\+\_\+pi\+\_\+points} & initial number of points in a privacy interval \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{cvdi\+::\+Point\+Counter@{cvdi\+::\+Point\+Counter}!operator+@{operator+}}
+\index{operator+@{operator+}!cvdi\+::\+Point\+Counter@{cvdi\+::\+Point\+Counter}}
+\subsubsection[{\texorpdfstring{operator+(const Point\+Counter \&other) const }{operator+(const PointCounter &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point\+Counter} cvdi\+::\+Point\+Counter\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point\+Counter} \&}]{other}
+\end{DoxyParamCaption}
+) const}\hypertarget{structcvdi_1_1PointCounter_a274b6da1ad2f5afb2b7d7d2fb9adf1cd}{}\label{structcvdi_1_1PointCounter_a274b6da1ad2f5afb2b7d7d2fb9adf1cd}
+
+
+Return a new \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} instance = this \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} + other \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter}. Values in each \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} are added together. 
+
+This \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} is N\+OT modified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} whose value are to be added to this point counter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a N\+EW \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} instance 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{cvdi\+::\+Point\+Counter@{cvdi\+::\+Point\+Counter}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvdi\+::\+Point\+Counter@{cvdi\+::\+Point\+Counter}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Point\+Counter} \&}]{point\+\_\+counter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{structcvdi_1_1PointCounter_a7d38a9212813c666452f29a6bc89de6c}{}\label{structcvdi_1_1PointCounter_a7d38a9212813c666452f29a6bc89de6c}
+
+
+Write a \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} to an output stream. 
+
+The form of the output is a comma-\/delimited list of the various values managed by the \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & the output stream to write the string form of this \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} \\
+\hline
+{\em point\+\_\+counter} & the \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the output stream after the write 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi/include/cvdi.\+hpp\item 
+cvdi-\/src/cvdi/src/cvdi.\+cpp\end{DoxyCompactItemize}

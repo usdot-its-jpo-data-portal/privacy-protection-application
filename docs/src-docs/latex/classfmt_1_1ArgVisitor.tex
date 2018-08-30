@@ -1,0 +1,179 @@
+\hypertarget{classfmt_1_1ArgVisitor}{}\section{fmt\+:\+:Arg\+Visitor$<$ Impl, Result $>$ Class Template Reference}
+\label{classfmt_1_1ArgVisitor}\index{fmt\+::\+Arg\+Visitor$<$ Impl, Result $>$@{fmt\+::\+Arg\+Visitor$<$ Impl, Result $>$}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries report\+\_\+unhandled\+\_\+arg} ()\hypertarget{classfmt_1_1ArgVisitor_a130090f53213407548d93d8ee2801738}{}\label{classfmt_1_1ArgVisitor_a130090f53213407548d93d8ee2801738}
+
+\item 
+Result {\bfseries visit\+\_\+unhandled\+\_\+arg} ()\hypertarget{classfmt_1_1ArgVisitor_a8de54a54b863eb63b5c45c4495c12793}{}\label{classfmt_1_1ArgVisitor_a8de54a54b863eb63b5c45c4495c12793}
+
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_ac6d79e3d931a9f56f40bca08f8651cdf}{visit\+\_\+int} (int value)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_ab5687cccaae516d3e6e94775737ff798}{visit\+\_\+long\+\_\+long} (Long\+Long value)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_a51494a02bd4573280fc1cc6fc921f871}{visit\+\_\+uint} (unsigned value)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_ac4424926e9c138b3503039d91c18c087}{visit\+\_\+ulong\+\_\+long} (U\+Long\+Long value)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_ad3013b580959ecbfaae97f29a35964ae}{visit\+\_\+bool} (bool value)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_ad635596afa3cd1e4983db071f045dabd}{visit\+\_\+char} (int value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Result \hyperlink{classfmt_1_1ArgVisitor_a5e33c073c34ca49a6f1dd82181e2d98f}{visit\+\_\+any\+\_\+int} (T)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_a2a7a4cbb1df7a8b3c310a607600773ae}{visit\+\_\+double} (double value)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_aa0b2e1792ff7e62d1a49a3118d3c10db}{visit\+\_\+long\+\_\+double} (long double value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Result \hyperlink{classfmt_1_1ArgVisitor_a9a2cdc09adb9783cddb2548691e6720c}{visit\+\_\+any\+\_\+double} (T)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_a6a91a7125820563502f1f5bb7a8c85be}{visit\+\_\+cstring} (const char $\ast$)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_ac39e46583b36900aa8df8e533648cf99}{visit\+\_\+string} (\hyperlink{structfmt_1_1internal_1_1Value_1_1StringValue}{Arg\+::\+String\+Value}$<$ char $>$)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_abd76337375076717e6089763dcfb1ad0}{visit\+\_\+wstring} (\hyperlink{structfmt_1_1internal_1_1Value_1_1StringValue}{Arg\+::\+String\+Value}$<$ wchar\+\_\+t $>$)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_a80e62b2dcd7e7e38208a4863826ec731}{visit\+\_\+pointer} (const void $\ast$)
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_a19a38c25e9c45f9c6a6674f7dfaf3759}{visit\+\_\+custom} (\hyperlink{structfmt_1_1internal_1_1Value_1_1CustomValue}{Arg\+::\+Custom\+Value})
+\item 
+Result \hyperlink{classfmt_1_1ArgVisitor_a19a979776fc789baaf038ab216e245bb}{visit} (const \hyperlink{structfmt_1_1internal_1_1Arg}{Arg} \&arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Impl, typename Result$>$\\*
+class fmt\+::\+Arg\+Visitor$<$ Impl, Result $>$}
+
+An argument visitor based on the {\ttfamily curiously recurring template pattern $<$\href{http://en.wikipedia.org/wiki/Curiously_recurring_template_pattern}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Curiously\+\_\+recurring\+\_\+template\+\_\+pattern}$>$}\+\_\+.
+
+To use {\ttfamily $\sim$fmt\+::\+Arg\+Visitor} define a subclass that implements some or all of the visit methods with the same signatures as the methods in {\ttfamily $\sim$fmt\+::\+Arg\+Visitor}, for example, {\ttfamily $\sim$fmt\+::\+Arg\+Visitor\+::visit\+\_\+int()}. Pass the subclass as the {\itshape Impl} template parameter. Then calling {\ttfamily $\sim$fmt\+::\+Arg\+Visitor\+::visit} for some argument will dispatch to a visit method specific to the argument type. For example, if the argument type is {\ttfamily double} then the {\ttfamily $\sim$fmt\+::\+Arg\+Visitor\+::visit\+\_\+double()} method of a subclass will be called. If the subclass doesn\textquotesingle{}t contain a method with this signature, then a corresponding method of {\ttfamily $\sim$fmt\+::\+Arg\+Visitor} will be called.
+
+Example$\ast$$\ast$\+:\+:
+
+class My\+Arg\+Visitor \+: public fmt\+::\+Arg\+Visitor$<$\+My\+Arg\+Visitor, void$>$ \{ public\+: void \hyperlink{classfmt_1_1ArgVisitor_ac6d79e3d931a9f56f40bca08f8651cdf}{visit\+\_\+int(int value)} \{ fmt\+::print(\char`\"{}\{\}\char`\"{}, value); \} void \hyperlink{classfmt_1_1ArgVisitor_a2a7a4cbb1df7a8b3c310a607600773ae}{visit\+\_\+double(double value)} \{ fmt\+::print(\char`\"{}\{\}\char`\"{}, value ); \} \};  
+
+\subsection{Member Function Documentation}
+\index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit@{visit}}
+\index{visit@{visit}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit(const Arg \&arg)}{visit(const Arg &arg)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Arg} \&}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_a19a979776fc789baaf038ab216e245bb}{}\label{classfmt_1_1ArgVisitor_a19a979776fc789baaf038ab216e245bb}
+Visits an argument dispatching to the appropriate visit method based on the argument type. For example, if the argument type is {\ttfamily double} then the {\ttfamily $\sim$fmt\+::\+Arg\+Visitor\+::visit\+\_\+double()} method of the {\itshape Impl} class will be called.  \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+any\+\_\+double@{visit\+\_\+any\+\_\+double}}
+\index{visit\+\_\+any\+\_\+double@{visit\+\_\+any\+\_\+double}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+any\+\_\+double(\+T)}{visit_any_double(T)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ template$<$typename T $>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+any\+\_\+double (
+\begin{DoxyParamCaption}
+\item[{T}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_a9a2cdc09adb9783cddb2548691e6720c}{}\label{classfmt_1_1ArgVisitor_a9a2cdc09adb9783cddb2548691e6720c}
+Visits a {\ttfamily double} or {\ttfamily long double} argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+any\+\_\+int@{visit\+\_\+any\+\_\+int}}
+\index{visit\+\_\+any\+\_\+int@{visit\+\_\+any\+\_\+int}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+any\+\_\+int(\+T)}{visit_any_int(T)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ template$<$typename T $>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+any\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{T}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_a5e33c073c34ca49a6f1dd82181e2d98f}{}\label{classfmt_1_1ArgVisitor_a5e33c073c34ca49a6f1dd82181e2d98f}
+Visits an argument of any integral type. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+bool@{visit\+\_\+bool}}
+\index{visit\+\_\+bool@{visit\+\_\+bool}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+bool(bool value)}{visit_bool(bool value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+bool (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_ad3013b580959ecbfaae97f29a35964ae}{}\label{classfmt_1_1ArgVisitor_ad3013b580959ecbfaae97f29a35964ae}
+Visits a {\ttfamily bool} argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+char@{visit\+\_\+char}}
+\index{visit\+\_\+char@{visit\+\_\+char}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+char(int value)}{visit_char(int value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+char (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_ad635596afa3cd1e4983db071f045dabd}{}\label{classfmt_1_1ArgVisitor_ad635596afa3cd1e4983db071f045dabd}
+Visits a {\ttfamily char} or {\ttfamily wchar\+\_\+t} argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+cstring@{visit\+\_\+cstring}}
+\index{visit\+\_\+cstring@{visit\+\_\+cstring}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+cstring(const char $\ast$)}{visit_cstring(const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+cstring (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_a6a91a7125820563502f1f5bb7a8c85be}{}\label{classfmt_1_1ArgVisitor_a6a91a7125820563502f1f5bb7a8c85be}
+Visits a null-\/terminated C string ({\ttfamily const char $\ast$}) argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+custom@{visit\+\_\+custom}}
+\index{visit\+\_\+custom@{visit\+\_\+custom}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+custom(\+Arg\+::\+Custom\+Value)}{visit_custom(Arg::CustomValue)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+custom (
+\begin{DoxyParamCaption}
+\item[{{\bf Arg\+::\+Custom\+Value}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_a19a38c25e9c45f9c6a6674f7dfaf3759}{}\label{classfmt_1_1ArgVisitor_a19a38c25e9c45f9c6a6674f7dfaf3759}
+Visits an argument of a custom (user-\/defined) type. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+double@{visit\+\_\+double}}
+\index{visit\+\_\+double@{visit\+\_\+double}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+double(double value)}{visit_double(double value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+double (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_a2a7a4cbb1df7a8b3c310a607600773ae}{}\label{classfmt_1_1ArgVisitor_a2a7a4cbb1df7a8b3c310a607600773ae}
+Visits a {\ttfamily double} argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+int@{visit\+\_\+int}}
+\index{visit\+\_\+int@{visit\+\_\+int}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+int(int value)}{visit_int(int value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_ac6d79e3d931a9f56f40bca08f8651cdf}{}\label{classfmt_1_1ArgVisitor_ac6d79e3d931a9f56f40bca08f8651cdf}
+Visits an {\ttfamily int} argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+long\+\_\+double@{visit\+\_\+long\+\_\+double}}
+\index{visit\+\_\+long\+\_\+double@{visit\+\_\+long\+\_\+double}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+long\+\_\+double(long double value)}{visit_long_double(long double value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+long\+\_\+double (
+\begin{DoxyParamCaption}
+\item[{long double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_aa0b2e1792ff7e62d1a49a3118d3c10db}{}\label{classfmt_1_1ArgVisitor_aa0b2e1792ff7e62d1a49a3118d3c10db}
+Visits a {\ttfamily long double} argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+long\+\_\+long@{visit\+\_\+long\+\_\+long}}
+\index{visit\+\_\+long\+\_\+long@{visit\+\_\+long\+\_\+long}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+long\+\_\+long(\+Long\+Long value)}{visit_long_long(LongLong value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+long\+\_\+long (
+\begin{DoxyParamCaption}
+\item[{Long\+Long}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_ab5687cccaae516d3e6e94775737ff798}{}\label{classfmt_1_1ArgVisitor_ab5687cccaae516d3e6e94775737ff798}
+Visits a {\ttfamily long long} argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+pointer@{visit\+\_\+pointer}}
+\index{visit\+\_\+pointer@{visit\+\_\+pointer}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+pointer(const void $\ast$)}{visit_pointer(const void *)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+pointer (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_a80e62b2dcd7e7e38208a4863826ec731}{}\label{classfmt_1_1ArgVisitor_a80e62b2dcd7e7e38208a4863826ec731}
+Visits a pointer argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+string@{visit\+\_\+string}}
+\index{visit\+\_\+string@{visit\+\_\+string}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+string(\+Arg\+::\+String\+Value$<$ char $>$)}{visit_string(Arg::StringValue< char >)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{{\bf Arg\+::\+String\+Value}$<$ char $>$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_ac39e46583b36900aa8df8e533648cf99}{}\label{classfmt_1_1ArgVisitor_ac39e46583b36900aa8df8e533648cf99}
+Visits a string argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+uint@{visit\+\_\+uint}}
+\index{visit\+\_\+uint@{visit\+\_\+uint}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+uint(unsigned value)}{visit_uint(unsigned value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+uint (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_a51494a02bd4573280fc1cc6fc921f871}{}\label{classfmt_1_1ArgVisitor_a51494a02bd4573280fc1cc6fc921f871}
+Visits an {\ttfamily unsigned} argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+ulong\+\_\+long@{visit\+\_\+ulong\+\_\+long}}
+\index{visit\+\_\+ulong\+\_\+long@{visit\+\_\+ulong\+\_\+long}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+ulong\+\_\+long(\+U\+Long\+Long value)}{visit_ulong_long(ULongLong value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+ulong\+\_\+long (
+\begin{DoxyParamCaption}
+\item[{U\+Long\+Long}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_ac4424926e9c138b3503039d91c18c087}{}\label{classfmt_1_1ArgVisitor_ac4424926e9c138b3503039d91c18c087}
+Visits an {\ttfamily unsigned long long} argument. \index{fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}!visit\+\_\+wstring@{visit\+\_\+wstring}}
+\index{visit\+\_\+wstring@{visit\+\_\+wstring}!fmt\+::\+Arg\+Visitor@{fmt\+::\+Arg\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+\_\+wstring(\+Arg\+::\+String\+Value$<$ wchar\+\_\+t $>$)}{visit_wstring(Arg::StringValue< wchar_t >)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Result$>$ Result {\bf fmt\+::\+Arg\+Visitor}$<$ Impl, Result $>$\+::visit\+\_\+wstring (
+\begin{DoxyParamCaption}
+\item[{{\bf Arg\+::\+String\+Value}$<$ wchar\+\_\+t $>$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1ArgVisitor_abd76337375076717e6089763dcfb1ad0}{}\label{classfmt_1_1ArgVisitor_abd76337375076717e6089763dcfb1ad0}
+Visits a wide string argument. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

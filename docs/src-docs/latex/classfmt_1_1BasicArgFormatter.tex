@@ -1,0 +1,55 @@
+\hypertarget{classfmt_1_1BasicArgFormatter}{}\section{fmt\+:\+:Basic\+Arg\+Formatter$<$ Impl, Char $>$ Class Template Reference}
+\label{classfmt_1_1BasicArgFormatter}\index{fmt\+::\+Basic\+Arg\+Formatter$<$ Impl, Char $>$@{fmt\+::\+Basic\+Arg\+Formatter$<$ Impl, Char $>$}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+Inheritance diagram for fmt\+:\+:Basic\+Arg\+Formatter$<$ Impl, Char $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classfmt_1_1BasicArgFormatter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfmt_1_1BasicArgFormatter_a207b17b258c5e16cf61ebfc9b13211d3}{Basic\+Arg\+Formatter} (\hyperlink{classfmt_1_1BasicFormatter}{Basic\+Formatter}$<$ Char, Impl $>$ \&formatter, \hyperlink{structfmt_1_1FormatSpec}{Format\+Spec} \&spec, const Char $\ast$fmt)
+\item 
+void \hyperlink{classfmt_1_1BasicArgFormatter_ae0aab0f90c9c93e3513203fc84c2c4dc}{visit\+\_\+custom} (\hyperlink{structfmt_1_1internal_1_1Value_1_1CustomValue}{internal\+::\+Arg\+::\+Custom\+Value} c)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Impl, typename Char$>$\\*
+class fmt\+::\+Basic\+Arg\+Formatter$<$ Impl, Char $>$}
+
+An argument formatter based on the {\ttfamily curiously recurring template pattern $<$\href{http://en.wikipedia.org/wiki/Curiously_recurring_template_pattern}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Curiously\+\_\+recurring\+\_\+template\+\_\+pattern}$>$}\+\_\+.
+
+To use {\ttfamily $\sim$fmt\+::\+Basic\+Arg\+Formatter} define a subclass that implements some or all of the visit methods with the same signatures as the methods in {\ttfamily $\sim$fmt\+::\+Arg\+Visitor}, for example, {\ttfamily $\sim$fmt\+::\+Arg\+Visitor\+::visit\+\_\+int()}. Pass the subclass as the {\itshape Impl} template parameter. When a formatting function processes an argument, it will dispatch to a visit method specific to the argument type. For example, if the argument type is {\ttfamily double} then the {\ttfamily $\sim$fmt\+::\+Arg\+Visitor\+::visit\+\_\+double()} method of a subclass will be called. If the subclass doesn\textquotesingle{}t contain a method with this signature, then a corresponding method of {\ttfamily $\sim$fmt\+::\+Basic\+Arg\+Formatter} or its superclass will be called.  
+
+\subsection{Constructor \& Destructor Documentation}
+\index{fmt\+::\+Basic\+Arg\+Formatter@{fmt\+::\+Basic\+Arg\+Formatter}!Basic\+Arg\+Formatter@{Basic\+Arg\+Formatter}}
+\index{Basic\+Arg\+Formatter@{Basic\+Arg\+Formatter}!fmt\+::\+Basic\+Arg\+Formatter@{fmt\+::\+Basic\+Arg\+Formatter}}
+\subsubsection[{\texorpdfstring{Basic\+Arg\+Formatter(\+Basic\+Formatter$<$ Char, Impl $>$ \&formatter, Format\+Spec \&spec, const Char $\ast$fmt)}{BasicArgFormatter(BasicFormatter< Char, Impl > &formatter, FormatSpec &spec, const Char *fmt)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Char$>$ {\bf fmt\+::\+Basic\+Arg\+Formatter}$<$ Impl, Char $>$\+::{\bf Basic\+Arg\+Formatter} (
+\begin{DoxyParamCaption}
+\item[{{\bf Basic\+Formatter}$<$ Char, Impl $>$ \&}]{formatter, }
+\item[{{\bf Format\+Spec} \&}]{spec, }
+\item[{const Char $\ast$}]{fmt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicArgFormatter_a207b17b258c5e16cf61ebfc9b13211d3}{}\label{classfmt_1_1BasicArgFormatter_a207b17b258c5e16cf61ebfc9b13211d3}
+Constructs an argument formatter object. formatter$\ast$ is a reference to the main formatter object, {\itshape spec} contains format specifier information for standard argument types, and {\itshape fmt} points to the part of the format string being parsed for custom argument types.  
+
+\subsection{Member Function Documentation}
+\index{fmt\+::\+Basic\+Arg\+Formatter@{fmt\+::\+Basic\+Arg\+Formatter}!visit\+\_\+custom@{visit\+\_\+custom}}
+\index{visit\+\_\+custom@{visit\+\_\+custom}!fmt\+::\+Basic\+Arg\+Formatter@{fmt\+::\+Basic\+Arg\+Formatter}}
+\subsubsection[{\texorpdfstring{visit\+\_\+custom(internal\+::\+Arg\+::\+Custom\+Value c)}{visit_custom(internal::Arg::CustomValue c)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Impl, typename Char$>$ void {\bf fmt\+::\+Basic\+Arg\+Formatter}$<$ Impl, Char $>$\+::visit\+\_\+custom (
+\begin{DoxyParamCaption}
+\item[{{\bf internal\+::\+Arg\+::\+Custom\+Value}}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicArgFormatter_ae0aab0f90c9c93e3513203fc84c2c4dc}{}\label{classfmt_1_1BasicArgFormatter_ae0aab0f90c9c93e3513203fc84c2c4dc}
+Formats argument of a custom (user-\/defined) type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

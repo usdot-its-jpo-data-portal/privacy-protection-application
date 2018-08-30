@@ -1,0 +1,37 @@
+\hypertarget{classspdlog_1_1details_1_1async__log__helper}{}\section{spdlog\+:\+:details\+:\+:async\+\_\+log\+\_\+helper Class Reference}
+\label{classspdlog_1_1details_1_1async__log__helper}\index{spdlog\+::details\+::async\+\_\+log\+\_\+helper@{spdlog\+::details\+::async\+\_\+log\+\_\+helper}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries item\+\_\+type} = async\+\_\+msg\hypertarget{classspdlog_1_1details_1_1async__log__helper_a697d7c2f16fe34871f560eeb50bdb8f9}{}\label{classspdlog_1_1details_1_1async__log__helper_a697d7c2f16fe34871f560eeb50bdb8f9}
+
+\item 
+using {\bfseries q\+\_\+type} = \hyperlink{classspdlog_1_1details_1_1mpmc__bounded__queue}{details\+::mpmc\+\_\+bounded\+\_\+queue}$<$ item\+\_\+type $>$\hypertarget{classspdlog_1_1details_1_1async__log__helper_adc1eff190d4b041a9f90232c7097581a}{}\label{classspdlog_1_1details_1_1async__log__helper_adc1eff190d4b041a9f90232c7097581a}
+
+\item 
+using {\bfseries clock} = std\+::chrono\+::steady\+\_\+clock\hypertarget{classspdlog_1_1details_1_1async__log__helper_adeafd5c2590273a1f2bbfc0f26fe9075}{}\label{classspdlog_1_1details_1_1async__log__helper_adeafd5c2590273a1f2bbfc0f26fe9075}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries async\+\_\+log\+\_\+helper} (formatter\+\_\+ptr \hyperlink{classspdlog_1_1formatter}{formatter}, const std\+::vector$<$ sink\+\_\+ptr $>$ \&sinks, size\+\_\+t queue\+\_\+size, const log\+\_\+err\+\_\+handler err\+\_\+handler, const async\+\_\+overflow\+\_\+policy overflow\+\_\+policy=async\+\_\+overflow\+\_\+policy\+::block\+\_\+retry, const std\+::function$<$ void()$>$ \&worker\+\_\+warmup\+\_\+cb=nullptr, const std\+::chrono\+::milliseconds \&flush\+\_\+interval\+\_\+ms=std\+::chrono\+::milliseconds\+::zero(), const std\+::function$<$ void()$>$ \&worker\+\_\+teardown\+\_\+cb=nullptr)\hypertarget{classspdlog_1_1details_1_1async__log__helper_a3e6735135a7ce90c88b604fade3f5ed6}{}\label{classspdlog_1_1details_1_1async__log__helper_a3e6735135a7ce90c88b604fade3f5ed6}
+
+\item 
+void {\bfseries log} (const \hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&msg)\hypertarget{classspdlog_1_1details_1_1async__log__helper_a1e42d4ca767ff71d3d9df0f2668a87eb}{}\label{classspdlog_1_1details_1_1async__log__helper_a1e42d4ca767ff71d3d9df0f2668a87eb}
+
+\item 
+void {\bfseries set\+\_\+formatter} (formatter\+\_\+ptr)\hypertarget{classspdlog_1_1details_1_1async__log__helper_ad8973702ee63c93086e153eeaec7563e}{}\label{classspdlog_1_1details_1_1async__log__helper_ad8973702ee63c93086e153eeaec7563e}
+
+\item 
+void {\bfseries flush} (bool wait\+\_\+for\+\_\+q)\hypertarget{classspdlog_1_1details_1_1async__log__helper_a36166b7c51a1b8e7a689ab94fee2b65e}{}\label{classspdlog_1_1details_1_1async__log__helper_a36166b7c51a1b8e7a689ab94fee2b65e}
+
+\item 
+void {\bfseries set\+\_\+error\+\_\+handler} (spdlog\+::log\+\_\+err\+\_\+handler err\+\_\+handler)\hypertarget{classspdlog_1_1details_1_1async__log__helper_ae0f9db64915cd9f24db2d2ef32a37229}{}\label{classspdlog_1_1details_1_1async__log__helper_ae0f9db64915cd9f24db2d2ef32a37229}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/details/async\+\_\+log\+\_\+helper.\+h\end{DoxyCompactItemize}

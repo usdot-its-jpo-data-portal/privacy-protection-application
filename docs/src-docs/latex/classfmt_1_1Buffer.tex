@@ -1,0 +1,118 @@
+\hypertarget{classfmt_1_1Buffer}{}\section{fmt\+:\+:Buffer$<$ T $>$ Class Template Reference}
+\label{classfmt_1_1Buffer}\index{fmt\+::\+Buffer$<$ T $>$@{fmt\+::\+Buffer$<$ T $>$}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+Inheritance diagram for fmt\+:\+:Buffer$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classfmt_1_1Buffer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \hyperlink{classfmt_1_1Buffer_a14fa72f0ddf584c14ffffb1446f598aa}{size} () const 
+\item 
+std\+::size\+\_\+t \hyperlink{classfmt_1_1Buffer_aaf54fe786de91157629f96380e0cb215}{capacity} () const 
+\item 
+void \hyperlink{classfmt_1_1Buffer_a20f893164dc20e8ea8c77810d4ea8d59}{resize} (std\+::size\+\_\+t new\+\_\+size)
+\item 
+void \hyperlink{classfmt_1_1Buffer_a7f46a3ce8d86abe35904f6654bd4ea1e}{reserve} (std\+::size\+\_\+t \hyperlink{classfmt_1_1Buffer_aaf54fe786de91157629f96380e0cb215}{capacity})
+\item 
+void {\bfseries clear} () F\+M\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT\hypertarget{classfmt_1_1Buffer_a4591d21c7970ba5205680cb5224ef2b2}{}\label{classfmt_1_1Buffer_a4591d21c7970ba5205680cb5224ef2b2}
+
+\item 
+void {\bfseries push\+\_\+back} (const T \&value)\hypertarget{classfmt_1_1Buffer_a4056b71637286b41b3275e3dac57462d}{}\label{classfmt_1_1Buffer_a4056b71637286b41b3275e3dac57462d}
+
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \hyperlink{classfmt_1_1Buffer_a7ca155741c43ec7c7edcea8dd28a2123}{append} (const U $\ast$begin, const U $\ast$end)
+\item 
+T \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t index)\hypertarget{classfmt_1_1Buffer_ad1f9ad75ba08826671a78df23161685a}{}\label{classfmt_1_1Buffer_ad1f9ad75ba08826671a78df23161685a}
+
+\item 
+const T \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t index) const \hypertarget{classfmt_1_1Buffer_a15dd7f9027d6c9fb0fe4b6255c9a7929}{}\label{classfmt_1_1Buffer_a15dd7f9027d6c9fb0fe4b6255c9a7929}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Buffer} (T $\ast$ptr=0, std\+::size\+\_\+t \hyperlink{classfmt_1_1Buffer_aaf54fe786de91157629f96380e0cb215}{capacity}=0)\hypertarget{classfmt_1_1Buffer_a1830c1ba88170ed60f40f662d7f1886a}{}\label{classfmt_1_1Buffer_a1830c1ba88170ed60f40f662d7f1886a}
+
+\item 
+virtual void \hyperlink{classfmt_1_1Buffer_abdc7aaf5813aa07008b3d715969a7e19}{grow} (std\+::size\+\_\+t \hyperlink{classfmt_1_1Buffer_a14fa72f0ddf584c14ffffb1446f598aa}{size})=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ {\bfseries ptr\+\_\+}\hypertarget{classfmt_1_1Buffer_a17b11ccf916407fdb464b53b3e556849}{}\label{classfmt_1_1Buffer_a17b11ccf916407fdb464b53b3e556849}
+
+\item 
+std\+::size\+\_\+t {\bfseries size\+\_\+}\hypertarget{classfmt_1_1Buffer_a3959d66180b075a0ae324ea98466e20f}{}\label{classfmt_1_1Buffer_a3959d66180b075a0ae324ea98466e20f}
+
+\item 
+std\+::size\+\_\+t {\bfseries capacity\+\_\+}\hypertarget{classfmt_1_1Buffer_ab9c3e293679699058a2d33c4a07ad657}{}\label{classfmt_1_1Buffer_ab9c3e293679699058a2d33c4a07ad657}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class fmt\+::\+Buffer$<$ T $>$}
+
+A buffer supporting a subset of {\ttfamily std\+::vector}\textquotesingle{}s operations.  
+
+\subsection{Member Function Documentation}
+\index{fmt\+::\+Buffer@{fmt\+::\+Buffer}!append@{append}}
+\index{append@{append}!fmt\+::\+Buffer@{fmt\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{append(const U $\ast$begin, const U $\ast$end)}{append(const U *begin, const U *end)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename U $>$ void {\bf fmt\+::\+Buffer}$<$ T $>$\+::append (
+\begin{DoxyParamCaption}
+\item[{const U $\ast$}]{begin, }
+\item[{const U $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{classfmt_1_1Buffer_a7ca155741c43ec7c7edcea8dd28a2123}{}\label{classfmt_1_1Buffer_a7ca155741c43ec7c7edcea8dd28a2123}
+Appends data to the end of the buffer. \index{fmt\+::\+Buffer@{fmt\+::\+Buffer}!capacity@{capacity}}
+\index{capacity@{capacity}!fmt\+::\+Buffer@{fmt\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{capacity() const }{capacity() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ std\+::size\+\_\+t {\bf fmt\+::\+Buffer}$<$ T $>$\+::capacity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1Buffer_aaf54fe786de91157629f96380e0cb215}{}\label{classfmt_1_1Buffer_aaf54fe786de91157629f96380e0cb215}
+Returns the capacity of this buffer. \index{fmt\+::\+Buffer@{fmt\+::\+Buffer}!grow@{grow}}
+\index{grow@{grow}!fmt\+::\+Buffer@{fmt\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{grow(std\+::size\+\_\+t size)=0}{grow(std::size_t size)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ virtual void {\bf fmt\+::\+Buffer}$<$ T $>$\+::grow (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classfmt_1_1Buffer_abdc7aaf5813aa07008b3d715969a7e19}{}\label{classfmt_1_1Buffer_abdc7aaf5813aa07008b3d715969a7e19}
+Increases the buffer capacity to hold at least {\itshape size} elements updating {\ttfamily ptr\+\_\+} and {\ttfamily capacity\+\_\+}.  
+
+Implemented in \hyperlink{classfmt_1_1internal_1_1FixedBuffer_a90dc1dce4e8eac799d57ca519cfeb82d}{fmt\+::internal\+::\+Fixed\+Buffer$<$ Char $>$}, \hyperlink{classfmt_1_1internal_1_1MemoryBuffer_a6ecee679d5caf3345f8ffae92b7ca702}{fmt\+::internal\+::\+Memory\+Buffer$<$ T, S\+I\+Z\+E, Allocator $>$}, and \hyperlink{classfmt_1_1internal_1_1MemoryBuffer_a6ecee679d5caf3345f8ffae92b7ca702}{fmt\+::internal\+::\+Memory\+Buffer$<$ Char, internal\+::\+I\+N\+L\+I\+N\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E, Allocator $>$}.
+
+\index{fmt\+::\+Buffer@{fmt\+::\+Buffer}!reserve@{reserve}}
+\index{reserve@{reserve}!fmt\+::\+Buffer@{fmt\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{reserve(std\+::size\+\_\+t capacity)}{reserve(std::size_t capacity)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf fmt\+::\+Buffer}$<$ T $>$\+::reserve (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{capacity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1Buffer_a7f46a3ce8d86abe35904f6654bd4ea1e}{}\label{classfmt_1_1Buffer_a7f46a3ce8d86abe35904f6654bd4ea1e}
+Reserves space to store at least {\itshape capacity} elements.  \index{fmt\+::\+Buffer@{fmt\+::\+Buffer}!resize@{resize}}
+\index{resize@{resize}!fmt\+::\+Buffer@{fmt\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{resize(std\+::size\+\_\+t new\+\_\+size)}{resize(std::size_t new_size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf fmt\+::\+Buffer}$<$ T $>$\+::resize (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{new\+\_\+size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1Buffer_a20f893164dc20e8ea8c77810d4ea8d59}{}\label{classfmt_1_1Buffer_a20f893164dc20e8ea8c77810d4ea8d59}
+Resizes the buffer. If T is a P\+OD type new elements may not be initialized. \index{fmt\+::\+Buffer@{fmt\+::\+Buffer}!size@{size}}
+\index{size@{size}!fmt\+::\+Buffer@{fmt\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{size() const }{size() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ std\+::size\+\_\+t {\bf fmt\+::\+Buffer}$<$ T $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1Buffer_a14fa72f0ddf584c14ffffb1446f598aa}{}\label{classfmt_1_1Buffer_a14fa72f0ddf584c14ffffb1446f598aa}
+Returns the size of this buffer. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

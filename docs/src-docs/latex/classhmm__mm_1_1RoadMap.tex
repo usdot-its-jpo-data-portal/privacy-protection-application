@@ -1,0 +1,246 @@
+\hypertarget{classhmm__mm_1_1RoadMap}{}\section{hmm\+\_\+mm\+:\+:Road\+Map Class Reference}
+\label{classhmm__mm_1_1RoadMap}\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+
+
+Road map for finding road point candidates and routes between them.  
+
+
+
+
+{\ttfamily \#include $<$hmm\+\_\+mm.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classhmm__mm_1_1RoadMap}{Road\+Map} $>$\hypertarget{classhmm__mm_1_1RoadMap_a7f4f82412272a8ec5f482d666d6f7f31}{}\label{classhmm__mm_1_1RoadMap_a7f4f82412272a8ec5f482d666d6f7f31}
+
+\item 
+using {\bfseries Route\+Transition\+Map} = std\+::unordered\+\_\+map$<$ Road\+Point\+::\+Ptr, Transition\+::\+Ptr $>$\hypertarget{classhmm__mm_1_1RoadMap_a5903f87ea4b9a454edc4eea4fed70d8a}{}\label{classhmm__mm_1_1RoadMap_a5903f87ea4b9a454edc4eea4fed70d8a}
+
+\item 
+using {\bfseries Route\+Transition\+Map\+Ptr} = std\+::shared\+\_\+ptr$<$ Route\+Transition\+Map $>$\hypertarget{classhmm__mm_1_1RoadMap_ad1816ca34b42bb77d547b82b7a4b1db3}{}\label{classhmm__mm_1_1RoadMap_ad1816ca34b42bb77d547b82b7a4b1db3}
+
+\item 
+using {\bfseries Transition\+Map} = std\+::unordered\+\_\+map$<$ Road\+Point\+::\+Ptr, Route\+Transition\+Map\+Ptr $>$\hypertarget{classhmm__mm_1_1RoadMap_a5e7ed3ff0ca50191232d9b4ab360e250}{}\label{classhmm__mm_1_1RoadMap_a5e7ed3ff0ca50191232d9b4ab360e250}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhmm__mm_1_1RoadMap_a047e8396e3def5299553e8d7dc32a341}{Road\+Map} (double \hyperlink{classhmm__mm_1_1RoadMap_aa469fb16711f4871f0ceea29e3dee0bd}{sigma}=10.\+0, double lambda=0.\+0, double \hyperlink{classhmm__mm_1_1RoadMap_a17ae636d51887670e192fad2cb87ce4f}{radius}=200.\+0, double distance=15000.\+0, bool shorten\+\_\+turns=true)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classhmm__mm_1_1RoadMap}{Road\+Map} object. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadMap_aa469fb16711f4871f0ceea29e3dee0bd}{sigma} (double sigma)
+\begin{DoxyCompactList}\small\item\em Get the sigma for the emission probability distribution constant. \end{DoxyCompactList}\item 
+int \hyperlink{classhmm__mm_1_1RoadMap_ab930afeeed97f3c5649eec7e7e721fd5}{n\+\_\+quad\+\_\+features} () const 
+\begin{DoxyCompactList}\small\item\em Get the number of edges in the quad tree. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadMap_aa29ba9fe11cf05d2b2df95351d5ca750}{construct} (\hyperlink{classgeo__data_1_1RoadReader}{geo\+\_\+data\+::\+Road\+Reader} \&road\+\_\+reader)
+\begin{DoxyCompactList}\small\item\em Construct the road map from a \hyperlink{classgeo__data_1_1RoadReader}{geo\+\_\+data\+::\+Road\+Reader}. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadMap_aff049625526c933084197039f4eabe07}{nearest} (const O\+G\+R\+Point \&point, Road\+Point\+Set \&out)
+\begin{DoxyCompactList}\small\item\em Get the nearest candidate road points for a sample point. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadMap_a17ae636d51887670e192fad2cb87ce4f}{radius} (const O\+G\+R\+Point \&point, double radius, Road\+Point\+Set \&out)
+\begin{DoxyCompactList}\small\item\em Get the nearest candidate road points within the radius for a sample point. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadMap_a31ca066cdbd48471441baef3c118f2cd}{minset} (const Road\+Point\+Set \&road\+\_\+points, Road\+Point\+Set \&out)
+\begin{DoxyCompactList}\small\item\em Get the minimal set of road points from an existing road point candidate set. Removes points that are within a very short (G\+PS error) distance of each other. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadMap_a6c594cef8fe885644c028ab1647740c5}{candidates} (geo\+\_\+data\+::\+Sample\+::\+Ptr sample, const Road\+Point\+Set \&predecessors, Road\+Point\+Set \&out)
+\begin{DoxyCompactList}\small\item\em Find the candidate road point set for a sample. Checks predecessor\textquotesingle{}s candidates in the Hidden Markov Models. If the predecessor road points map to the same edge and have better heading and distance, then the predecessor road point is used. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadMap_a1985f0104837c0674dfc1e4302cee862}{transitions} (const \hyperlink{classhmm__mm_1_1EmissionState}{Emission\+State} \&predecessor\+\_\+state, const \hyperlink{classhmm__mm_1_1EmissionState}{Emission\+State} \&candidate\+\_\+state, Transition\+Map \&out)
+\begin{DoxyCompactList}\small\item\em Find the transitions between two emission states. This is an all pairs comparison between road points in the predecessor states and road points in the current candidate state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo_1_1Spatial}{geo\+::\+Spatial} \hyperlink{classhmm__mm_1_1RoadMap_aa386bf13788086c4d9f9f864afe39b5d}{spatial}\hypertarget{classhmm__mm_1_1RoadMap_aa386bf13788086c4d9f9f864afe39b5d}{}\label{classhmm__mm_1_1RoadMap_aa386bf13788086c4d9f9f864afe39b5d}
+
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classgeo_1_1Spatial}{geo\+::\+Spatial} object used in the road map functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Road map for finding road point candidates and routes between them. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}!Road\+Map@{Road\+Map}}
+\index{Road\+Map@{Road\+Map}!hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+\subsubsection[{\texorpdfstring{Road\+Map(double sigma=10.\+0, double lambda=0.\+0, double radius=200.\+0, double distance=15000.\+0, bool shorten\+\_\+turns=true)}{RoadMap(double sigma=10.0, double lambda=0.0, double radius=200.0, double distance=15000.0, bool shorten_turns=true)}}]{\setlength{\rightskip}{0pt plus 5cm}hmm\+\_\+mm\+::\+Road\+Map\+::\+Road\+Map (
+\begin{DoxyParamCaption}
+\item[{double}]{sigma = {\ttfamily 10.0}, }
+\item[{double}]{lambda = {\ttfamily 0.0}, }
+\item[{double}]{radius = {\ttfamily 200.0}, }
+\item[{double}]{distance = {\ttfamily 15000.0}, }
+\item[{bool}]{shorten\+\_\+turns = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadMap_a047e8396e3def5299553e8d7dc32a341}{}\label{classhmm__mm_1_1RoadMap_a047e8396e3def5299553e8d7dc32a341}
+
+
+Construct a \hyperlink{classhmm__mm_1_1RoadMap}{Road\+Map} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sigma} & the emission probability distribution sigma constant \\
+\hline
+{\em lambda} & the transition probability distribution lambda constant \\
+\hline
+{\em radius} & for candidate road point queries in meters \\
+\hline
+{\em distance} & max distance for routing in meters \\
+\hline
+{\em shorten\+\_\+turns} & flag to check for turns when computing the transition when routing \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}!candidates@{candidates}}
+\index{candidates@{candidates}!hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+\subsubsection[{\texorpdfstring{candidates(geo\+\_\+data\+::\+Sample\+::\+Ptr sample, const Road\+Point\+Set \&predecessors, Road\+Point\+Set \&out)}{candidates(geo_data::Sample::Ptr sample, const RoadPointSet &predecessors, RoadPointSet &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Map\+::candidates (
+\begin{DoxyParamCaption}
+\item[{geo\+\_\+data\+::\+Sample\+::\+Ptr}]{sample, }
+\item[{const Road\+Point\+Set \&}]{predecessors, }
+\item[{Road\+Point\+Set \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadMap_a6c594cef8fe885644c028ab1647740c5}{}\label{classhmm__mm_1_1RoadMap_a6c594cef8fe885644c028ab1647740c5}
+
+
+Find the candidate road point set for a sample. Checks predecessor\textquotesingle{}s candidates in the Hidden Markov Models. If the predecessor road points map to the same edge and have better heading and distance, then the predecessor road point is used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample} & pointer to the sample \\
+\hline
+{\em predecessor} & set of road point candidates from the predecessor sample \\
+\hline
+{\em out} & the resulting candidate road points for the sample \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}!construct@{construct}}
+\index{construct@{construct}!hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+\subsubsection[{\texorpdfstring{construct(geo\+\_\+data\+::\+Road\+Reader \&road\+\_\+reader)}{construct(geo_data::RoadReader &road_reader)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Map\+::construct (
+\begin{DoxyParamCaption}
+\item[{{\bf geo\+\_\+data\+::\+Road\+Reader} \&}]{road\+\_\+reader}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadMap_aa29ba9fe11cf05d2b2df95351d5ca750}{}\label{classhmm__mm_1_1RoadMap_aa29ba9fe11cf05d2b2df95351d5ca750}
+
+
+Construct the road map from a \hyperlink{classgeo__data_1_1RoadReader}{geo\+\_\+data\+::\+Road\+Reader}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em road\+\_\+reader} & the road reader \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}!minset@{minset}}
+\index{minset@{minset}!hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+\subsubsection[{\texorpdfstring{minset(const Road\+Point\+Set \&road\+\_\+points, Road\+Point\+Set \&out)}{minset(const RoadPointSet &road_points, RoadPointSet &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Map\+::minset (
+\begin{DoxyParamCaption}
+\item[{const Road\+Point\+Set \&}]{road\+\_\+points, }
+\item[{Road\+Point\+Set \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadMap_a31ca066cdbd48471441baef3c118f2cd}{}\label{classhmm__mm_1_1RoadMap_a31ca066cdbd48471441baef3c118f2cd}
+
+
+Get the minimal set of road points from an existing road point candidate set. Removes points that are within a very short (G\+PS error) distance of each other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em road\+\_\+points} & the original candidate road point set \\
+\hline
+{\em out} & the resulting minimal set of road points \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}!n\+\_\+quad\+\_\+features@{n\+\_\+quad\+\_\+features}}
+\index{n\+\_\+quad\+\_\+features@{n\+\_\+quad\+\_\+features}!hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+\subsubsection[{\texorpdfstring{n\+\_\+quad\+\_\+features() const }{n_quad_features() const }}]{\setlength{\rightskip}{0pt plus 5cm}int hmm\+\_\+mm\+::\+Road\+Map\+::n\+\_\+quad\+\_\+features (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadMap_ab930afeeed97f3c5649eec7e7e721fd5}{}\label{classhmm__mm_1_1RoadMap_ab930afeeed97f3c5649eec7e7e721fd5}
+
+
+Get the number of edges in the quad tree. 
+
+\begin{DoxyReturn}{Returns}
+the number of edges (features) 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}!nearest@{nearest}}
+\index{nearest@{nearest}!hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+\subsubsection[{\texorpdfstring{nearest(const O\+G\+R\+Point \&point, Road\+Point\+Set \&out)}{nearest(const OGRPoint &point, RoadPointSet &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Map\+::nearest (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point, }
+\item[{Road\+Point\+Set \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadMap_aff049625526c933084197039f4eabe07}{}\label{classhmm__mm_1_1RoadMap_aff049625526c933084197039f4eabe07}
+
+
+Get the nearest candidate road points for a sample point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & sample point \\
+\hline
+{\em out} & the resulting candidate road points \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}!radius@{radius}}
+\index{radius@{radius}!hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+\subsubsection[{\texorpdfstring{radius(const O\+G\+R\+Point \&point, double radius, Road\+Point\+Set \&out)}{radius(const OGRPoint &point, double radius, RoadPointSet &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Map\+::radius (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point, }
+\item[{double}]{radius, }
+\item[{Road\+Point\+Set \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadMap_a17ae636d51887670e192fad2cb87ce4f}{}\label{classhmm__mm_1_1RoadMap_a17ae636d51887670e192fad2cb87ce4f}
+
+
+Get the nearest candidate road points within the radius for a sample point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the sample point \\
+\hline
+{\em radius} & the radius in meters \\
+\hline
+{\em out} & the resulting candidate road points \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}!sigma@{sigma}}
+\index{sigma@{sigma}!hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+\subsubsection[{\texorpdfstring{sigma(double sigma)}{sigma(double sigma)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Map\+::sigma (
+\begin{DoxyParamCaption}
+\item[{double}]{sigma}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadMap_aa469fb16711f4871f0ceea29e3dee0bd}{}\label{classhmm__mm_1_1RoadMap_aa469fb16711f4871f0ceea29e3dee0bd}
+
+
+Get the sigma for the emission probability distribution constant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & sigma value \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}!transitions@{transitions}}
+\index{transitions@{transitions}!hmm\+\_\+mm\+::\+Road\+Map@{hmm\+\_\+mm\+::\+Road\+Map}}
+\subsubsection[{\texorpdfstring{transitions(const Emission\+State \&predecessor\+\_\+state, const Emission\+State \&candidate\+\_\+state, Transition\+Map \&out)}{transitions(const EmissionState &predecessor_state, const EmissionState &candidate_state, TransitionMap &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Map\+::transitions (
+\begin{DoxyParamCaption}
+\item[{const {\bf Emission\+State} \&}]{predecessor\+\_\+state, }
+\item[{const {\bf Emission\+State} \&}]{candidate\+\_\+state, }
+\item[{Transition\+Map \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadMap_a1985f0104837c0674dfc1e4302cee862}{}\label{classhmm__mm_1_1RoadMap_a1985f0104837c0674dfc1e4302cee862}
+
+
+Find the transitions between two emission states. This is an all pairs comparison between road points in the predecessor states and road points in the current candidate state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em predecessor\+\_\+state} & the predecessor emission state \\
+\hline
+{\em candidate\+\_\+state} & the candidate emission state \\
+\hline
+{\em out} & the resulting transitions as a map of candidate road points to route transitions \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/hmm-\/mm/include/hmm\+\_\+mm.\+hpp\item 
+cvdi-\/src/hmm-\/mm/src/hmm\+\_\+mm.\+cpp\end{DoxyCompactItemize}

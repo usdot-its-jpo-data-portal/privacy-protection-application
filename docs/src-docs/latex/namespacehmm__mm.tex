@@ -1,0 +1,45 @@
+\hypertarget{namespacehmm__mm}{}\section{hmm\+\_\+mm Namespace Reference}
+\label{namespacehmm__mm}\index{hmm\+\_\+mm@{hmm\+\_\+mm}}
+
+
+Hidden Markov Model Map Matching.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classhmm__mm_1_1EmissionState}{Emission\+State}
+\begin{DoxyCompactList}\small\item\em Emission state for a sample a some time (t) in the Hidden Markov Model. \end{DoxyCompactList}\item 
+class \hyperlink{classhmm__mm_1_1Mark}{Mark}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classhmm__mm_1_1Mark}{Mark} used for routing. \end{DoxyCompactList}\item 
+class \hyperlink{classhmm__mm_1_1MarkComparison}{Mark\+Comparison}
+\begin{DoxyCompactList}\small\item\em Comparison \hyperlink{classhmm__mm_1_1Mark}{Mark} objects used in routing. \end{DoxyCompactList}\item 
+class \hyperlink{classhmm__mm_1_1Matcher}{Matcher}
+\begin{DoxyCompactList}\small\item\em Hidden Markov Model Map \hyperlink{classhmm__mm_1_1Matcher}{Matcher} for sequential G\+PS traces. \end{DoxyCompactList}\item 
+class \hyperlink{classhmm__mm_1_1RoadMap}{Road\+Map}
+\begin{DoxyCompactList}\small\item\em Road map for finding road point candidates and routes between them. \end{DoxyCompactList}\item 
+class \hyperlink{classhmm__mm_1_1RoadPoint}{Road\+Point}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classhmm__mm_1_1RoadPoint}{Road\+Point} object representing a candidate edge for a sample. This is the core Hidden Markov Model structure, containing the emmission and transition probabilities, as well, as the intermediate probabilities (filter and sequence). \end{DoxyCompactList}\item 
+class \hyperlink{classhmm__mm_1_1Router}{Router}
+\begin{DoxyCompactList}\small\item\em Static class for find the lowest cost (shortest time) path between two sequential samples in the Hidden Markov Model. \end{DoxyCompactList}\item 
+class \hyperlink{classhmm__mm_1_1Transition}{Transition}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classhmm__mm_1_1Transition}{Transition} object representing the path and probability between two sequential trace samples. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Road\+Point\+Map} = std\+::unordered\+\_\+map$<$ long, Road\+Point\+::\+Ptr $>$\hypertarget{namespacehmm__mm_a2082386e29c66edb1a4ea35eab592d1f}{}\label{namespacehmm__mm_a2082386e29c66edb1a4ea35eab592d1f}
+
+\item 
+using {\bfseries Road\+Point\+List} = std\+::vector$<$ Road\+Point\+::\+Ptr $>$\hypertarget{namespacehmm__mm_a95b877e1f599aba61a3f79a8ab7e5f29}{}\label{namespacehmm__mm_a95b877e1f599aba61a3f79a8ab7e5f29}
+
+\item 
+using {\bfseries Road\+Point\+Set} = std\+::unordered\+\_\+set$<$ Road\+Point\+::\+Ptr $>$\hypertarget{namespacehmm__mm_abf21c09a2f7e31b37b496631e727f51a}{}\label{namespacehmm__mm_abf21c09a2f7e31b37b496631e727f51a}
+
+\item 
+using {\bfseries Matched\+Results} = std\+::list$<$ Road\+Point\+::\+Ptr $>$\hypertarget{namespacehmm__mm_a0bf17e25adf5c987f838b20572785ef7}{}\label{namespacehmm__mm_a0bf17e25adf5c987f838b20572785ef7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hidden Markov Model Map Matching. 

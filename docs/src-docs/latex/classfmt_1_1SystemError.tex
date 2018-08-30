@@ -1,0 +1,60 @@
+\hypertarget{classfmt_1_1SystemError}{}\section{fmt\+:\+:System\+Error Class Reference}
+\label{classfmt_1_1SystemError}\index{fmt\+::\+System\+Error@{fmt\+::\+System\+Error}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+Inheritance diagram for fmt\+:\+:System\+Error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classfmt_1_1SystemError}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfmt_1_1SystemError_a307c40b2542f53d7426b09319255d35c}{System\+Error} (int error\+\_\+code, \hyperlink{classfmt_1_1BasicCStringRef}{C\+String\+Ref} message)
+\item 
+int {\bfseries error\+\_\+code} () const \hypertarget{classfmt_1_1SystemError_ae6a1e8889412ce7818d4ba22cdb511d7}{}\label{classfmt_1_1SystemError_ae6a1e8889412ce7818d4ba22cdb511d7}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef char {\bfseries Char}\hypertarget{classfmt_1_1SystemError_a5b10a8e6d426d0d8768944622a52ae51}{}\label{classfmt_1_1SystemError_a5b10a8e6d426d0d8768944622a52ae51}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries error\+\_\+code\+\_\+}\hypertarget{classfmt_1_1SystemError_a705a49ba6ef5e06dced3b845bdc7330a}{}\label{classfmt_1_1SystemError_a705a49ba6ef5e06dced3b845bdc7330a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An error returned by an operating system or a language runtime, for example a file opening error. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{fmt\+::\+System\+Error@{fmt\+::\+System\+Error}!System\+Error@{System\+Error}}
+\index{System\+Error@{System\+Error}!fmt\+::\+System\+Error@{fmt\+::\+System\+Error}}
+\subsubsection[{\texorpdfstring{System\+Error(int error\+\_\+code, C\+String\+Ref message)}{SystemError(int error_code, CStringRef message)}}]{\setlength{\rightskip}{0pt plus 5cm}fmt\+::\+System\+Error\+::\+System\+Error (
+\begin{DoxyParamCaption}
+\item[{int}]{error\+\_\+code, }
+\item[{{\bf C\+String\+Ref}}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1SystemError_a307c40b2542f53d7426b09319255d35c}{}\label{classfmt_1_1SystemError_a307c40b2542f53d7426b09319255d35c}
+Constructs a \+:class\+:{\ttfamily \hyperlink{classfmt_1_1SystemError}{fmt\+::\+System\+Error}} object with the description of the form
+
+.. parsed-\/literal\+:\+: $<$message$>$$\ast$\+: $\ast$$<$system-\/message$>$$\ast$
+
+where $\ast$$<$message$>$$\ast$ is the formatted message and $\ast$$<$system-\/message$>$$\ast$ is the system message corresponding to the error code. error\+\_\+code$\ast$ is a system error code as given by {\ttfamily errno}. If {\itshape error\+\_\+code} is not a valid error code such as -\/1, the system message may look like \char`\"{}\+Unknown error -\/1\char`\"{} and is platform-\/dependent.
+
+Example$\ast$$\ast$\+:\+:
+
+This throws a \hyperlink{classfmt_1_1SystemError}{System\+Error} with the description cannot open file \textquotesingle{}madeup\textquotesingle{}\+: No such file or directory or similar (system message may vary). const char $\ast$filename = \char`\"{}madeup\char`\"{}; std\+::\+F\+I\+LE $\ast$file = std\+::fopen(filename, \char`\"{}r\char`\"{}); if (!file) throw \hyperlink{classfmt_1_1SystemError}{fmt\+::\+System\+Error}(errno, \char`\"{}cannot open file \textquotesingle{}\{\}\textquotesingle{}\char`\"{}, filename);  
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+cc\end{DoxyCompactItemize}

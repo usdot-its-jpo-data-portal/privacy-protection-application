@@ -1,0 +1,355 @@
+\hypertarget{classgeo_1_1Road}{}\section{geo\+:\+:Road Class Reference}
+\label{classgeo_1_1Road}\index{geo\+::\+Road@{geo\+::\+Road}}
+
+
+\hyperlink{classgeo_1_1Road}{Road} object containing a basic line string and meta data associated with the underlying real world road. A road can be one or two way and is used in spatial indexing. A road should not be confused with an edge used in the graph topology.  
+
+
+
+
+{\ttfamily \#include $<$geo.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classgeo_1_1Road}{Road} $>$\hypertarget{classgeo_1_1Road_a1bd5a576d8c09aa43ae8b638f2e896de}{}\label{classgeo_1_1Road_a1bd5a576d8c09aa43ae8b638f2e896de}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo_1_1Road_a85b7e3e89e52e842bfa15e5404fe4a9e}{Road} (long gid, long \hyperlink{classgeo_1_1Road_a79fa381411ec36822a72b18bdc0fb208}{osm\+\_\+id}, long \hyperlink{classgeo_1_1Road_aeb43e9d82bbcab6a14a34abb749c4315}{source}, long \hyperlink{classgeo_1_1Road_adc5ce304928ae25948a4e4d96f239751}{target}, double reverse, long class\+\_\+id, float \hyperlink{classgeo_1_1Road_a24e121011f2b204e1d591c6a4f886380}{priority}, int \hyperlink{classgeo_1_1Road_a08506729380f0ec23720cffd27ea3d16}{maxspeed\+\_\+forward}, int \hyperlink{classgeo_1_1Road_a4278e486912e378390de155ca0bb2fc9}{maxspeed\+\_\+backward}, double \hyperlink{classgeo_1_1Road_ad102794fac433fc684647827d79f0aeb}{width}, bool \hyperlink{classgeo_1_1Road_afdc7c8bacdac2e5976bf29a0e9ee5ce2}{is\+\_\+excluded}, const std\+::string geom\+\_\+string, bool \hyperlink{classgeo_1_1Road_a63163ca614d9d01b3e15bf06a0901ddb}{is\+\_\+valid}=true, const std\+::string \hyperlink{classgeo_1_1Road_a32af3119496e802b14d9b1e3529b139b}{error\+\_\+msg}=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Construct a road. Most fields are copied to the new object. The geometric string is used to build the underlying line string. This string should be a valid W\+KB representation of a line string, otherwise the road will be set to invalid. This also constructs a bounds for this road so that it can be spatially indexed (e.\+g. by a quad tree). \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Road_a2461a5c785065220b6036f9e2e6646ff}{id} () const 
+\begin{DoxyCompactList}\small\item\em Get the unique ID of this road. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Road_a79fa381411ec36822a72b18bdc0fb208}{osm\+\_\+id} () const 
+\begin{DoxyCompactList}\small\item\em Get the O\+SM way ID of this road. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Road_aeb43e9d82bbcab6a14a34abb749c4315}{source} () const 
+\begin{DoxyCompactList}\small\item\em Get the ID of the source vertex of this road. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Road_adc5ce304928ae25948a4e4d96f239751}{target} () const 
+\begin{DoxyCompactList}\small\item\em Get the ID of the target vertex of this road. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Road_a22e7817a996ae5367f549228bbdda1b9}{type} () const 
+\begin{DoxyCompactList}\small\item\em Get the O\+SM way type of this road. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Road_a08506729380f0ec23720cffd27ea3d16}{maxspeed\+\_\+forward} () const 
+\begin{DoxyCompactList}\small\item\em Get the maximum forward speed for the road as kilometers per hour. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Road_a4278e486912e378390de155ca0bb2fc9}{maxspeed\+\_\+backward} () const 
+\begin{DoxyCompactList}\small\item\em Get the maximum backward speed for the road as kilometers per hour. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo_1_1Road_ae8ac2aa49e88d8698fac37e74d07b829}{length} () const 
+\begin{DoxyCompactList}\small\item\em Get the length of this road in meters. \end{DoxyCompactList}\item 
+float \hyperlink{classgeo_1_1Road_a24e121011f2b204e1d591c6a4f886380}{priority} () const 
+\begin{DoxyCompactList}\small\item\em Get the use priority for this road. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo_1_1Road_ad102794fac433fc684647827d79f0aeb}{width} () const 
+\begin{DoxyCompactList}\small\item\em Get the approximate width in meters of this road. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo_1_1Road_afdc7c8bacdac2e5976bf29a0e9ee5ce2}{is\+\_\+excluded} () const 
+\begin{DoxyCompactList}\small\item\em Return true if this road should be excluded from the graph topology. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo_1_1Road_aebf540cdc90e8cdad7d5fbaf2838ed0f}{is\+\_\+oneway} () const 
+\begin{DoxyCompactList}\small\item\em Return true if this road is a one way road. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo_1_1Road_a63163ca614d9d01b3e15bf06a0901ddb}{is\+\_\+valid} () const 
+\begin{DoxyCompactList}\small\item\em Return true if this road has a valid line string. \end{DoxyCompactList}\item 
+const std\+::string \hyperlink{classgeo_1_1Road_a32af3119496e802b14d9b1e3529b139b}{error\+\_\+msg} () const 
+\begin{DoxyCompactList}\small\item\em Get the error message for invalid road line strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+O\+G\+R\+Line\+String \hyperlink{classgeo_1_1Road_a00b051e682503788221079985a52e5fe}{line\+\_\+string}\hypertarget{classgeo_1_1Road_a00b051e682503788221079985a52e5fe}{}\label{classgeo_1_1Road_a00b051e682503788221079985a52e5fe}
+
+\begin{DoxyCompactList}\small\item\em The underlying line string of this road as an O\+G\+R\+Line\+String. \end{DoxyCompactList}\item 
+C\+P\+L\+Rect\+Obj \hyperlink{classgeo_1_1Road_ad862769d9ef8ce686ab11a65f93efc38}{bounds}\hypertarget{classgeo_1_1Road_ad862769d9ef8ce686ab11a65f93efc38}{}\label{classgeo_1_1Road_ad862769d9ef8ce686ab11a65f93efc38}
+
+\begin{DoxyCompactList}\small\item\em The underlying bounds of this road as a C\+P\+L\+Rect\+Obj. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classgeo_1_1Road_a9f00f89b48840bb6e500adbb1e4b1ab7}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classgeo_1_1Road}{Road} \&road)
+\begin{DoxyCompactList}\small\item\em Write this \hyperlink{classgeo_1_1Road}{Road} to a stream formatted for C\+SV output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classgeo_1_1Road}{Road} object containing a basic line string and meta data associated with the underlying real world road. A road can be one or two way and is used in spatial indexing. A road should not be confused with an edge used in the graph topology. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+::\+Road@{geo\+::\+Road}!Road@{Road}}
+\index{Road@{Road}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{Road(long gid, long osm\+\_\+id, long source, long target, double reverse, long class\+\_\+id, float priority, int maxspeed\+\_\+forward, int maxspeed\+\_\+backward, double width, bool is\+\_\+excluded, const std\+::string geom\+\_\+string, bool is\+\_\+valid=true, const std\+::string error\+\_\+msg="""")}{Road(long gid, long osm_id, long source, long target, double reverse, long class_id, float priority, int maxspeed_forward, int maxspeed_backward, double width, bool is_excluded, const std::string geom_string, bool is_valid=true, const std::string error_msg="")}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+::\+Road\+::\+Road (
+\begin{DoxyParamCaption}
+\item[{long}]{gid, }
+\item[{long}]{osm\+\_\+id, }
+\item[{long}]{source, }
+\item[{long}]{target, }
+\item[{double}]{reverse, }
+\item[{long}]{class\+\_\+id, }
+\item[{float}]{priority, }
+\item[{int}]{maxspeed\+\_\+forward, }
+\item[{int}]{maxspeed\+\_\+backward, }
+\item[{double}]{width, }
+\item[{bool}]{is\+\_\+excluded, }
+\item[{const std\+::string}]{geom\+\_\+string, }
+\item[{bool}]{is\+\_\+valid = {\ttfamily true}, }
+\item[{const std\+::string}]{error\+\_\+msg = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo_1_1Road_a85b7e3e89e52e842bfa15e5404fe4a9e}{}\label{classgeo_1_1Road_a85b7e3e89e52e842bfa15e5404fe4a9e}
+
+
+Construct a road. Most fields are copied to the new object. The geometric string is used to build the underlying line string. This string should be a valid W\+KB representation of a line string, otherwise the road will be set to invalid. This also constructs a bounds for this road so that it can be spatially indexed (e.\+g. by a quad tree). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gid} & the unique G\+ID of the road \\
+\hline
+{\em osm\+\_\+id} & the O\+SM way ID of the road \\
+\hline
+{\em source} & the ID of the entry vertex to this road \\
+\hline
+{\em target} & the ID of the exit vertex road to this road \\
+\hline
+{\em reverse} & direction of the road (one way if negative) \\
+\hline
+{\em class\+\_\+id} & the O\+SM way type of the road \\
+\hline
+{\em priority} & the priority of the road used to compute the cost of traversing this road \\
+\hline
+{\em maxspeed\+\_\+forward} & the maximum forward speed limit for this road as kilometers per hour \\
+\hline
+{\em maxspeed\+\_\+backward} & the maximum backward speed limit for this road as kilometers per hour \\
+\hline
+{\em width} & the approximate width of the this road in meters \\
+\hline
+{\em is\+\_\+excluded} & is this road type should be excluded from the graph topology \\
+\hline
+{\em geom\+\_\+string} & the W\+KB hex string representing the line string of this road \\
+\hline
+{\em is\+\_\+valid} & indicates the road has a valid line string \\
+\hline
+{\em error\+\_\+msg} & error message about the line string creation \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+::\+Road@{geo\+::\+Road}!error\+\_\+msg@{error\+\_\+msg}}
+\index{error\+\_\+msg@{error\+\_\+msg}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{error\+\_\+msg() const }{error_msg() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string geo\+::\+Road\+::error\+\_\+msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_a32af3119496e802b14d9b1e3529b139b}{}\label{classgeo_1_1Road_a32af3119496e802b14d9b1e3529b139b}
+
+
+Get the error message for invalid road line strings. 
+
+\begin{DoxyReturn}{Returns}
+the error message for the line string 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!id@{id}}
+\index{id@{id}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{id() const }{id() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Road\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_a2461a5c785065220b6036f9e2e6646ff}{}\label{classgeo_1_1Road_a2461a5c785065220b6036f9e2e6646ff}
+
+
+Get the unique ID of this road. 
+
+\begin{DoxyReturn}{Returns}
+the unique ID 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!is\+\_\+excluded@{is\+\_\+excluded}}
+\index{is\+\_\+excluded@{is\+\_\+excluded}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{is\+\_\+excluded() const }{is_excluded() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+::\+Road\+::is\+\_\+excluded (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_afdc7c8bacdac2e5976bf29a0e9ee5ce2}{}\label{classgeo_1_1Road_afdc7c8bacdac2e5976bf29a0e9ee5ce2}
+
+
+Return true if this road should be excluded from the graph topology. 
+
+\begin{DoxyReturn}{Returns}
+true if excluded, false otherwise 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!is\+\_\+oneway@{is\+\_\+oneway}}
+\index{is\+\_\+oneway@{is\+\_\+oneway}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{is\+\_\+oneway() const }{is_oneway() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+::\+Road\+::is\+\_\+oneway (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_aebf540cdc90e8cdad7d5fbaf2838ed0f}{}\label{classgeo_1_1Road_aebf540cdc90e8cdad7d5fbaf2838ed0f}
+
+
+Return true if this road is a one way road. 
+
+\begin{DoxyReturn}{Returns}
+true if one way, false otherwise 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!is\+\_\+valid@{is\+\_\+valid}}
+\index{is\+\_\+valid@{is\+\_\+valid}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{is\+\_\+valid() const }{is_valid() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+::\+Road\+::is\+\_\+valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_a63163ca614d9d01b3e15bf06a0901ddb}{}\label{classgeo_1_1Road_a63163ca614d9d01b3e15bf06a0901ddb}
+
+
+Return true if this road has a valid line string. 
+
+\begin{DoxyReturn}{Returns}
+true if the line string is valid, false otherwise 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!length@{length}}
+\index{length@{length}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{length() const }{length() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Road\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_ae8ac2aa49e88d8698fac37e74d07b829}{}\label{classgeo_1_1Road_ae8ac2aa49e88d8698fac37e74d07b829}
+
+
+Get the length of this road in meters. 
+
+\begin{DoxyReturn}{Returns}
+the length in meters 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!maxspeed\+\_\+backward@{maxspeed\+\_\+backward}}
+\index{maxspeed\+\_\+backward@{maxspeed\+\_\+backward}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{maxspeed\+\_\+backward() const }{maxspeed_backward() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Road\+::maxspeed\+\_\+backward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_a4278e486912e378390de155ca0bb2fc9}{}\label{classgeo_1_1Road_a4278e486912e378390de155ca0bb2fc9}
+
+
+Get the maximum backward speed for the road as kilometers per hour. 
+
+\begin{DoxyReturn}{Returns}
+the maximum backward speed as kilometers per hour 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!maxspeed\+\_\+forward@{maxspeed\+\_\+forward}}
+\index{maxspeed\+\_\+forward@{maxspeed\+\_\+forward}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{maxspeed\+\_\+forward() const }{maxspeed_forward() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Road\+::maxspeed\+\_\+forward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_a08506729380f0ec23720cffd27ea3d16}{}\label{classgeo_1_1Road_a08506729380f0ec23720cffd27ea3d16}
+
+
+Get the maximum forward speed for the road as kilometers per hour. 
+
+\begin{DoxyReturn}{Returns}
+the maximum forward speed as kilometers per hour 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!osm\+\_\+id@{osm\+\_\+id}}
+\index{osm\+\_\+id@{osm\+\_\+id}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{osm\+\_\+id() const }{osm_id() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Road\+::osm\+\_\+id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_a79fa381411ec36822a72b18bdc0fb208}{}\label{classgeo_1_1Road_a79fa381411ec36822a72b18bdc0fb208}
+
+
+Get the O\+SM way ID of this road. 
+
+\begin{DoxyReturn}{Returns}
+the O\+SM way ID 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!priority@{priority}}
+\index{priority@{priority}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{priority() const }{priority() const }}]{\setlength{\rightskip}{0pt plus 5cm}float geo\+::\+Road\+::priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_a24e121011f2b204e1d591c6a4f886380}{}\label{classgeo_1_1Road_a24e121011f2b204e1d591c6a4f886380}
+
+
+Get the use priority for this road. 
+
+\begin{DoxyReturn}{Returns}
+the use priority 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!source@{source}}
+\index{source@{source}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{source() const }{source() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Road\+::source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_aeb43e9d82bbcab6a14a34abb749c4315}{}\label{classgeo_1_1Road_aeb43e9d82bbcab6a14a34abb749c4315}
+
+
+Get the ID of the source vertex of this road. 
+
+\begin{DoxyReturn}{Returns}
+the ID of the source vertex 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!target@{target}}
+\index{target@{target}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{target() const }{target() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Road\+::target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_adc5ce304928ae25948a4e4d96f239751}{}\label{classgeo_1_1Road_adc5ce304928ae25948a4e4d96f239751}
+
+
+Get the ID of the target vertex of this road. 
+
+\begin{DoxyReturn}{Returns}
+the ID of the target vertex 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!type@{type}}
+\index{type@{type}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{type() const }{type() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Road\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_a22e7817a996ae5367f549228bbdda1b9}{}\label{classgeo_1_1Road_a22e7817a996ae5367f549228bbdda1b9}
+
+
+Get the O\+SM way type of this road. 
+
+\begin{DoxyReturn}{Returns}
+the O\+SM way type 
+\end{DoxyReturn}
+\index{geo\+::\+Road@{geo\+::\+Road}!width@{width}}
+\index{width@{width}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{width() const }{width() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Road\+::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Road_ad102794fac433fc684647827d79f0aeb}{}\label{classgeo_1_1Road_ad102794fac433fc684647827d79f0aeb}
+
+
+Get the approximate width in meters of this road. 
+
+\begin{DoxyReturn}{Returns}
+the approximate width in meters 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{geo\+::\+Road@{geo\+::\+Road}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!geo\+::\+Road@{geo\+::\+Road}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Road} \&}]{road}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classgeo_1_1Road_a9f00f89b48840bb6e500adbb1e4b1ab7}{}\label{classgeo_1_1Road_a9f00f89b48840bb6e500adbb1e4b1ab7}
+
+
+Write this \hyperlink{classgeo_1_1Road}{Road} to a stream formatted for C\+SV output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream object where the point will be written \\
+\hline
+{\em road} & the road to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the given stream object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo/include/geo.\+hpp\item 
+cvdi-\/src/geo/src/geo.\+cpp\end{DoxyCompactItemize}

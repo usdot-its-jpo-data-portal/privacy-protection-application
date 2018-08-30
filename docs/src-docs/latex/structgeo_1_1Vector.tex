@@ -1,0 +1,149 @@
+\hypertarget{structgeo_1_1Vector}{}\section{geo\+:\+:Vector Struct Reference}
+\label{structgeo_1_1Vector}\index{geo\+::\+Vector@{geo\+::\+Vector}}
+
+
+Simple 3 dimensional (x,y,z) vector class used to assist in geospatial and geodesic computations.  
+
+
+
+
+{\ttfamily \#include $<$geo.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structgeo_1_1Vector_abe80c8a529a5562d0efd8258424773eb}{Vector} (double \hyperlink{structgeo_1_1Vector_a92d828b5095e1a99f159d043cc88ce3d}{x}=1.\+0, double \hyperlink{structgeo_1_1Vector_ab21926c4f98eeb07d6ad19d1affdb906}{y}=1.\+0, double \hyperlink{structgeo_1_1Vector_a27b88a7d57422a7609e011fe921ea500}{z}=1.\+0)
+\begin{DoxyCompactList}\small\item\em Construct a vector. Will construct the unit vector if no parameters are given. \end{DoxyCompactList}\item 
+void \hyperlink{structgeo_1_1Vector_a27d2f64b051e43dca9e7e920cb041d50}{add} (const \hyperlink{structgeo_1_1Vector}{Vector} \&in, \hyperlink{structgeo_1_1Vector}{Vector} \&out) const 
+\begin{DoxyCompactList}\small\item\em Add this vector with another vector. \end{DoxyCompactList}\item 
+void \hyperlink{structgeo_1_1Vector_ae93fe864d5eb6ebb960f167757e7d9ce}{multiply} (double scalar, \hyperlink{structgeo_1_1Vector}{Vector} \&out) const 
+\begin{DoxyCompactList}\small\item\em Multiply this vector with a scalar. \end{DoxyCompactList}\item 
+void \hyperlink{structgeo_1_1Vector_a9afe0c66aadbbb1c740e93aa419b19d5}{cross} (const \hyperlink{structgeo_1_1Vector}{Vector} \&in, \hyperlink{structgeo_1_1Vector}{Vector} \&out) const 
+\begin{DoxyCompactList}\small\item\em Compute the cross product of this vector with another vector. \end{DoxyCompactList}\item 
+double \hyperlink{structgeo_1_1Vector_a186ede370d236ac2f8d37c17c1999fbf}{dot} (const \hyperlink{structgeo_1_1Vector}{Vector} \&in) const 
+\begin{DoxyCompactList}\small\item\em Compute the dot product of this vector with another vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{structgeo_1_1Vector_a92d828b5095e1a99f159d043cc88ce3d}{x}\hypertarget{structgeo_1_1Vector_a92d828b5095e1a99f159d043cc88ce3d}{}\label{structgeo_1_1Vector_a92d828b5095e1a99f159d043cc88ce3d}
+
+\begin{DoxyCompactList}\small\item\em The x value of the vector. \end{DoxyCompactList}\item 
+double \hyperlink{structgeo_1_1Vector_ab21926c4f98eeb07d6ad19d1affdb906}{y}\hypertarget{structgeo_1_1Vector_ab21926c4f98eeb07d6ad19d1affdb906}{}\label{structgeo_1_1Vector_ab21926c4f98eeb07d6ad19d1affdb906}
+
+\begin{DoxyCompactList}\small\item\em The y value of the vector. \end{DoxyCompactList}\item 
+double \hyperlink{structgeo_1_1Vector_a27b88a7d57422a7609e011fe921ea500}{z}\hypertarget{structgeo_1_1Vector_a27b88a7d57422a7609e011fe921ea500}{}\label{structgeo_1_1Vector_a27b88a7d57422a7609e011fe921ea500}
+
+\begin{DoxyCompactList}\small\item\em The z value of the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple 3 dimensional (x,y,z) vector class used to assist in geospatial and geodesic computations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+::\+Vector@{geo\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!geo\+::\+Vector@{geo\+::\+Vector}}
+\subsubsection[{\texorpdfstring{Vector(double x=1.\+0, double y=1.\+0, double z=1.\+0)}{Vector(double x=1.0, double y=1.0, double z=1.0)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+::\+Vector\+::\+Vector (
+\begin{DoxyParamCaption}
+\item[{double}]{x = {\ttfamily 1.0}, }
+\item[{double}]{y = {\ttfamily 1.0}, }
+\item[{double}]{z = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{structgeo_1_1Vector_abe80c8a529a5562d0efd8258424773eb}{}\label{structgeo_1_1Vector_abe80c8a529a5562d0efd8258424773eb}
+
+
+Construct a vector. Will construct the unit vector if no parameters are given. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x value of the vector \\
+\hline
+{\em y} & the y value of the vector \\
+\hline
+{\em z} & the z value of the vector \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+::\+Vector@{geo\+::\+Vector}!add@{add}}
+\index{add@{add}!geo\+::\+Vector@{geo\+::\+Vector}}
+\subsubsection[{\texorpdfstring{add(const Vector \&in, Vector \&out) const }{add(const Vector &in, Vector &out) const }}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Vector\+::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{in, }
+\item[{{\bf Vector} \&}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{structgeo_1_1Vector_a27d2f64b051e43dca9e7e920cb041d50}{}\label{structgeo_1_1Vector_a27d2f64b051e43dca9e7e920cb041d50}
+
+
+Add this vector with another vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & the vector to add to this vector \\
+\hline
+{\em out} & the vector to store the result of the addition \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Vector@{geo\+::\+Vector}!cross@{cross}}
+\index{cross@{cross}!geo\+::\+Vector@{geo\+::\+Vector}}
+\subsubsection[{\texorpdfstring{cross(const Vector \&in, Vector \&out) const }{cross(const Vector &in, Vector &out) const }}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Vector\+::cross (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{in, }
+\item[{{\bf Vector} \&}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{structgeo_1_1Vector_a9afe0c66aadbbb1c740e93aa419b19d5}{}\label{structgeo_1_1Vector_a9afe0c66aadbbb1c740e93aa419b19d5}
+
+
+Compute the cross product of this vector with another vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & the vector for R\+HS of this cross product \\
+\hline
+{\em out} & the vector to store the result of the cross product \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Vector@{geo\+::\+Vector}!dot@{dot}}
+\index{dot@{dot}!geo\+::\+Vector@{geo\+::\+Vector}}
+\subsubsection[{\texorpdfstring{dot(const Vector \&in) const }{dot(const Vector &in) const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Vector\+::dot (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{in}
+\end{DoxyParamCaption}
+) const}\hypertarget{structgeo_1_1Vector_a186ede370d236ac2f8d37c17c1999fbf}{}\label{structgeo_1_1Vector_a186ede370d236ac2f8d37c17c1999fbf}
+
+
+Compute the dot product of this vector with another vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & the vector to compute the dot product with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the computed dot product 
+\end{DoxyReturn}
+\index{geo\+::\+Vector@{geo\+::\+Vector}!multiply@{multiply}}
+\index{multiply@{multiply}!geo\+::\+Vector@{geo\+::\+Vector}}
+\subsubsection[{\texorpdfstring{multiply(double scalar, Vector \&out) const }{multiply(double scalar, Vector &out) const }}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Vector\+::multiply (
+\begin{DoxyParamCaption}
+\item[{double}]{scalar, }
+\item[{{\bf Vector} \&}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{structgeo_1_1Vector_ae93fe864d5eb6ebb960f167757e7d9ce}{}\label{structgeo_1_1Vector_ae93fe864d5eb6ebb960f167757e7d9ce}
+
+
+Multiply this vector with a scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & the scalar value to multiply this vector by \\
+\hline
+{\em out} & the vector to store the result of the multiplication \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo/include/geo.\+hpp\item 
+cvdi-\/src/geo/src/geo.\+cpp\end{DoxyCompactItemize}

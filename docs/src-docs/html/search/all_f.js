@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['radius',['radius',['../classhmm__mm_1_1RoadMap.html#a17ae636d51887670e192fad2cb87ce4f',1,'hmm_mm::RoadMap']]],
+  ['raw_5findex',['raw_index',['../classgeo__data_1_1Sample.html#ac7ed68fe4f3e48e77a43ba52be3838e9',1,'geo_data::Sample']]],
+  ['record',['record',['../classgeo__data_1_1Sample.html#ac7ebb4bddcc448ab65843f29f7e3d2a5',1,'geo_data::Sample']]],
+  ['rect_5ffor_5fradius',['rect_for_radius',['../classgeo_1_1Spatial.html#a4d594e436dd265ed927e6ce4d3a8db42',1,'geo::Spatial']]],
+  ['rect_5fring',['rect_ring',['../classgeo_1_1Spatial.html#a34a03dcb8afdca6fc2d4cfc3fd3025e6',1,'geo::Spatial']]],
+  ['registry_5ft',['registry_t',['../classspdlog_1_1details_1_1registry__t.html',1,'spdlog::details']]],
+  ['remove_5ftrace_5ferrors',['remove_trace_errors',['../namespacegeo__data.html#a0570a86d6626b4a1d8ca9880c3dc1e60',1,'geo_data']]],
+  ['reserve',['reserve',['../classfmt_1_1Buffer.html#a7f46a3ce8d86abe35904f6654bd4ea1e',1,'fmt::Buffer']]],
+  ['reset',['reset',['../classcvdi_1_1Stop_1_1Deque.html#a07479bd54399d00d977965de4608f57d',1,'cvdi::Stop::Deque']]],
+  ['resize',['resize',['../classfmt_1_1Buffer.html#a20f893164dc20e8ea8c77810d4ea8d59',1,'fmt::Buffer']]],
+  ['right',['right',['../classgeo__data_1_1Interval.html#af952a082fcbaba214c19b8e647e9f04e',1,'geo_data::Interval']]],
+  ['rings',['rings',['../classgeo_1_1Area.html#a3e197ce947f9cc7df5c8ca93c97bb17f',1,'geo::Area']]],
+  ['road',['Road',['../classgeo_1_1Road.html',1,'geo']]],
+  ['road',['Road',['../classgeo_1_1Road.html#a85b7e3e89e52e842bfa15e5404fe4a9e',1,'geo::Road::Road()'],['../classgeo_1_1Edge.html#a96fc3fb170d60c5eed77a4fb274f4741',1,'geo::Edge::road()']]],
+  ['roadmap',['RoadMap',['../classhmm__mm_1_1RoadMap.html',1,'hmm_mm']]],
+  ['roadmap',['RoadMap',['../classhmm__mm_1_1RoadMap.html#a047e8396e3def5299553e8d7dc32a341',1,'hmm_mm::RoadMap']]],
+  ['roadpoint',['RoadPoint',['../classhmm__mm_1_1RoadPoint.html',1,'hmm_mm']]],
+  ['roadpoint',['RoadPoint',['../classhmm__mm_1_1RoadPoint.html#a6e011235953e681f770ee5e77b9aa4b1',1,'hmm_mm::RoadPoint']]],
+  ['roadreader',['RoadReader',['../classgeo__data_1_1RoadReader.html',1,'geo_data']]],
+  ['round',['round',['../classgeo_1_1Spatial.html#a820aa2d3891ef2c7c560cb71c88d24ba',1,'geo::Spatial']]],
+  ['route',['route',['../classhmm__mm_1_1Router.html#ade72964f9d0c24520f76757cde903d5f',1,'hmm_mm::Router']]],
+  ['route_5fcost',['route_cost',['../classhmm__mm_1_1Router.html#a087113186f15df2c7c462a45d5569325',1,'hmm_mm::Router']]],
+  ['router',['Router',['../classhmm__mm_1_1Router.html',1,'hmm_mm']]],
+  ['rstrip',['rstrip',['../namespaceutil.html#a8119e330269073c45052eff3685a2aee',1,'util']]],
+  ['runtimeerror',['RuntimeError',['../classfmt_1_1internal_1_1RuntimeError.html',1,'fmt::internal']]]
+];

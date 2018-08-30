@@ -1,0 +1,58 @@
+\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase}{}\section{fmt\+:\+:internal\+:\+:Arg\+Formatter\+Base$<$ Impl, Char $>$ Class Template Reference}
+\label{classfmt_1_1internal_1_1ArgFormatterBase}\index{fmt\+::internal\+::\+Arg\+Formatter\+Base$<$ Impl, Char $>$@{fmt\+::internal\+::\+Arg\+Formatter\+Base$<$ Impl, Char $>$}}
+Inheritance diagram for fmt\+:\+:internal\+:\+:Arg\+Formatter\+Base$<$ Impl, Char $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classfmt_1_1internal_1_1ArgFormatterBase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Arg\+Formatter\+Base} (\hyperlink{classfmt_1_1BasicWriter}{Basic\+Writer}$<$ Char $>$ \&w, \hyperlink{structfmt_1_1FormatSpec}{Format\+Spec} \&s)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_a67f48acedb2ba3f243150c41f964252b}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_a67f48acedb2ba3f243150c41f964252b}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries visit\+\_\+any\+\_\+int} (T value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_ae6f9ce1fa7940ebda3ac594a45edd32d}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_ae6f9ce1fa7940ebda3ac594a45edd32d}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries visit\+\_\+any\+\_\+double} (T value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_a670214e1773c9c86002be07c043566dd}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_a670214e1773c9c86002be07c043566dd}
+
+\item 
+void {\bfseries visit\+\_\+bool} (bool value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_a379b2f30d3e0526c88be65f8a2b596be}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_a379b2f30d3e0526c88be65f8a2b596be}
+
+\item 
+void {\bfseries visit\+\_\+char} (int value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_ab85eb2158c9d48c847706de26f35460c}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_ab85eb2158c9d48c847706de26f35460c}
+
+\item 
+void {\bfseries visit\+\_\+cstring} (const char $\ast$value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_a35e5c4d1580f7eec032661f9823c0cad}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_a35e5c4d1580f7eec032661f9823c0cad}
+
+\item 
+void {\bfseries visit\+\_\+string} (\hyperlink{structfmt_1_1internal_1_1Value_1_1StringValue}{Arg\+::\+String\+Value}$<$ char $>$ value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_a937a7808ebf21736498e32abba6a0046}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_a937a7808ebf21736498e32abba6a0046}
+
+\item 
+void {\bfseries visit\+\_\+wstring} (\hyperlink{structfmt_1_1internal_1_1Value_1_1StringValue}{Arg\+::\+String\+Value}$<$ Char $>$ value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_ad3469bff1ffe51395d9f8f0e0824ff2c}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_ad3469bff1ffe51395d9f8f0e0824ff2c}
+
+\item 
+void {\bfseries visit\+\_\+pointer} (const void $\ast$value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_a5c11af21a3e1249b78ef87c968572ef5}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_a5c11af21a3e1249b78ef87c968572ef5}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfmt_1_1BasicWriter}{Basic\+Writer}$<$ Char $>$ \& {\bfseries writer} ()\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_a042c1243143197b04c5b4d77a89a4fb5}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_a042c1243143197b04c5b4d77a89a4fb5}
+
+\item 
+\hyperlink{structfmt_1_1FormatSpec}{Format\+Spec} \& {\bfseries spec} ()\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_acdd3bb185f7b444a60faf98fa9806ed4}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_acdd3bb185f7b444a60faf98fa9806ed4}
+
+\item 
+void {\bfseries write} (bool value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_a002d52aca6bc9a70d7eb62c037ffadc4}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_a002d52aca6bc9a70d7eb62c037ffadc4}
+
+\item 
+void {\bfseries write} (const char $\ast$value)\hypertarget{classfmt_1_1internal_1_1ArgFormatterBase_a1a706cd6067d51bfa07d5e6c577e0843}{}\label{classfmt_1_1internal_1_1ArgFormatterBase_a1a706cd6067d51bfa07d5e6c577e0843}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

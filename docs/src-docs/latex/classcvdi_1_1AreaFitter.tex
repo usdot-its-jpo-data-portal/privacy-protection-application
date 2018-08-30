@@ -1,0 +1,109 @@
+\hypertarget{classcvdi_1_1AreaFitter}{}\section{cvdi\+:\+:Area\+Fitter Class Reference}
+\label{classcvdi_1_1AreaFitter}\index{cvdi\+::\+Area\+Fitter@{cvdi\+::\+Area\+Fitter}}
+
+
+Annotate a trace with fit area edges for each edge.  
+
+
+
+
+{\ttfamily \#include $<$cvdi.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Area\+Set} = std\+::unordered\+\_\+set$<$ geo\+::\+Area\+::\+Ptr $>$\hypertarget{classcvdi_1_1AreaFitter_ae7be357d8b6c0156cb8bfedecd5feb0f}{}\label{classcvdi_1_1AreaFitter_ae7be357d8b6c0156cb8bfedecd5feb0f}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcvdi_1_1AreaFitter_a53040e056cbdc8b8862ad03b36158eed}{Area\+Fitter} (double fit\+\_\+width\+\_\+scaling=1.\+0, double fit\+\_\+extension=5.\+0, uint32\+\_\+t num\+\_\+sectors=36, uint32\+\_\+t min\+\_\+fit\+\_\+points=50)
+\begin{DoxyCompactList}\small\item\em Construct an Area Fitter object. \end{DoxyCompactList}\item 
+void \hyperlink{classcvdi_1_1AreaFitter_a8f4d6d9a5e4e27afbe9ea74cd52e5351}{fit} (geo\+\_\+data\+::\+Sample\+::\+Ptr sample)
+\begin{DoxyCompactList}\small\item\em Fit a sample to a road area. \end{DoxyCompactList}\item 
+void \hyperlink{classcvdi_1_1AreaFitter_a87669e87838bc1a3181e7b905c1967fa}{fit} (geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)
+\begin{DoxyCompactList}\small\item\em Fit an entire trace to road areas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Edge\+Set \hyperlink{classcvdi_1_1AreaFitter_a362bc13dadb5e7ff3151bbf8d0fe735c}{implicit\+\_\+edge\+\_\+set}\hypertarget{classcvdi_1_1AreaFitter_a362bc13dadb5e7ff3151bbf8d0fe735c}{}\label{classcvdi_1_1AreaFitter_a362bc13dadb5e7ff3151bbf8d0fe735c}
+
+\begin{DoxyCompactList}\small\item\em The complete set of implicit edges. \end{DoxyCompactList}\item 
+Edge\+Set \hyperlink{classcvdi_1_1AreaFitter_a60a8f1de63afe94f368a06382a035acb}{explicit\+\_\+edge\+\_\+set}\hypertarget{classcvdi_1_1AreaFitter_a60a8f1de63afe94f368a06382a035acb}{}\label{classcvdi_1_1AreaFitter_a60a8f1de63afe94f368a06382a035acb}
+
+\begin{DoxyCompactList}\small\item\em The complete set of implicit edges. \end{DoxyCompactList}\item 
+Area\+Set \hyperlink{classcvdi_1_1AreaFitter_a51b64f5f4d531e6ca4bc03b554f77c7e}{implicit\+\_\+area\+\_\+set}\hypertarget{classcvdi_1_1AreaFitter_a51b64f5f4d531e6ca4bc03b554f77c7e}{}\label{classcvdi_1_1AreaFitter_a51b64f5f4d531e6ca4bc03b554f77c7e}
+
+\begin{DoxyCompactList}\small\item\em The complete set of areas built from the implicit edges. \end{DoxyCompactList}\item 
+Area\+Set \hyperlink{classcvdi_1_1AreaFitter_afaca52e1741b02ba88960cb3b837b8f4}{explicit\+\_\+area\+\_\+set}\hypertarget{classcvdi_1_1AreaFitter_afaca52e1741b02ba88960cb3b837b8f4}{}\label{classcvdi_1_1AreaFitter_afaca52e1741b02ba88960cb3b837b8f4}
+
+\begin{DoxyCompactList}\small\item\em The complete set of areas built from the implicit edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Annotate a trace with fit area edges for each edge. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cvdi\+::\+Area\+Fitter@{cvdi\+::\+Area\+Fitter}!Area\+Fitter@{Area\+Fitter}}
+\index{Area\+Fitter@{Area\+Fitter}!cvdi\+::\+Area\+Fitter@{cvdi\+::\+Area\+Fitter}}
+\subsubsection[{\texorpdfstring{Area\+Fitter(double fit\+\_\+width\+\_\+scaling=1.\+0, double fit\+\_\+extension=5.\+0, uint32\+\_\+t num\+\_\+sectors=36, uint32\+\_\+t min\+\_\+fit\+\_\+points=50)}{AreaFitter(double fit_width_scaling=1.0, double fit_extension=5.0, uint32_t num_sectors=36, uint32_t min_fit_points=50)}}]{\setlength{\rightskip}{0pt plus 5cm}cvdi\+::\+Area\+Fitter\+::\+Area\+Fitter (
+\begin{DoxyParamCaption}
+\item[{double}]{fit\+\_\+width\+\_\+scaling = {\ttfamily 1.0}, }
+\item[{double}]{fit\+\_\+extension = {\ttfamily 5.0}, }
+\item[{uint32\+\_\+t}]{num\+\_\+sectors = {\ttfamily 36}, }
+\item[{uint32\+\_\+t}]{min\+\_\+fit\+\_\+points = {\ttfamily 50}}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1AreaFitter_a53040e056cbdc8b8862ad03b36158eed}{}\label{classcvdi_1_1AreaFitter_a53040e056cbdc8b8862ad03b36158eed}
+
+
+Construct an Area Fitter object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+sectors} & the compass rose is divided into this number of equally sized sectors \\
+\hline
+{\em min\+\_\+fit\+\_\+points} & use no less than this many points to infer a road segment \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{cvdi\+::\+Area\+Fitter@{cvdi\+::\+Area\+Fitter}!fit@{fit}}
+\index{fit@{fit}!cvdi\+::\+Area\+Fitter@{cvdi\+::\+Area\+Fitter}}
+\subsubsection[{\texorpdfstring{fit(geo\+\_\+data\+::\+Sample\+::\+Ptr sample)}{fit(geo_data::Sample::Ptr sample)}}]{\setlength{\rightskip}{0pt plus 5cm}void cvdi\+::\+Area\+Fitter\+::fit (
+\begin{DoxyParamCaption}
+\item[{geo\+\_\+data\+::\+Sample\+::\+Ptr}]{sample}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1AreaFitter_a8f4d6d9a5e4e27afbe9ea74cd52e5351}{}\label{classcvdi_1_1AreaFitter_a8f4d6d9a5e4e27afbe9ea74cd52e5351}
+
+
+Fit a sample to a road area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample} & pointer to a \hyperlink{classgeo__data_1_1Sample}{geo\+\_\+data\+::\+Sample} \\
+\hline
+\end{DoxyParams}
+\index{cvdi\+::\+Area\+Fitter@{cvdi\+::\+Area\+Fitter}!fit@{fit}}
+\index{fit@{fit}!cvdi\+::\+Area\+Fitter@{cvdi\+::\+Area\+Fitter}}
+\subsubsection[{\texorpdfstring{fit(geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)}{fit(geo_data::Sample::Trace &trace)}}]{\setlength{\rightskip}{0pt plus 5cm}void cvdi\+::\+Area\+Fitter\+::fit (
+\begin{DoxyParamCaption}
+\item[{geo\+\_\+data\+::\+Sample\+::\+Trace \&}]{trace}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1AreaFitter_a87669e87838bc1a3181e7b905c1967fa}{}\label{classcvdi_1_1AreaFitter_a87669e87838bc1a3181e7b905c1967fa}
+
+
+Fit an entire trace to road areas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trace} & the trace to fit \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi/include/cvdi.\+hpp\item 
+cvdi-\/src/cvdi/src/cvdi.\+cpp\end{DoxyCompactItemize}

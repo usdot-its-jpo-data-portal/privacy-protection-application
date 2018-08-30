@@ -1,0 +1,59 @@
+\hypertarget{classhmm__mm_1_1EmissionState}{}\section{hmm\+\_\+mm\+:\+:Emission\+State Class Reference}
+\label{classhmm__mm_1_1EmissionState}\index{hmm\+\_\+mm\+::\+Emission\+State@{hmm\+\_\+mm\+::\+Emission\+State}}
+
+
+Emission state for a sample a some time (t) in the Hidden Markov Model.  
+
+
+
+
+{\ttfamily \#include $<$hmm\+\_\+mm.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classhmm__mm_1_1EmissionState}{Emission\+State} $>$\hypertarget{classhmm__mm_1_1EmissionState_a3a77bd80597c503af5bdfaf5fb7e4f52}{}\label{classhmm__mm_1_1EmissionState_a3a77bd80597c503af5bdfaf5fb7e4f52}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhmm__mm_1_1EmissionState_a940c45981493c0b8673e48b5016e7d62}{Emission\+State} (geo\+\_\+data\+::\+Sample\+::\+Ptr \hyperlink{classhmm__mm_1_1EmissionState_a7a7746e0e8681e12106cc3754f68df63}{sample}=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct an \hyperlink{classhmm__mm_1_1EmissionState}{Emission\+State} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Road\+Point\+Set \hyperlink{classhmm__mm_1_1EmissionState_a08e0a8a230696b97549f307806d9947a}{candidates}\hypertarget{classhmm__mm_1_1EmissionState_a08e0a8a230696b97549f307806d9947a}{}\label{classhmm__mm_1_1EmissionState_a08e0a8a230696b97549f307806d9947a}
+
+\begin{DoxyCompactList}\small\item\em Road point candidates of for the emission state. \end{DoxyCompactList}\item 
+geo\+\_\+data\+::\+Sample\+::\+Ptr \hyperlink{classhmm__mm_1_1EmissionState_a7a7746e0e8681e12106cc3754f68df63}{sample}\hypertarget{classhmm__mm_1_1EmissionState_a7a7746e0e8681e12106cc3754f68df63}{}\label{classhmm__mm_1_1EmissionState_a7a7746e0e8681e12106cc3754f68df63}
+
+\begin{DoxyCompactList}\small\item\em Sample for the emission state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Emission state for a sample a some time (t) in the Hidden Markov Model. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{hmm\+\_\+mm\+::\+Emission\+State@{hmm\+\_\+mm\+::\+Emission\+State}!Emission\+State@{Emission\+State}}
+\index{Emission\+State@{Emission\+State}!hmm\+\_\+mm\+::\+Emission\+State@{hmm\+\_\+mm\+::\+Emission\+State}}
+\subsubsection[{\texorpdfstring{Emission\+State(geo\+\_\+data\+::\+Sample\+::\+Ptr sample=nullptr)}{EmissionState(geo_data::Sample::Ptr sample=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}hmm\+\_\+mm\+::\+Emission\+State\+::\+Emission\+State (
+\begin{DoxyParamCaption}
+\item[{geo\+\_\+data\+::\+Sample\+::\+Ptr}]{sample = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1EmissionState_a940c45981493c0b8673e48b5016e7d62}{}\label{classhmm__mm_1_1EmissionState_a940c45981493c0b8673e48b5016e7d62}
+
+
+Construct an \hyperlink{classhmm__mm_1_1EmissionState}{Emission\+State} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample} & pointer to underlying sample, can be a nullptr if this is the predecessor of the first sample \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/hmm-\/mm/include/hmm\+\_\+mm.\+hpp\item 
+cvdi-\/src/hmm-\/mm/src/hmm\+\_\+mm.\+cpp\end{DoxyCompactItemize}

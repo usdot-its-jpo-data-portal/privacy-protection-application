@@ -1,0 +1,300 @@
+\hypertarget{classtool_1_1Tool}{}\section{tool\+:\+:Tool Class Reference}
+\label{classtool_1_1Tool}\index{tool\+::\+Tool@{tool\+::\+Tool}}
+
+
+A basic command line tool, represented as a container for options. A tool is a simple command line interface. It supports multiple optional arguments and a single positional source argument.  
+
+
+
+
+{\ttfamily \#include $<$tool.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtool_1_1Tool_a23c21bf943629dda5c3493904a2f6c98}{Tool} (const std\+::string \&tool\+\_\+name, const std\+::string \&description, std\+::ostream \&os=std\+::cerr)
+\begin{DoxyCompactList}\small\item\em New tool constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtool_1_1Tool_a6ff41f1b821715bd510b6f5b0f92ee51}{Tool} (const \hyperlink{classtool_1_1Tool}{Tool} \&command)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classtool_1_1Tool}{Tool} copy constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtool_1_1Tool_a793db31f3e5cec35c8b223cbd7187865}{Print\+Help} (void)\hypertarget{classtool_1_1Tool_a793db31f3e5cec35c8b223cbd7187865}{}\label{classtool_1_1Tool_a793db31f3e5cec35c8b223cbd7187865}
+
+\begin{DoxyCompactList}\small\item\em Print the help message for this tool to the error stream. \end{DoxyCompactList}\item 
+void \hyperlink{classtool_1_1Tool_a664b73bc60f23aafee63603ae22dc9fe}{Print\+Usage} (void)\hypertarget{classtool_1_1Tool_a664b73bc60f23aafee63603ae22dc9fe}{}\label{classtool_1_1Tool_a664b73bc60f23aafee63603ae22dc9fe}
+
+\begin{DoxyCompactList}\small\item\em Print the usage message for this tool to the error stream. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classtool_1_1Tool_af2610dfa17e6d51b5f321902b66fc5a3}{Get\+Name} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the name of the tool. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classtool_1_1Tool_ad8bc0c17bc21bcdab45c9694c7691551}{Get\+Desciption} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the description of this tool. \end{DoxyCompactList}\item 
+bool \hyperlink{classtool_1_1Tool_a141fb0e2b3aefd52d17b8626c97a746d}{Parse\+Args} (const std\+::vector$<$ std\+::string $>$ args)
+\begin{DoxyCompactList}\small\item\em Parse the command line options and store the results in this tool. \end{DoxyCompactList}\item 
+void \hyperlink{classtool_1_1Tool_ab3c5916d3a39dc2774a9d77d6b330529}{Add\+Option} (const \hyperlink{classtool_1_1Option}{Option} \&option)
+\begin{DoxyCompactList}\small\item\em Add a new \hyperlink{classtool_1_1Option}{Option} to this tool. This maps the option\textquotesingle{}s long name to the value of the option. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classtool_1_1Tool_a4656da0e2cc8c0991e26222174edcf33}{Get\+String\+Val} (const std\+::string option) const 
+\begin{DoxyCompactList}\small\item\em Get the string value for an option supported by this tool. \end{DoxyCompactList}\item 
+int \hyperlink{classtool_1_1Tool_a00ddc9710a6b02c791dc75ad4bf8282e}{Get\+Int\+Val} (const std\+::string option) const 
+\begin{DoxyCompactList}\small\item\em Get the integer value for an option supported by this tool. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classtool_1_1Tool_a4acdbdd82d83e3fd95442582cb33aaa3}{Get\+Uint64\+Val} (const std\+::string option) const 
+\begin{DoxyCompactList}\small\item\em Get the unsigned long long (unsigned 64-\/bit) value for an option supported by this tool. \end{DoxyCompactList}\item 
+double \hyperlink{classtool_1_1Tool_aede929b4f49445c292023cfc38cf5132}{Get\+Double\+Val} (const std\+::string option) const 
+\begin{DoxyCompactList}\small\item\em Get the double value for an option supported by this tool. \end{DoxyCompactList}\item 
+bool \hyperlink{classtool_1_1Tool_aceeb31eea348ccd8f4b0a9e5e256fcb8}{Get\+Bool\+Val} (const std\+::string option) const 
+\begin{DoxyCompactList}\small\item\em Get the boolean value for an option supported by this tool. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classtool_1_1Tool_ac9d3ac84a06d1e938238ed36d6aaf726}{Get\+Source} () const 
+\begin{DoxyCompactList}\small\item\em Get the positional source argument for this tool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A basic command line tool, represented as a container for options. A tool is a simple command line interface. It supports multiple optional arguments and a single positional source argument. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Tool@{Tool}}
+\index{Tool@{Tool}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Tool(const std\+::string \&tool\+\_\+name, const std\+::string \&description, std\+::ostream \&os=std\+::cerr)}{Tool(const std::string &tool_name, const std::string &description, std::ostream &os=std::cerr)}}]{\setlength{\rightskip}{0pt plus 5cm}tool\+::\+Tool\+::\+Tool (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tool\+\_\+name, }
+\item[{const std\+::string \&}]{description, }
+\item[{std\+::ostream \&}]{os = {\ttfamily std\+:\+:cerr}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtool_1_1Tool_a23c21bf943629dda5c3493904a2f6c98}{}\label{classtool_1_1Tool_a23c21bf943629dda5c3493904a2f6c98}
+
+
+New tool constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tool\+\_\+name} & the name of the command line tool \\
+\hline
+{\em description} & the description for this command line tool \\
+\hline
+{\em os} & the error stream used to display help and error information \\
+\hline
+\end{DoxyParams}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Tool@{Tool}}
+\index{Tool@{Tool}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Tool(const Tool \&command)}{Tool(const Tool &command)}}]{\setlength{\rightskip}{0pt plus 5cm}tool\+::\+Tool\+::\+Tool (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tool} \&}]{command}
+\end{DoxyParamCaption}
+)}\hypertarget{classtool_1_1Tool_a6ff41f1b821715bd510b6f5b0f92ee51}{}\label{classtool_1_1Tool_a6ff41f1b821715bd510b6f5b0f92ee51}
+
+
+\hyperlink{classtool_1_1Tool}{Tool} copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & the \hyperlink{classtool_1_1Tool}{Tool} to copy \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Add\+Option@{Add\+Option}}
+\index{Add\+Option@{Add\+Option}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Add\+Option(const Option \&option)}{AddOption(const Option &option)}}]{\setlength{\rightskip}{0pt plus 5cm}void tool\+::\+Tool\+::\+Add\+Option (
+\begin{DoxyParamCaption}
+\item[{const {\bf Option} \&}]{option}
+\end{DoxyParamCaption}
+)}\hypertarget{classtool_1_1Tool_ab3c5916d3a39dc2774a9d77d6b330529}{}\label{classtool_1_1Tool_ab3c5916d3a39dc2774a9d77d6b330529}
+
+
+Add a new \hyperlink{classtool_1_1Option}{Option} to this tool. This maps the option\textquotesingle{}s long name to the value of the option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & The new option to add. \\
+\hline
+\end{DoxyParams}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Get\+Bool\+Val@{Get\+Bool\+Val}}
+\index{Get\+Bool\+Val@{Get\+Bool\+Val}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Get\+Bool\+Val(const std\+::string option) const }{GetBoolVal(const std::string option) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool tool\+::\+Tool\+::\+Get\+Bool\+Val (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{option}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Tool_aceeb31eea348ccd8f4b0a9e5e256fcb8}{}\label{classtool_1_1Tool_aceeb31eea348ccd8f4b0a9e5e256fcb8}
+
+
+Get the boolean value for an option supported by this tool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & the long name of the option \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the boolean representation of this option 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if the option can not be found in the tool \\
+\hline
+\end{DoxyExceptions}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Get\+Desciption@{Get\+Desciption}}
+\index{Get\+Desciption@{Get\+Desciption}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Get\+Desciption(void) const }{GetDesciption(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& tool\+::\+Tool\+::\+Get\+Desciption (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Tool_ad8bc0c17bc21bcdab45c9694c7691551}{}\label{classtool_1_1Tool_ad8bc0c17bc21bcdab45c9694c7691551}
+
+
+Get the description of this tool. 
+
+\begin{DoxyReturn}{Returns}
+the description of this tool 
+\end{DoxyReturn}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Get\+Double\+Val@{Get\+Double\+Val}}
+\index{Get\+Double\+Val@{Get\+Double\+Val}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Get\+Double\+Val(const std\+::string option) const }{GetDoubleVal(const std::string option) const }}]{\setlength{\rightskip}{0pt plus 5cm}double tool\+::\+Tool\+::\+Get\+Double\+Val (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{option}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Tool_aede929b4f49445c292023cfc38cf5132}{}\label{classtool_1_1Tool_aede929b4f49445c292023cfc38cf5132}
+
+
+Get the double value for an option supported by this tool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & the long name of the option \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer representation of this option 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if the option can not be found in the tool \\
+\hline
+{\em std\+::invalid\+\_\+argument} & if the value cannot be converted to an double. \\
+\hline
+\end{DoxyExceptions}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Get\+Int\+Val@{Get\+Int\+Val}}
+\index{Get\+Int\+Val@{Get\+Int\+Val}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Get\+Int\+Val(const std\+::string option) const }{GetIntVal(const std::string option) const }}]{\setlength{\rightskip}{0pt plus 5cm}int tool\+::\+Tool\+::\+Get\+Int\+Val (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{option}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Tool_a00ddc9710a6b02c791dc75ad4bf8282e}{}\label{classtool_1_1Tool_a00ddc9710a6b02c791dc75ad4bf8282e}
+
+
+Get the integer value for an option supported by this tool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & the long name of the option \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer representation of this option 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if the option can not be found in the tool \\
+\hline
+{\em std\+::invalid\+\_\+argument} & if the value cannot be converted to an integer. \\
+\hline
+\end{DoxyExceptions}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Get\+Name(void) const }{GetName(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& tool\+::\+Tool\+::\+Get\+Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Tool_af2610dfa17e6d51b5f321902b66fc5a3}{}\label{classtool_1_1Tool_af2610dfa17e6d51b5f321902b66fc5a3}
+
+
+Get the name of the tool. 
+
+\begin{DoxyReturn}{Returns}
+the name of the tool 
+\end{DoxyReturn}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Get\+Source@{Get\+Source}}
+\index{Get\+Source@{Get\+Source}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Get\+Source() const }{GetSource() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& tool\+::\+Tool\+::\+Get\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Tool_ac9d3ac84a06d1e938238ed36d6aaf726}{}\label{classtool_1_1Tool_ac9d3ac84a06d1e938238ed36d6aaf726}
+
+
+Get the positional source argument for this tool. 
+
+\begin{DoxyReturn}{Returns}
+the positional source argument 
+\end{DoxyReturn}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Get\+String\+Val@{Get\+String\+Val}}
+\index{Get\+String\+Val@{Get\+String\+Val}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Get\+String\+Val(const std\+::string option) const }{GetStringVal(const std::string option) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& tool\+::\+Tool\+::\+Get\+String\+Val (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{option}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Tool_a4656da0e2cc8c0991e26222174edcf33}{}\label{classtool_1_1Tool_a4656da0e2cc8c0991e26222174edcf33}
+
+
+Get the string value for an option supported by this tool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & the long name of the option \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the string representation of the option 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if the option can not be found in the tool \\
+\hline
+\end{DoxyExceptions}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Get\+Uint64\+Val@{Get\+Uint64\+Val}}
+\index{Get\+Uint64\+Val@{Get\+Uint64\+Val}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Get\+Uint64\+Val(const std\+::string option) const }{GetUint64Val(const std::string option) const }}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t tool\+::\+Tool\+::\+Get\+Uint64\+Val (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{option}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtool_1_1Tool_a4acdbdd82d83e3fd95442582cb33aaa3}{}\label{classtool_1_1Tool_a4acdbdd82d83e3fd95442582cb33aaa3}
+
+
+Get the unsigned long long (unsigned 64-\/bit) value for an option supported by this tool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & the long name of the option \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the unsigned long long value of this option 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if the option can not be found in the tool \\
+\hline
+{\em std\+::invalid\+\_\+argument} & if the value cannot be converted to a long long (unsigned 64-\/bit). \\
+\hline
+\end{DoxyExceptions}
+\index{tool\+::\+Tool@{tool\+::\+Tool}!Parse\+Args@{Parse\+Args}}
+\index{Parse\+Args@{Parse\+Args}!tool\+::\+Tool@{tool\+::\+Tool}}
+\subsubsection[{\texorpdfstring{Parse\+Args(const std\+::vector$<$ std\+::string $>$ args)}{ParseArgs(const std::vector< std::string > args)}}]{\setlength{\rightskip}{0pt plus 5cm}bool tool\+::\+Tool\+::\+Parse\+Args (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{classtool_1_1Tool_a141fb0e2b3aefd52d17b8626c97a746d}{}\label{classtool_1_1Tool_a141fb0e2b3aefd52d17b8626c97a746d}
+
+
+Parse the command line options and store the results in this tool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & the command line arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the parsing succeeds, otherwise false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/tool/include/tool.\+hpp\item 
+cvdi-\/src/tool/src/tool.\+cpp\end{DoxyCompactItemize}

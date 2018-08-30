@@ -1,0 +1,134 @@
+\hypertarget{namespacegeo__data}{}\section{geo\+\_\+data Namespace Reference}
+\label{namespacegeo__data}\index{geo\+\_\+data@{geo\+\_\+data}}
+
+
+Routines and data structures for reading, writing, and displaying geospatial data.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classgeo__data_1_1CSVRoadReader}{C\+S\+V\+Road\+Reader}
+\begin{DoxyCompactList}\small\item\em C\+SV \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader}. Reads roads from a C\+SV file. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo__data_1_1CSVRoadWriter}{C\+S\+V\+Road\+Writer}
+\begin{DoxyCompactList}\small\item\em A C\+SV Road\+Writer. Write roads to a C\+SV file. Overwrites the existing file. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo__data_1_1Interval}{Interval}
+\begin{DoxyCompactList}\small\item\em An integer-\/based interval class to be used with trajectories. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo__data_1_1IntervalMarker}{Interval\+Marker}
+\begin{DoxyCompactList}\small\item\em Label each point in a trip with the interval that contains it. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo__data_1_1KML}{K\+ML}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{classgeo__data_1_1KML}{K\+ML} file. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo__data_1_1PostGISRoadReader}{Post\+G\+I\+S\+Road\+Reader}
+\begin{DoxyCompactList}\small\item\em Postgis (postgres) \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader}. Reads roads from the postgis O\+SM bfmap\+\_\+ways table of the database. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader}
+\begin{DoxyCompactList}\small\item\em Base class for reading \hyperlink{classgeo_1_1Road}{geo\+::\+Road} O\+SM road networks. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo__data_1_1Sample}{Sample}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries O\+S\+M\+Config\+Map} = std\+::unordered\+\_\+map$<$ int, std\+::tuple$<$ float, int, double, bool $>$$>$\hypertarget{namespacegeo__data_a7b3566f9a0ecf0ed14afebe84de56101}{}\label{namespacegeo__data_a7b3566f9a0ecf0ed14afebe84de56101}
+
+\item 
+using {\bfseries Index} = std\+::size\+\_\+t\hypertarget{namespacegeo__data_a143b1b20973c843f51d75e42151737f4}{}\label{namespacegeo__data_a143b1b20973c843f51d75e42151737f4}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacegeo__data_a2374ba83ef1f8bcad5d82c67dc7c8ddd}{Sample\+Error} \{ {\bfseries N\+O\+NE} = 0, 
+{\bfseries F\+I\+E\+LD} = 1, 
+{\bfseries G\+EO} = 2, 
+{\bfseries H\+E\+A\+D\+I\+NG} = 3
+ \}\hypertarget{namespacegeo__data_a2374ba83ef1f8bcad5d82c67dc7c8ddd}{}\label{namespacegeo__data_a2374ba83ef1f8bcad5d82c67dc7c8ddd}
+\begin{DoxyCompactList}\small\item\em Error types for Samples. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+O\+S\+M\+Config\+Map {\bfseries osm\+\_\+config\+\_\+map} (const std\+::string \&config\+\_\+file\+\_\+path)\hypertarget{namespacegeo__data_a830f9736d78ea850fa72326194ce5c73}{}\label{namespacegeo__data_a830f9736d78ea850fa72326194ce5c73}
+
+\item 
+Sample\+::\+Trace \hyperlink{namespacegeo__data_a9abdfa53deaf2910a1a9dd9c2a8fe024}{make\+\_\+trace} (const std\+::string \&input\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Make a trace of B\+S\+M\+P1 C\+SV connected vehicle trace \hyperlink{classgeo__data_1_1Sample}{Sample} object from a C\+SV object. \end{DoxyCompactList}\item 
+void \hyperlink{namespacegeo__data_a0570a86d6626b4a1d8ca9880c3dc1e60}{remove\+\_\+trace\+\_\+errors} (const Sample\+::\+Trace \&trace, Sample\+::\+Trace \&out)
+\begin{DoxyCompactList}\small\item\em Remove invalid samples from the sample trace and re-\/index the samples of the new trace. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{namespacegeo__data_a27c82a06c2a2db414d46ec592154a94d}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classgeo__data_1_1Interval}{Interval} \&interval)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \hyperlink{namespacegeo__data_a969af86800f6c61411452280db2d47dc}{k\+Road\+C\+S\+V\+Header} = \char`\"{}gid,source,target,osm\+\_\+id,reverse,class\+\_\+id,priority,maxspeed\+\_\+forward,maxspeed\+\_\+backward,width,excluded,geom\+\_\+string,valid,error\char`\"{}\hypertarget{namespacegeo__data_a969af86800f6c61411452280db2d47dc}{}\label{namespacegeo__data_a969af86800f6c61411452280db2d47dc}
+
+\begin{DoxyCompactList}\small\item\em Header for C\+SV O\+SM road network file. \end{DoxyCompactList}\item 
+const uint32\+\_\+t \hyperlink{namespacegeo__data_a714ca3d923889110e62e69997dbbcb41}{k\+Road\+C\+S\+V\+Num\+Fields} = 14\hypertarget{namespacegeo__data_a714ca3d923889110e62e69997dbbcb41}{}\label{namespacegeo__data_a714ca3d923889110e62e69997dbbcb41}
+
+\begin{DoxyCompactList}\small\item\em Number of fields (columns) in the C\+SV O\+SM road network . \end{DoxyCompactList}\item 
+const std\+::string \hyperlink{namespacegeo__data_abe7f3abbcd66372e8490f8d5adea3787}{k\+Trace\+C\+S\+V\+Header} = \char`\"{}Rx\+Device,File\+Id,Tx\+Device,Gentime,Tx\+Random,Msg\+Count,D\+Second,Latitude,Longitude,Elevation,Speed,Heading,Ax,Ay,Az,Yawrate,Path\+Count,Radius\+Of\+Curve,Confidence\char`\"{}\hypertarget{namespacegeo__data_abe7f3abbcd66372e8490f8d5adea3787}{}\label{namespacegeo__data_abe7f3abbcd66372e8490f8d5adea3787}
+
+\begin{DoxyCompactList}\small\item\em Header for B\+S\+M\+P1 C\+SV trace file. \end{DoxyCompactList}\item 
+const uint32\+\_\+t \hyperlink{namespacegeo__data_a50a14f246f326d96bd1fd63479262885}{k\+Trace\+C\+S\+V\+Num\+Fields} = 19\hypertarget{namespacegeo__data_a50a14f246f326d96bd1fd63479262885}{}\label{namespacegeo__data_a50a14f246f326d96bd1fd63479262885}
+
+\begin{DoxyCompactList}\small\item\em Number of fields in the B\+S\+M\+P1 C\+SV trace file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Routines and data structures for reading, writing, and displaying geospatial data. 
+
+\subsection{Function Documentation}
+\index{geo\+\_\+data@{geo\+\_\+data}!make\+\_\+trace@{make\+\_\+trace}}
+\index{make\+\_\+trace@{make\+\_\+trace}!geo\+\_\+data@{geo\+\_\+data}}
+\subsubsection[{\texorpdfstring{make\+\_\+trace(const std\+::string \&input\+\_\+file)}{make_trace(const std::string &input_file)}}]{\setlength{\rightskip}{0pt plus 5cm}Sample\+::\+Trace geo\+\_\+data\+::make\+\_\+trace (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{input\+\_\+file}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegeo__data_a9abdfa53deaf2910a1a9dd9c2a8fe024}{}\label{namespacegeo__data_a9abdfa53deaf2910a1a9dd9c2a8fe024}
+
+
+Make a trace of B\+S\+M\+P1 C\+SV connected vehicle trace \hyperlink{classgeo__data_1_1Sample}{Sample} object from a C\+SV object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+file} & the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sample trace (std\+::vector of Samples) 
+\end{DoxyReturn}
+\index{geo\+\_\+data@{geo\+\_\+data}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!geo\+\_\+data@{geo\+\_\+data}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const Interval \&interval)}{operator<<(std::ostream &os, const Interval &interval)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& geo\+\_\+data\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegeo__data_a27c82a06c2a2db414d46ec592154a94d}{}\label{namespacegeo__data_a27c82a06c2a2db414d46ec592154a94d}
+
+\begin{DoxyParams}{Parameters}
+{\em os} & the output stream \\
+\hline
+{\em interval} & the \hyperlink{classgeo__data_1_1Interval}{Interval} to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the output stream 
+\end{DoxyReturn}
+\index{geo\+\_\+data@{geo\+\_\+data}!remove\+\_\+trace\+\_\+errors@{remove\+\_\+trace\+\_\+errors}}
+\index{remove\+\_\+trace\+\_\+errors@{remove\+\_\+trace\+\_\+errors}!geo\+\_\+data@{geo\+\_\+data}}
+\subsubsection[{\texorpdfstring{remove\+\_\+trace\+\_\+errors(const Sample\+::\+Trace \&trace, Sample\+::\+Trace \&out)}{remove_trace_errors(const Sample::Trace &trace, Sample::Trace &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::remove\+\_\+trace\+\_\+errors (
+\begin{DoxyParamCaption}
+\item[{const Sample\+::\+Trace \&}]{trace, }
+\item[{Sample\+::\+Trace \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegeo__data_a0570a86d6626b4a1d8ca9880c3dc1e60}{}\label{namespacegeo__data_a0570a86d6626b4a1d8ca9880c3dc1e60}
+
+
+Remove invalid samples from the sample trace and re-\/index the samples of the new trace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trace} & the raw trace with invalid samples \\
+\hline
+{\em out} & the new trace with invalid samples removed \\
+\hline
+\end{DoxyParams}

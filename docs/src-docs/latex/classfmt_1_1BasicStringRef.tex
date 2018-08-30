@@ -1,0 +1,115 @@
+\hypertarget{classfmt_1_1BasicStringRef}{}\section{fmt\+:\+:Basic\+String\+Ref$<$ Char $>$ Class Template Reference}
+\label{classfmt_1_1BasicStringRef}\index{fmt\+::\+Basic\+String\+Ref$<$ Char $>$@{fmt\+::\+Basic\+String\+Ref$<$ Char $>$}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfmt_1_1BasicStringRef_adc7198e4dbd3eefff16081aae819181a}{Basic\+String\+Ref} (const Char $\ast$s, std\+::size\+\_\+t \hyperlink{classfmt_1_1BasicStringRef_ae38d9106dd5bec69488e5464aedc266a}{size})
+\item 
+\hyperlink{classfmt_1_1BasicStringRef_a5e3875071c0be193aa706d6c8e7bf29c}{Basic\+String\+Ref} (const Char $\ast$s)
+\item 
+\hyperlink{classfmt_1_1BasicStringRef_afd8ffd0c6d2ccac657f277a4faea3889}{Basic\+String\+Ref} (const std\+::basic\+\_\+string$<$ Char $>$ \&s)
+\item 
+std\+::basic\+\_\+string$<$ Char $>$ \hyperlink{classfmt_1_1BasicStringRef_a7340f48f53cf9188e9fea5e6e1556969}{to\+\_\+string} () const 
+\item 
+const Char $\ast$ \hyperlink{classfmt_1_1BasicStringRef_ae9c80502c527437215fe1c11dca8b475}{data} () const 
+\item 
+std\+::size\+\_\+t \hyperlink{classfmt_1_1BasicStringRef_ae38d9106dd5bec69488e5464aedc266a}{size} () const 
+\item 
+int {\bfseries compare} (\hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} other) const \hypertarget{classfmt_1_1BasicStringRef_a8e9a2f33780c6fe88bd80fb9da193ced}{}\label{classfmt_1_1BasicStringRef_a8e9a2f33780c6fe88bd80fb9da193ced}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries operator==} (\hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} lhs, \hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} rhs)\hypertarget{classfmt_1_1BasicStringRef_af0c85958cdfb63d912d312c19ae81d7c}{}\label{classfmt_1_1BasicStringRef_af0c85958cdfb63d912d312c19ae81d7c}
+
+\item 
+bool {\bfseries operator!=} (\hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} lhs, \hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} rhs)\hypertarget{classfmt_1_1BasicStringRef_a836256d721e8228d72db00235a57bc9e}{}\label{classfmt_1_1BasicStringRef_a836256d721e8228d72db00235a57bc9e}
+
+\item 
+bool {\bfseries operator$<$} (\hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} lhs, \hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} rhs)\hypertarget{classfmt_1_1BasicStringRef_a9e8993607a0ef7c60efb860170e5ce5a}{}\label{classfmt_1_1BasicStringRef_a9e8993607a0ef7c60efb860170e5ce5a}
+
+\item 
+bool {\bfseries operator$<$=} (\hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} lhs, \hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} rhs)\hypertarget{classfmt_1_1BasicStringRef_ab59af398fee6a8d5716b3e1df4576f94}{}\label{classfmt_1_1BasicStringRef_ab59af398fee6a8d5716b3e1df4576f94}
+
+\item 
+bool {\bfseries operator$>$} (\hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} lhs, \hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} rhs)\hypertarget{classfmt_1_1BasicStringRef_ab7e3a5a5a2dfa6fe31d90e89467cebd5}{}\label{classfmt_1_1BasicStringRef_ab7e3a5a5a2dfa6fe31d90e89467cebd5}
+
+\item 
+bool {\bfseries operator$>$=} (\hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} lhs, \hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref} rhs)\hypertarget{classfmt_1_1BasicStringRef_ad6664b4fb7a1d73d429b41c7ae9de98e}{}\label{classfmt_1_1BasicStringRef_ad6664b4fb7a1d73d429b41c7ae9de98e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Char$>$\\*
+class fmt\+::\+Basic\+String\+Ref$<$ Char $>$}
+
+A string reference. It can be constructed from a C string or {\ttfamily std\+::string}.
+
+You can use one of the following typedefs for common character types\+:
+
++-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ Type $\vert$ Definition $\vert$ +============+=========================+ $\vert$ String\+Ref $\vert$ \hyperlink{classfmt_1_1BasicStringRef}{Basic\+String\+Ref$<$char$>$} $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ W\+String\+Ref $\vert$ Basic\+String\+Ref$<$wchar\+\_\+t$>$ $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+
+
+This class is most useful as a parameter type to allow passing different types of strings to a function, for example\+:\+:
+
+template $<$typename... Args$>$ std\+::string format(String\+Ref format\+\_\+str, const Args \& ... args);
+
+format(\char`\"{}\{\}\char`\"{}, 42); format(std\+::string(\char`\"{}\{\}\char`\"{}), 42);  
+
+\subsection{Constructor \& Destructor Documentation}
+\index{fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}!Basic\+String\+Ref@{Basic\+String\+Ref}}
+\index{Basic\+String\+Ref@{Basic\+String\+Ref}!fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}}
+\subsubsection[{\texorpdfstring{Basic\+String\+Ref(const Char $\ast$s, std\+::size\+\_\+t size)}{BasicStringRef(const Char *s, std::size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char$>$ {\bf fmt\+::\+Basic\+String\+Ref}$<$ Char $>$\+::{\bf Basic\+String\+Ref} (
+\begin{DoxyParamCaption}
+\item[{const Char $\ast$}]{s, }
+\item[{std\+::size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicStringRef_adc7198e4dbd3eefff16081aae819181a}{}\label{classfmt_1_1BasicStringRef_adc7198e4dbd3eefff16081aae819181a}
+Constructs a string reference object from a C string and a size. \index{fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}!Basic\+String\+Ref@{Basic\+String\+Ref}}
+\index{Basic\+String\+Ref@{Basic\+String\+Ref}!fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}}
+\subsubsection[{\texorpdfstring{Basic\+String\+Ref(const Char $\ast$s)}{BasicStringRef(const Char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char$>$ {\bf fmt\+::\+Basic\+String\+Ref}$<$ Char $>$\+::{\bf Basic\+String\+Ref} (
+\begin{DoxyParamCaption}
+\item[{const Char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicStringRef_a5e3875071c0be193aa706d6c8e7bf29c}{}\label{classfmt_1_1BasicStringRef_a5e3875071c0be193aa706d6c8e7bf29c}
+Constructs a string reference object from a C string computing the size with {\ttfamily std\+::char\+\_\+traits$<$Char$>$\+::length}.  \index{fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}!Basic\+String\+Ref@{Basic\+String\+Ref}}
+\index{Basic\+String\+Ref@{Basic\+String\+Ref}!fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}}
+\subsubsection[{\texorpdfstring{Basic\+String\+Ref(const std\+::basic\+\_\+string$<$ Char $>$ \&s)}{BasicStringRef(const std::basic_string< Char > &s)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char$>$ {\bf fmt\+::\+Basic\+String\+Ref}$<$ Char $>$\+::{\bf Basic\+String\+Ref} (
+\begin{DoxyParamCaption}
+\item[{const std\+::basic\+\_\+string$<$ Char $>$ \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicStringRef_afd8ffd0c6d2ccac657f277a4faea3889}{}\label{classfmt_1_1BasicStringRef_afd8ffd0c6d2ccac657f277a4faea3889}
+Constructs a string reference from an {\ttfamily std\+::string} object.  
+
+\subsection{Member Function Documentation}
+\index{fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}!data@{data}}
+\index{data@{data}!fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}}
+\subsubsection[{\texorpdfstring{data() const }{data() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char$>$ const Char$\ast$ {\bf fmt\+::\+Basic\+String\+Ref}$<$ Char $>$\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicStringRef_ae9c80502c527437215fe1c11dca8b475}{}\label{classfmt_1_1BasicStringRef_ae9c80502c527437215fe1c11dca8b475}
+Returns a pointer to the string data. \index{fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}!size@{size}}
+\index{size@{size}!fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}}
+\subsubsection[{\texorpdfstring{size() const }{size() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char$>$ std\+::size\+\_\+t {\bf fmt\+::\+Basic\+String\+Ref}$<$ Char $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicStringRef_ae38d9106dd5bec69488e5464aedc266a}{}\label{classfmt_1_1BasicStringRef_ae38d9106dd5bec69488e5464aedc266a}
+Returns the string size. \index{fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!fmt\+::\+Basic\+String\+Ref@{fmt\+::\+Basic\+String\+Ref}}
+\subsubsection[{\texorpdfstring{to\+\_\+string() const }{to_string() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char$>$ std\+::basic\+\_\+string$<$Char$>$ {\bf fmt\+::\+Basic\+String\+Ref}$<$ Char $>$\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicStringRef_a7340f48f53cf9188e9fea5e6e1556969}{}\label{classfmt_1_1BasicStringRef_a7340f48f53cf9188e9fea5e6e1556969}
+Converts a string reference to an {\ttfamily std\+::string} object.  
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

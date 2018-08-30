@@ -1,0 +1,475 @@
+\hypertarget{classgeo__data_1_1Sample}{}\section{geo\+\_\+data\+:\+:Sample Class Reference}
+\label{classgeo__data_1_1Sample}\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+
+
+{\ttfamily \#include $<$geo\+\_\+data.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classgeo__data_1_1Sample}{Sample} $>$\hypertarget{classgeo__data_1_1Sample_adf7988c796ed7425dff198fbb3556fcc}{}\label{classgeo__data_1_1Sample_adf7988c796ed7425dff198fbb3556fcc}
+
+\item 
+using {\bfseries Trace} = std\+::vector$<$ Ptr $>$\hypertarget{classgeo__data_1_1Sample_a6dedccb71de46de1b2ad54227962c3d7}{}\label{classgeo__data_1_1Sample_a6dedccb71de46de1b2ad54227962c3d7}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo__data_1_1Sample_a8d91847711c56badc1bce86f85ef23e4}{Sample} (const std\+::string \&\hyperlink{classgeo__data_1_1Sample_aa529b9aef77c02620eac7a5ada4adcb3}{id}, std\+::size\+\_\+t \hyperlink{classgeo__data_1_1Sample_a68267127a7cb00839ec904fcc0b9f64b}{index}, long \hyperlink{classgeo__data_1_1Sample_a7c6cd5157117296b306f8e5726737090}{timestamp}, double \hyperlink{classgeo__data_1_1Sample_a89ad23a22a5043e61e08129783333e4c}{lat}, double \hyperlink{classgeo__data_1_1Sample_a0f3322502b9f32fbc51462e4b6270381}{lon}, double \hyperlink{classgeo__data_1_1Sample_a9be314cd78a47730551e6169748edc96}{azimuth}, double \hyperlink{classgeo__data_1_1Sample_a77437a286640779148c3f4905b90a16c}{speed}, const std\+::string \&\hyperlink{classgeo__data_1_1Sample_ac7ebb4bddcc448ab65843f29f7e3d2a5}{record}, bool \hyperlink{classgeo__data_1_1Sample_ae009ad7cc3106219b77123ba4e5d3238}{is\+\_\+valid}=true, \hyperlink{namespacegeo__data_a2374ba83ef1f8bcad5d82c67dc7c8ddd}{Sample\+Error} \hyperlink{classgeo__data_1_1Sample_a6aaf864d36093ef23cb5a273d45f4f01}{error\+\_\+type}=Sample\+Error\+::\+N\+O\+NE, const std\+::string \&\hyperlink{classgeo__data_1_1Sample_a5ad107d3bca8ca053e785f24efae6c28}{error\+\_\+msg}=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classgeo__data_1_1Sample}{Sample} object. A sample is valid if it was created successfully from the C\+SV record. Invalid records have missing fields, invalid G\+PS, or values that are not able to be converted to the required type. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classgeo__data_1_1Sample_aa529b9aef77c02620eac7a5ada4adcb3}{id} () const 
+\begin{DoxyCompactList}\small\item\em Get the ID of this sample. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \hyperlink{classgeo__data_1_1Sample_a68267127a7cb00839ec904fcc0b9f64b}{index} () const 
+\begin{DoxyCompactList}\small\item\em Get the index of this sample in the trace. Because sample\textquotesingle{}s can be re-\/indexed due to errors and filtering, this might differ from the sample\textquotesingle{}s index in the C\+SV file. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \hyperlink{classgeo__data_1_1Sample_ac7ed68fe4f3e48e77a43ba52be3838e9}{raw\+\_\+index} () const 
+\begin{DoxyCompactList}\small\item\em Get the raw index of this sample in the trace. The raw index is the initial index of sample in the C\+SV file, irrespective of the filtering or errors. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo__data_1_1Sample_a7c6cd5157117296b306f8e5726737090}{timestamp} () const 
+\begin{DoxyCompactList}\small\item\em Get the Unix timestamp of this sample in seconds. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo__data_1_1Sample_a89ad23a22a5043e61e08129783333e4c}{lat} () const 
+\begin{DoxyCompactList}\small\item\em Get the G\+PS latitude of this sample in decimal degrees. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo__data_1_1Sample_a0f3322502b9f32fbc51462e4b6270381}{lon} () const 
+\begin{DoxyCompactList}\small\item\em Get the G\+PS of this sample in decimal degrees. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo__data_1_1Sample_a9be314cd78a47730551e6169748edc96}{azimuth} () const 
+\begin{DoxyCompactList}\small\item\em Get azimuth (header or bearing) in degrees from north of the sample. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo__data_1_1Sample_a77437a286640779148c3f4905b90a16c}{speed} () const 
+\begin{DoxyCompactList}\small\item\em Get the speed in meters per second of the sample. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classgeo__data_1_1Sample_ac7ebb4bddcc448ab65843f29f7e3d2a5}{record} () const 
+\begin{DoxyCompactList}\small\item\em Get the underlying C\+SV record for this sample. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo__data_1_1Sample_ae009ad7cc3106219b77123ba4e5d3238}{is\+\_\+valid} () const 
+\begin{DoxyCompactList}\small\item\em Return true if sample is valid. A sample is valid if it was created successfully from the C\+SV record. Invalid records have missing fields, invalid G\+PS, or values that are not convertible to the required type. \end{DoxyCompactList}\item 
+\hyperlink{namespacegeo__data_a2374ba83ef1f8bcad5d82c67dc7c8ddd}{Sample\+Error} \hyperlink{classgeo__data_1_1Sample_a6aaf864d36093ef23cb5a273d45f4f01}{error\+\_\+type} () const 
+\begin{DoxyCompactList}\small\item\em Get the Sample\+Error type for the sample. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classgeo__data_1_1Sample_a5ad107d3bca8ca053e785f24efae6c28}{error\+\_\+msg} () const 
+\begin{DoxyCompactList}\small\item\em Get the error message of the sample. \end{DoxyCompactList}\item 
+geo\+::\+Edge\+::\+Ptr \hyperlink{classgeo__data_1_1Sample_a17881dc1186aa58c6923187b4386bf45}{matched\+\_\+edge} () const 
+\begin{DoxyCompactList}\small\item\em Get the matched edge for the sample. \end{DoxyCompactList}\item 
+geo\+::\+Edge\+::\+Ptr \hyperlink{classgeo__data_1_1Sample_adf2425e64a0cda4f6f247ec89ee9f708}{fit\+\_\+edge} () const 
+\begin{DoxyCompactList}\small\item\em Get the fit edge for the sample. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo__data_1_1Sample_a2c71fa2fbc417fcb031da4009d15c4ea}{is\+\_\+explicit\+\_\+fit} () const 
+\begin{DoxyCompactList}\small\item\em Return true if this sample is map matched and falls within the area of the mapped edge. \end{DoxyCompactList}\item 
+Interval\+::\+Ptr \hyperlink{classgeo__data_1_1Sample_a4461eedbc44d2a528f2e502929bb1053}{interval} () const 
+\begin{DoxyCompactList}\small\item\em Get the interval (critical or private) of this sample. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classgeo__data_1_1Sample_aee00b5ede8ede7cb8119c4a94f85fe8e}{out\+\_\+degree} () const 
+\begin{DoxyCompactList}\small\item\em Get the cumulative trace out degree of the trace at this sample. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1Sample_a9e2a4ac09187e72f582122253531c669}{matched\+\_\+edge} (geo\+::\+Edge\+::\+Ptr edge)
+\begin{DoxyCompactList}\small\item\em Set the matched edge of this sample. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1Sample_ad968e18e8b77a4325e1245f2333d802e}{fit\+\_\+edge} (geo\+::\+Edge\+::\+Ptr edge)
+\begin{DoxyCompactList}\small\item\em Set the fit edge of this sample. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1Sample_abc387126ac2a9285599aa7b4d243cdb5}{is\+\_\+explicit\+\_\+fit} (bool explicit\+\_\+fit)
+\begin{DoxyCompactList}\small\item\em Set the sample to be explicitly fit. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1Sample_a7c69af72f22c276d96ac9b17d5a5b250}{interval} (Interval\+::\+Ptr interval)
+\begin{DoxyCompactList}\small\item\em Set the interval (private or critical) for the sample. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1Sample_ad339548ab91c90be41c9be2c81d3d07a}{out\+\_\+degree} (uint32\+\_\+t out\+\_\+degree)
+\begin{DoxyCompactList}\small\item\em Set the cumulative trace out degree of the sample. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1Sample_af432c7b67cb2280eaac5d0d8c24163bf}{index} (std\+::size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Set the index of the sample. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+O\+G\+R\+Point \hyperlink{classgeo__data_1_1Sample_abb1a8679c0f245bc614b7f5168af3f8d}{point}\hypertarget{classgeo__data_1_1Sample_abb1a8679c0f245bc614b7f5168af3f8d}{}\label{classgeo__data_1_1Sample_abb1a8679c0f245bc614b7f5168af3f8d}
+
+\begin{DoxyCompactList}\small\item\em The underlying O\+G\+R\+Point for the G\+PS coordinates of the sample. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+B\+S\+M\+P1 connected vehicle trace \hyperlink{classgeo__data_1_1Sample}{Sample} object. Samples represent a spatial-\/temporal point created by an on-\/board device. Samples are part of a G\+PS sequence trace, which represents a self contained vehicle trajectory. The underlying G\+PS point is contained within an O\+G\+R\+Point object.
+
+The record for a sample is a C\+SV line. The record must have the correct format, number of fields, and unit types. Although only a few fields are used in the sample, the entire record must be correct to avoid flagging the record (and sample) as invalid. Invalid records have missing fields, invalid G\+PS, or values that are not convertible to the required type.
+
+Samples have associated road edges. There are two types these edges, matched and fit. A matched edge is the edge to which the sample is map matched. A fit edge is edge to which the sample\textquotesingle{}s G\+PS point falls within the \hyperlink{classgeo_1_1Area}{geo\+::\+Area} of the edge. If a sample has a matched edge and falls with the area of that edge, then that edge is also the sample\textquotesingle{}s fit edge. If the sample does not have a matched edge or does not fall within the area of its matched edge, then the sample will have an implicit fit edge.
+
+Samples have associated intervals marking the sample as critical or private.
+
+Samples also store the accumulated out degree of the trace. This will be zero at the beginning of the trace and the maximum out degree at the end of the trace. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!Sample@{Sample}}
+\index{Sample@{Sample}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{Sample(const std\+::string \&id, std\+::size\+\_\+t index, long timestamp, double lat, double lon, double azimuth, double speed, const std\+::string \&record, bool is\+\_\+valid=true, Sample\+Error error\+\_\+type=\+Sample\+Error\+::\+N\+O\+N\+E, const std\+::string \&error\+\_\+msg="""")}{Sample(const std::string &id, std::size_t index, long timestamp, double lat, double lon, double azimuth, double speed, const std::string &record, bool is_valid=true, SampleError error_type=SampleError::NONE, const std::string &error_msg="")}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Sample\+::\+Sample (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{id, }
+\item[{std\+::size\+\_\+t}]{index, }
+\item[{long}]{timestamp, }
+\item[{double}]{lat, }
+\item[{double}]{lon, }
+\item[{double}]{azimuth, }
+\item[{double}]{speed, }
+\item[{const std\+::string \&}]{record, }
+\item[{bool}]{is\+\_\+valid = {\ttfamily true}, }
+\item[{{\bf Sample\+Error}}]{error\+\_\+type = {\ttfamily SampleError\+:\+:NONE}, }
+\item[{const std\+::string \&}]{error\+\_\+msg = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1Sample_a8d91847711c56badc1bce86f85ef23e4}{}\label{classgeo__data_1_1Sample_a8d91847711c56badc1bce86f85ef23e4}
+
+
+Construct a \hyperlink{classgeo__data_1_1Sample}{Sample} object. A sample is valid if it was created successfully from the C\+SV record. Invalid records have missing fields, invalid G\+PS, or values that are not able to be converted to the required type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & unique ID of this sample \\
+\hline
+{\em index} & index of this sample within the trace \\
+\hline
+{\em timestamp} & Unix timestamp as seconds \\
+\hline
+{\em lat} & the decimal G\+PS latitude of the sample \\
+\hline
+{\em lon} & the decimal G\+PS longitude of the sample \\
+\hline
+{\em azimuth} & the azimuth (heading or bearing) in degrees from north \\
+\hline
+{\em speed} & the instantaneous velocity in meters per second of the vehicle for this sample \\
+\hline
+{\em record} & the raw C\+SV record for this sample \\
+\hline
+{\em is\+\_\+valid} & flag indicating the sample is valid \\
+\hline
+{\em error\+\_\+type} & indicates Sample\+Error type of the sample \\
+\hline
+{\em error\+\_\+msg} & message for the sample \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!azimuth@{azimuth}}
+\index{azimuth@{azimuth}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{azimuth() const }{azimuth() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+\_\+data\+::\+Sample\+::azimuth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a9be314cd78a47730551e6169748edc96}{}\label{classgeo__data_1_1Sample_a9be314cd78a47730551e6169748edc96}
+
+
+Get azimuth (header or bearing) in degrees from north of the sample. 
+
+\begin{DoxyReturn}{Returns}
+the azimuth 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!error\+\_\+msg@{error\+\_\+msg}}
+\index{error\+\_\+msg@{error\+\_\+msg}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{error\+\_\+msg() const }{error_msg() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string geo\+\_\+data\+::\+Sample\+::error\+\_\+msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a5ad107d3bca8ca053e785f24efae6c28}{}\label{classgeo__data_1_1Sample_a5ad107d3bca8ca053e785f24efae6c28}
+
+
+Get the error message of the sample. 
+
+\begin{DoxyReturn}{Returns}
+the error message 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!error\+\_\+type@{error\+\_\+type}}
+\index{error\+\_\+type@{error\+\_\+type}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{error\+\_\+type() const }{error_type() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sample\+Error} geo\+\_\+data\+::\+Sample\+::error\+\_\+type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a6aaf864d36093ef23cb5a273d45f4f01}{}\label{classgeo__data_1_1Sample_a6aaf864d36093ef23cb5a273d45f4f01}
+
+
+Get the Sample\+Error type for the sample. 
+
+\begin{DoxyReturn}{Returns}
+the sample error type 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!fit\+\_\+edge@{fit\+\_\+edge}}
+\index{fit\+\_\+edge@{fit\+\_\+edge}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{fit\+\_\+edge() const }{fit_edge() const }}]{\setlength{\rightskip}{0pt plus 5cm}geo\+::\+Edge\+::\+Ptr geo\+\_\+data\+::\+Sample\+::fit\+\_\+edge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_adf2425e64a0cda4f6f247ec89ee9f708}{}\label{classgeo__data_1_1Sample_adf2425e64a0cda4f6f247ec89ee9f708}
+
+
+Get the fit edge for the sample. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to the fit edge 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!fit\+\_\+edge@{fit\+\_\+edge}}
+\index{fit\+\_\+edge@{fit\+\_\+edge}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{fit\+\_\+edge(geo\+::\+Edge\+::\+Ptr edge)}{fit_edge(geo::Edge::Ptr edge)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+Sample\+::fit\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{geo\+::\+Edge\+::\+Ptr}]{edge}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1Sample_ad968e18e8b77a4325e1245f2333d802e}{}\label{classgeo__data_1_1Sample_ad968e18e8b77a4325e1245f2333d802e}
+
+
+Set the fit edge of this sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the fit edge \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!id@{id}}
+\index{id@{id}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{id() const }{id() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string geo\+\_\+data\+::\+Sample\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_aa529b9aef77c02620eac7a5ada4adcb3}{}\label{classgeo__data_1_1Sample_aa529b9aef77c02620eac7a5ada4adcb3}
+
+
+Get the ID of this sample. 
+
+\begin{DoxyReturn}{Returns}
+the ID 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!index@{index}}
+\index{index@{index}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{index() const }{index() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::size\+\_\+t geo\+\_\+data\+::\+Sample\+::index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a68267127a7cb00839ec904fcc0b9f64b}{}\label{classgeo__data_1_1Sample_a68267127a7cb00839ec904fcc0b9f64b}
+
+
+Get the index of this sample in the trace. Because sample\textquotesingle{}s can be re-\/indexed due to errors and filtering, this might differ from the sample\textquotesingle{}s index in the C\+SV file. 
+
+\begin{DoxyReturn}{Returns}
+the index 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!index@{index}}
+\index{index@{index}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{index(std\+::size\+\_\+t index)}{index(std::size_t index)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+Sample\+::index (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1Sample_af432c7b67cb2280eaac5d0d8c24163bf}{}\label{classgeo__data_1_1Sample_af432c7b67cb2280eaac5d0d8c24163bf}
+
+
+Set the index of the sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & new index of the sample \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!interval@{interval}}
+\index{interval@{interval}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{interval() const }{interval() const }}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+::\+Ptr geo\+\_\+data\+::\+Sample\+::interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a4461eedbc44d2a528f2e502929bb1053}{}\label{classgeo__data_1_1Sample_a4461eedbc44d2a528f2e502929bb1053}
+
+
+Get the interval (critical or private) of this sample. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to the interval 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!interval@{interval}}
+\index{interval@{interval}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{interval(\+Interval\+::\+Ptr interval)}{interval(Interval::Ptr interval)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+Sample\+::interval (
+\begin{DoxyParamCaption}
+\item[{Interval\+::\+Ptr}]{interval}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1Sample_a7c69af72f22c276d96ac9b17d5a5b250}{}\label{classgeo__data_1_1Sample_a7c69af72f22c276d96ac9b17d5a5b250}
+
+
+Set the interval (private or critical) for the sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & the interval \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!is\+\_\+explicit\+\_\+fit@{is\+\_\+explicit\+\_\+fit}}
+\index{is\+\_\+explicit\+\_\+fit@{is\+\_\+explicit\+\_\+fit}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{is\+\_\+explicit\+\_\+fit() const }{is_explicit_fit() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+\_\+data\+::\+Sample\+::is\+\_\+explicit\+\_\+fit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a2c71fa2fbc417fcb031da4009d15c4ea}{}\label{classgeo__data_1_1Sample_a2c71fa2fbc417fcb031da4009d15c4ea}
+
+
+Return true if this sample is map matched and falls within the area of the mapped edge. 
+
+\begin{DoxyReturn}{Returns}
+true if explicitly fit, false otherwise 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!is\+\_\+explicit\+\_\+fit@{is\+\_\+explicit\+\_\+fit}}
+\index{is\+\_\+explicit\+\_\+fit@{is\+\_\+explicit\+\_\+fit}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{is\+\_\+explicit\+\_\+fit(bool explicit\+\_\+fit)}{is_explicit_fit(bool explicit_fit)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+Sample\+::is\+\_\+explicit\+\_\+fit (
+\begin{DoxyParamCaption}
+\item[{bool}]{explicit\+\_\+fit}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1Sample_abc387126ac2a9285599aa7b4d243cdb5}{}\label{classgeo__data_1_1Sample_abc387126ac2a9285599aa7b4d243cdb5}
+
+
+Set the sample to be explicitly fit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & for explicitly fit \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!is\+\_\+valid@{is\+\_\+valid}}
+\index{is\+\_\+valid@{is\+\_\+valid}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{is\+\_\+valid() const }{is_valid() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+\_\+data\+::\+Sample\+::is\+\_\+valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_ae009ad7cc3106219b77123ba4e5d3238}{}\label{classgeo__data_1_1Sample_ae009ad7cc3106219b77123ba4e5d3238}
+
+
+Return true if sample is valid. A sample is valid if it was created successfully from the C\+SV record. Invalid records have missing fields, invalid G\+PS, or values that are not convertible to the required type. 
+
+\begin{DoxyReturn}{Returns}
+true if the sample is valid, false otherwise 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!lat@{lat}}
+\index{lat@{lat}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{lat() const }{lat() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+\_\+data\+::\+Sample\+::lat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a89ad23a22a5043e61e08129783333e4c}{}\label{classgeo__data_1_1Sample_a89ad23a22a5043e61e08129783333e4c}
+
+
+Get the G\+PS latitude of this sample in decimal degrees. 
+
+\begin{DoxyReturn}{Returns}
+the latitude 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!lon@{lon}}
+\index{lon@{lon}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{lon() const }{lon() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+\_\+data\+::\+Sample\+::lon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a0f3322502b9f32fbc51462e4b6270381}{}\label{classgeo__data_1_1Sample_a0f3322502b9f32fbc51462e4b6270381}
+
+
+Get the G\+PS of this sample in decimal degrees. 
+
+\begin{DoxyReturn}{Returns}
+the longitude 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!matched\+\_\+edge@{matched\+\_\+edge}}
+\index{matched\+\_\+edge@{matched\+\_\+edge}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{matched\+\_\+edge() const }{matched_edge() const }}]{\setlength{\rightskip}{0pt plus 5cm}geo\+::\+Edge\+::\+Ptr geo\+\_\+data\+::\+Sample\+::matched\+\_\+edge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a17881dc1186aa58c6923187b4386bf45}{}\label{classgeo__data_1_1Sample_a17881dc1186aa58c6923187b4386bf45}
+
+
+Get the matched edge for the sample. 
+
+\begin{DoxyReturn}{Returns}
+a pointer the matched edge 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!matched\+\_\+edge@{matched\+\_\+edge}}
+\index{matched\+\_\+edge@{matched\+\_\+edge}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{matched\+\_\+edge(geo\+::\+Edge\+::\+Ptr edge)}{matched_edge(geo::Edge::Ptr edge)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+Sample\+::matched\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{geo\+::\+Edge\+::\+Ptr}]{edge}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1Sample_a9e2a4ac09187e72f582122253531c669}{}\label{classgeo__data_1_1Sample_a9e2a4ac09187e72f582122253531c669}
+
+
+Set the matched edge of this sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the matched edge \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!out\+\_\+degree@{out\+\_\+degree}}
+\index{out\+\_\+degree@{out\+\_\+degree}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{out\+\_\+degree() const }{out_degree() const }}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t geo\+\_\+data\+::\+Sample\+::out\+\_\+degree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_aee00b5ede8ede7cb8119c4a94f85fe8e}{}\label{classgeo__data_1_1Sample_aee00b5ede8ede7cb8119c4a94f85fe8e}
+
+
+Get the cumulative trace out degree of the trace at this sample. 
+
+\begin{DoxyReturn}{Returns}
+the out degree 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!out\+\_\+degree@{out\+\_\+degree}}
+\index{out\+\_\+degree@{out\+\_\+degree}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{out\+\_\+degree(uint32\+\_\+t out\+\_\+degree)}{out_degree(uint32_t out_degree)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+Sample\+::out\+\_\+degree (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{out\+\_\+degree}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1Sample_ad339548ab91c90be41c9be2c81d3d07a}{}\label{classgeo__data_1_1Sample_ad339548ab91c90be41c9be2c81d3d07a}
+
+
+Set the cumulative trace out degree of the sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & out degree \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!raw\+\_\+index@{raw\+\_\+index}}
+\index{raw\+\_\+index@{raw\+\_\+index}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{raw\+\_\+index() const }{raw_index() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::size\+\_\+t geo\+\_\+data\+::\+Sample\+::raw\+\_\+index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_ac7ed68fe4f3e48e77a43ba52be3838e9}{}\label{classgeo__data_1_1Sample_ac7ed68fe4f3e48e77a43ba52be3838e9}
+
+
+Get the raw index of this sample in the trace. The raw index is the initial index of sample in the C\+SV file, irrespective of the filtering or errors. 
+
+\begin{DoxyReturn}{Returns}
+the raw index 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!record@{record}}
+\index{record@{record}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{record() const }{record() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string geo\+\_\+data\+::\+Sample\+::record (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_ac7ebb4bddcc448ab65843f29f7e3d2a5}{}\label{classgeo__data_1_1Sample_ac7ebb4bddcc448ab65843f29f7e3d2a5}
+
+
+Get the underlying C\+SV record for this sample. 
+
+\begin{DoxyReturn}{Returns}
+the record 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!speed@{speed}}
+\index{speed@{speed}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{speed() const }{speed() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+\_\+data\+::\+Sample\+::speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a77437a286640779148c3f4905b90a16c}{}\label{classgeo__data_1_1Sample_a77437a286640779148c3f4905b90a16c}
+
+
+Get the speed in meters per second of the sample. 
+
+\begin{DoxyReturn}{Returns}
+the speed 
+\end{DoxyReturn}
+\index{geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!geo\+\_\+data\+::\+Sample@{geo\+\_\+data\+::\+Sample}}
+\subsubsection[{\texorpdfstring{timestamp() const }{timestamp() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+\_\+data\+::\+Sample\+::timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo__data_1_1Sample_a7c6cd5157117296b306f8e5726737090}{}\label{classgeo__data_1_1Sample_a7c6cd5157117296b306f8e5726737090}
+
+
+Get the Unix timestamp of this sample in seconds. 
+
+\begin{DoxyReturn}{Returns}
+the timestamp 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo-\/data/include/geo\+\_\+data.\+hpp\item 
+cvdi-\/src/geo-\/data/src/geo\+\_\+data.\+cpp\end{DoxyCompactItemize}

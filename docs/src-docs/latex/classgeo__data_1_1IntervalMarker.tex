@@ -1,0 +1,68 @@
+\hypertarget{classgeo__data_1_1IntervalMarker}{}\section{geo\+\_\+data\+:\+:Interval\+Marker Class Reference}
+\label{classgeo__data_1_1IntervalMarker}\index{geo\+\_\+data\+::\+Interval\+Marker@{geo\+\_\+data\+::\+Interval\+Marker}}
+
+
+Label each point in a trip with the interval that contains it.  
+
+
+
+
+{\ttfamily \#include $<$geo\+\_\+data.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo__data_1_1IntervalMarker_a5c4ea2b6dc213ee5ddab6a203d26969c}{Interval\+Marker} (const std\+::initializer\+\_\+list$<$ Interval\+::\+Ptr\+List $>$ list, uint32\+\_\+t interval\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1IntervalMarker_afc77457c6d99343996bb5ae64fea6109}{mark\+\_\+trace} (Sample\+::\+Trace \&trace)
+\begin{DoxyCompactList}\small\item\em Annotate each sample in a trace with the interval containing it. All samples may not be associated with an interval. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Label each point in a trip with the interval that contains it. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+\_\+data\+::\+Interval\+Marker@{geo\+\_\+data\+::\+Interval\+Marker}!Interval\+Marker@{Interval\+Marker}}
+\index{Interval\+Marker@{Interval\+Marker}!geo\+\_\+data\+::\+Interval\+Marker@{geo\+\_\+data\+::\+Interval\+Marker}}
+\subsubsection[{\texorpdfstring{Interval\+Marker(const std\+::initializer\+\_\+list$<$ Interval\+::\+Ptr\+List $>$ list, uint32\+\_\+t interval\+\_\+type)}{IntervalMarker(const std::initializer_list< Interval::PtrList > list, uint32_t interval_type)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Interval\+Marker\+::\+Interval\+Marker (
+\begin{DoxyParamCaption}
+\item[{const std\+::initializer\+\_\+list$<$ Interval\+::\+Ptr\+List $>$}]{list, }
+\item[{uint32\+\_\+t}]{interval\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1IntervalMarker_a5c4ea2b6dc213ee5ddab6a203d26969c}{}\label{classgeo__data_1_1IntervalMarker_a5c4ea2b6dc213ee5ddab6a203d26969c}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the list of intervals to use for marking the trajectory \\
+\hline
+{\em interval\+\_\+type} & the type of the interval (critical or private) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+\_\+data\+::\+Interval\+Marker@{geo\+\_\+data\+::\+Interval\+Marker}!mark\+\_\+trace@{mark\+\_\+trace}}
+\index{mark\+\_\+trace@{mark\+\_\+trace}!geo\+\_\+data\+::\+Interval\+Marker@{geo\+\_\+data\+::\+Interval\+Marker}}
+\subsubsection[{\texorpdfstring{mark\+\_\+trace(\+Sample\+::\+Trace \&trace)}{mark_trace(Sample::Trace &trace)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+Interval\+Marker\+::mark\+\_\+trace (
+\begin{DoxyParamCaption}
+\item[{Sample\+::\+Trace \&}]{trace}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1IntervalMarker_afc77457c6d99343996bb5ae64fea6109}{}\label{classgeo__data_1_1IntervalMarker_afc77457c6d99343996bb5ae64fea6109}
+
+
+Annotate each sample in a trace with the interval containing it. All samples may not be associated with an interval. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trace} & the trace to annotate \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo-\/data/include/geo\+\_\+data.\+hpp\item 
+cvdi-\/src/geo-\/data/src/geo\+\_\+data.\+cpp\end{DoxyCompactItemize}

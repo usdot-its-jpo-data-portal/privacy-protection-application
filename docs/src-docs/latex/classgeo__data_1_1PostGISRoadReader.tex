@@ -1,0 +1,97 @@
+\hypertarget{classgeo__data_1_1PostGISRoadReader}{}\section{geo\+\_\+data\+:\+:Post\+G\+I\+S\+Road\+Reader Class Reference}
+\label{classgeo__data_1_1PostGISRoadReader}\index{geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader@{geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader}}
+
+
+Postgis (postgres) \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader}. Reads roads from the postgis O\+SM bfmap\+\_\+ways table of the database.  
+
+
+
+
+{\ttfamily \#include $<$geo\+\_\+data.\+hpp$>$}
+
+Inheritance diagram for geo\+\_\+data\+:\+:Post\+G\+I\+S\+Road\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgeo__data_1_1PostGISRoadReader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo__data_1_1PostGISRoadReader_ad45dbce658a641c26137fc04eb2b34e2}{Post\+G\+I\+S\+Road\+Reader} (const std\+::string \&host, uint32\+\_\+t port, const std\+::string \&database, const std\+::string \&user, const std\+::string \&password, const O\+S\+M\+Config\+Map \&osm\+\_\+config\+\_\+map\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classgeo__data_1_1PostGISRoadReader}{Post\+G\+I\+S\+Road\+Reader} object. \end{DoxyCompactList}\item 
+\hyperlink{classgeo__data_1_1PostGISRoadReader_aaa5ee860cdc35c2fbc988520859efcbd}{$\sim$\+Post\+G\+I\+S\+Road\+Reader} ()\hypertarget{classgeo__data_1_1PostGISRoadReader_aaa5ee860cdc35c2fbc988520859efcbd}{}\label{classgeo__data_1_1PostGISRoadReader_aaa5ee860cdc35c2fbc988520859efcbd}
+
+\begin{DoxyCompactList}\small\item\em Destruct a \hyperlink{classgeo__data_1_1PostGISRoadReader}{Post\+G\+I\+S\+Road\+Reader} object. \end{DoxyCompactList}\item 
+geo\+::\+Road\+::\+Ptr \hyperlink{classgeo__data_1_1PostGISRoadReader_aafd2e9afed093d19550677e91f4cfec2}{next\+\_\+road} (void)
+\begin{DoxyCompactList}\small\item\em Get the next road from the O\+SM bfmap\+\_\+ways table query. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Postgis (postgres) \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader}. Reads roads from the postgis O\+SM bfmap\+\_\+ways table of the database. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader@{geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader}!Post\+G\+I\+S\+Road\+Reader@{Post\+G\+I\+S\+Road\+Reader}}
+\index{Post\+G\+I\+S\+Road\+Reader@{Post\+G\+I\+S\+Road\+Reader}!geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader@{geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader}}
+\subsubsection[{\texorpdfstring{Post\+G\+I\+S\+Road\+Reader(const std\+::string \&host, uint32\+\_\+t port, const std\+::string \&database, const std\+::string \&user, const std\+::string \&password, const O\+S\+M\+Config\+Map \&osm\+\_\+config\+\_\+map\+\_\+)}{PostGISRoadReader(const std::string &host, uint32_t port, const std::string &database, const std::string &user, const std::string &password, const OSMConfigMap &osm_config_map_)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader\+::\+Post\+G\+I\+S\+Road\+Reader (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{host, }
+\item[{uint32\+\_\+t}]{port, }
+\item[{const std\+::string \&}]{database, }
+\item[{const std\+::string \&}]{user, }
+\item[{const std\+::string \&}]{password, }
+\item[{const O\+S\+M\+Config\+Map \&}]{osm\+\_\+config\+\_\+map\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1PostGISRoadReader_ad45dbce658a641c26137fc04eb2b34e2}{}\label{classgeo__data_1_1PostGISRoadReader_ad45dbce658a641c26137fc04eb2b34e2}
+
+
+Construct a \hyperlink{classgeo__data_1_1PostGISRoadReader}{Post\+G\+I\+S\+Road\+Reader} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & the address or F\+Q\+DN of the postgres host \\
+\hline
+{\em port} & the port the where the postgres server is running \\
+\hline
+{\em database} & the name of O\+SM road network database \\
+\hline
+{\em user} & the name of the postgres user \\
+\hline
+{\em password} & the password for the postgres user \\
+\hline
+{\em osm\+\_\+config\+\_\+map} & configuration for O\+SM ways \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the psotgres connection could not be established or the query fails \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader@{geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader}!next\+\_\+road@{next\+\_\+road}}
+\index{next\+\_\+road@{next\+\_\+road}!geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader@{geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader}}
+\subsubsection[{\texorpdfstring{next\+\_\+road(void)}{next_road(void)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+::\+Road\+::\+Ptr geo\+\_\+data\+::\+Post\+G\+I\+S\+Road\+Reader\+::next\+\_\+road (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classgeo__data_1_1PostGISRoadReader_aafd2e9afed093d19550677e91f4cfec2}{}\label{classgeo__data_1_1PostGISRoadReader_aafd2e9afed093d19550677e91f4cfec2}
+
+
+Get the next road from the O\+SM bfmap\+\_\+ways table query. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to \hyperlink{classgeo_1_1Road}{geo\+::\+Road} or nullptr if there are no more roads 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classgeo__data_1_1RoadReader}{geo\+\_\+data\+::\+Road\+Reader}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo-\/data/include/geo\+\_\+data.\+hpp\item 
+cvdi-\/src/geo-\/data/src/geo\+\_\+data.\+cpp\end{DoxyCompactItemize}

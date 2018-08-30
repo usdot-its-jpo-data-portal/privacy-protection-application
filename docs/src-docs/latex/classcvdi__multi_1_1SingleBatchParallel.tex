@@ -1,0 +1,67 @@
+\hypertarget{classcvdi__multi_1_1SingleBatchParallel}{}\section{cvdi\+\_\+multi\+:\+:Single\+Batch\+Parallel Class Reference}
+\label{classcvdi__multi_1_1SingleBatchParallel}\index{cvdi\+\_\+multi\+::\+Single\+Batch\+Parallel@{cvdi\+\_\+multi\+::\+Single\+Batch\+Parallel}}
+
+
+Single file batch processing.  
+
+
+
+
+{\ttfamily \#include $<$cvdi\+\_\+multi.\+hpp$>$}
+
+Inheritance diagram for cvdi\+\_\+multi\+:\+:Single\+Batch\+Parallel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcvdi__multi_1_1SingleBatchParallel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Single\+Batch\+Parallel} (const std\+::string \&file\+\_\+path)\hypertarget{classcvdi__multi_1_1SingleBatchParallel_ac209a23cedee901482dd96d878f85688}{}\label{classcvdi__multi_1_1SingleBatchParallel_ac209a23cedee901482dd96d878f85688}
+
+\item 
+virtual void \hyperlink{classcvdi__multi_1_1SingleBatchParallel_a6514a89e14f2724ab671ffd65d7c43c7}{Thread} (unsigned thread\+\_\+num, \hyperlink{classMultiThread_1_1SharedQueue}{Multi\+Thread\+::\+Shared\+Queue}$<$ File\+Info\+::\+Ptr $>$ $\ast$q)=0
+\begin{DoxyCompactList}\small\item\em The main work thread. \end{DoxyCompactList}\item 
+File\+Info\+::\+Ptr {\bfseries Next\+Item} (void)\hypertarget{classcvdi__multi_1_1SingleBatchParallel_a26f4c22424a0f3683e9a2f326adba590}{}\label{classcvdi__multi_1_1SingleBatchParallel_a26f4c22424a0f3683e9a2f326adba590}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Single file batch processing. 
+
+\subsection{Member Function Documentation}
+\index{cvdi\+\_\+multi\+::\+Single\+Batch\+Parallel@{cvdi\+\_\+multi\+::\+Single\+Batch\+Parallel}!Thread@{Thread}}
+\index{Thread@{Thread}!cvdi\+\_\+multi\+::\+Single\+Batch\+Parallel@{cvdi\+\_\+multi\+::\+Single\+Batch\+Parallel}}
+\subsubsection[{\texorpdfstring{Thread(unsigned thread\+\_\+num, Multi\+Thread\+::\+Shared\+Queue$<$ File\+Info\+::\+Ptr $>$ $\ast$q)=0}{Thread(unsigned thread_num, MultiThread::SharedQueue< FileInfo::Ptr > *q)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void cvdi\+\_\+multi\+::\+Single\+Batch\+Parallel\+::\+Thread (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{thread\+\_\+num, }
+\item[{{\bf Multi\+Thread\+::\+Shared\+Queue}$<$ File\+Info\+::\+Ptr $>$ $\ast$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classcvdi__multi_1_1SingleBatchParallel_a6514a89e14f2724ab671ffd65d7c43c7}{}\label{classcvdi__multi_1_1SingleBatchParallel_a6514a89e14f2724ab671ffd65d7c43c7}
+
+
+The main work thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread\+\_\+num} & a easy to read unique identifier for this thread. \\
+\hline
+{\em the} & work queue containing the trip files that this thread should process. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classcvdi__multi_1_1BatchParallel_a23fd90da6768ad102e3ce5968ab11410}{cvdi\+\_\+multi\+::\+Batch\+Parallel}.
+
+
+
+Implemented in \hyperlink{classcvdi__multi_1_1CVDIParallel_a7c256d91bb868873a1c6ce854c923c17}{cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/cvdi\+\_\+multi.\+hpp\item 
+cvdi-\/src/cvdi-\/cl/src/cvdi\+\_\+multi.\+cpp\end{DoxyCompactItemize}

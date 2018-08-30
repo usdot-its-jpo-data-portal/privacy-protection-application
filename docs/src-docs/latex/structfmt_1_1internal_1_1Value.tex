@@ -1,0 +1,73 @@
+\hypertarget{structfmt_1_1internal_1_1Value}{}\section{fmt\+:\+:internal\+:\+:Value Struct Reference}
+\label{structfmt_1_1internal_1_1Value}\index{fmt\+::internal\+::\+Value@{fmt\+::internal\+::\+Value}}
+Inheritance diagram for fmt\+:\+:internal\+:\+:Value\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.413793cm]{structfmt_1_1internal_1_1Value}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfmt_1_1internal_1_1Value_1_1CustomValue}{Custom\+Value}
+\item 
+struct \hyperlink{structfmt_1_1internal_1_1Value_1_1StringValue}{String\+Value}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Type} \{ \\*
+{\bfseries N\+O\+NE}, 
+{\bfseries N\+A\+M\+E\+D\+\_\+\+A\+RG}, 
+{\bfseries I\+NT}, 
+{\bfseries U\+I\+NT}, 
+\\*
+{\bfseries L\+O\+N\+G\+\_\+\+L\+O\+NG}, 
+{\bfseries U\+L\+O\+N\+G\+\_\+\+L\+O\+NG}, 
+{\bfseries B\+O\+OL}, 
+{\bfseries C\+H\+AR}, 
+\\*
+{\bfseries L\+A\+S\+T\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+T\+Y\+PE} = C\+H\+AR, 
+{\bfseries D\+O\+U\+B\+LE}, 
+{\bfseries L\+O\+N\+G\+\_\+\+D\+O\+U\+B\+LE}, 
+{\bfseries L\+A\+S\+T\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+T\+Y\+PE} = L\+O\+N\+G\+\_\+\+D\+O\+U\+B\+LE, 
+\\*
+{\bfseries C\+S\+T\+R\+I\+NG}, 
+{\bfseries S\+T\+R\+I\+NG}, 
+{\bfseries W\+S\+T\+R\+I\+NG}, 
+{\bfseries P\+O\+I\+N\+T\+ER}, 
+\\*
+{\bfseries C\+U\+S\+T\+OM}
+ \}\hypertarget{structfmt_1_1internal_1_1Value_a0305339d0a9571e14e26f385367fedaa}{}\label{structfmt_1_1internal_1_1Value_a0305339d0a9571e14e26f385367fedaa}
+
+\item 
+typedef void($\ast$ {\bfseries Format\+Func}) (void $\ast$formatter, const void $\ast$arg, void $\ast$format\+\_\+str\+\_\+ptr)\hypertarget{structfmt_1_1internal_1_1Value_a1bdc8aa6f70614fbb514aaa56106c669}{}\label{structfmt_1_1internal_1_1Value_a1bdc8aa6f70614fbb514aaa56106c669}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>int {\bfseries int\_value}\\
+\>unsigned {\bfseries uint\_value}\\
+\>LongLong {\bfseries long\_long\_value}\\
+\>ULongLong {\bfseries ulong\_long\_value}\\
+\>double {\bfseries double\_value}\\
+\>long double {\bfseries long\_double\_value}\\
+\>const void $\ast$ {\bfseries pointer}\\
+\>\hyperlink{structfmt_1_1internal_1_1Value_1_1StringValue}{StringValue}$<$ char $>$ {\bfseries string}\\
+\>\hyperlink{structfmt_1_1internal_1_1Value_1_1StringValue}{StringValue}$<$ signed char $>$ {\bfseries sstring}\\
+\>\hyperlink{structfmt_1_1internal_1_1Value_1_1StringValue}{StringValue}$<$ unsigned char $>$ {\bfseries ustring}\\
+\>\hyperlink{structfmt_1_1internal_1_1Value_1_1StringValue}{StringValue}$<$ wchar\_t $>$ {\bfseries wstring}\\
+\>\hyperlink{structfmt_1_1internal_1_1Value_1_1CustomValue}{CustomValue} {\bfseries custom}\\
+\}; \hypertarget{structfmt_1_1internal_1_1Value_abee01a135224a5fda926c6f585d2e682}{}\label{structfmt_1_1internal_1_1Value_abee01a135224a5fda926c6f585d2e682}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

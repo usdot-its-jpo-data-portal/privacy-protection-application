@@ -1,0 +1,239 @@
+\hypertarget{classcvdi_1_1Stop_1_1Deque}{}\section{cvdi\+:\+:Stop\+:\+:Deque Class Reference}
+\label{classcvdi_1_1Stop_1_1Deque}\index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+
+
+A special deque with support for detecting stops in trace.  
+
+
+
+
+{\ttfamily \#include $<$cvdi.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries size\+\_\+type} = std\+::deque$<$ geo\+\_\+data\+::\+Sample\+::\+Trace\+::const\+\_\+iterator $>$\+::size\+\_\+type\hypertarget{classcvdi_1_1Stop_1_1Deque_ab87d53f81657062dd9b54aa9b6ef5664}{}\label{classcvdi_1_1Stop_1_1Deque_ab87d53f81657062dd9b54aa9b6ef5664}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcvdi_1_1Stop_1_1Deque_a82db9db1295a1d0470e5a2ae5fdceab1}{Deque} (\hyperlink{classcvdi_1_1Stop}{Stop} \&detector)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque} object. \end{DoxyCompactList}\item 
+double \hyperlink{classcvdi_1_1Stop_1_1Deque_af2be913dfab359504aaebc7620d7399b}{delta\+\_\+distance} () const 
+\begin{DoxyCompactList}\small\item\em Get the point-\/to-\/point distance in meters covered by points in the \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque}. \end{DoxyCompactList}\item 
+double \hyperlink{classcvdi_1_1Stop_1_1Deque_ae6b2b3fccac30fe6112ff6da6aafcd90}{cover\+\_\+distance} () const 
+\begin{DoxyCompactList}\small\item\em Get the distance between the first point and last point in the \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque}. \end{DoxyCompactList}\item 
+void \hyperlink{classcvdi_1_1Stop_1_1Deque_ad277103300d4fc3a09afbe0b575a4567}{push\+\_\+right} (const geo\+\_\+data\+::\+Sample\+::\+Trace\+::const\+\_\+iterator \&it)
+\begin{DoxyCompactList}\small\item\em Add a point (iterator) to the back (right) of the deque and update the point-\/to-\/point distance. \end{DoxyCompactList}\item 
+bool \hyperlink{classcvdi_1_1Stop_1_1Deque_aab0122a2992c126d1ccc9e6b5dfd04f9}{unwind} ()
+\begin{DoxyCompactList}\small\item\em Remove iterators (points) from the front of the deque until the following conditions are met\+: \end{DoxyCompactList}\item 
+void \hyperlink{classcvdi_1_1Stop_1_1Deque_a07479bd54399d00d977965de4608f57d}{reset} ()\hypertarget{classcvdi_1_1Stop_1_1Deque_a07479bd54399d00d977965de4608f57d}{}\label{classcvdi_1_1Stop_1_1Deque_a07479bd54399d00d977965de4608f57d}
+
+\begin{DoxyCompactList}\small\item\em Reset this \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque} instance. Remove all points (iterators) from the deque and reset cumulated distance to 0. \end{DoxyCompactList}\item 
+bool \hyperlink{classcvdi_1_1Stop_1_1Deque_a4e267019ceae75025ac0aadc4c073a28}{under\+\_\+time} (geo\+\_\+data\+::\+Sample\+::\+Ptr sample) const 
+\begin{DoxyCompactList}\small\item\em Predicate indicating whether the time elapsed from the first trip point in the deque to this trip point does not exceed max\+\_\+time. \end{DoxyCompactList}\item 
+bool \hyperlink{classcvdi_1_1Stop_1_1Deque_a891bee58957586879e58a34ef4839c3e}{under\+\_\+distance} () const 
+\begin{DoxyCompactList}\small\item\em Predicate indicating whether the distance covered by the points in the deque is less than the parameterized limit. \end{DoxyCompactList}\item 
+bool \hyperlink{classcvdi_1_1Stop_1_1Deque_a26a9eef47ae371704ec54b4442c0649b}{under\+\_\+speed} (geo\+\_\+data\+::\+Sample\+::\+Ptr sample) const 
+\begin{DoxyCompactList}\small\item\em Predicate that indicates the speed in this point record is less than the limit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Stop}\hypertarget{classcvdi_1_1Stop_1_1Deque_a06c1356535b989762bfdfc0f8fcc76ae}{}\label{classcvdi_1_1Stop_1_1Deque_a06c1356535b989762bfdfc0f8fcc76ae}
+
+\item 
+std\+::ostream \& \hyperlink{classcvdi_1_1Stop_1_1Deque_a573b40bf9fa3ab3485f1a8335d1dac7c}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque} \&q)
+\begin{DoxyCompactList}\small\item\em Output to a stream details about this \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A special deque with support for detecting stops in trace. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}!Deque@{Deque}}
+\index{Deque@{Deque}!cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+\subsubsection[{\texorpdfstring{Deque(\+Stop \&detector)}{Deque(Stop &detector)}}]{\setlength{\rightskip}{0pt plus 5cm}cvdi\+::\+Stop\+::\+Deque\+::\+Deque (
+\begin{DoxyParamCaption}
+\item[{{\bf Stop} \&}]{detector}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1Stop_1_1Deque_a82db9db1295a1d0470e5a2ae5fdceab1}{}\label{classcvdi_1_1Stop_1_1Deque_a82db9db1295a1d0470e5a2ae5fdceab1}
+
+
+Construct a \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em detector} & a reference to the \hyperlink{classcvdi_1_1Stop}{Stop} instance to support\\
+\hline
+\end{DoxyParams}
+C\+T\+OR for new stop detector deque. 
+
+\subsection{Member Function Documentation}
+\index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}!cover\+\_\+distance@{cover\+\_\+distance}}
+\index{cover\+\_\+distance@{cover\+\_\+distance}!cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+\subsubsection[{\texorpdfstring{cover\+\_\+distance() const }{cover_distance() const }}]{\setlength{\rightskip}{0pt plus 5cm}double cvdi\+::\+Stop\+::\+Deque\+::cover\+\_\+distance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcvdi_1_1Stop_1_1Deque_ae6b2b3fccac30fe6112ff6da6aafcd90}{}\label{classcvdi_1_1Stop_1_1Deque_ae6b2b3fccac30fe6112ff6da6aafcd90}
+
+
+Get the distance between the first point and last point in the \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque}. 
+
+\begin{DoxyReturn}{Returns}
+the distance in meters
+\end{DoxyReturn}
+The direct distance from first point to last point within the deque.
+
+N\+O\+TE\+: This seems to be a better metric because G\+PS error could infer a larger manhattan distance when a vehicle is actually not moving at all. \index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}!delta\+\_\+distance@{delta\+\_\+distance}}
+\index{delta\+\_\+distance@{delta\+\_\+distance}!cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+\subsubsection[{\texorpdfstring{delta\+\_\+distance() const }{delta_distance() const }}]{\setlength{\rightskip}{0pt plus 5cm}double cvdi\+::\+Stop\+::\+Deque\+::delta\+\_\+distance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcvdi_1_1Stop_1_1Deque_af2be913dfab359504aaebc7620d7399b}{}\label{classcvdi_1_1Stop_1_1Deque_af2be913dfab359504aaebc7620d7399b}
+
+
+Get the point-\/to-\/point distance in meters covered by points in the \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque}. 
+
+\begin{DoxyReturn}{Returns}
+the distance in meters
+\end{DoxyReturn}
+The manhattan distance covered by the points within the deque. \index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}!push\+\_\+right@{push\+\_\+right}}
+\index{push\+\_\+right@{push\+\_\+right}!cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+\subsubsection[{\texorpdfstring{push\+\_\+right(const geo\+\_\+data\+::\+Sample\+::\+Trace\+::const\+\_\+iterator \&it)}{push_right(const geo_data::Sample::Trace::const_iterator &it)}}]{\setlength{\rightskip}{0pt plus 5cm}void cvdi\+::\+Stop\+::\+Deque\+::push\+\_\+right (
+\begin{DoxyParamCaption}
+\item[{const geo\+\_\+data\+::\+Sample\+::\+Trace\+::const\+\_\+iterator \&}]{it}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1Stop_1_1Deque_ad277103300d4fc3a09afbe0b575a4567}{}\label{classcvdi_1_1Stop_1_1Deque_ad277103300d4fc3a09afbe0b575a4567}
+
+
+Add a point (iterator) to the back (right) of the deque and update the point-\/to-\/point distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & An iterator to a trace point\\
+\hline
+\end{DoxyParams}
+Add a point/iterator to the back (right) of the deque and update the manhattan distance. \index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}!under\+\_\+distance@{under\+\_\+distance}}
+\index{under\+\_\+distance@{under\+\_\+distance}!cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+\subsubsection[{\texorpdfstring{under\+\_\+distance() const }{under_distance() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool cvdi\+::\+Stop\+::\+Deque\+::under\+\_\+distance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcvdi_1_1Stop_1_1Deque_a891bee58957586879e58a34ef4839c3e}{}\label{classcvdi_1_1Stop_1_1Deque_a891bee58957586879e58a34ef4839c3e}
+
+
+Predicate indicating whether the distance covered by the points in the deque is less than the parameterized limit. 
+
+Cover distance is used since G\+PS error can greatly skew the Manhattan distance in instances where no actual movement has taken place. In cases where the driver is traveling in a straight line, both cover\+\_\+distance and Manhattan distance will be equivalent.
+
+\begin{DoxyReturn}{Returns}
+true if cover distance $<$= limit, false otherwise.
+\end{DoxyReturn}
+Prediate indicating whether the distance covered by the points in the deque is less than the limit at which too much movement has taken place to consider it a stop.
+
+Cover distance is used since G\+PS error can greatly skew the manhattan distance in instances where no actual movement has taken place. In cases where the driver is traveling in a straight line, both cover\+\_\+distance and manhattan distance will be equivalent. \index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}!under\+\_\+speed@{under\+\_\+speed}}
+\index{under\+\_\+speed@{under\+\_\+speed}!cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+\subsubsection[{\texorpdfstring{under\+\_\+speed(geo\+\_\+data\+::\+Sample\+::\+Ptr sample) const }{under_speed(geo_data::Sample::Ptr sample) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool cvdi\+::\+Stop\+::\+Deque\+::under\+\_\+speed (
+\begin{DoxyParamCaption}
+\item[{geo\+\_\+data\+::\+Sample\+::\+Ptr}]{ptptr}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcvdi_1_1Stop_1_1Deque_a26a9eef47ae371704ec54b4442c0649b}{}\label{classcvdi_1_1Stop_1_1Deque_a26a9eef47ae371704ec54b4442c0649b}
+
+
+Predicate that indicates the speed in this point record is less than the limit. 
+
+Points having speeds greater than or equal to this speed are not considered by the stop detector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample} & sample point in a trace \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the points current speeds is less than the parameterized max speed.
+\end{DoxyReturn}
+Predicate that indicates the speed in this point record is less than the speed where we start considering (collecting points) stop detection properties. \index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}!under\+\_\+time@{under\+\_\+time}}
+\index{under\+\_\+time@{under\+\_\+time}!cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+\subsubsection[{\texorpdfstring{under\+\_\+time(geo\+\_\+data\+::\+Sample\+::\+Ptr sample) const }{under_time(geo_data::Sample::Ptr sample) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool cvdi\+::\+Stop\+::\+Deque\+::under\+\_\+time (
+\begin{DoxyParamCaption}
+\item[{geo\+\_\+data\+::\+Sample\+::\+Ptr}]{ptptr}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcvdi_1_1Stop_1_1Deque_a4e267019ceae75025ac0aadc4c073a28}{}\label{classcvdi_1_1Stop_1_1Deque_a4e267019ceae75025ac0aadc4c073a28}
+
+
+Predicate indicating whether the time elapsed from the first trip point in the deque to this trip point does not exceed max\+\_\+time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample} & a point in a trace; this point is later in the trip than the first point in the deque.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the time difference is less than or equal to the max\+\_\+time.
+\end{DoxyReturn}
+Predicate indicating whether the deque\textquotesingle{}s I\+N\+V\+A\+R\+I\+A\+NT would be broken by adding this trip point to it.
+
+I\+N\+V\+A\+R\+I\+A\+NT\+: The time elapsed from first trip point in deque to last never exceeds max\+\_\+time. \index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}!unwind@{unwind}}
+\index{unwind@{unwind}!cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+\subsubsection[{\texorpdfstring{unwind()}{unwind()}}]{\setlength{\rightskip}{0pt plus 5cm}bool cvdi\+::\+Stop\+::\+Deque\+::unwind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1Stop_1_1Deque_aab0122a2992c126d1ccc9e6b5dfd04f9}{}\label{classcvdi_1_1Stop_1_1Deque_aab0122a2992c126d1ccc9e6b5dfd04f9}
+
+
+Remove iterators (points) from the front of the deque until the following conditions are met\+: 
+
+
+\begin{DoxyEnumerate}
+\item The distance covered in the deque is under the limit.
+\item The deque does not become empty.
+\item The velocity is below the limit and the road is not in the blacklist.
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+true if the deque is empty (stop condition); false if it is not empty
+\end{DoxyReturn}
+Remove iterators (points) from the front of the deque until the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item The distance covered in the deque is under the limit.
+\item The deque does not become empty.
+\item The velocity is below the limit and the road is not in the blacklist.
+\end{DoxyEnumerate}
+
+Return\+: true if the deque is empty (stop condition); false if it is not empty. 
+
+\subsection{Friends And Related Function Documentation}
+\index{cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvdi\+::\+Stop\+::\+Deque@{cvdi\+::\+Stop\+::\+Deque}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Deque} \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classcvdi_1_1Stop_1_1Deque_a573b40bf9fa3ab3485f1a8335d1dac7c}{}\label{classcvdi_1_1Stop_1_1Deque_a573b40bf9fa3ab3485f1a8335d1dac7c}
+
+
+Output to a stream details about this \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & the output stream \\
+\hline
+{\em q} & the \hyperlink{classcvdi_1_1Stop}{Stop} \hyperlink{classcvdi_1_1Stop_1_1Deque}{Deque} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the output stream after printing for chaining 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi/include/cvdi.\+hpp\item 
+cvdi-\/src/cvdi/src/cvdi.\+cpp\end{DoxyCompactItemize}

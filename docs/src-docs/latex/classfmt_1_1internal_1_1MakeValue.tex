@@ -1,0 +1,59 @@
+\hypertarget{classfmt_1_1internal_1_1MakeValue}{}\section{fmt\+:\+:internal\+:\+:Make\+Value$<$ Formatter $>$ Class Template Reference}
+\label{classfmt_1_1internal_1_1MakeValue}\index{fmt\+::internal\+::\+Make\+Value$<$ Formatter $>$@{fmt\+::internal\+::\+Make\+Value$<$ Formatter $>$}}
+Inheritance diagram for fmt\+:\+:internal\+:\+:Make\+Value$<$ Formatter $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classfmt_1_1internal_1_1MakeValue}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Formatter\+::\+Char {\bfseries Char}\hypertarget{classfmt_1_1internal_1_1MakeValue_a6c7944899a1c1ba1dd5102131d19c443}{}\label{classfmt_1_1internal_1_1MakeValue_a6c7944899a1c1ba1dd5102131d19c443}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Make\+Value} (long value)\hypertarget{classfmt_1_1internal_1_1MakeValue_ad7e52c1fc3d087a666bdd55bfda0c79c}{}\label{classfmt_1_1internal_1_1MakeValue_ad7e52c1fc3d087a666bdd55bfda0c79c}
+
+\item 
+{\bfseries Make\+Value} (unsigned long value)\hypertarget{classfmt_1_1internal_1_1MakeValue_a09061194386798ee1f7652ff0100192e}{}\label{classfmt_1_1internal_1_1MakeValue_a09061194386798ee1f7652ff0100192e}
+
+\item 
+{\bfseries Make\+Value} (typename \hyperlink{structfmt_1_1internal_1_1WCharHelper}{W\+Char\+Helper}$<$ wchar\+\_\+t, Char $>$\+::Supported value)\hypertarget{classfmt_1_1internal_1_1MakeValue_acee23248667dcf84353cecf3e8f28d67}{}\label{classfmt_1_1internal_1_1MakeValue_acee23248667dcf84353cecf3e8f28d67}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\{\bfseries Make\+Value} (const T \&value, typename \hyperlink{structfmt_1_1internal_1_1EnableIf}{Enable\+If}$<$ \hyperlink{structfmt_1_1internal_1_1Not}{Not}$<$ \hyperlink{structfmt_1_1internal_1_1ConvertToInt}{Convert\+To\+Int}$<$ T $>$\+::value $>$\+::value, int $>$\+::type=0)\hypertarget{classfmt_1_1internal_1_1MakeValue_a84e3301c4bda7c59a0d065462b4c7de5}{}\label{classfmt_1_1internal_1_1MakeValue_a84e3301c4bda7c59a0d065462b4c7de5}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\{\bfseries Make\+Value} (const T \&value, typename \hyperlink{structfmt_1_1internal_1_1EnableIf}{Enable\+If}$<$ \hyperlink{structfmt_1_1internal_1_1ConvertToInt}{Convert\+To\+Int}$<$ T $>$\+::value, int $>$\+::type=0)\hypertarget{classfmt_1_1internal_1_1MakeValue_a7635061558249117606a4facce211b03}{}\label{classfmt_1_1internal_1_1MakeValue_a7635061558249117606a4facce211b03}
+
+\item 
+{\footnotesize template$<$typename Char\+\_\+ $>$ }\\{\bfseries Make\+Value} (const \hyperlink{structfmt_1_1internal_1_1NamedArg}{Named\+Arg}$<$ Char\+\_\+ $>$ \&value)\hypertarget{classfmt_1_1internal_1_1MakeValue_a282289e2dd46a048c06d4994423e1fa4}{}\label{classfmt_1_1internal_1_1MakeValue_a282289e2dd46a048c06d4994423e1fa4}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint64\+\_\+t {\bfseries type} (long)\hypertarget{classfmt_1_1internal_1_1MakeValue_a595ab8ee3b95d916881ffe40db3a13b0}{}\label{classfmt_1_1internal_1_1MakeValue_a595ab8ee3b95d916881ffe40db3a13b0}
+
+\item 
+static uint64\+\_\+t {\bfseries type} (unsigned long)\hypertarget{classfmt_1_1internal_1_1MakeValue_a797f6663d8fdaf02cf254c05dbb19647}{}\label{classfmt_1_1internal_1_1MakeValue_a797f6663d8fdaf02cf254c05dbb19647}
+
+\item 
+static uint64\+\_\+t {\bfseries type} (wchar\+\_\+t)\hypertarget{classfmt_1_1internal_1_1MakeValue_adf70f5e369c149ce2916b73bea8c2af9}{}\label{classfmt_1_1internal_1_1MakeValue_adf70f5e369c149ce2916b73bea8c2af9}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\static uint64\+\_\+t {\bfseries type} (const T \&)\hypertarget{classfmt_1_1internal_1_1MakeValue_ada410611bcfef70448489daaf4b0e66a}{}\label{classfmt_1_1internal_1_1MakeValue_ada410611bcfef70448489daaf4b0e66a}
+
+\item 
+{\footnotesize template$<$typename Char\+\_\+ $>$ }\\static uint64\+\_\+t {\bfseries type} (const \hyperlink{structfmt_1_1internal_1_1NamedArg}{Named\+Arg}$<$ Char\+\_\+ $>$ \&)\hypertarget{classfmt_1_1internal_1_1MakeValue_a346c9fe85895cf679c651ec45e726a64}{}\label{classfmt_1_1internal_1_1MakeValue_a346c9fe85895cf679c651ec45e726a64}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

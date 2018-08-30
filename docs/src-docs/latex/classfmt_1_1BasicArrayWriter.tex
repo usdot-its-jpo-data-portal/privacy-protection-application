@@ -1,0 +1,55 @@
+\hypertarget{classfmt_1_1BasicArrayWriter}{}\section{fmt\+:\+:Basic\+Array\+Writer$<$ Char $>$ Class Template Reference}
+\label{classfmt_1_1BasicArrayWriter}\index{fmt\+::\+Basic\+Array\+Writer$<$ Char $>$@{fmt\+::\+Basic\+Array\+Writer$<$ Char $>$}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+Inheritance diagram for fmt\+:\+:Basic\+Array\+Writer$<$ Char $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classfmt_1_1BasicArrayWriter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfmt_1_1BasicArrayWriter_a7559ecce2ffb3ecbb275dac5d2cc05e9}{Basic\+Array\+Writer} (Char $\ast$array, std\+::size\+\_\+t \hyperlink{classfmt_1_1BasicWriter_a1b6721b4ba4d3fa18ac781a36616cc2a}{size})
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t S\+I\+ZE$>$ }\\\hyperlink{classfmt_1_1BasicArrayWriter_ab8787cfc9b1500c0f2765074f64e5088}{Basic\+Array\+Writer} (Char(\&array)\mbox{[}S\+I\+ZE\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Char$>$\\*
+class fmt\+::\+Basic\+Array\+Writer$<$ Char $>$}
+
+This class template provides operations for formatting and writing data into a fixed-\/size array. For writing into a dynamically growing buffer use \+:class\+:{\ttfamily \hyperlink{classfmt_1_1BasicMemoryWriter}{fmt\+::\+Basic\+Memory\+Writer}}.
+
+Any write method will throw {\ttfamily std\+::runtime\+\_\+error} if the output doesn\textquotesingle{}t fit into the array.
+
+You can use one of the following typedefs for common character types\+:
+
++-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ Type $\vert$ Definition $\vert$ +==============+===========================+ $\vert$ Array\+Writer $\vert$ Basic\+Array\+Writer$<$char$>$ $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ W\+Array\+Writer $\vert$ Basic\+Array\+Writer$<$wchar\+\_\+t$>$ $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+  
+
+\subsection{Constructor \& Destructor Documentation}
+\index{fmt\+::\+Basic\+Array\+Writer@{fmt\+::\+Basic\+Array\+Writer}!Basic\+Array\+Writer@{Basic\+Array\+Writer}}
+\index{Basic\+Array\+Writer@{Basic\+Array\+Writer}!fmt\+::\+Basic\+Array\+Writer@{fmt\+::\+Basic\+Array\+Writer}}
+\subsubsection[{\texorpdfstring{Basic\+Array\+Writer(\+Char $\ast$array, std\+::size\+\_\+t size)}{BasicArrayWriter(Char *array, std::size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char $>$ {\bf fmt\+::\+Basic\+Array\+Writer}$<$ Char $>$\+::{\bf Basic\+Array\+Writer} (
+\begin{DoxyParamCaption}
+\item[{Char $\ast$}]{array, }
+\item[{std\+::size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicArrayWriter_a7559ecce2ffb3ecbb275dac5d2cc05e9}{}\label{classfmt_1_1BasicArrayWriter_a7559ecce2ffb3ecbb275dac5d2cc05e9}
+Constructs a \+:class\+:{\ttfamily \hyperlink{classfmt_1_1BasicArrayWriter}{fmt\+::\+Basic\+Array\+Writer}} object for {\itshape array} of the given size.  \index{fmt\+::\+Basic\+Array\+Writer@{fmt\+::\+Basic\+Array\+Writer}!Basic\+Array\+Writer@{Basic\+Array\+Writer}}
+\index{Basic\+Array\+Writer@{Basic\+Array\+Writer}!fmt\+::\+Basic\+Array\+Writer@{fmt\+::\+Basic\+Array\+Writer}}
+\subsubsection[{\texorpdfstring{Basic\+Array\+Writer(\+Char(\&array)[S\+I\+ZE])}{BasicArrayWriter(Char(&array)[SIZE])}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char $>$ template$<$std\+::size\+\_\+t S\+I\+ZE$>$ {\bf fmt\+::\+Basic\+Array\+Writer}$<$ Char $>$\+::{\bf Basic\+Array\+Writer} (
+\begin{DoxyParamCaption}
+\item[{Char(\&)}]{array\mbox{[}\+S\+I\+Z\+E\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classfmt_1_1BasicArrayWriter_ab8787cfc9b1500c0f2765074f64e5088}{}\label{classfmt_1_1BasicArrayWriter_ab8787cfc9b1500c0f2765074f64e5088}
+Constructs a \+:class\+:{\ttfamily \hyperlink{classfmt_1_1BasicArrayWriter}{fmt\+::\+Basic\+Array\+Writer}} object for {\itshape array} of the size known at compile time.  
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

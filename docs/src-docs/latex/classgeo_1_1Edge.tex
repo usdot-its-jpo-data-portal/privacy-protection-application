@@ -1,0 +1,280 @@
+\hypertarget{classgeo_1_1Edge}{}\section{geo\+:\+:Edge Class Reference}
+\label{classgeo_1_1Edge}\index{geo\+::\+Edge@{geo\+::\+Edge}}
+
+
+\hyperlink{classgeo_1_1Edge}{Edge} class containing a basic line string and meta data associated with the underlying real world road. \hyperlink{classgeo_1_1Edge}{Edge} objects are similar to \hyperlink{classgeo_1_1Road}{Road} objects except that they are one-\/directional and used in the graph topology. Because and edge is part of a topology, each edge will point to a successor edge and possible a neighbor edge.  
+
+
+
+
+{\ttfamily \#include $<$geo.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classgeo_1_1Edge}{Edge} $>$\hypertarget{classgeo_1_1Edge_a42cbd37dad3201c3d4386e7e781a260a}{}\label{classgeo_1_1Edge_a42cbd37dad3201c3d4386e7e781a260a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo_1_1Edge_a0e93626d5bf90f09430535a501ad7850}{Edge} (Road\+::\+Ptr road\+\_\+ptr, \hyperlink{namespacegeo_ae7a495a59f07984a90e0b609bc038df9}{Heading} \hyperlink{classgeo_1_1Edge_a42070020fa7326a102316b7aab57801b}{heading})
+\begin{DoxyCompactList}\small\item\em Construct an \hyperlink{classgeo_1_1Edge}{Edge} object from a \hyperlink{classgeo_1_1Road}{Road} object pointer, and heading of the \hyperlink{classgeo_1_1Edge}{Edge}. \end{DoxyCompactList}\item 
+\hyperlink{classgeo_1_1Edge_a47b947fe3b87e6a28edf790c83e39fb0}{Edge} (long \hyperlink{classgeo_1_1Edge_a459268032f5d9ccf412b66569f5ac258}{id})\hypertarget{classgeo_1_1Edge_a47b947fe3b87e6a28edf790c83e39fb0}{}\label{classgeo_1_1Edge_a47b947fe3b87e6a28edf790c83e39fb0}
+
+\begin{DoxyCompactList}\small\item\em Construct an abstract \hyperlink{classgeo_1_1Edge}{Edge}. This will create an empty line string, which can be used to build edges that don\textquotesingle{}t represent real world roads. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Edge_a459268032f5d9ccf412b66569f5ac258}{id} () const 
+\begin{DoxyCompactList}\small\item\em Get the unique ID of this edge. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Edge_a01e03971727a7ee252b64c4a5991aae3}{source} () const 
+\begin{DoxyCompactList}\small\item\em Get the ID of the source vertex of this edge. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Edge_a2710a346c2eec1dc979d529f7067e7c9}{target} () const 
+\begin{DoxyCompactList}\small\item\em Get the ID of the target vertex of this edge. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo_1_1Edge_a752e5cfb9e469a1523fad88088167874}{length} () const 
+\begin{DoxyCompactList}\small\item\em Get the length of this edge in meters. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo_1_1Edge_a3f7e577f1218b742a387fe9c23030689}{width} () const 
+\begin{DoxyCompactList}\small\item\em Get the approximate width in meters of this edge. \end{DoxyCompactList}\item 
+float \hyperlink{classgeo_1_1Edge_a23de2560879285876899961e614fc433}{priority} () const 
+\begin{DoxyCompactList}\small\item\em Get the use priority for this edge. \end{DoxyCompactList}\item 
+int \hyperlink{classgeo_1_1Edge_ab2913bedb82fd1e24e0c99d5ea6c7a87}{maxspeed} () const 
+\begin{DoxyCompactList}\small\item\em Get the maximum speed for this edge as kilometers per hour. \end{DoxyCompactList}\item 
+\hyperlink{namespacegeo_ae7a495a59f07984a90e0b609bc038df9}{Heading} \hyperlink{classgeo_1_1Edge_a42070020fa7326a102316b7aab57801b}{heading} () const 
+\begin{DoxyCompactList}\small\item\em Get the heading (forward or backward) of this edge. \end{DoxyCompactList}\item 
+Ptr \hyperlink{classgeo_1_1Edge_aba1290f592ea2cd848fcb801f0562df2}{successor} () const 
+\begin{DoxyCompactList}\small\item\em Get the pointer to the successor edge for this edge. \end{DoxyCompactList}\item 
+Ptr \hyperlink{classgeo_1_1Edge_aad32f284aba317162ae6276497926268}{neighbor} () const 
+\begin{DoxyCompactList}\small\item\em Get the pointer to the neighbor edge for this edge. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo_1_1Edge_a571ee74792a242715887d699a9486e53}{successor} (Ptr successor)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the successor edge for this edge. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo_1_1Edge_a001d13006bed7403a1ddf920a937bf4e}{neighbor} (Ptr neighbor)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the neighbor edge for this edge. \end{DoxyCompactList}\item 
+Road\+::\+Ptr \hyperlink{classgeo_1_1Edge_a96fc3fb170d60c5eed77a4fb274f4741}{road} () const \hypertarget{classgeo_1_1Edge_a96fc3fb170d60c5eed77a4fb274f4741}{}\label{classgeo_1_1Edge_a96fc3fb170d60c5eed77a4fb274f4741}
+
+\begin{DoxyCompactList}\small\item\em Get the pointer the base \hyperlink{classgeo_1_1Road}{Road} object for this edge. \end{DoxyCompactList}\item 
+long \hyperlink{classgeo_1_1Edge_ad93db783fea4d5017739aba83a973acc}{type} () const 
+\begin{DoxyCompactList}\small\item\em Get the O\+SM way type of this edge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+O\+G\+R\+Line\+String \hyperlink{classgeo_1_1Edge_adaca6b6b12347bb7ce47da4e3d1d1c6a}{line\+\_\+string}\hypertarget{classgeo_1_1Edge_adaca6b6b12347bb7ce47da4e3d1d1c6a}{}\label{classgeo_1_1Edge_adaca6b6b12347bb7ce47da4e3d1d1c6a}
+
+\begin{DoxyCompactList}\small\item\em The underlying line string of this edge as an O\+G\+R\+Line\+String. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classgeo_1_1Edge}{Edge} class containing a basic line string and meta data associated with the underlying real world road. \hyperlink{classgeo_1_1Edge}{Edge} objects are similar to \hyperlink{classgeo_1_1Road}{Road} objects except that they are one-\/directional and used in the graph topology. Because and edge is part of a topology, each edge will point to a successor edge and possible a neighbor edge. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{Edge(\+Road\+::\+Ptr road\+\_\+ptr, Heading heading)}{Edge(Road::Ptr road_ptr, Heading heading)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+::\+Edge\+::\+Edge (
+\begin{DoxyParamCaption}
+\item[{Road\+::\+Ptr}]{road\+\_\+ptr, }
+\item[{{\bf Heading}}]{heading}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo_1_1Edge_a0e93626d5bf90f09430535a501ad7850}{}\label{classgeo_1_1Edge_a0e93626d5bf90f09430535a501ad7850}
+
+
+Construct an \hyperlink{classgeo_1_1Edge}{Edge} object from a \hyperlink{classgeo_1_1Road}{Road} object pointer, and heading of the \hyperlink{classgeo_1_1Edge}{Edge}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em road\+\_\+ptr} & Pointer to \hyperlink{classgeo_1_1Road}{Road} object \\
+\hline
+{\em heading} & The Heading value for the edge \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!heading@{heading}}
+\index{heading@{heading}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{heading() const }{heading() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Heading} geo\+::\+Edge\+::heading (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_a42070020fa7326a102316b7aab57801b}{}\label{classgeo_1_1Edge_a42070020fa7326a102316b7aab57801b}
+
+
+Get the heading (forward or backward) of this edge. 
+
+\begin{DoxyReturn}{Returns}
+the heading (forward or backward) 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!id@{id}}
+\index{id@{id}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{id() const }{id() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Edge\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_a459268032f5d9ccf412b66569f5ac258}{}\label{classgeo_1_1Edge_a459268032f5d9ccf412b66569f5ac258}
+
+
+Get the unique ID of this edge. 
+
+\begin{DoxyReturn}{Returns}
+the unique ID 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!length@{length}}
+\index{length@{length}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{length() const }{length() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Edge\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_a752e5cfb9e469a1523fad88088167874}{}\label{classgeo_1_1Edge_a752e5cfb9e469a1523fad88088167874}
+
+
+Get the length of this edge in meters. 
+
+\begin{DoxyReturn}{Returns}
+the length in meters 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!maxspeed@{maxspeed}}
+\index{maxspeed@{maxspeed}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{maxspeed() const }{maxspeed() const }}]{\setlength{\rightskip}{0pt plus 5cm}int geo\+::\+Edge\+::maxspeed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_ab2913bedb82fd1e24e0c99d5ea6c7a87}{}\label{classgeo_1_1Edge_ab2913bedb82fd1e24e0c99d5ea6c7a87}
+
+
+Get the maximum speed for this edge as kilometers per hour. 
+
+\begin{DoxyReturn}{Returns}
+the maximum speed as kilometers per hour 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!neighbor@{neighbor}}
+\index{neighbor@{neighbor}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{neighbor() const }{neighbor() const }}]{\setlength{\rightskip}{0pt plus 5cm}Edge\+::\+Ptr geo\+::\+Edge\+::neighbor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_aad32f284aba317162ae6276497926268}{}\label{classgeo_1_1Edge_aad32f284aba317162ae6276497926268}
+
+
+Get the pointer to the neighbor edge for this edge. 
+
+\begin{DoxyReturn}{Returns}
+the neighbor edge 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!neighbor@{neighbor}}
+\index{neighbor@{neighbor}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{neighbor(\+Ptr neighbor)}{neighbor(Ptr neighbor)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Edge\+::neighbor (
+\begin{DoxyParamCaption}
+\item[{Edge\+::\+Ptr}]{neighbor}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo_1_1Edge_a001d13006bed7403a1ddf920a937bf4e}{}\label{classgeo_1_1Edge_a001d13006bed7403a1ddf920a937bf4e}
+
+
+Set the pointer to the neighbor edge for this edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & neighbor edge \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!priority@{priority}}
+\index{priority@{priority}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{priority() const }{priority() const }}]{\setlength{\rightskip}{0pt plus 5cm}float geo\+::\+Edge\+::priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_a23de2560879285876899961e614fc433}{}\label{classgeo_1_1Edge_a23de2560879285876899961e614fc433}
+
+
+Get the use priority for this edge. 
+
+\begin{DoxyReturn}{Returns}
+the use priority 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!source@{source}}
+\index{source@{source}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{source() const }{source() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Edge\+::source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_a01e03971727a7ee252b64c4a5991aae3}{}\label{classgeo_1_1Edge_a01e03971727a7ee252b64c4a5991aae3}
+
+
+Get the ID of the source vertex of this edge. 
+
+\begin{DoxyReturn}{Returns}
+the source of the vertex ID 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!successor@{successor}}
+\index{successor@{successor}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{successor() const }{successor() const }}]{\setlength{\rightskip}{0pt plus 5cm}Edge\+::\+Ptr geo\+::\+Edge\+::successor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_aba1290f592ea2cd848fcb801f0562df2}{}\label{classgeo_1_1Edge_aba1290f592ea2cd848fcb801f0562df2}
+
+
+Get the pointer to the successor edge for this edge. 
+
+\begin{DoxyReturn}{Returns}
+the successor edge 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!successor@{successor}}
+\index{successor@{successor}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{successor(\+Ptr successor)}{successor(Ptr successor)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Edge\+::successor (
+\begin{DoxyParamCaption}
+\item[{Edge\+::\+Ptr}]{successor}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo_1_1Edge_a571ee74792a242715887d699a9486e53}{}\label{classgeo_1_1Edge_a571ee74792a242715887d699a9486e53}
+
+
+Set the pointer to the successor edge for this edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & successor edge \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!target@{target}}
+\index{target@{target}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{target() const }{target() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Edge\+::target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_a2710a346c2eec1dc979d529f7067e7c9}{}\label{classgeo_1_1Edge_a2710a346c2eec1dc979d529f7067e7c9}
+
+
+Get the ID of the target vertex of this edge. 
+
+\begin{DoxyReturn}{Returns}
+the ID of the vertex ID 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!type@{type}}
+\index{type@{type}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{type() const }{type() const }}]{\setlength{\rightskip}{0pt plus 5cm}long geo\+::\+Edge\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_ad93db783fea4d5017739aba83a973acc}{}\label{classgeo_1_1Edge_ad93db783fea4d5017739aba83a973acc}
+
+
+Get the O\+SM way type of this edge. 
+
+\begin{DoxyReturn}{Returns}
+the O\+SM way type 
+\end{DoxyReturn}
+\index{geo\+::\+Edge@{geo\+::\+Edge}!width@{width}}
+\index{width@{width}!geo\+::\+Edge@{geo\+::\+Edge}}
+\subsubsection[{\texorpdfstring{width() const }{width() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Edge\+::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Edge_a3f7e577f1218b742a387fe9c23030689}{}\label{classgeo_1_1Edge_a3f7e577f1218b742a387fe9c23030689}
+
+
+Get the approximate width in meters of this edge. 
+
+\begin{DoxyReturn}{Returns}
+the approximate width in meters 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo/include/geo.\+hpp\item 
+cvdi-\/src/geo/src/geo.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{classgeo__data_1_1CSVRoadReader}{}\section{geo\+\_\+data\+:\+:C\+S\+V\+Road\+Reader Class Reference}
+\label{classgeo__data_1_1CSVRoadReader}\index{geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader@{geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader}}
+
+
+C\+SV \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader}. Reads roads from a C\+SV file.  
+
+
+
+
+{\ttfamily \#include $<$geo\+\_\+data.\+hpp$>$}
+
+Inheritance diagram for geo\+\_\+data\+:\+:C\+S\+V\+Road\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgeo__data_1_1CSVRoadReader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo__data_1_1CSVRoadReader_acea18148fa1db97efbade81b780e5312}{C\+S\+V\+Road\+Reader} (const std\+::string \&file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Construct a C\+SV \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader} object. \end{DoxyCompactList}\item 
+\hyperlink{classgeo__data_1_1CSVRoadReader_a3061db500f28034ee2e6faa5bb6a6d45}{$\sim$\+C\+S\+V\+Road\+Reader} ()\hypertarget{classgeo__data_1_1CSVRoadReader_a3061db500f28034ee2e6faa5bb6a6d45}{}\label{classgeo__data_1_1CSVRoadReader_a3061db500f28034ee2e6faa5bb6a6d45}
+
+\begin{DoxyCompactList}\small\item\em Destruct a C\+SV \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader} object. \end{DoxyCompactList}\item 
+geo\+::\+Road\+::\+Ptr \hyperlink{classgeo__data_1_1CSVRoadReader_af926c0827d3fa38fbf26b4557184fecf}{next\+\_\+road} (void)
+\begin{DoxyCompactList}\small\item\em Get the next road from the C\+SV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+C\+SV \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader}. Reads roads from a C\+SV file. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader@{geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader}!C\+S\+V\+Road\+Reader@{C\+S\+V\+Road\+Reader}}
+\index{C\+S\+V\+Road\+Reader@{C\+S\+V\+Road\+Reader}!geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader@{geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader}}
+\subsubsection[{\texorpdfstring{C\+S\+V\+Road\+Reader(const std\+::string \&file\+\_\+path)}{CSVRoadReader(const std::string &file_path)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader\+::\+C\+S\+V\+Road\+Reader (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file\+\_\+path}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1CSVRoadReader_acea18148fa1db97efbade81b780e5312}{}\label{classgeo__data_1_1CSVRoadReader_acea18148fa1db97efbade81b780e5312}
+
+
+Construct a C\+SV \hyperlink{classgeo__data_1_1RoadReader}{Road\+Reader} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & the C\+SV file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the file does not exist or is empty \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader@{geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader}!next\+\_\+road@{next\+\_\+road}}
+\index{next\+\_\+road@{next\+\_\+road}!geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader@{geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader}}
+\subsubsection[{\texorpdfstring{next\+\_\+road(void)}{next_road(void)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+::\+Road\+::\+Ptr geo\+\_\+data\+::\+C\+S\+V\+Road\+Reader\+::next\+\_\+road (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classgeo__data_1_1CSVRoadReader_af926c0827d3fa38fbf26b4557184fecf}{}\label{classgeo__data_1_1CSVRoadReader_af926c0827d3fa38fbf26b4557184fecf}
+
+
+Get the next road from the C\+SV file. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to \hyperlink{classgeo_1_1Road}{geo\+::\+Road} or nullptr if there are no more roads 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classgeo__data_1_1RoadReader}{geo\+\_\+data\+::\+Road\+Reader}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo-\/data/include/geo\+\_\+data.\+hpp\item 
+cvdi-\/src/geo-\/data/src/geo\+\_\+data.\+cpp\end{DoxyCompactItemize}

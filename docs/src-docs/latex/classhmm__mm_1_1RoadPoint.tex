@@ -1,0 +1,314 @@
+\hypertarget{classhmm__mm_1_1RoadPoint}{}\section{hmm\+\_\+mm\+:\+:Road\+Point Class Reference}
+\label{classhmm__mm_1_1RoadPoint}\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+
+
+\hyperlink{classhmm__mm_1_1RoadPoint}{Road\+Point} object representing a candidate edge for a sample. This is the core Hidden Markov Model structure, containing the emmission and transition probabilities, as well, as the intermediate probabilities (filter and sequence).  
+
+
+
+
+{\ttfamily \#include $<$hmm\+\_\+mm.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classhmm__mm_1_1RoadPoint}{Road\+Point} $>$\hypertarget{classhmm__mm_1_1RoadPoint_a50405ae3f502d3a034f4ee16a2ef5e7f}{}\label{classhmm__mm_1_1RoadPoint_a50405ae3f502d3a034f4ee16a2ef5e7f}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhmm__mm_1_1RoadPoint_a6e011235953e681f770ee5e77b9aa4b1}{Road\+Point} (geo\+::\+Edge\+::\+Ptr edge\+\_\+ptr, double \hyperlink{classhmm__mm_1_1RoadPoint_adccfe10456ad5ae7ca02a224c0b8cf73}{fraction})
+\begin{DoxyCompactList}\small\item\em Construct a road point. \end{DoxyCompactList}\item 
+geo\+::\+Edge\+::\+Ptr \hyperlink{classhmm__mm_1_1RoadPoint_af8184b73f9d3ce90b512654fcb68867e}{edge} () const 
+\begin{DoxyCompactList}\small\item\em Get the edge for this road point. \end{DoxyCompactList}\item 
+Ptr \hyperlink{classhmm__mm_1_1RoadPoint_a0632d0d91d9cf167943707fd4619e7c4}{predecessor} () const 
+\begin{DoxyCompactList}\small\item\em Get the predecessor candidate road point in the Hidden Markov Model. \end{DoxyCompactList}\item 
+Transition\+::\+Ptr \hyperlink{classhmm__mm_1_1RoadPoint_a3dcf1bf6911a716c3ebf308ef4db2b08}{transition} () const 
+\begin{DoxyCompactList}\small\item\em Get the transition for this road point. \end{DoxyCompactList}\item 
+double \hyperlink{classhmm__mm_1_1RoadPoint_adccfe10456ad5ae7ca02a224c0b8cf73}{fraction} () const 
+\begin{DoxyCompactList}\small\item\em Get the fraction of the edge to which the sample is mapped. \end{DoxyCompactList}\item 
+double \hyperlink{classhmm__mm_1_1RoadPoint_a85a03fe45e41698173a88af613a15a98}{emission\+\_\+prob} () const 
+\begin{DoxyCompactList}\small\item\em Get the emission probability of the sample for this road point. This is probability that the sample is mapped to edge. \end{DoxyCompactList}\item 
+double \hyperlink{classhmm__mm_1_1RoadPoint_ac5e490bd5f602d393a58705ef1b16fed}{filter\+\_\+prob} () const 
+\begin{DoxyCompactList}\small\item\em Get the filter probability of the sample for this road point. \end{DoxyCompactList}\item 
+double \hyperlink{classhmm__mm_1_1RoadPoint_afd05e1d555115d5119d61d2aec3b7f01}{sequence\+\_\+prob} () const 
+\begin{DoxyCompactList}\small\item\em Get the sequence probability of the sample for this road point. \end{DoxyCompactList}\item 
+double \hyperlink{classhmm__mm_1_1RoadPoint_a09adddfdb8e81fd96645dd638a1e1603}{azimuth} () const 
+\begin{DoxyCompactList}\small\item\em Get the azimuth (heading or bearing) in degrees from north of the road point. \end{DoxyCompactList}\item 
+geo\+\_\+data\+::\+Sample\+::\+Ptr \hyperlink{classhmm__mm_1_1RoadPoint_a3cd18236757a75ec37336cad017260c6}{sample} () const 
+\begin{DoxyCompactList}\small\item\em Get the sample for the road point. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadPoint_a811fa18ab70ddc70dcb258f486ac2666}{emission\+\_\+prob} (double emission\+\_\+prob)
+\begin{DoxyCompactList}\small\item\em Set the emission probability of this road point. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadPoint_afd6f0812876d3bb1c9ac8547ac33d825}{filter\+\_\+prob} (double filter\+\_\+prob)
+\begin{DoxyCompactList}\small\item\em Set the filter probability of this road point. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadPoint_afe446e7eaffe7c2830ba7747c7b5d14d}{sequence\+\_\+prob} (double sequence\+\_\+prob)
+\begin{DoxyCompactList}\small\item\em Set the sequence probability of this road point. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadPoint_abd5f4616b4dca5ef1cca75f47d0eedc4}{transition} (Transition\+::\+Ptr transition)
+\begin{DoxyCompactList}\small\item\em Set the transition probability of this road point. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadPoint_aad18f6ce7c60bc0463c95eb422db0186}{predecessor} (Ptr predecessor)
+\begin{DoxyCompactList}\small\item\em Set the road point candidate predecessor for this road point. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1RoadPoint_ae65ef9e2e3431635ac642a4b1e74fab1}{sample} (geo\+\_\+data\+::\+Sample\+::\+Ptr sample)
+\begin{DoxyCompactList}\small\item\em Set the sample for road point candidate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+O\+G\+R\+Point \hyperlink{classhmm__mm_1_1RoadPoint_a32bff153ce045acad8912b43ec2660e7}{geometry}\hypertarget{classhmm__mm_1_1RoadPoint_a32bff153ce045acad8912b43ec2660e7}{}\label{classhmm__mm_1_1RoadPoint_a32bff153ce045acad8912b43ec2660e7}
+
+\begin{DoxyCompactList}\small\item\em The underlying G\+PS point on the edge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classhmm__mm_1_1RoadPoint}{Road\+Point} object representing a candidate edge for a sample. This is the core Hidden Markov Model structure, containing the emmission and transition probabilities, as well, as the intermediate probabilities (filter and sequence). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!Road\+Point@{Road\+Point}}
+\index{Road\+Point@{Road\+Point}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{Road\+Point(geo\+::\+Edge\+::\+Ptr edge\+\_\+ptr, double fraction)}{RoadPoint(geo::Edge::Ptr edge_ptr, double fraction)}}]{\setlength{\rightskip}{0pt plus 5cm}hmm\+\_\+mm\+::\+Road\+Point\+::\+Road\+Point (
+\begin{DoxyParamCaption}
+\item[{geo\+::\+Edge\+::\+Ptr}]{edge\+\_\+ptr, }
+\item[{double}]{fraction}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadPoint_a6e011235953e681f770ee5e77b9aa4b1}{}\label{classhmm__mm_1_1RoadPoint_a6e011235953e681f770ee5e77b9aa4b1}
+
+
+Construct a road point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge\+\_\+ptr} & pointer to the candidate edge \\
+\hline
+{\em fraction} & fraction representing the part of the edge to which the sample is mapped \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!azimuth@{azimuth}}
+\index{azimuth@{azimuth}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{azimuth() const }{azimuth() const }}]{\setlength{\rightskip}{0pt plus 5cm}double hmm\+\_\+mm\+::\+Road\+Point\+::azimuth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadPoint_a09adddfdb8e81fd96645dd638a1e1603}{}\label{classhmm__mm_1_1RoadPoint_a09adddfdb8e81fd96645dd638a1e1603}
+
+
+Get the azimuth (heading or bearing) in degrees from north of the road point. 
+
+\begin{DoxyReturn}{Returns}
+the azimuth 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!edge@{edge}}
+\index{edge@{edge}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{edge() const }{edge() const }}]{\setlength{\rightskip}{0pt plus 5cm}geo\+::\+Edge\+::\+Ptr hmm\+\_\+mm\+::\+Road\+Point\+::edge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadPoint_af8184b73f9d3ce90b512654fcb68867e}{}\label{classhmm__mm_1_1RoadPoint_af8184b73f9d3ce90b512654fcb68867e}
+
+
+Get the edge for this road point. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to edge 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!emission\+\_\+prob@{emission\+\_\+prob}}
+\index{emission\+\_\+prob@{emission\+\_\+prob}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{emission\+\_\+prob() const }{emission_prob() const }}]{\setlength{\rightskip}{0pt plus 5cm}double hmm\+\_\+mm\+::\+Road\+Point\+::emission\+\_\+prob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadPoint_a85a03fe45e41698173a88af613a15a98}{}\label{classhmm__mm_1_1RoadPoint_a85a03fe45e41698173a88af613a15a98}
+
+
+Get the emission probability of the sample for this road point. This is probability that the sample is mapped to edge. 
+
+\begin{DoxyReturn}{Returns}
+the emission probability 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!emission\+\_\+prob@{emission\+\_\+prob}}
+\index{emission\+\_\+prob@{emission\+\_\+prob}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{emission\+\_\+prob(double emission\+\_\+prob)}{emission_prob(double emission_prob)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Point\+::emission\+\_\+prob (
+\begin{DoxyParamCaption}
+\item[{double}]{emission\+\_\+prob}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadPoint_a811fa18ab70ddc70dcb258f486ac2666}{}\label{classhmm__mm_1_1RoadPoint_a811fa18ab70ddc70dcb258f486ac2666}
+
+
+Set the emission probability of this road point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em emission\+\_\+prob} & the emission probability \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!filter\+\_\+prob@{filter\+\_\+prob}}
+\index{filter\+\_\+prob@{filter\+\_\+prob}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{filter\+\_\+prob() const }{filter_prob() const }}]{\setlength{\rightskip}{0pt plus 5cm}double hmm\+\_\+mm\+::\+Road\+Point\+::filter\+\_\+prob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadPoint_ac5e490bd5f602d393a58705ef1b16fed}{}\label{classhmm__mm_1_1RoadPoint_ac5e490bd5f602d393a58705ef1b16fed}
+
+
+Get the filter probability of the sample for this road point. 
+
+\begin{DoxyReturn}{Returns}
+the filter probability 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!filter\+\_\+prob@{filter\+\_\+prob}}
+\index{filter\+\_\+prob@{filter\+\_\+prob}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{filter\+\_\+prob(double filter\+\_\+prob)}{filter_prob(double filter_prob)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Point\+::filter\+\_\+prob (
+\begin{DoxyParamCaption}
+\item[{double}]{filter\+\_\+prob}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadPoint_afd6f0812876d3bb1c9ac8547ac33d825}{}\label{classhmm__mm_1_1RoadPoint_afd6f0812876d3bb1c9ac8547ac33d825}
+
+
+Set the filter probability of this road point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+\_\+prob} & the filter probability \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!fraction@{fraction}}
+\index{fraction@{fraction}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{fraction() const }{fraction() const }}]{\setlength{\rightskip}{0pt plus 5cm}double hmm\+\_\+mm\+::\+Road\+Point\+::fraction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadPoint_adccfe10456ad5ae7ca02a224c0b8cf73}{}\label{classhmm__mm_1_1RoadPoint_adccfe10456ad5ae7ca02a224c0b8cf73}
+
+
+Get the fraction of the edge to which the sample is mapped. 
+
+\begin{DoxyReturn}{Returns}
+the fraction 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!predecessor@{predecessor}}
+\index{predecessor@{predecessor}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{predecessor() const }{predecessor() const }}]{\setlength{\rightskip}{0pt plus 5cm}Road\+Point\+::\+Ptr hmm\+\_\+mm\+::\+Road\+Point\+::predecessor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadPoint_a0632d0d91d9cf167943707fd4619e7c4}{}\label{classhmm__mm_1_1RoadPoint_a0632d0d91d9cf167943707fd4619e7c4}
+
+
+Get the predecessor candidate road point in the Hidden Markov Model. 
+
+\begin{DoxyReturn}{Returns}
+pointer the predecessor candidate or nullptr if this is the first sample in the model 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!predecessor@{predecessor}}
+\index{predecessor@{predecessor}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{predecessor(\+Ptr predecessor)}{predecessor(Ptr predecessor)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Point\+::predecessor (
+\begin{DoxyParamCaption}
+\item[{Road\+Point\+::\+Ptr}]{predecessor}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadPoint_aad18f6ce7c60bc0463c95eb422db0186}{}\label{classhmm__mm_1_1RoadPoint_aad18f6ce7c60bc0463c95eb422db0186}
+
+
+Set the road point candidate predecessor for this road point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em predecessor} & pointer to the predecessor road point \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!sample@{sample}}
+\index{sample@{sample}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{sample() const }{sample() const }}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+Sample\+::\+Ptr hmm\+\_\+mm\+::\+Road\+Point\+::sample (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadPoint_a3cd18236757a75ec37336cad017260c6}{}\label{classhmm__mm_1_1RoadPoint_a3cd18236757a75ec37336cad017260c6}
+
+
+Get the sample for the road point. 
+
+\begin{DoxyReturn}{Returns}
+pointer to the road point sample 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!sample@{sample}}
+\index{sample@{sample}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{sample(geo\+\_\+data\+::\+Sample\+::\+Ptr sample)}{sample(geo_data::Sample::Ptr sample)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Point\+::sample (
+\begin{DoxyParamCaption}
+\item[{geo\+\_\+data\+::\+Sample\+::\+Ptr}]{sample}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadPoint_ae65ef9e2e3431635ac642a4b1e74fab1}{}\label{classhmm__mm_1_1RoadPoint_ae65ef9e2e3431635ac642a4b1e74fab1}
+
+
+Set the sample for road point candidate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample} & pointer to a Sample object \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!sequence\+\_\+prob@{sequence\+\_\+prob}}
+\index{sequence\+\_\+prob@{sequence\+\_\+prob}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{sequence\+\_\+prob() const }{sequence_prob() const }}]{\setlength{\rightskip}{0pt plus 5cm}double hmm\+\_\+mm\+::\+Road\+Point\+::sequence\+\_\+prob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadPoint_afd05e1d555115d5119d61d2aec3b7f01}{}\label{classhmm__mm_1_1RoadPoint_afd05e1d555115d5119d61d2aec3b7f01}
+
+
+Get the sequence probability of the sample for this road point. 
+
+\begin{DoxyReturn}{Returns}
+the sequence probability 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!sequence\+\_\+prob@{sequence\+\_\+prob}}
+\index{sequence\+\_\+prob@{sequence\+\_\+prob}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{sequence\+\_\+prob(double sequence\+\_\+prob)}{sequence_prob(double sequence_prob)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Point\+::sequence\+\_\+prob (
+\begin{DoxyParamCaption}
+\item[{double}]{sequence\+\_\+prob}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadPoint_afe446e7eaffe7c2830ba7747c7b5d14d}{}\label{classhmm__mm_1_1RoadPoint_afe446e7eaffe7c2830ba7747c7b5d14d}
+
+
+Set the sequence probability of this road point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence\+\_\+prob} & the sequence probability \\
+\hline
+\end{DoxyParams}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!transition@{transition}}
+\index{transition@{transition}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{transition() const }{transition() const }}]{\setlength{\rightskip}{0pt plus 5cm}Transition\+::\+Ptr hmm\+\_\+mm\+::\+Road\+Point\+::transition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classhmm__mm_1_1RoadPoint_a3dcf1bf6911a716c3ebf308ef4db2b08}{}\label{classhmm__mm_1_1RoadPoint_a3dcf1bf6911a716c3ebf308ef4db2b08}
+
+
+Get the transition for this road point. 
+
+\begin{DoxyReturn}{Returns}
+pointer to a \hyperlink{classhmm__mm_1_1Transition}{Transition} or nullptr if this is the first sample in the model 
+\end{DoxyReturn}
+\index{hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}!transition@{transition}}
+\index{transition@{transition}!hmm\+\_\+mm\+::\+Road\+Point@{hmm\+\_\+mm\+::\+Road\+Point}}
+\subsubsection[{\texorpdfstring{transition(\+Transition\+::\+Ptr transition)}{transition(Transition::Ptr transition)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Road\+Point\+::transition (
+\begin{DoxyParamCaption}
+\item[{Transition\+::\+Ptr}]{transition}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1RoadPoint_abd5f4616b4dca5ef1cca75f47d0eedc4}{}\label{classhmm__mm_1_1RoadPoint_abd5f4616b4dca5ef1cca75f47d0eedc4}
+
+
+Set the transition probability of this road point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transition} & pointer the transition probability \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/hmm-\/mm/include/hmm\+\_\+mm.\+hpp\item 
+cvdi-\/src/hmm-\/mm/src/hmm\+\_\+mm.\+cpp\end{DoxyCompactItemize}

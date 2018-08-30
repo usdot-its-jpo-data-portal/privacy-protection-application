@@ -1,0 +1,535 @@
+\hypertarget{classgeo_1_1Spatial}{}\section{geo\+:\+:Spatial Class Reference}
+\label{classgeo_1_1Spatial}\index{geo\+::\+Spatial@{geo\+::\+Spatial}}
+
+
+\hyperlink{classgeo_1_1Spatial}{Spatial} operator class.  
+
+
+
+
+{\ttfamily \#include $<$geo.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classgeo_1_1Spatial_adcdd1f41c39d0999326828527c8e7aaa}{intercept} (const O\+G\+R\+Line\+String \&line\+\_\+string, const O\+G\+R\+Point \&point) const 
+\begin{DoxyCompactList}\small\item\em Compute the geospatial intercept of point and a line string. The intercept value represents the point\textquotesingle{}s interpolation within the interval \mbox{[}0,1\mbox{]}. If the return value is not within this interval then the point does not intercept the line. A value of 0 means the point is on one end of the line and a value of 1 means the point is on the other end. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo_1_1Spatial_a5521d7ea795ff49abb99e324982764e4}{intercept} (const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b, const O\+G\+R\+Point \&point\+\_\+c) const 
+\begin{DoxyCompactList}\small\item\em Compute the geospatial intercept of a line formed by points A and B with point C. The intercept value represents point C\textquotesingle{}s interpolation within the interval \mbox{[}0,1\mbox{]}. If the return value is not within this interval then the point does not intercept the line segment. A value of 0 means C is equal to A and a value of 1 means the C is equal to B. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo_1_1Spatial_abd029fbc910d1d983bb006f9729c4904}{intercept} (const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b, const O\+G\+R\+Point \&point\+\_\+c, O\+G\+R\+Point \&out) const 
+\begin{DoxyCompactList}\small\item\em Compute the geospatial intercept point of a line formed by points A and B with point C. The intercept point represents the original point\textquotesingle{}s interpolated position on the line. The intercept point will be either A or B if the point C does not intercept the line segment (i.\+e. interpolated as an end point) \end{DoxyCompactList}\item 
+void \hyperlink{classgeo_1_1Spatial_a01ef3e17941b265d3b21c9d3a618da18}{interpolate} (const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b, double fraction, O\+G\+R\+Point \&out) const 
+\begin{DoxyCompactList}\small\item\em Get the point on a line given by points A and B and a fraction. If the fraction is less than 0 then point A is returned and if the fraction is greater than 1 then point B is returned. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo_1_1Spatial_a4de3f6650935ef3ece0db3d19f06a5f9}{interpolate} (const O\+G\+R\+Line\+String \&line\+\_\+string, double \hyperlink{classgeo_1_1Spatial_a6bcfc529e8ab148e30cb58f243362eee}{length}, double fraction, O\+G\+R\+Point \&out) const 
+\begin{DoxyCompactList}\small\item\em Get the point on a line string of given length and fraction. If the fraction is less than 0 then the first point of the line string is returned and if the fraction is greater than 1 then the last point of the line string is returned. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo_1_1Spatial_a309e1932e955eee2a57d2104655e8080}{interpolate} (const O\+G\+R\+Line\+String \&line\+\_\+string, double fraction, O\+G\+R\+Point \&out) const 
+\begin{DoxyCompactList}\small\item\em Get the point on a line string of given fraction. If the fraction is less than 0 then the first point of the line string is returned and if the fraction is greater than 1 then the last point of the line string is returned. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo_1_1Spatial_a9530b4b540b4601fa6254d2a30c17b95}{distance} (const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b) const 
+\begin{DoxyCompactList}\small\item\em Get the distance in meters between two points. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo_1_1Spatial_a6bcfc529e8ab148e30cb58f243362eee}{length} (const O\+G\+R\+Line\+String \&line\+\_\+string) const 
+\item 
+void \hyperlink{classgeo_1_1Spatial_a6550ab40ef68eee2bc2345df92a65f37}{envelope\+\_\+for\+\_\+radius} (const O\+G\+R\+Point \&point, double radius, O\+G\+R\+Envelope \&envelope) const 
+\item 
+void \hyperlink{classgeo_1_1Spatial_a4d594e436dd265ed927e6ce4d3a8db42}{rect\+\_\+for\+\_\+radius} (const O\+G\+R\+Point \&point, double radius, C\+P\+L\+Rect\+Obj \&rect) const 
+\item 
+void \hyperlink{classgeo_1_1Spatial_aab7fbff6c1e0dbc56e58ff3065a435d2}{point\+\_\+from\+\_\+bearing} (double start\+\_\+lat, double start\+\_\+lon, double \hyperlink{classgeo_1_1Spatial_a9530b4b540b4601fa6254d2a30c17b95}{distance}, double bearing, double $\ast$lat\+\_\+out, double $\ast$lon\+\_\+out) const 
+\item 
+double \hyperlink{classgeo_1_1Spatial_abac49c2a0f02415321758d9cdbc86f92}{azimuth} (const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b, double fraction) const 
+\item 
+double \hyperlink{classgeo_1_1Spatial_a834e931e1879d3296e365b74215da09e}{azimuth} (const O\+G\+R\+Line\+String \&line\+\_\+string, double \hyperlink{classgeo_1_1Spatial_a6bcfc529e8ab148e30cb58f243362eee}{length}, double fraction) const 
+\item 
+double \hyperlink{classgeo_1_1Spatial_a2e45a6bce9ffd26b9d8546876747e118}{azimuth} (const O\+G\+R\+Line\+String \&line\+\_\+string, double fraction) const 
+\item 
+void \hyperlink{classgeo_1_1Spatial_a34a03dcb8afdca6fc2d4cfc3fd3025e6}{rect\+\_\+ring} (const O\+G\+R\+Point \&a, const O\+G\+R\+Point \&b, double width, double extension, O\+G\+R\+Linear\+Ring \&out) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classgeo_1_1Spatial_a038ae4ddfdb9c89ce9bb3d55f4e6daa7}{doubles\+\_\+are\+\_\+equal} (double a, double b, double epsilon)
+\begin{DoxyCompactList}\small\item\em Uses epsilon values to compare double precision equality. \end{DoxyCompactList}\item 
+static double \hyperlink{classgeo_1_1Spatial_a70141094fae0f0fabc90224bf1d7cd0f}{to\+\_\+radians} (double degrees)
+\begin{DoxyCompactList}\small\item\em Convert decimal degrees to radians. \end{DoxyCompactList}\item 
+static double \hyperlink{classgeo_1_1Spatial_a2bff1ce08e67dc3f6ca2ee90f97860e4}{to\+\_\+degrees} (double radians)
+\begin{DoxyCompactList}\small\item\em Convert radians to decimal degrees. \end{DoxyCompactList}\item 
+static double \hyperlink{classgeo_1_1Spatial_a820aa2d3891ef2c7c560cb71c88d24ba}{round} (double value)
+\begin{DoxyCompactList}\small\item\em Round to a double precision number to k\+Precision. \end{DoxyCompactList}\item 
+static double \hyperlink{classgeo_1_1Spatial_ae0055b6a137cb3159a097c70d3c7f375}{heading\+\_\+delta} (double a, double b)
+\begin{DoxyCompactList}\small\item\em Compute the difference between two heading values in degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double \hyperlink{classgeo_1_1Spatial_a24d24121ccdc99cd841f3aeb744032ff}{k\+Pi} = 3.\+14159265358979323846\hypertarget{classgeo_1_1Spatial_a24d24121ccdc99cd841f3aeb744032ff}{}\label{classgeo_1_1Spatial_a24d24121ccdc99cd841f3aeb744032ff}
+
+\begin{DoxyCompactList}\small\item\em Standard PI value used in degrees to radians conversions. \end{DoxyCompactList}\item 
+static constexpr double \hyperlink{classgeo_1_1Spatial_a999c14d081785779ab54afc9d3ac61bb}{k\+G\+P\+S\+Epsilon} = std\+::numeric\+\_\+limits$<$double$>$\+::epsilon() $\ast$ 100.\+0\hypertarget{classgeo_1_1Spatial_a999c14d081785779ab54afc9d3ac61bb}{}\label{classgeo_1_1Spatial_a999c14d081785779ab54afc9d3ac61bb}
+
+\begin{DoxyCompactList}\small\item\em G\+PS epsilon for comparing decimal G\+PS coordinates. \end{DoxyCompactList}\item 
+static constexpr double \hyperlink{classgeo_1_1Spatial_a31720b63ae272b98283851a74a4d34d3}{k\+Intercept\+Epsilon} = std\+::sqrt(std\+::numeric\+\_\+limits$<$double$>$\+::epsilon()) $\ast$ 0.\+01\hypertarget{classgeo_1_1Spatial_a31720b63ae272b98283851a74a4d34d3}{}\label{classgeo_1_1Spatial_a31720b63ae272b98283851a74a4d34d3}
+
+\begin{DoxyCompactList}\small\item\em The epsilon for comparing geospatial intercepts. \end{DoxyCompactList}\item 
+static constexpr double \hyperlink{classgeo_1_1Spatial_adb250ee63cf19c7e9d2f691184521516}{k\+Earth\+RadiusM} = 6378137.\+0\hypertarget{classgeo_1_1Spatial_adb250ee63cf19c7e9d2f691184521516}{}\label{classgeo_1_1Spatial_adb250ee63cf19c7e9d2f691184521516}
+
+\begin{DoxyCompactList}\small\item\em The Earth\textquotesingle{}s radius in meters. \end{DoxyCompactList}\item 
+static constexpr double \hyperlink{classgeo_1_1Spatial_a317a6c113f7c71a94e706d47a19ed182}{k\+Precision} = 1\+E-\/8\hypertarget{classgeo_1_1Spatial_a317a6c113f7c71a94e706d47a19ed182}{}\label{classgeo_1_1Spatial_a317a6c113f7c71a94e706d47a19ed182}
+
+\begin{DoxyCompactList}\small\item\em The precision used to round double values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classgeo_1_1Spatial}{Spatial} operator class. 
+
+\subsection{Member Function Documentation}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!azimuth@{azimuth}}
+\index{azimuth@{azimuth}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{azimuth(const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b, double fraction) const }{azimuth(const OGRPoint &point_a, const OGRPoint &point_b, double fraction) const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Spatial\+::azimuth (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+a, }
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+b, }
+\item[{double}]{fraction}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_abac49c2a0f02415321758d9cdbc86f92}{}\label{classgeo_1_1Spatial_abac49c2a0f02415321758d9cdbc86f92}
+Compute the azimuth (bearing or heading) as degrees from north between two points A and B within the given fraction. If the fraction is less than 0 then the azimuth between A and B is returned and if the fraction is greater than 1 then the azimuth between B and A is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+a} & the first point \\
+\hline
+{\em point\+\_\+b} & the second point \\
+\hline
+{\em fraction} & the fraction in the line formed by point\+\_\+a and point\+\_\+b within the interval \mbox{[}0,1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the azimuth in degrees from north between point\+\_\+a and point\+\_\+b 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!azimuth@{azimuth}}
+\index{azimuth@{azimuth}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{azimuth(const O\+G\+R\+Line\+String \&line\+\_\+string, double length, double fraction) const }{azimuth(const OGRLineString &line_string, double length, double fraction) const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Spatial\+::azimuth (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Line\+String \&}]{line\+\_\+string, }
+\item[{double}]{length, }
+\item[{double}]{fraction}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a834e931e1879d3296e365b74215da09e}{}\label{classgeo_1_1Spatial_a834e931e1879d3296e365b74215da09e}
+Compute the azimuth (bearing or heading) as degrees from north for a line string with the given length and fraction. If the fraction is less than 0 then the azimuth between the first two points of the line string is returned. If the fraction is greater than 1 then the azimuth between the last two points is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+string} & the line string \\
+\hline
+{\em fraction} & the fraction on the line string within the interval \mbox{[}0,1\mbox{]} \\
+\hline
+{\em length} & the length of the line string to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the azimuth in degrees from north of the line string 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!azimuth@{azimuth}}
+\index{azimuth@{azimuth}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{azimuth(const O\+G\+R\+Line\+String \&line\+\_\+string, double fraction) const }{azimuth(const OGRLineString &line_string, double fraction) const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Spatial\+::azimuth (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Line\+String \&}]{line\+\_\+string, }
+\item[{double}]{fraction}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a2e45a6bce9ffd26b9d8546876747e118}{}\label{classgeo_1_1Spatial_a2e45a6bce9ffd26b9d8546876747e118}
+Compute the azimuth (bearing or heading) as degrees from north for a line string with the given fraction. If the fraction is less than 0 then the azimuth between the first two points of the line string is returned. If the fraction is greater than 1 then the azimuth between the last two points is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+string} & the line string \\
+\hline
+{\em fraction} & the fraction on the line string within the interval \mbox{[}0,1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the azimuth in degrees from north of the line string 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!distance@{distance}}
+\index{distance@{distance}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{distance(const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b) const }{distance(const OGRPoint &point_a, const OGRPoint &point_b) const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Spatial\+::distance (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+a, }
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+b}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a9530b4b540b4601fa6254d2a30c17b95}{}\label{classgeo_1_1Spatial_a9530b4b540b4601fa6254d2a30c17b95}
+
+
+Get the distance in meters between two points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+a} & the first point \\
+\hline
+{\em point\+\_\+a} & the second point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the distance between point\+\_\+a and point\+\_\+b 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!doubles\+\_\+are\+\_\+equal@{doubles\+\_\+are\+\_\+equal}}
+\index{doubles\+\_\+are\+\_\+equal@{doubles\+\_\+are\+\_\+equal}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{doubles\+\_\+are\+\_\+equal(double a, double b, double epsilon)}{doubles_are_equal(double a, double b, double epsilon)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool geo\+::\+Spatial\+::doubles\+\_\+are\+\_\+equal (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{epsilon}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classgeo_1_1Spatial_a038ae4ddfdb9c89ce9bb3d55f4e6daa7}{}\label{classgeo_1_1Spatial_a038ae4ddfdb9c89ce9bb3d55f4e6daa7}
+
+
+Uses epsilon values to compare double precision equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the first double \\
+\hline
+{\em b} & the second double \\
+\hline
+{\em epsilon} & the epsilon used for the equality comparison \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the absolute value difference between the doubles is less than the epsilon, false otherwise 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!envelope\+\_\+for\+\_\+radius@{envelope\+\_\+for\+\_\+radius}}
+\index{envelope\+\_\+for\+\_\+radius@{envelope\+\_\+for\+\_\+radius}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{envelope\+\_\+for\+\_\+radius(const O\+G\+R\+Point \&point, double radius, O\+G\+R\+Envelope \&envelope) const }{envelope_for_radius(const OGRPoint &point, double radius, OGREnvelope &envelope) const }}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Spatial\+::envelope\+\_\+for\+\_\+radius (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point, }
+\item[{double}]{radius, }
+\item[{O\+G\+R\+Envelope \&}]{envelope}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a6550ab40ef68eee2bc2345df92a65f37}{}\label{classgeo_1_1Spatial_a6550ab40ef68eee2bc2345df92a65f37}
+Make an O\+G\+R\+Envelope bounding box for a point and given radius.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the center of the bounding box \\
+\hline
+{\em radius} & the half-\/width of the box in meters \\
+\hline
+{\em envelope} & the resulting bounding box as an O\+G\+R\+Envelope \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!heading\+\_\+delta@{heading\+\_\+delta}}
+\index{heading\+\_\+delta@{heading\+\_\+delta}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{heading\+\_\+delta(double a, double b)}{heading_delta(double a, double b)}}]{\setlength{\rightskip}{0pt plus 5cm}static double geo\+::\+Spatial\+::heading\+\_\+delta (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classgeo_1_1Spatial_ae0055b6a137cb3159a097c70d3c7f375}{}\label{classgeo_1_1Spatial_ae0055b6a137cb3159a097c70d3c7f375}
+
+
+Compute the difference between two heading values in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the first heading \\
+\hline
+{\em b} & the second heading \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the difference between the two headings in degrees 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!intercept@{intercept}}
+\index{intercept@{intercept}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{intercept(const O\+G\+R\+Line\+String \&line\+\_\+string, const O\+G\+R\+Point \&point) const }{intercept(const OGRLineString &line_string, const OGRPoint &point) const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Spatial\+::intercept (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Line\+String \&}]{line\+\_\+string, }
+\item[{const O\+G\+R\+Point \&}]{point}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_adcdd1f41c39d0999326828527c8e7aaa}{}\label{classgeo_1_1Spatial_adcdd1f41c39d0999326828527c8e7aaa}
+
+
+Compute the geospatial intercept of point and a line string. The intercept value represents the point\textquotesingle{}s interpolation within the interval \mbox{[}0,1\mbox{]}. If the return value is not within this interval then the point does not intercept the line. A value of 0 means the point is on one end of the line and a value of 1 means the point is on the other end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+string} & the line string \\
+\hline
+{\em point} & the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intercept value 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!intercept@{intercept}}
+\index{intercept@{intercept}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{intercept(const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b, const O\+G\+R\+Point \&point\+\_\+c) const }{intercept(const OGRPoint &point_a, const OGRPoint &point_b, const OGRPoint &point_c) const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Spatial\+::intercept (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+a, }
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+b, }
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a5521d7ea795ff49abb99e324982764e4}{}\label{classgeo_1_1Spatial_a5521d7ea795ff49abb99e324982764e4}
+
+
+Compute the geospatial intercept of a line formed by points A and B with point C. The intercept value represents point C\textquotesingle{}s interpolation within the interval \mbox{[}0,1\mbox{]}. If the return value is not within this interval then the point does not intercept the line segment. A value of 0 means C is equal to A and a value of 1 means the C is equal to B. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+a} & the first point of the line \\
+\hline
+{\em point\+\_\+b} & the second point of the line \\
+\hline
+{\em point\+\_\+c} & the third point, not on the line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intercept value 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!intercept@{intercept}}
+\index{intercept@{intercept}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{intercept(const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b, const O\+G\+R\+Point \&point\+\_\+c, O\+G\+R\+Point \&out) const }{intercept(const OGRPoint &point_a, const OGRPoint &point_b, const OGRPoint &point_c, OGRPoint &out) const }}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Spatial\+::intercept (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+a, }
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+b, }
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+c, }
+\item[{O\+G\+R\+Point \&}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_abd029fbc910d1d983bb006f9729c4904}{}\label{classgeo_1_1Spatial_abd029fbc910d1d983bb006f9729c4904}
+
+
+Compute the geospatial intercept point of a line formed by points A and B with point C. The intercept point represents the original point\textquotesingle{}s interpolated position on the line. The intercept point will be either A or B if the point C does not intercept the line segment (i.\+e. interpolated as an end point) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+a} & the first point of the line \\
+\hline
+{\em point\+\_\+b} & the second point of the line \\
+\hline
+{\em point\+\_\+c} & the third point, not on the line \\
+\hline
+{\em out} & the intercept point of point\+\_\+c the line \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{interpolate(const O\+G\+R\+Point \&point\+\_\+a, const O\+G\+R\+Point \&point\+\_\+b, double fraction, O\+G\+R\+Point \&out) const }{interpolate(const OGRPoint &point_a, const OGRPoint &point_b, double fraction, OGRPoint &out) const }}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Spatial\+::interpolate (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+a, }
+\item[{const O\+G\+R\+Point \&}]{point\+\_\+b, }
+\item[{double}]{fraction, }
+\item[{O\+G\+R\+Point \&}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a01ef3e17941b265d3b21c9d3a618da18}{}\label{classgeo_1_1Spatial_a01ef3e17941b265d3b21c9d3a618da18}
+
+
+Get the point on a line given by points A and B and a fraction. If the fraction is less than 0 then point A is returned and if the fraction is greater than 1 then point B is returned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+a} & the first point of the line \\
+\hline
+{\em point\+\_\+b} & the second point of the line \\
+\hline
+{\em fraction} & the fraction representing the position of the point on the line \\
+\hline
+{\em out} & the interpolated point between point\+\_\+a and point\+\_\+b \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{interpolate(const O\+G\+R\+Line\+String \&line\+\_\+string, double length, double fraction, O\+G\+R\+Point \&out) const }{interpolate(const OGRLineString &line_string, double length, double fraction, OGRPoint &out) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+::\+Spatial\+::interpolate (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Line\+String \&}]{line\+\_\+string, }
+\item[{double}]{length, }
+\item[{double}]{fraction, }
+\item[{O\+G\+R\+Point \&}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a4de3f6650935ef3ece0db3d19f06a5f9}{}\label{classgeo_1_1Spatial_a4de3f6650935ef3ece0db3d19f06a5f9}
+
+
+Get the point on a line string of given length and fraction. If the fraction is less than 0 then the first point of the line string is returned and if the fraction is greater than 1 then the last point of the line string is returned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+string} & the line string \\
+\hline
+{\em length} & the length of the line string to use \\
+\hline
+{\em fraction} & the fraction representing the position of the point on the line, within the given length \\
+\hline
+{\em out} & the interpolated point on line\+\_\+string \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{interpolate(const O\+G\+R\+Line\+String \&line\+\_\+string, double fraction, O\+G\+R\+Point \&out) const }{interpolate(const OGRLineString &line_string, double fraction, OGRPoint &out) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+::\+Spatial\+::interpolate (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Line\+String \&}]{line\+\_\+string, }
+\item[{double}]{fraction, }
+\item[{O\+G\+R\+Point \&}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a309e1932e955eee2a57d2104655e8080}{}\label{classgeo_1_1Spatial_a309e1932e955eee2a57d2104655e8080}
+
+
+Get the point on a line string of given fraction. If the fraction is less than 0 then the first point of the line string is returned and if the fraction is greater than 1 then the last point of the line string is returned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+string} & the line string \\
+\hline
+{\em fraction} & the fraction representing the position of the point on the line, within the given length \\
+\hline
+{\em out} & the interpolated point \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!length@{length}}
+\index{length@{length}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{length(const O\+G\+R\+Line\+String \&line\+\_\+string) const }{length(const OGRLineString &line_string) const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Spatial\+::length (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Line\+String \&}]{line\+\_\+string}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a6bcfc529e8ab148e30cb58f243362eee}{}\label{classgeo_1_1Spatial_a6bcfc529e8ab148e30cb58f243362eee}
+Get the length in meters of a line string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+string} & the line string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of line\+\_\+string 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!point\+\_\+from\+\_\+bearing@{point\+\_\+from\+\_\+bearing}}
+\index{point\+\_\+from\+\_\+bearing@{point\+\_\+from\+\_\+bearing}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{point\+\_\+from\+\_\+bearing(double start\+\_\+lat, double start\+\_\+lon, double distance, double bearing, double $\ast$lat\+\_\+out, double $\ast$lon\+\_\+out) const }{point_from_bearing(double start_lat, double start_lon, double distance, double bearing, double *lat_out, double *lon_out) const }}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Spatial\+::point\+\_\+from\+\_\+bearing (
+\begin{DoxyParamCaption}
+\item[{double}]{start\+\_\+lat, }
+\item[{double}]{start\+\_\+lon, }
+\item[{double}]{distance, }
+\item[{double}]{bearing, }
+\item[{double $\ast$}]{lat\+\_\+out, }
+\item[{double $\ast$}]{lon\+\_\+out}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_aab7fbff6c1e0dbc56e58ff3065a435d2}{}\label{classgeo_1_1Spatial_aab7fbff6c1e0dbc56e58ff3065a435d2}
+Find a new point from start position, given a bearing and distance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+\_\+lat} & the latitude of the starting position \\
+\hline
+{\em start\+\_\+lon} & the longitude of the starting position \\
+\hline
+{\em distance} & the distance between the new point and starting position \\
+\hline
+{\em bearing} & the bearing from the starting position and new point \\
+\hline
+{\em lat\+\_\+out} & pointer to the new points latitude \\
+\hline
+{\em lon\+\_\+out} & pointer to the new point longitude \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!rect\+\_\+for\+\_\+radius@{rect\+\_\+for\+\_\+radius}}
+\index{rect\+\_\+for\+\_\+radius@{rect\+\_\+for\+\_\+radius}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{rect\+\_\+for\+\_\+radius(const O\+G\+R\+Point \&point, double radius, C\+P\+L\+Rect\+Obj \&rect) const }{rect_for_radius(const OGRPoint &point, double radius, CPLRectObj &rect) const }}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Spatial\+::rect\+\_\+for\+\_\+radius (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point, }
+\item[{double}]{radius, }
+\item[{C\+P\+L\+Rect\+Obj \&}]{rect}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a4d594e436dd265ed927e6ce4d3a8db42}{}\label{classgeo_1_1Spatial_a4d594e436dd265ed927e6ce4d3a8db42}
+Make a C\+P\+L\+Rect\+Obj bounding box for a point and given radius.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the center of the bounding box \\
+\hline
+{\em radius} & the half-\/width of the box in meters \\
+\hline
+{\em envelope} & the resulting bounding box as a C\+P\+L\+Rect\+Obj \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!rect\+\_\+ring@{rect\+\_\+ring}}
+\index{rect\+\_\+ring@{rect\+\_\+ring}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{rect\+\_\+ring(const O\+G\+R\+Point \&a, const O\+G\+R\+Point \&b, double width, double extension, O\+G\+R\+Linear\+Ring \&out) const }{rect_ring(const OGRPoint &a, const OGRPoint &b, double width, double extension, OGRLinearRing &out) const }}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::\+Spatial\+::rect\+\_\+ring (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{a, }
+\item[{const O\+G\+R\+Point \&}]{b, }
+\item[{double}]{width, }
+\item[{double}]{extension, }
+\item[{O\+G\+R\+Linear\+Ring \&}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Spatial_a34a03dcb8afdca6fc2d4cfc3fd3025e6}{}\label{classgeo_1_1Spatial_a34a03dcb8afdca6fc2d4cfc3fd3025e6}
+Create a rectangle about two points A and B as an O\+G\+R\+Linear\+Ring. The rectangle will have a width equal to the given width and length equal to the distance between A and B plus the given extension.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the first point \\
+\hline
+{\em b} & the second point \\
+\hline
+{\em width} & the width of rectangle in meters \\
+\hline
+{\em extension} & the length extension of the rectangle in meters \\
+\hline
+{\em out} & the O\+G\+R\+Linear\+Ring representing the newly created rectangle \\
+\hline
+\end{DoxyParams}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!round@{round}}
+\index{round@{round}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{round(double value)}{round(double value)}}]{\setlength{\rightskip}{0pt plus 5cm}static double geo\+::\+Spatial\+::round (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classgeo_1_1Spatial_a820aa2d3891ef2c7c560cb71c88d24ba}{}\label{classgeo_1_1Spatial_a820aa2d3891ef2c7c560cb71c88d24ba}
+
+
+Round to a double precision number to k\+Precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the double value to round \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the rounded value 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!to\+\_\+degrees@{to\+\_\+degrees}}
+\index{to\+\_\+degrees@{to\+\_\+degrees}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{to\+\_\+degrees(double radians)}{to_degrees(double radians)}}]{\setlength{\rightskip}{0pt plus 5cm}static double geo\+::\+Spatial\+::to\+\_\+degrees (
+\begin{DoxyParamCaption}
+\item[{double}]{radians}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classgeo_1_1Spatial_a2bff1ce08e67dc3f6ca2ee90f97860e4}{}\label{classgeo_1_1Spatial_a2bff1ce08e67dc3f6ca2ee90f97860e4}
+
+
+Convert radians to decimal degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radians} & the radians value to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the converted value in degrees 
+\end{DoxyReturn}
+\index{geo\+::\+Spatial@{geo\+::\+Spatial}!to\+\_\+radians@{to\+\_\+radians}}
+\index{to\+\_\+radians@{to\+\_\+radians}!geo\+::\+Spatial@{geo\+::\+Spatial}}
+\subsubsection[{\texorpdfstring{to\+\_\+radians(double degrees)}{to_radians(double degrees)}}]{\setlength{\rightskip}{0pt plus 5cm}static double geo\+::\+Spatial\+::to\+\_\+radians (
+\begin{DoxyParamCaption}
+\item[{double}]{degrees}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classgeo_1_1Spatial_a70141094fae0f0fabc90224bf1d7cd0f}{}\label{classgeo_1_1Spatial_a70141094fae0f0fabc90224bf1d7cd0f}
+
+
+Convert decimal degrees to radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & the decimal degree value to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the converted value in radians 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo/include/geo.\+hpp\item 
+cvdi-\/src/geo/src/geo.\+cpp\end{DoxyCompactItemize}

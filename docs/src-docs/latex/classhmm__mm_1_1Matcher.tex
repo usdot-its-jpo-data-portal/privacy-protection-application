@@ -1,0 +1,77 @@
+\hypertarget{classhmm__mm_1_1Matcher}{}\section{hmm\+\_\+mm\+:\+:Matcher Class Reference}
+\label{classhmm__mm_1_1Matcher}\index{hmm\+\_\+mm\+::\+Matcher@{hmm\+\_\+mm\+::\+Matcher}}
+
+
+Hidden Markov Model Map \hyperlink{classhmm__mm_1_1Matcher}{Matcher} for sequential G\+PS traces.  
+
+
+
+
+{\ttfamily \#include $<$hmm\+\_\+mm.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhmm__mm_1_1Matcher_a4a1a9eafcddc6c98789e056121f55ee1}{Matcher} (double min\+\_\+distance, long min\+\_\+time, int k=-\/1, long t=-\/1)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classhmm__mm_1_1Matcher}{Matcher} object. \end{DoxyCompactList}\item 
+void \hyperlink{classhmm__mm_1_1Matcher_ab6ead19f86c9ed2711d0b6e4cc20365a}{map\+\_\+match} (\hyperlink{classhmm__mm_1_1RoadMap}{Road\+Map} \&road\+\_\+map, geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)
+\begin{DoxyCompactList}\small\item\em Map match samples in a sequential G\+PS trace. Sets the matched edge for each \hyperlink{classgeo__data_1_1Sample}{geo\+\_\+data\+::\+Sample} object until the end of trace is reached, or a break in the Hidden Markov Model occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hidden Markov Model Map \hyperlink{classhmm__mm_1_1Matcher}{Matcher} for sequential G\+PS traces. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{hmm\+\_\+mm\+::\+Matcher@{hmm\+\_\+mm\+::\+Matcher}!Matcher@{Matcher}}
+\index{Matcher@{Matcher}!hmm\+\_\+mm\+::\+Matcher@{hmm\+\_\+mm\+::\+Matcher}}
+\subsubsection[{\texorpdfstring{Matcher(double min\+\_\+distance, long min\+\_\+time, int k=-\/1, long t=-\/1)}{Matcher(double min_distance, long min_time, int k=-1, long t=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}hmm\+\_\+mm\+::\+Matcher\+::\+Matcher (
+\begin{DoxyParamCaption}
+\item[{double}]{min\+\_\+distance, }
+\item[{long}]{min\+\_\+time, }
+\item[{int}]{k = {\ttfamily -\/1}, }
+\item[{long}]{t = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1Matcher_a4a1a9eafcddc6c98789e056121f55ee1}{}\label{classhmm__mm_1_1Matcher_a4a1a9eafcddc6c98789e056121f55ee1}
+
+
+Construct a \hyperlink{classhmm__mm_1_1Matcher}{Matcher} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+\_\+distance} & minimum distance, in meters, between samples in the model \\
+\hline
+{\em min\+\_\+time} & minimum time, in seconds, between samples in the model \\
+\hline
+{\em k} & not used \\
+\hline
+{\em t} & not used \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{hmm\+\_\+mm\+::\+Matcher@{hmm\+\_\+mm\+::\+Matcher}!map\+\_\+match@{map\+\_\+match}}
+\index{map\+\_\+match@{map\+\_\+match}!hmm\+\_\+mm\+::\+Matcher@{hmm\+\_\+mm\+::\+Matcher}}
+\subsubsection[{\texorpdfstring{map\+\_\+match(\+Road\+Map \&road\+\_\+map, geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)}{map_match(RoadMap &road_map, geo_data::Sample::Trace &trace)}}]{\setlength{\rightskip}{0pt plus 5cm}void hmm\+\_\+mm\+::\+Matcher\+::map\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{{\bf Road\+Map} \&}]{road\+\_\+map, }
+\item[{geo\+\_\+data\+::\+Sample\+::\+Trace \&}]{trace}
+\end{DoxyParamCaption}
+)}\hypertarget{classhmm__mm_1_1Matcher_ab6ead19f86c9ed2711d0b6e4cc20365a}{}\label{classhmm__mm_1_1Matcher_ab6ead19f86c9ed2711d0b6e4cc20365a}
+
+
+Map match samples in a sequential G\+PS trace. Sets the matched edge for each \hyperlink{classgeo__data_1_1Sample}{geo\+\_\+data\+::\+Sample} object until the end of trace is reached, or a break in the Hidden Markov Model occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em road\+\_\+map} & the geo\+\_\+data\+::\+Road\+Map object to used for candidates and transitions. \\
+\hline
+{\em trace} & the sample G\+PS trace \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/hmm-\/mm/include/hmm\+\_\+mm.\+hpp\item 
+cvdi-\/src/hmm-\/mm/src/hmm\+\_\+mm.\+cpp\end{DoxyCompactItemize}

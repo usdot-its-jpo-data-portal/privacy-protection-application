@@ -1,0 +1,47 @@
+\hypertarget{classcvdi_1_1StartEndIntervals}{}\section{cvdi\+:\+:Start\+End\+Intervals Class Reference}
+\label{classcvdi_1_1StartEndIntervals}\index{cvdi\+::\+Start\+End\+Intervals@{cvdi\+::\+Start\+End\+Intervals}}
+
+
+A method that builds two intervals, one for the beginning point of a trip and one for the end point of a trip.  
+
+
+
+
+{\ttfamily \#include $<$cvdi.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const geo\+\_\+data\+::\+Interval\+::\+Ptr\+List \& \hyperlink{classcvdi_1_1StartEndIntervals_a107b1a502ab7c2f868c07b1930ee4801}{get\+\_\+start\+\_\+end\+\_\+intervals} (const geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)
+\begin{DoxyCompactList}\small\item\em Return a list of two intervals that define the start -\/ end trace critical intervals. Each interval has one point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A method that builds two intervals, one for the beginning point of a trip and one for the end point of a trip. 
+
+\subsection{Member Function Documentation}
+\index{cvdi\+::\+Start\+End\+Intervals@{cvdi\+::\+Start\+End\+Intervals}!get\+\_\+start\+\_\+end\+\_\+intervals@{get\+\_\+start\+\_\+end\+\_\+intervals}}
+\index{get\+\_\+start\+\_\+end\+\_\+intervals@{get\+\_\+start\+\_\+end\+\_\+intervals}!cvdi\+::\+Start\+End\+Intervals@{cvdi\+::\+Start\+End\+Intervals}}
+\subsubsection[{\texorpdfstring{get\+\_\+start\+\_\+end\+\_\+intervals(const geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)}{get_start_end_intervals(const geo_data::Sample::Trace &trace)}}]{\setlength{\rightskip}{0pt plus 5cm}const geo\+\_\+data\+::\+Interval\+::\+Ptr\+List \& cvdi\+::\+Start\+End\+Intervals\+::get\+\_\+start\+\_\+end\+\_\+intervals (
+\begin{DoxyParamCaption}
+\item[{const geo\+\_\+data\+::\+Sample\+::\+Trace \&}]{trace}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1StartEndIntervals_a107b1a502ab7c2f868c07b1930ee4801}{}\label{classcvdi_1_1StartEndIntervals_a107b1a502ab7c2f868c07b1930ee4801}
+
+
+Return a list of two intervals that define the start -\/ end trace critical intervals. Each interval has one point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trace} & The trace to pull the intervals from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a length 2 list of pointers to the start and end trip critical intervals 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi/include/cvdi.\+hpp\item 
+cvdi-\/src/cvdi/src/cvdi.\+cpp\end{DoxyCompactItemize}

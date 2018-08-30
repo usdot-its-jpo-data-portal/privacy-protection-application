@@ -1,0 +1,74 @@
+\hypertarget{classfmt_1_1FormatInt}{}\section{fmt\+:\+:Format\+Int Class Reference}
+\label{classfmt_1_1FormatInt}\index{fmt\+::\+Format\+Int@{fmt\+::\+Format\+Int}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Format\+Int} (int value)\hypertarget{classfmt_1_1FormatInt_a9ea696341b1f8be23c41885c1bfb1395}{}\label{classfmt_1_1FormatInt_a9ea696341b1f8be23c41885c1bfb1395}
+
+\item 
+{\bfseries Format\+Int} (long value)\hypertarget{classfmt_1_1FormatInt_afba7a9464d4b9d70a877b38f09b66a30}{}\label{classfmt_1_1FormatInt_afba7a9464d4b9d70a877b38f09b66a30}
+
+\item 
+{\bfseries Format\+Int} (Long\+Long value)\hypertarget{classfmt_1_1FormatInt_af1e95a3f28e4905ed901beb1df3d77e2}{}\label{classfmt_1_1FormatInt_af1e95a3f28e4905ed901beb1df3d77e2}
+
+\item 
+{\bfseries Format\+Int} (unsigned value)\hypertarget{classfmt_1_1FormatInt_a6bbe09f7223c6489272ae295330c145c}{}\label{classfmt_1_1FormatInt_a6bbe09f7223c6489272ae295330c145c}
+
+\item 
+{\bfseries Format\+Int} (unsigned long value)\hypertarget{classfmt_1_1FormatInt_a376433048225d105887f0a151126c134}{}\label{classfmt_1_1FormatInt_a376433048225d105887f0a151126c134}
+
+\item 
+{\bfseries Format\+Int} (U\+Long\+Long value)\hypertarget{classfmt_1_1FormatInt_ace4887e009064bcea8eea9bb6e30026e}{}\label{classfmt_1_1FormatInt_ace4887e009064bcea8eea9bb6e30026e}
+
+\item 
+std\+::size\+\_\+t \hyperlink{classfmt_1_1FormatInt_ad09445e55ae7c8944b5275a54a03da14}{size} () const 
+\item 
+const char $\ast$ \hyperlink{classfmt_1_1FormatInt_a3cad581dde135c51390fd4ebd18d6d1b}{data} () const 
+\item 
+const char $\ast$ \hyperlink{classfmt_1_1FormatInt_a58a17394f4f8e63debb91b90aa0dea0c}{c\+\_\+str} () const 
+\item 
+std\+::string \hyperlink{classfmt_1_1FormatInt_adfd4854a5efceb8df461a521c3eda5ef}{str} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fast integer formatter. 
+
+\subsection{Member Function Documentation}
+\index{fmt\+::\+Format\+Int@{fmt\+::\+Format\+Int}!c\+\_\+str@{c\+\_\+str}}
+\index{c\+\_\+str@{c\+\_\+str}!fmt\+::\+Format\+Int@{fmt\+::\+Format\+Int}}
+\subsubsection[{\texorpdfstring{c\+\_\+str() const }{c_str() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ fmt\+::\+Format\+Int\+::c\+\_\+str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1FormatInt_a58a17394f4f8e63debb91b90aa0dea0c}{}\label{classfmt_1_1FormatInt_a58a17394f4f8e63debb91b90aa0dea0c}
+Returns a pointer to the output buffer content with terminating null character appended. \index{fmt\+::\+Format\+Int@{fmt\+::\+Format\+Int}!data@{data}}
+\index{data@{data}!fmt\+::\+Format\+Int@{fmt\+::\+Format\+Int}}
+\subsubsection[{\texorpdfstring{data() const }{data() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ fmt\+::\+Format\+Int\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1FormatInt_a3cad581dde135c51390fd4ebd18d6d1b}{}\label{classfmt_1_1FormatInt_a3cad581dde135c51390fd4ebd18d6d1b}
+Returns a pointer to the output buffer content. No terminating null character is appended. \index{fmt\+::\+Format\+Int@{fmt\+::\+Format\+Int}!size@{size}}
+\index{size@{size}!fmt\+::\+Format\+Int@{fmt\+::\+Format\+Int}}
+\subsubsection[{\texorpdfstring{size() const }{size() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::size\+\_\+t fmt\+::\+Format\+Int\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1FormatInt_ad09445e55ae7c8944b5275a54a03da14}{}\label{classfmt_1_1FormatInt_ad09445e55ae7c8944b5275a54a03da14}
+Returns the number of characters written to the output buffer. \index{fmt\+::\+Format\+Int@{fmt\+::\+Format\+Int}!str@{str}}
+\index{str@{str}!fmt\+::\+Format\+Int@{fmt\+::\+Format\+Int}}
+\subsubsection[{\texorpdfstring{str() const }{str() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string fmt\+::\+Format\+Int\+::str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1FormatInt_adfd4854a5efceb8df461a521c3eda5ef}{}\label{classfmt_1_1FormatInt_adfd4854a5efceb8df461a521c3eda5ef}
+Returns the content of the output buffer as an {\ttfamily std\+::string}.  
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

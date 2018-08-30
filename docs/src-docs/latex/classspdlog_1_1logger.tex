@@ -1,0 +1,155 @@
+\hypertarget{classspdlog_1_1logger}{}\section{spdlog\+:\+:logger Class Reference}
+\label{classspdlog_1_1logger}\index{spdlog\+::logger@{spdlog\+::logger}}
+Inheritance diagram for spdlog\+:\+:logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classspdlog_1_1logger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries logger} (const std\+::string \&logger\+\_\+name, sink\+\_\+ptr single\+\_\+sink)\hypertarget{classspdlog_1_1logger_a01e952f5adbc10326c3d77b3ded7063b}{}\label{classspdlog_1_1logger_a01e952f5adbc10326c3d77b3ded7063b}
+
+\item 
+{\bfseries logger} (const std\+::string \&name, sinks\+\_\+init\+\_\+list)\hypertarget{classspdlog_1_1logger_a1c4b03a1b5d3a2305e19aee47f8f2c17}{}\label{classspdlog_1_1logger_a1c4b03a1b5d3a2305e19aee47f8f2c17}
+
+\item 
+{\footnotesize template$<$class It $>$ }\\{\bfseries logger} (const std\+::string \&name, const It \&begin, const It \&end)\hypertarget{classspdlog_1_1logger_add870b09f8a36ee6660cc0dc4eba258a}{}\label{classspdlog_1_1logger_add870b09f8a36ee6660cc0dc4eba258a}
+
+\item 
+{\bfseries logger} (const \hyperlink{classspdlog_1_1logger}{logger} \&)=delete\hypertarget{classspdlog_1_1logger_aa6074d763b0df4e7d16ccf7d307a3938}{}\label{classspdlog_1_1logger_aa6074d763b0df4e7d16ccf7d307a3938}
+
+\item 
+\hyperlink{classspdlog_1_1logger}{logger} \& {\bfseries operator=} (const \hyperlink{classspdlog_1_1logger}{logger} \&)=delete\hypertarget{classspdlog_1_1logger_afd373cd857f49de170d9a23f1dd34bc0}{}\label{classspdlog_1_1logger_afd373cd857f49de170d9a23f1dd34bc0}
+
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\void {\bfseries log} (level\+::level\+\_\+enum lvl, const char $\ast$fmt, const Args \&...args)\hypertarget{classspdlog_1_1logger_a5149c7b8c1ac8aeedbeba779b0e0cfb7}{}\label{classspdlog_1_1logger_a5149c7b8c1ac8aeedbeba779b0e0cfb7}
+
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\void {\bfseries log} (level\+::level\+\_\+enum lvl, const char $\ast$msg)\hypertarget{classspdlog_1_1logger_a44da1d3a0003e6a67fddb3d7bb99ce1d}{}\label{classspdlog_1_1logger_a44da1d3a0003e6a67fddb3d7bb99ce1d}
+
+\item 
+{\footnotesize template$<$typename Arg1 , typename... Args$>$ }\\void {\bfseries trace} (const char $\ast$fmt, const Arg1 \&, const Args \&...args)\hypertarget{classspdlog_1_1logger_aa580734685da694da3d17d43232ec3ac}{}\label{classspdlog_1_1logger_aa580734685da694da3d17d43232ec3ac}
+
+\item 
+{\footnotesize template$<$typename Arg1 , typename... Args$>$ }\\void {\bfseries debug} (const char $\ast$fmt, const Arg1 \&, const Args \&...args)\hypertarget{classspdlog_1_1logger_af814a11eca93b3a173f3da389f5f751b}{}\label{classspdlog_1_1logger_af814a11eca93b3a173f3da389f5f751b}
+
+\item 
+{\footnotesize template$<$typename Arg1 , typename... Args$>$ }\\void {\bfseries info} (const char $\ast$fmt, const Arg1 \&, const Args \&...args)\hypertarget{classspdlog_1_1logger_abbc0dd1cd95139acebe5ed0cc003ec16}{}\label{classspdlog_1_1logger_abbc0dd1cd95139acebe5ed0cc003ec16}
+
+\item 
+{\footnotesize template$<$typename Arg1 , typename... Args$>$ }\\void {\bfseries warn} (const char $\ast$fmt, const Arg1 \&, const Args \&...args)\hypertarget{classspdlog_1_1logger_a04c38de2bcde8fa35d56f136988bf338}{}\label{classspdlog_1_1logger_a04c38de2bcde8fa35d56f136988bf338}
+
+\item 
+{\footnotesize template$<$typename Arg1 , typename... Args$>$ }\\void {\bfseries error} (const char $\ast$fmt, const Arg1 \&, const Args \&...args)\hypertarget{classspdlog_1_1logger_aadc2f59f010c7d7140e1d90900d7888e}{}\label{classspdlog_1_1logger_aadc2f59f010c7d7140e1d90900d7888e}
+
+\item 
+{\footnotesize template$<$typename Arg1 , typename... Args$>$ }\\void {\bfseries critical} (const char $\ast$fmt, const Arg1 \&, const Args \&...args)\hypertarget{classspdlog_1_1logger_a3dbacca444787282fb94bf2c79f48fef}{}\label{classspdlog_1_1logger_a3dbacca444787282fb94bf2c79f48fef}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries log} (level\+::level\+\_\+enum lvl, const T \&)\hypertarget{classspdlog_1_1logger_a16d3d178ac86ea71b8a0becfca0c5449}{}\label{classspdlog_1_1logger_a16d3d178ac86ea71b8a0becfca0c5449}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries trace} (const T \&)\hypertarget{classspdlog_1_1logger_a8d0c37f6eb65405b7dcfc7e7d60e6e58}{}\label{classspdlog_1_1logger_a8d0c37f6eb65405b7dcfc7e7d60e6e58}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries debug} (const T \&)\hypertarget{classspdlog_1_1logger_ab46aca3267a2f2c4bfc25834067527e0}{}\label{classspdlog_1_1logger_ab46aca3267a2f2c4bfc25834067527e0}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries info} (const T \&)\hypertarget{classspdlog_1_1logger_af002a28bd29ef0f798ca67191419b129}{}\label{classspdlog_1_1logger_af002a28bd29ef0f798ca67191419b129}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries warn} (const T \&)\hypertarget{classspdlog_1_1logger_a7b4abd6d315181b2421e89f0efe71743}{}\label{classspdlog_1_1logger_a7b4abd6d315181b2421e89f0efe71743}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries error} (const T \&)\hypertarget{classspdlog_1_1logger_aa91ef7020d423cf399fb54ae7800964f}{}\label{classspdlog_1_1logger_aa91ef7020d423cf399fb54ae7800964f}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries critical} (const T \&)\hypertarget{classspdlog_1_1logger_a3102470f39f6d84e083e62d9c336fecd}{}\label{classspdlog_1_1logger_a3102470f39f6d84e083e62d9c336fecd}
+
+\item 
+bool {\bfseries should\+\_\+log} (level\+::level\+\_\+enum) const \hypertarget{classspdlog_1_1logger_a6c0941a0897874e3c7c3cc77edafa13e}{}\label{classspdlog_1_1logger_a6c0941a0897874e3c7c3cc77edafa13e}
+
+\item 
+void {\bfseries set\+\_\+level} (level\+::level\+\_\+enum)\hypertarget{classspdlog_1_1logger_afa83b0334d1599dd148f14ed4b8bae9f}{}\label{classspdlog_1_1logger_afa83b0334d1599dd148f14ed4b8bae9f}
+
+\item 
+level\+::level\+\_\+enum {\bfseries level} () const \hypertarget{classspdlog_1_1logger_a6fdaf38b46b34772ffa728e8faa3e857}{}\label{classspdlog_1_1logger_a6fdaf38b46b34772ffa728e8faa3e857}
+
+\item 
+const std\+::string \& {\bfseries name} () const \hypertarget{classspdlog_1_1logger_a965147f4736d658065f8ba6e923c1c47}{}\label{classspdlog_1_1logger_a965147f4736d658065f8ba6e923c1c47}
+
+\item 
+void {\bfseries set\+\_\+pattern} (const std\+::string \&, pattern\+\_\+time\+\_\+type=pattern\+\_\+time\+\_\+type\+::local)\hypertarget{classspdlog_1_1logger_a7fef08e7bfc1369e31f5cf1f0b213be2}{}\label{classspdlog_1_1logger_a7fef08e7bfc1369e31f5cf1f0b213be2}
+
+\item 
+void {\bfseries set\+\_\+formatter} (formatter\+\_\+ptr)\hypertarget{classspdlog_1_1logger_a5671bc1118ec7486591e288518b7854f}{}\label{classspdlog_1_1logger_a5671bc1118ec7486591e288518b7854f}
+
+\item 
+void {\bfseries flush\+\_\+on} (level\+::level\+\_\+enum log\+\_\+level)\hypertarget{classspdlog_1_1logger_a47c021d339c1f246758e1a87a41668e3}{}\label{classspdlog_1_1logger_a47c021d339c1f246758e1a87a41668e3}
+
+\item 
+virtual void {\bfseries flush} ()\hypertarget{classspdlog_1_1logger_a861bb4d4e65de07966148822075bee86}{}\label{classspdlog_1_1logger_a861bb4d4e65de07966148822075bee86}
+
+\item 
+const std\+::vector$<$ sink\+\_\+ptr $>$ \& {\bfseries sinks} () const \hypertarget{classspdlog_1_1logger_a59a64487a6c9714d2f7c70b5e094711b}{}\label{classspdlog_1_1logger_a59a64487a6c9714d2f7c70b5e094711b}
+
+\item 
+virtual void {\bfseries set\+\_\+error\+\_\+handler} (log\+\_\+err\+\_\+handler)\hypertarget{classspdlog_1_1logger_a7f20aa1910f281f3fd8e477d165ee124}{}\label{classspdlog_1_1logger_a7f20aa1910f281f3fd8e477d165ee124}
+
+\item 
+virtual log\+\_\+err\+\_\+handler {\bfseries error\+\_\+handler} ()\hypertarget{classspdlog_1_1logger_a49f6b60692fdaf3adfc13f9831c4bd14}{}\label{classspdlog_1_1logger_a49f6b60692fdaf3adfc13f9831c4bd14}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries \+\_\+sink\+\_\+it} (\hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&)\hypertarget{classspdlog_1_1logger_ace111ec67a09bca55fa8f73233b79b08}{}\label{classspdlog_1_1logger_ace111ec67a09bca55fa8f73233b79b08}
+
+\item 
+virtual void {\bfseries \+\_\+set\+\_\+pattern} (const std\+::string \&, pattern\+\_\+time\+\_\+type)\hypertarget{classspdlog_1_1logger_a1bdb98068fca139a50a167894bc7fcd0}{}\label{classspdlog_1_1logger_a1bdb98068fca139a50a167894bc7fcd0}
+
+\item 
+virtual void {\bfseries \+\_\+set\+\_\+formatter} (formatter\+\_\+ptr)\hypertarget{classspdlog_1_1logger_addb8fd1eec5a87bcfa8cec1ab32aa375}{}\label{classspdlog_1_1logger_addb8fd1eec5a87bcfa8cec1ab32aa375}
+
+\item 
+virtual void {\bfseries \+\_\+default\+\_\+err\+\_\+handler} (const std\+::string \&msg)\hypertarget{classspdlog_1_1logger_a3a4a00fbf7e739dcd162ef4a5a98fb56}{}\label{classspdlog_1_1logger_a3a4a00fbf7e739dcd162ef4a5a98fb56}
+
+\item 
+bool {\bfseries \+\_\+should\+\_\+flush\+\_\+on} (const \hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&)\hypertarget{classspdlog_1_1logger_ab6905b5e7a19a319d65682bdc859373a}{}\label{classspdlog_1_1logger_ab6905b5e7a19a319d65682bdc859373a}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string {\bfseries \+\_\+name}\hypertarget{classspdlog_1_1logger_a819e97be3b6e2066edb7798c04121749}{}\label{classspdlog_1_1logger_a819e97be3b6e2066edb7798c04121749}
+
+\item 
+std\+::vector$<$ sink\+\_\+ptr $>$ {\bfseries \+\_\+sinks}\hypertarget{classspdlog_1_1logger_aa3563923d7afee42f8ae19e5b1a6daea}{}\label{classspdlog_1_1logger_aa3563923d7afee42f8ae19e5b1a6daea}
+
+\item 
+formatter\+\_\+ptr {\bfseries \+\_\+formatter}\hypertarget{classspdlog_1_1logger_af3d364c4242d9071f9f7d48e437c373f}{}\label{classspdlog_1_1logger_af3d364c4242d9071f9f7d48e437c373f}
+
+\item 
+spdlog\+::level\+\_\+t {\bfseries \+\_\+level}\hypertarget{classspdlog_1_1logger_a89f596c2328f2ce5402c77eb8b181ab6}{}\label{classspdlog_1_1logger_a89f596c2328f2ce5402c77eb8b181ab6}
+
+\item 
+spdlog\+::level\+\_\+t {\bfseries \+\_\+flush\+\_\+level}\hypertarget{classspdlog_1_1logger_a53dcc290a397bd019756cfedf4d839d2}{}\label{classspdlog_1_1logger_a53dcc290a397bd019756cfedf4d839d2}
+
+\item 
+log\+\_\+err\+\_\+handler {\bfseries \+\_\+err\+\_\+handler}\hypertarget{classspdlog_1_1logger_a249eaef178568d6f7153e33118f8a9da}{}\label{classspdlog_1_1logger_a249eaef178568d6f7153e33118f8a9da}
+
+\item 
+std\+::atomic$<$ time\+\_\+t $>$ {\bfseries \+\_\+last\+\_\+err\+\_\+time}\hypertarget{classspdlog_1_1logger_a0b88740c53e5fc64ebebdbbd1640a4a6}{}\label{classspdlog_1_1logger_a0b88740c53e5fc64ebebdbbd1640a4a6}
+
+\item 
+std\+::atomic$<$ size\+\_\+t $>$ {\bfseries \+\_\+msg\+\_\+counter}\hypertarget{classspdlog_1_1logger_ab0f217552f160a7154a4398bcec65263}{}\label{classspdlog_1_1logger_ab0f217552f160a7154a4398bcec65263}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/logger.\+h\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/details/logger\+\_\+impl.\+h\end{DoxyCompactItemize}

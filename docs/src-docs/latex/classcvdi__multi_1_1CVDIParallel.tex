@@ -1,0 +1,85 @@
+\hypertarget{classcvdi__multi_1_1CVDIParallel}{}\section{cvdi\+\_\+multi\+:\+:C\+V\+D\+I\+Parallel Class Reference}
+\label{classcvdi__multi_1_1CVDIParallel}\index{cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel@{cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel}}
+
+
+Single file C\+V\+DI batch processing application.  
+
+
+
+
+{\ttfamily \#include $<$cvdi\+\_\+multi.\+hpp$>$}
+
+Inheritance diagram for cvdi\+\_\+multi\+:\+:C\+V\+D\+I\+Parallel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcvdi__multi_1_1CVDIParallel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries C\+V\+D\+I\+Parallel} (const std\+::string file\+\_\+path, const std\+::string osm\+\_\+file, const std\+::string out\+\_\+dir, const std\+::string config\+\_\+file)\hypertarget{classcvdi__multi_1_1CVDIParallel_a7548d213ef13ea2be4634c4d71ee8e49}{}\label{classcvdi__multi_1_1CVDIParallel_a7548d213ef13ea2be4634c4d71ee8e49}
+
+\item 
+void \hyperlink{classcvdi__multi_1_1CVDIParallel_a5d162d98140883424d43acd01c562507}{Init} (unsigned n\+\_\+used\+\_\+threads)
+\begin{DoxyCompactList}\small\item\em an initialization method; override to perform a concrete initialization action. \end{DoxyCompactList}\item 
+void \hyperlink{classcvdi__multi_1_1CVDIParallel_a621f66bf0446ed9a9a63e9fbfb465f1e}{Close} (void)\hypertarget{classcvdi__multi_1_1CVDIParallel_a621f66bf0446ed9a9a63e9fbfb465f1e}{}\label{classcvdi__multi_1_1CVDIParallel_a621f66bf0446ed9a9a63e9fbfb465f1e}
+
+\begin{DoxyCompactList}\small\item\em Close the batch file. \end{DoxyCompactList}\item 
+void \hyperlink{classcvdi__multi_1_1CVDIParallel_a7c256d91bb868873a1c6ce854c923c17}{Thread} (unsigned thread\+\_\+num, \hyperlink{classMultiThread_1_1SharedQueue}{Multi\+Thread\+::\+Shared\+Queue}$<$ File\+Info\+::\+Ptr $>$ $\ast$q)
+\begin{DoxyCompactList}\small\item\em The main work thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Single file C\+V\+DI batch processing application. 
+
+\subsection{Member Function Documentation}
+\index{cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel@{cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel}!Init@{Init}}
+\index{Init@{Init}!cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel@{cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel}}
+\subsubsection[{\texorpdfstring{Init(unsigned n\+\_\+used\+\_\+threads)}{Init(unsigned n_used_threads)}}]{\setlength{\rightskip}{0pt plus 5cm}void cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{n\+\_\+used\+\_\+threads}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classcvdi__multi_1_1CVDIParallel_a5d162d98140883424d43acd01c562507}{}\label{classcvdi__multi_1_1CVDIParallel_a5d162d98140883424d43acd01c562507}
+
+
+an initialization method; override to perform a concrete initialization action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+used\+\_\+threads} & the number of threads that will be managed by this instance. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classcvdi__multi_1_1BatchParallel_a40f083a185b29a90733ada3fe789ada2}{cvdi\+\_\+multi\+::\+Batch\+Parallel}.
+
+\index{cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel@{cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel}!Thread@{Thread}}
+\index{Thread@{Thread}!cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel@{cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel}}
+\subsubsection[{\texorpdfstring{Thread(unsigned thread\+\_\+num, Multi\+Thread\+::\+Shared\+Queue$<$ File\+Info\+::\+Ptr $>$ $\ast$q)}{Thread(unsigned thread_num, MultiThread::SharedQueue< FileInfo::Ptr > *q)}}]{\setlength{\rightskip}{0pt plus 5cm}void cvdi\+\_\+multi\+::\+C\+V\+D\+I\+Parallel\+::\+Thread (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{thread\+\_\+num, }
+\item[{{\bf Multi\+Thread\+::\+Shared\+Queue}$<$ File\+Info\+::\+Ptr $>$ $\ast$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classcvdi__multi_1_1CVDIParallel_a7c256d91bb868873a1c6ce854c923c17}{}\label{classcvdi__multi_1_1CVDIParallel_a7c256d91bb868873a1c6ce854c923c17}
+
+
+The main work thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread\+\_\+num} & a easy to read unique identifier for this thread. \\
+\hline
+{\em the} & work queue containing the trip files that this thread should process. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classcvdi__multi_1_1SingleBatchParallel_a6514a89e14f2724ab671ffd65d7c43c7}{cvdi\+\_\+multi\+::\+Single\+Batch\+Parallel}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/cvdi\+\_\+multi.\+hpp\item 
+cvdi-\/src/cvdi-\/cl/src/cvdi\+\_\+multi.\+cpp\end{DoxyCompactItemize}

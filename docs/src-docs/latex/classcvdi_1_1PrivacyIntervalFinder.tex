@@ -1,0 +1,101 @@
+\hypertarget{classcvdi_1_1PrivacyIntervalFinder}{}\section{cvdi\+:\+:Privacy\+Interval\+Finder Class Reference}
+\label{classcvdi_1_1PrivacyIntervalFinder}\index{cvdi\+::\+Privacy\+Interval\+Finder@{cvdi\+::\+Privacy\+Interval\+Finder}}
+
+
+Define the intervals that \char`\"{}hide\char`\"{} critical intervals. Instances of this class determine the portion of a trace extended from the ends of the previously defined critical intervals to protect those locations. This is done using intersection out degree, direct distance, and Manhattan distance.  
+
+
+
+
+{\ttfamily \#include $<$cvdi.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Trajectory\+Iterator} = geo\+\_\+data\+::\+Sample\+::\+Trace\+::iterator\hypertarget{classcvdi_1_1PrivacyIntervalFinder_a82dfa8f6018349f3e430fd842e2a17cc}{}\label{classcvdi_1_1PrivacyIntervalFinder_a82dfa8f6018349f3e430fd842e2a17cc}
+
+\item 
+using {\bfseries Rev\+Trajectory\+Iterator} = geo\+\_\+data\+::\+Sample\+::\+Trace\+::reverse\+\_\+iterator\hypertarget{classcvdi_1_1PrivacyIntervalFinder_aed4483689c32d185a5fa2f5c7d387700}{}\label{classcvdi_1_1PrivacyIntervalFinder_aed4483689c32d185a5fa2f5c7d387700}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcvdi_1_1PrivacyIntervalFinder_ae7041f26e25befc38dc63771c901ff47}{Privacy\+Interval\+Finder} (double min\+\_\+dd, double min\+\_\+md, uint32\+\_\+t min\+\_\+out\+\_\+degree, double max\+\_\+dd, double max\+\_\+md, uint32\+\_\+t max\+\_\+out\+\_\+degree, double dd\+\_\+rand, double md\+\_\+rand, double out\+\_\+degree\+\_\+rand)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classcvdi_1_1PrivacyIntervalFinder}{Privacy\+Interval\+Finder} object. \end{DoxyCompactList}\item 
+const geo\+\_\+data\+::\+Interval\+::\+Ptr\+List \& \hyperlink{classcvdi_1_1PrivacyIntervalFinder_af41665ec45983014303ec2124038308e}{find\+\_\+intervals} (geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)
+\begin{DoxyCompactList}\small\item\em Find the privacy intervals in the provided trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define the intervals that \char`\"{}hide\char`\"{} critical intervals. Instances of this class determine the portion of a trace extended from the ends of the previously defined critical intervals to protect those locations. This is done using intersection out degree, direct distance, and Manhattan distance. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cvdi\+::\+Privacy\+Interval\+Finder@{cvdi\+::\+Privacy\+Interval\+Finder}!Privacy\+Interval\+Finder@{Privacy\+Interval\+Finder}}
+\index{Privacy\+Interval\+Finder@{Privacy\+Interval\+Finder}!cvdi\+::\+Privacy\+Interval\+Finder@{cvdi\+::\+Privacy\+Interval\+Finder}}
+\subsubsection[{\texorpdfstring{Privacy\+Interval\+Finder(double min\+\_\+dd, double min\+\_\+md, uint32\+\_\+t min\+\_\+out\+\_\+degree, double max\+\_\+dd, double max\+\_\+md, uint32\+\_\+t max\+\_\+out\+\_\+degree, double dd\+\_\+rand, double md\+\_\+rand, double out\+\_\+degree\+\_\+rand)}{PrivacyIntervalFinder(double min_dd, double min_md, uint32_t min_out_degree, double max_dd, double max_md, uint32_t max_out_degree, double dd_rand, double md_rand, double out_degree_rand)}}]{\setlength{\rightskip}{0pt plus 5cm}cvdi\+::\+Privacy\+Interval\+Finder\+::\+Privacy\+Interval\+Finder (
+\begin{DoxyParamCaption}
+\item[{double}]{min\+\_\+dd, }
+\item[{double}]{min\+\_\+md, }
+\item[{uint32\+\_\+t}]{min\+\_\+out\+\_\+degree, }
+\item[{double}]{max\+\_\+dd, }
+\item[{double}]{max\+\_\+md, }
+\item[{uint32\+\_\+t}]{max\+\_\+out\+\_\+degree, }
+\item[{double}]{dd\+\_\+rand, }
+\item[{double}]{md\+\_\+rand, }
+\item[{double}]{out\+\_\+degree\+\_\+rand}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1PrivacyIntervalFinder_ae7041f26e25befc38dc63771c901ff47}{}\label{classcvdi_1_1PrivacyIntervalFinder_ae7041f26e25befc38dc63771c901ff47}
+
+
+Construct a \hyperlink{classcvdi_1_1PrivacyIntervalFinder}{Privacy\+Interval\+Finder} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+\_\+dd} & minimum direct distance \\
+\hline
+{\em min\+\_\+md} & minimum manhattan distance \\
+\hline
+{\em min\+\_\+out\+\_\+degree} & minimum intersection out degree \\
+\hline
+{\em max\+\_\+dd} & maximum direct distance \\
+\hline
+{\em max\+\_\+md} & maximum manhattan distance \\
+\hline
+{\em max\+\_\+out\+\_\+degree} & maximum intersection out degree \\
+\hline
+{\em dd\+\_\+rand} & direct distance randomization factor \\
+\hline
+{\em md\+\_\+rand} & manhattan distance randomization factor \\
+\hline
+{\em out\+\_\+degree\+\_\+rand} & out degree randomization factor \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{cvdi\+::\+Privacy\+Interval\+Finder@{cvdi\+::\+Privacy\+Interval\+Finder}!find\+\_\+intervals@{find\+\_\+intervals}}
+\index{find\+\_\+intervals@{find\+\_\+intervals}!cvdi\+::\+Privacy\+Interval\+Finder@{cvdi\+::\+Privacy\+Interval\+Finder}}
+\subsubsection[{\texorpdfstring{find\+\_\+intervals(geo\+\_\+data\+::\+Sample\+::\+Trace \&trace)}{find_intervals(geo_data::Sample::Trace &trace)}}]{\setlength{\rightskip}{0pt plus 5cm}const geo\+\_\+data\+::\+Interval\+::\+Ptr\+List \& cvdi\+::\+Privacy\+Interval\+Finder\+::find\+\_\+intervals (
+\begin{DoxyParamCaption}
+\item[{geo\+\_\+data\+::\+Sample\+::\+Trace \&}]{trace}
+\end{DoxyParamCaption}
+)}\hypertarget{classcvdi_1_1PrivacyIntervalFinder_af41665ec45983014303ec2124038308e}{}\label{classcvdi_1_1PrivacyIntervalFinder_af41665ec45983014303ec2124038308e}
+
+
+Find the privacy intervals in the provided trace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trace} & the trace to search for privacy intervals \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of the intervals that define the privacy intervals 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi/include/cvdi.\+hpp\item 
+cvdi-\/src/cvdi/src/cvdi.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,296 @@
+\hypertarget{classgeo__data_1_1KML}{}\section{geo\+\_\+data\+:\+:K\+ML Class Reference}
+\label{classgeo__data_1_1KML}\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+
+
+A \hyperlink{classgeo__data_1_1KML}{K\+ML} file.  
+
+
+
+
+{\ttfamily \#include $<$geo\+\_\+data.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Stream\+Ptr} = std\+::shared\+\_\+ptr$<$ std\+::ostream $>$\hypertarget{classgeo__data_1_1KML_a0523f1943a5bdfad5d7c7d707edeec17}{}\label{classgeo__data_1_1KML_a0523f1943a5bdfad5d7c7d707edeec17}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo__data_1_1KML_abcd98547b50dbb378c1a634caa0911e2}{K\+ML} (std\+::ostream \&stream, const std\+::string \&doc\+\_\+name, bool visibility=true)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classgeo__data_1_1KML}{K\+ML} object. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_a15aba5605fcae13de084543588d04b65}{finish} ()\hypertarget{classgeo__data_1_1KML_a15aba5605fcae13de084543588d04b65}{}\label{classgeo__data_1_1KML_a15aba5605fcae13de084543588d04b65}
+
+\begin{DoxyCompactList}\small\item\em Finalize the \hyperlink{classgeo__data_1_1KML}{K\+ML} file (write the ending tags). \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_a52c966b02495f51aac7cbe9ca99a2eec}{write\+\_\+line\+\_\+style} (const std\+::string \&name, unsigned int color\+\_\+value, int width)
+\begin{DoxyCompactList}\small\item\em Write a style for a line to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_a68d10daf35e4c43f024e3e2d2bc44bf2}{write\+\_\+icon\+\_\+style} (const std\+::string \&name, const std\+::string \&href, float scale=1.\+0)
+\begin{DoxyCompactList}\small\item\em Write a style for an icon to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_a2a7e4010226e316d630837ec1f37f7c3}{write\+\_\+poly\+\_\+style} (const std\+::string \&name, unsigned int color\+\_\+value, int width=2, bool fill=true, bool outline=true)
+\begin{DoxyCompactList}\small\item\em Write a style for a polygon to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_a022fed3d67ebd03e5e8b04e27b21ceaf}{write\+\_\+point} (const O\+G\+R\+Point \&point, const std\+::string \&style\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Write a single point to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream using the point instance. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_afce06a5440ba520d2197933c37edc931}{write\+\_\+trace} (const Sample\+::\+Trace \&trace, bool de\+\_\+identify=false, int stride=20)
+\begin{DoxyCompactList}\small\item\em Write a rendering of a trajectory to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream considering speed and optionally special intervals. The rendering colors points based on the speed of the traveler. Privacy interval points and critical interval points can be excluded. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_a1acf0f483bb9a9063e22b665595b7a73}{write\+\_\+intervals} (const Interval\+::\+Ptr\+List \&intervals, const Sample\+::\+Trace \&trace, const std\+::string \&stylename, const std\+::string \&marker\+\_\+style, int stride=10)
+\begin{DoxyCompactList}\small\item\em Write the critical and privacy intervals to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_a59e90e9f806505f53e95910d8133c26d}{write\+\_\+intervals} (const Interval\+::\+Ptr\+List \&intervals, const Sample\+::\+Trace \&trace, const std\+::string \&stylename, int stride=10)
+\begin{DoxyCompactList}\small\item\em Write the critical and privacy interavls to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_aadfd649bf63dfa12f6d90b60e5cc2f81}{write\+\_\+areas} (const std\+::unordered\+\_\+set$<$ geo\+::\+Area\+::\+Ptr $>$ \&aptrset, const std\+::string \&stylename)
+\begin{DoxyCompactList}\small\item\em Write a set of \hyperlink{classgeo_1_1Area}{geo\+::\+Area} objects to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. \end{DoxyCompactList}\item 
+void \hyperlink{classgeo__data_1_1KML_a687a0d88d709e6b9d6e9f566f80efba7}{write\+\_\+areas} (const std\+::vector$<$ geo\+::\+Area\+::\+Ptr $>$ \&areas, const std\+::string \&stylename)
+\begin{DoxyCompactList}\small\item\em Write a vector of \hyperlink{classgeo_1_1Area}{geo\+::\+Area} objects to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const double {\bfseries M\+A\+X\+\_\+\+S\+P\+E\+ED} = 36.\+0\hypertarget{classgeo__data_1_1KML_ab44c2f5b2be77eec82125b8c49385a96}{}\label{classgeo__data_1_1KML_ab44c2f5b2be77eec82125b8c49385a96}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classgeo__data_1_1KML}{K\+ML} file. 
+
+\hyperlink{classgeo__data_1_1KML}{K\+ML} Color Values are specified as follows\+: color\+\_\+value is easiest to express in hex\+: 0xaabbggrr where aa -\/$>$ is the transparency alpha. 00 is transparent; ff is fully opaque. where bb -\/$>$ B\+L\+UE where gg -\/$>$ G\+R\+E\+EN where rr -\/$>$ R\+ED This is backwards from how it is usually specified, i.\+e., R\+GB. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!K\+ML@{K\+ML}}
+\index{K\+ML@{K\+ML}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{K\+M\+L(std\+::ostream \&stream, const std\+::string \&doc\+\_\+name, bool visibility=true)}{KML(std::ostream &stream, const std::string &doc_name, bool visibility=true)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+\_\+data\+::\+K\+M\+L\+::\+K\+ML (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{stream, }
+\item[{const std\+::string \&}]{doc\+\_\+name, }
+\item[{bool}]{visibility = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_abcd98547b50dbb378c1a634caa0911e2}{}\label{classgeo__data_1_1KML_abcd98547b50dbb378c1a634caa0911e2}
+
+
+Construct a \hyperlink{classgeo__data_1_1KML}{K\+ML} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & the output stream to write the \hyperlink{classgeo__data_1_1KML}{K\+ML} \\
+\hline
+{\em doc\+\_\+name} & the name of the \hyperlink{classgeo__data_1_1KML}{K\+ML} document \\
+\hline
+{\em visibility} & when true elements will be rendered when the \hyperlink{classgeo__data_1_1KML}{K\+ML} loads \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!write\+\_\+areas@{write\+\_\+areas}}
+\index{write\+\_\+areas@{write\+\_\+areas}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{write\+\_\+areas(const std\+::unordered\+\_\+set$<$ geo\+::\+Area\+::\+Ptr $>$ \&aptrset, const std\+::string \&stylename)}{write_areas(const std::unordered_set< geo::Area::Ptr > &aptrset, const std::string &stylename)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+K\+M\+L\+::write\+\_\+areas (
+\begin{DoxyParamCaption}
+\item[{const std\+::unordered\+\_\+set$<$ geo\+::\+Area\+::\+Ptr $>$ \&}]{aptrset, }
+\item[{const std\+::string \&}]{stylename}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_aadfd649bf63dfa12f6d90b60e5cc2f81}{}\label{classgeo__data_1_1KML_aadfd649bf63dfa12f6d90b60e5cc2f81}
+
+
+Write a set of \hyperlink{classgeo_1_1Area}{geo\+::\+Area} objects to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aptrset} & the set of areas to render \\
+\hline
+{\em stylename} & the style to use for the polygon rendering \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!write\+\_\+areas@{write\+\_\+areas}}
+\index{write\+\_\+areas@{write\+\_\+areas}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{write\+\_\+areas(const std\+::vector$<$ geo\+::\+Area\+::\+Ptr $>$ \&areas, const std\+::string \&stylename)}{write_areas(const std::vector< geo::Area::Ptr > &areas, const std::string &stylename)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+K\+M\+L\+::write\+\_\+areas (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ geo\+::\+Area\+::\+Ptr $>$ \&}]{areas, }
+\item[{const std\+::string \&}]{stylename}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_a687a0d88d709e6b9d6e9f566f80efba7}{}\label{classgeo__data_1_1KML_a687a0d88d709e6b9d6e9f566f80efba7}
+
+
+Write a vector of \hyperlink{classgeo_1_1Area}{geo\+::\+Area} objects to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em areas} & the set of areas to render \\
+\hline
+{\em stylename} & the style to use for the polygon rendering \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!write\+\_\+icon\+\_\+style@{write\+\_\+icon\+\_\+style}}
+\index{write\+\_\+icon\+\_\+style@{write\+\_\+icon\+\_\+style}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{write\+\_\+icon\+\_\+style(const std\+::string \&name, const std\+::string \&href, float scale=1.\+0)}{write_icon_style(const std::string &name, const std::string &href, float scale=1.0)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+K\+M\+L\+::write\+\_\+icon\+\_\+style (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{const std\+::string \&}]{href, }
+\item[{float}]{scale = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_a68d10daf35e4c43f024e3e2d2bc44bf2}{}\label{classgeo__data_1_1KML_a68d10daf35e4c43f024e3e2d2bc44bf2}
+
+
+Write a style for an icon to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the style ID \\
+\hline
+{\em href} & the U\+RL for the icon graphic \\
+\hline
+{\em scale} & the size adjustment of the icon relative to its original size \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!write\+\_\+intervals@{write\+\_\+intervals}}
+\index{write\+\_\+intervals@{write\+\_\+intervals}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{write\+\_\+intervals(const Interval\+::\+Ptr\+List \&intervals, const Sample\+::\+Trace \&trace, const std\+::string \&stylename, const std\+::string \&marker\+\_\+style, int stride=10)}{write_intervals(const Interval::PtrList &intervals, const Sample::Trace &trace, const std::string &stylename, const std::string &marker_style, int stride=10)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+K\+M\+L\+::write\+\_\+intervals (
+\begin{DoxyParamCaption}
+\item[{const Interval\+::\+Ptr\+List \&}]{intervals, }
+\item[{const Sample\+::\+Trace \&}]{trace, }
+\item[{const std\+::string \&}]{stylename, }
+\item[{const std\+::string \&}]{marker\+\_\+style, }
+\item[{int}]{stride = {\ttfamily 10}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_a1acf0f483bb9a9063e22b665595b7a73}{}\label{classgeo__data_1_1KML_a1acf0f483bb9a9063e22b665595b7a73}
+
+
+Write the critical and privacy intervals to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. 
+
+The intervals contain indexes into the provided trajectory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em intervals} & the list of intervals to render in the \hyperlink{classgeo__data_1_1KML}{K\+ML} \\
+\hline
+{\em trace} & the trace that generated the intervals \\
+\hline
+{\em stylename} & the style ID for the interval trip points \\
+\hline
+{\em marker\+\_\+style} & the style ID to use for the first point in the interval (highlights the interval type or what triggered it) \\
+\hline
+{\em stride} & the number of trip points to skip to minimize the amount of data rendered \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!write\+\_\+intervals@{write\+\_\+intervals}}
+\index{write\+\_\+intervals@{write\+\_\+intervals}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{write\+\_\+intervals(const Interval\+::\+Ptr\+List \&intervals, const Sample\+::\+Trace \&trace, const std\+::string \&stylename, int stride=10)}{write_intervals(const Interval::PtrList &intervals, const Sample::Trace &trace, const std::string &stylename, int stride=10)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+K\+M\+L\+::write\+\_\+intervals (
+\begin{DoxyParamCaption}
+\item[{const Interval\+::\+Ptr\+List \&}]{intervals, }
+\item[{const Sample\+::\+Trace \&}]{trace, }
+\item[{const std\+::string \&}]{stylename, }
+\item[{int}]{stride = {\ttfamily 10}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_a59e90e9f806505f53e95910d8133c26d}{}\label{classgeo__data_1_1KML_a59e90e9f806505f53e95910d8133c26d}
+
+
+Write the critical and privacy interavls to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. 
+
+The intervals contain indexes into the provided trajectory. This method does N\+OT mark the first point in the interval.
+
+
+\begin{DoxyParams}{Parameters}
+{\em intervals} & the list of intervals to render in the \hyperlink{classgeo__data_1_1KML}{K\+ML} \\
+\hline
+{\em traj} & the trajectory that generated the intervals \\
+\hline
+{\em stylename} & the style ID for the interval sample points \\
+\hline
+{\em stride} & the number of trip points to skip to minimize the amount of data rendered \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!write\+\_\+line\+\_\+style@{write\+\_\+line\+\_\+style}}
+\index{write\+\_\+line\+\_\+style@{write\+\_\+line\+\_\+style}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{write\+\_\+line\+\_\+style(const std\+::string \&name, unsigned int color\+\_\+value, int width)}{write_line_style(const std::string &name, unsigned int color_value, int width)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+K\+M\+L\+::write\+\_\+line\+\_\+style (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{unsigned int}]{color\+\_\+value, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_a52c966b02495f51aac7cbe9ca99a2eec}{}\label{classgeo__data_1_1KML_a52c966b02495f51aac7cbe9ca99a2eec}
+
+
+Write a style for a line to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the style ID \\
+\hline
+{\em color\+\_\+value} & the \hyperlink{classgeo__data_1_1KML}{K\+ML} color value as an integer (will be converted to hex) \\
+\hline
+{\em width} & the width of the line in pixels \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!write\+\_\+point@{write\+\_\+point}}
+\index{write\+\_\+point@{write\+\_\+point}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{write\+\_\+point(const O\+G\+R\+Point \&point, const std\+::string \&style\+\_\+name)}{write_point(const OGRPoint &point, const std::string &style_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+K\+M\+L\+::write\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point, }
+\item[{const std\+::string \&}]{style\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_a022fed3d67ebd03e5e8b04e27b21ceaf}{}\label{classgeo__data_1_1KML_a022fed3d67ebd03e5e8b04e27b21ceaf}
+
+
+Write a single point to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream using the point instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the point to represent in \hyperlink{classgeo__data_1_1KML}{K\+ML} \\
+\hline
+{\em style\+\_\+name} & the ID of the style for the point \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!write\+\_\+poly\+\_\+style@{write\+\_\+poly\+\_\+style}}
+\index{write\+\_\+poly\+\_\+style@{write\+\_\+poly\+\_\+style}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{write\+\_\+poly\+\_\+style(const std\+::string \&name, unsigned int color\+\_\+value, int width=2, bool fill=true, bool outline=true)}{write_poly_style(const std::string &name, unsigned int color_value, int width=2, bool fill=true, bool outline=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+K\+M\+L\+::write\+\_\+poly\+\_\+style (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{unsigned int}]{color\+\_\+value, }
+\item[{int}]{width = {\ttfamily 2}, }
+\item[{bool}]{fill = {\ttfamily true}, }
+\item[{bool}]{outline = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_a2a7e4010226e316d630837ec1f37f7c3}{}\label{classgeo__data_1_1KML_a2a7e4010226e316d630837ec1f37f7c3}
+
+
+Write a style for a polygon to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the style ID \\
+\hline
+{\em color\+\_\+value} & the \hyperlink{classgeo__data_1_1KML}{K\+ML} color value as an integer (will be converted to hex) \\
+\hline
+{\em width} & the width of the line in pixels \\
+\hline
+{\em fill} & true indicates the polygon should be color filled \\
+\hline
+{\em outline} & true indicates the polygon should be outlined \\
+\hline
+\end{DoxyParams}
+\index{geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}!write\+\_\+trace@{write\+\_\+trace}}
+\index{write\+\_\+trace@{write\+\_\+trace}!geo\+\_\+data\+::\+K\+ML@{geo\+\_\+data\+::\+K\+ML}}
+\subsubsection[{\texorpdfstring{write\+\_\+trace(const Sample\+::\+Trace \&trace, bool de\+\_\+identify=false, int stride=20)}{write_trace(const Sample::Trace &trace, bool de_identify=false, int stride=20)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+\_\+data\+::\+K\+M\+L\+::write\+\_\+trace (
+\begin{DoxyParamCaption}
+\item[{const Sample\+::\+Trace \&}]{trace, }
+\item[{bool}]{de\+\_\+identify = {\ttfamily false}, }
+\item[{int}]{stride = {\ttfamily 20}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo__data_1_1KML_afce06a5440ba520d2197933c37edc931}{}\label{classgeo__data_1_1KML_afce06a5440ba520d2197933c37edc931}
+
+
+Write a rendering of a trajectory to the \hyperlink{classgeo__data_1_1KML}{K\+ML} output stream considering speed and optionally special intervals. The rendering colors points based on the speed of the traveler. Privacy interval points and critical interval points can be excluded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trace} & the trace to base the line on \\
+\hline
+{\em de\+\_\+identify} & flag to suppress the privacy and critical intervals \\
+\hline
+{\em stride} & the number of trajectory points to skip while rendering the line as a sequence of segments \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo-\/data/include/geo\+\_\+data.\+hpp\item 
+cvdi-\/src/geo-\/data/src/geo\+\_\+data.\+cpp\end{DoxyCompactItemize}

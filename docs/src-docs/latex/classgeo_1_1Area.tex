@@ -1,0 +1,134 @@
+\hypertarget{classgeo_1_1Area}{}\section{geo\+:\+:Area Class Reference}
+\label{classgeo_1_1Area}\index{geo\+::\+Area@{geo\+::\+Area}}
+
+
+An \hyperlink{classgeo_1_1Area}{Area} object is a set of rectangular bounds used to check for geospatial point inclusion. Areas are constructed from line strings, where each segment has it\textquotesingle{}s own rectangular linear ring. Areas are invalid if the line string has less than 2 points, the width is less than or equal to zero, or the extension is less than zero.  
+
+
+
+
+{\ttfamily \#include $<$geo.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classgeo_1_1Area}{Area} $>$\hypertarget{classgeo_1_1Area_ac41a4e39b3fd4614106df968a0b50850}{}\label{classgeo_1_1Area_ac41a4e39b3fd4614106df968a0b50850}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgeo_1_1Area_ade2820a667effacf5147a4873e52bba5}{Area} (const O\+G\+R\+Line\+String \&line\+\_\+string, double \hyperlink{classgeo_1_1Area_a2069d731b316767105af529c9473f3a6}{width}, double \hyperlink{classgeo_1_1Area_aded96bcf3e373315755f87579a10098a}{extension}=0.\+0)
+\begin{DoxyCompactList}\small\item\em Construct an \hyperlink{classgeo_1_1Area}{Area} object from a line string with the given width and extension. The width and extension are applied to each rectangular, linear ring (line segment). \end{DoxyCompactList}\item 
+double \hyperlink{classgeo_1_1Area_a2069d731b316767105af529c9473f3a6}{width} () const 
+\begin{DoxyCompactList}\small\item\em Get the width of the area in meters. This is the width of each linear ring. \end{DoxyCompactList}\item 
+double \hyperlink{classgeo_1_1Area_aded96bcf3e373315755f87579a10098a}{extension} () const 
+\begin{DoxyCompactList}\small\item\em Get the extension of the area in meters. This is the length extension of each linear ring. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo_1_1Area_ad802b7acb44e30984ec21018bca63460}{is\+\_\+valid} () const 
+\begin{DoxyCompactList}\small\item\em Return true if the area is valid. Valid areas have at least one linear ring, a non-\/zero width, and a non-\/negative extension. \end{DoxyCompactList}\item 
+bool \hyperlink{classgeo_1_1Area_a0bbd39e81f67912b91db243825594c45}{is\+\_\+within} (const O\+G\+R\+Point \&point) const 
+\begin{DoxyCompactList}\small\item\em Return true if the given point is within the area. The point is within the area if it is within any of the area\textquotesingle{}s linear rings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ O\+G\+R\+Linear\+Ring $>$ \hyperlink{classgeo_1_1Area_a3e197ce947f9cc7df5c8ca93c97bb17f}{rings}\hypertarget{classgeo_1_1Area_a3e197ce947f9cc7df5c8ca93c97bb17f}{}\label{classgeo_1_1Area_a3e197ce947f9cc7df5c8ca93c97bb17f}
+
+\begin{DoxyCompactList}\small\item\em The std\+::vector of O\+G\+R\+Linear\+Ring used to test for point inclusion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An \hyperlink{classgeo_1_1Area}{Area} object is a set of rectangular bounds used to check for geospatial point inclusion. Areas are constructed from line strings, where each segment has it\textquotesingle{}s own rectangular linear ring. Areas are invalid if the line string has less than 2 points, the width is less than or equal to zero, or the extension is less than zero. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{geo\+::\+Area@{geo\+::\+Area}!Area@{Area}}
+\index{Area@{Area}!geo\+::\+Area@{geo\+::\+Area}}
+\subsubsection[{\texorpdfstring{Area(const O\+G\+R\+Line\+String \&line\+\_\+string, double width, double extension=0.\+0)}{Area(const OGRLineString &line_string, double width, double extension=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}geo\+::\+Area\+::\+Area (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Line\+String \&}]{line\+\_\+string, }
+\item[{double}]{width, }
+\item[{double}]{extension = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgeo_1_1Area_ade2820a667effacf5147a4873e52bba5}{}\label{classgeo_1_1Area_ade2820a667effacf5147a4873e52bba5}
+
+
+Construct an \hyperlink{classgeo_1_1Area}{Area} object from a line string with the given width and extension. The width and extension are applied to each rectangular, linear ring (line segment). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+string} & the line string from which to construct the area \\
+\hline
+{\em width} & the width of each linear ring in meters \\
+\hline
+{\em extension} & the length extension of each linear ring in meters \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{geo\+::\+Area@{geo\+::\+Area}!extension@{extension}}
+\index{extension@{extension}!geo\+::\+Area@{geo\+::\+Area}}
+\subsubsection[{\texorpdfstring{extension() const }{extension() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Area\+::extension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Area_aded96bcf3e373315755f87579a10098a}{}\label{classgeo_1_1Area_aded96bcf3e373315755f87579a10098a}
+
+
+Get the extension of the area in meters. This is the length extension of each linear ring. 
+
+\begin{DoxyReturn}{Returns}
+the extension in meters 
+\end{DoxyReturn}
+\index{geo\+::\+Area@{geo\+::\+Area}!is\+\_\+valid@{is\+\_\+valid}}
+\index{is\+\_\+valid@{is\+\_\+valid}!geo\+::\+Area@{geo\+::\+Area}}
+\subsubsection[{\texorpdfstring{is\+\_\+valid() const }{is_valid() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+::\+Area\+::is\+\_\+valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Area_ad802b7acb44e30984ec21018bca63460}{}\label{classgeo_1_1Area_ad802b7acb44e30984ec21018bca63460}
+
+
+Return true if the area is valid. Valid areas have at least one linear ring, a non-\/zero width, and a non-\/negative extension. 
+
+\begin{DoxyReturn}{Returns}
+true if valid, otherwise false 
+\end{DoxyReturn}
+\index{geo\+::\+Area@{geo\+::\+Area}!is\+\_\+within@{is\+\_\+within}}
+\index{is\+\_\+within@{is\+\_\+within}!geo\+::\+Area@{geo\+::\+Area}}
+\subsubsection[{\texorpdfstring{is\+\_\+within(const O\+G\+R\+Point \&point) const }{is_within(const OGRPoint &point) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool geo\+::\+Area\+::is\+\_\+within (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Point \&}]{point}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Area_a0bbd39e81f67912b91db243825594c45}{}\label{classgeo_1_1Area_a0bbd39e81f67912b91db243825594c45}
+
+
+Return true if the given point is within the area. The point is within the area if it is within any of the area\textquotesingle{}s linear rings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the point to check for inclusion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the point is included, false otherwise 
+\end{DoxyReturn}
+\index{geo\+::\+Area@{geo\+::\+Area}!width@{width}}
+\index{width@{width}!geo\+::\+Area@{geo\+::\+Area}}
+\subsubsection[{\texorpdfstring{width() const }{width() const }}]{\setlength{\rightskip}{0pt plus 5cm}double geo\+::\+Area\+::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classgeo_1_1Area_a2069d731b316767105af529c9473f3a6}{}\label{classgeo_1_1Area_a2069d731b316767105af529c9473f3a6}
+
+
+Get the width of the area in meters. This is the width of each linear ring. 
+
+\begin{DoxyReturn}{Returns}
+the width in meters 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/geo/include/geo.\+hpp\item 
+cvdi-\/src/geo/src/geo.\+cpp\end{DoxyCompactItemize}

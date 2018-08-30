@@ -1,0 +1,58 @@
+\hypertarget{classspdlog_1_1details_1_1registry__t}{}\section{spdlog\+:\+:details\+:\+:registry\+\_\+t$<$ Mutex $>$ Class Template Reference}
+\label{classspdlog_1_1details_1_1registry__t}\index{spdlog\+::details\+::registry\+\_\+t$<$ Mutex $>$@{spdlog\+::details\+::registry\+\_\+t$<$ Mutex $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries register\+\_\+logger} (std\+::shared\+\_\+ptr$<$ \hyperlink{classspdlog_1_1logger}{logger} $>$ \hyperlink{classspdlog_1_1logger}{logger})\hypertarget{classspdlog_1_1details_1_1registry__t_a75c112598c85eeadce7eaa2babe42f6a}{}\label{classspdlog_1_1details_1_1registry__t_a75c112598c85eeadce7eaa2babe42f6a}
+
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classspdlog_1_1logger}{logger} $>$ {\bfseries get} (const std\+::string \&logger\+\_\+name)\hypertarget{classspdlog_1_1details_1_1registry__t_a83c60ec97a96497a28b29ec042e54103}{}\label{classspdlog_1_1details_1_1registry__t_a83c60ec97a96497a28b29ec042e54103}
+
+\item 
+{\footnotesize template$<$class It $>$ }\\std\+::shared\+\_\+ptr$<$ \hyperlink{classspdlog_1_1logger}{logger} $>$ {\bfseries create} (const std\+::string \&logger\+\_\+name, const It \&sinks\+\_\+begin, const It \&sinks\+\_\+end)\hypertarget{classspdlog_1_1details_1_1registry__t_a001d70ea4b0a4794dc4ffe2cdf720d22}{}\label{classspdlog_1_1details_1_1registry__t_a001d70ea4b0a4794dc4ffe2cdf720d22}
+
+\item 
+void {\bfseries apply\+\_\+all} (std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ \hyperlink{classspdlog_1_1logger}{logger} $>$)$>$ fun)\hypertarget{classspdlog_1_1details_1_1registry__t_a6a75f3d36f7c54268512c586f4eb37af}{}\label{classspdlog_1_1details_1_1registry__t_a6a75f3d36f7c54268512c586f4eb37af}
+
+\item 
+void {\bfseries drop} (const std\+::string \&logger\+\_\+name)\hypertarget{classspdlog_1_1details_1_1registry__t_a547ea68afabdf2be39e20fa5aadbc37c}{}\label{classspdlog_1_1details_1_1registry__t_a547ea68afabdf2be39e20fa5aadbc37c}
+
+\item 
+void {\bfseries drop\+\_\+all} ()\hypertarget{classspdlog_1_1details_1_1registry__t_acd8ee16fd87c4f976a5728d4138acb2c}{}\label{classspdlog_1_1details_1_1registry__t_acd8ee16fd87c4f976a5728d4138acb2c}
+
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classspdlog_1_1logger}{logger} $>$ {\bfseries create} (const std\+::string \&logger\+\_\+name, sinks\+\_\+init\+\_\+list sinks)\hypertarget{classspdlog_1_1details_1_1registry__t_ae3da0fbf3566bc5d6a27ec6a96f8c270}{}\label{classspdlog_1_1details_1_1registry__t_ae3da0fbf3566bc5d6a27ec6a96f8c270}
+
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classspdlog_1_1logger}{logger} $>$ {\bfseries create} (const std\+::string \&logger\+\_\+name, sink\+\_\+ptr sink)\hypertarget{classspdlog_1_1details_1_1registry__t_acc516bff6719f15c33760d7771c70997}{}\label{classspdlog_1_1details_1_1registry__t_acc516bff6719f15c33760d7771c70997}
+
+\item 
+void {\bfseries formatter} (formatter\+\_\+ptr f)\hypertarget{classspdlog_1_1details_1_1registry__t_a23ab301e7663abdb8cc8ce1009450c7a}{}\label{classspdlog_1_1details_1_1registry__t_a23ab301e7663abdb8cc8ce1009450c7a}
+
+\item 
+void {\bfseries set\+\_\+pattern} (const std\+::string \&pattern)\hypertarget{classspdlog_1_1details_1_1registry__t_a96c915001a1b6c5656af1fd560fdec16}{}\label{classspdlog_1_1details_1_1registry__t_a96c915001a1b6c5656af1fd560fdec16}
+
+\item 
+void {\bfseries set\+\_\+level} (level\+::level\+\_\+enum log\+\_\+level)\hypertarget{classspdlog_1_1details_1_1registry__t_aabdbf66a65e1026e5e0dcbea877ff3ef}{}\label{classspdlog_1_1details_1_1registry__t_aabdbf66a65e1026e5e0dcbea877ff3ef}
+
+\item 
+void {\bfseries set\+\_\+error\+\_\+handler} (log\+\_\+err\+\_\+handler handler)\hypertarget{classspdlog_1_1details_1_1registry__t_a8cc9acbfcef9943cbff6611930d6c48c}{}\label{classspdlog_1_1details_1_1registry__t_a8cc9acbfcef9943cbff6611930d6c48c}
+
+\item 
+void {\bfseries set\+\_\+async\+\_\+mode} (size\+\_\+t q\+\_\+size, const async\+\_\+overflow\+\_\+policy overflow\+\_\+policy, const std\+::function$<$ void()$>$ \&worker\+\_\+warmup\+\_\+cb, const std\+::chrono\+::milliseconds \&flush\+\_\+interval\+\_\+ms, const std\+::function$<$ void()$>$ \&worker\+\_\+teardown\+\_\+cb)\hypertarget{classspdlog_1_1details_1_1registry__t_a0b2fec9af99edf72e3bc60a69fde5ba6}{}\label{classspdlog_1_1details_1_1registry__t_a0b2fec9af99edf72e3bc60a69fde5ba6}
+
+\item 
+void {\bfseries set\+\_\+sync\+\_\+mode} ()\hypertarget{classspdlog_1_1details_1_1registry__t_ad4aa99fcb43a890d9c64f8b0a88b829c}{}\label{classspdlog_1_1details_1_1registry__t_ad4aa99fcb43a890d9c64f8b0a88b829c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classspdlog_1_1details_1_1registry__t}{registry\+\_\+t}$<$ Mutex $>$ \& {\bfseries instance} ()\hypertarget{classspdlog_1_1details_1_1registry__t_ad9730643a6d028115fc26937e6085d5c}{}\label{classspdlog_1_1details_1_1registry__t_ad9730643a6d028115fc26937e6085d5c}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/details/registry.\+h\end{DoxyCompactItemize}

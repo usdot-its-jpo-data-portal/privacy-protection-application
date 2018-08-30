@@ -1,0 +1,46 @@
+\hypertarget{classfmt_1_1BasicMemoryWriter}{}\section{fmt\+:\+:Basic\+Memory\+Writer$<$ Char, Allocator $>$ Class Template Reference}
+\label{classfmt_1_1BasicMemoryWriter}\index{fmt\+::\+Basic\+Memory\+Writer$<$ Char, Allocator $>$@{fmt\+::\+Basic\+Memory\+Writer$<$ Char, Allocator $>$}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+Inheritance diagram for fmt\+:\+:Basic\+Memory\+Writer$<$ Char, Allocator $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classfmt_1_1BasicMemoryWriter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Basic\+Memory\+Writer} (const Allocator \&alloc=Allocator())\hypertarget{classfmt_1_1BasicMemoryWriter_a36ef881adce8fc7a0b3632d2fb66fdfb}{}\label{classfmt_1_1BasicMemoryWriter_a36ef881adce8fc7a0b3632d2fb66fdfb}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Char, typename Allocator = std\+::allocator$<$\+Char$>$$>$\\*
+class fmt\+::\+Basic\+Memory\+Writer$<$ Char, Allocator $>$}
+
+This class template provides operations for formatting and writing data into a character stream. The output is stored in a memory buffer that grows dynamically.
+
+You can use one of the following typedefs for common character types and the standard allocator\+:
+
++-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ Type $\vert$ Definition $\vert$ +===============+=====================================================+ $\vert$ Memory\+Writer $\vert$ \hyperlink{classfmt_1_1BasicMemoryWriter}{Basic\+Memory\+Writer}$<$char, std\+::allocator$<$char$>$$>$ $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ W\+Memory\+Writer $\vert$ \hyperlink{classfmt_1_1BasicMemoryWriter}{Basic\+Memory\+Writer}$<$wchar\+\_\+t, std\+::allocator$<$wchar\+\_\+t$>$$>$ $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+
+
+Example$\ast$$\ast$\+:\+:
+
+Memory\+Writer out; out $<$$<$ \char`\"{}\+The answer is \char`\"{} $<$$<$ 42 $<$$<$ \char`\"{}\textbackslash{}n\char`\"{}; out.\+write(\char`\"{}(\{\+:+f\}, \{\+:+f\})\char`\"{}, -\/3.\+14, 3.\+14);
+
+This will write the following output to the {\ttfamily out} object\+:
+
+.. code-\/block\+:\+: none
+
+The answer is 42 (-\/3.\+140000, +3.140000)
+
+The output can be converted to an {\ttfamily std\+::string} with {\ttfamily out.\+str()} or accessed as a C string with {\ttfamily out.\+c\+\_\+str()}.  
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

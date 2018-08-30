@@ -1,0 +1,129 @@
+\hypertarget{namespacegeo}{}\section{geo Namespace Reference}
+\label{namespacegeo}\index{geo@{geo}}
+
+
+Namespace for geospatial and geodesic tool functions.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classgeo_1_1Area}{Area}
+\begin{DoxyCompactList}\small\item\em An \hyperlink{classgeo_1_1Area}{Area} object is a set of rectangular bounds used to check for geospatial point inclusion. Areas are constructed from line strings, where each segment has it\textquotesingle{}s own rectangular linear ring. Areas are invalid if the line string has less than 2 points, the width is less than or equal to zero, or the extension is less than zero. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo_1_1Edge}{Edge}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classgeo_1_1Edge}{Edge} class containing a basic line string and meta data associated with the underlying real world road. \hyperlink{classgeo_1_1Edge}{Edge} objects are similar to \hyperlink{classgeo_1_1Road}{Road} objects except that they are one-\/directional and used in the graph topology. Because and edge is part of a topology, each edge will point to a successor edge and possible a neighbor edge. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo_1_1Road}{Road}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classgeo_1_1Road}{Road} object containing a basic line string and meta data associated with the underlying real world road. A road can be one or two way and is used in spatial indexing. A road should not be confused with an edge used in the graph topology. \end{DoxyCompactList}\item 
+class \hyperlink{classgeo_1_1Spatial}{Spatial}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classgeo_1_1Spatial}{Spatial} operator class. \end{DoxyCompactList}\item 
+struct \hyperlink{structgeo_1_1Vector}{Vector}
+\begin{DoxyCompactList}\small\item\em Simple 3 dimensional (x,y,z) vector class used to assist in geospatial and geodesic computations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Edge\+List} = std\+::vector$<$ Edge\+::\+Ptr $>$\hypertarget{namespacegeo_a4954bc71befa4d36c9f01bc1bdcfa4a9}{}\label{namespacegeo_a4954bc71befa4d36c9f01bc1bdcfa4a9}
+
+\item 
+using {\bfseries Edge\+List\+Ptr} = std\+::shared\+\_\+ptr$<$ Edge\+List $>$\hypertarget{namespacegeo_a840e1425ec1f0ce5bee8007cd8d8e31f}{}\label{namespacegeo_a840e1425ec1f0ce5bee8007cd8d8e31f}
+
+\item 
+using {\bfseries Edge\+Map} = std\+::unordered\+\_\+map$<$ long, Edge\+::\+Ptr $>$\hypertarget{namespacegeo_ad4965f9d39034484ea50d791836b82de}{}\label{namespacegeo_ad4965f9d39034484ea50d791836b82de}
+
+\item 
+using {\bfseries Edge\+List\+Map} = std\+::unordered\+\_\+map$<$ long, Edge\+List\+Ptr $>$\hypertarget{namespacegeo_a591255ebf7af9bc8f60949f87ac435e8}{}\label{namespacegeo_a591255ebf7af9bc8f60949f87ac435e8}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacegeo_ae7a495a59f07984a90e0b609bc038df9}{Heading} \{ {\bfseries F\+O\+R\+W\+A\+RD} = 0, 
+{\bfseries B\+A\+C\+K\+W\+A\+RD} = 1
+ \}\hypertarget{namespacegeo_ae7a495a59f07984a90e0b609bc038df9}{}\label{namespacegeo_ae7a495a59f07984a90e0b609bc038df9}
+\begin{DoxyCompactList}\small\item\em Heading types for directed Edges. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::unordered\+\_\+map$<$ char, unsigned char $>$ \hyperlink{namespacegeo_a71d5ed41f25b14f0e5d60d4b4d314314}{k\+Hex\+Map} (\{\{\textquotesingle{}0\textquotesingle{}, 0x0\},\{\textquotesingle{}1\textquotesingle{}, 0x1\},\{\textquotesingle{}2\textquotesingle{}, 0x2\},\{\textquotesingle{}3\textquotesingle{}, 0x3\},\{\textquotesingle{}4\textquotesingle{}, 0x4\},\{\textquotesingle{}5\textquotesingle{}, 0x5\},\{\textquotesingle{}6\textquotesingle{}, 0x6\},\{\textquotesingle{}7\textquotesingle{}, 0x7\},\{\textquotesingle{}8\textquotesingle{}, 0x8\},\{\textquotesingle{}9\textquotesingle{}, 0x9\},\{\textquotesingle{}\+A\textquotesingle{}, 0xa\},\{\textquotesingle{}a\textquotesingle{}, 0xa\},\{\textquotesingle{}b\textquotesingle{}, 0xb\},\{\textquotesingle{}\+B\textquotesingle{}, 0xb\},\{\textquotesingle{}c\textquotesingle{}, 0xc\},\{\textquotesingle{}\+C\textquotesingle{}, 0xc\},\{\textquotesingle{}d\textquotesingle{}, 0xd\},\{\textquotesingle{}\+D\textquotesingle{}, 0xd\},\{\textquotesingle{}e\textquotesingle{}, 0xe\},\{\textquotesingle{}\+E\textquotesingle{}, 0xe\},\{\textquotesingle{}f\textquotesingle{}, 0xf\},\{\textquotesingle{}\+F\textquotesingle{}, 0xf\}\})\hypertarget{namespacegeo_a71d5ed41f25b14f0e5d60d4b4d314314}{}\label{namespacegeo_a71d5ed41f25b14f0e5d60d4b4d314314}
+
+\begin{DoxyCompactList}\small\item\em Hex map used to decode strings into hex bytes. \end{DoxyCompactList}\item 
+void \hyperlink{namespacegeo_aa39955dae49af31671bf8eac3e2d46d9}{copy\+\_\+line\+\_\+string} (const O\+G\+R\+Line\+String \&line\+\_\+string, bool invert, O\+G\+R\+Line\+String \&out)
+\begin{DoxyCompactList}\small\item\em Copy a O\+G\+R\+Line\+String to another line string. Allows for reversal (inversion) of the string. \end{DoxyCompactList}\item 
+const Edge\+List \hyperlink{namespacegeo_a4542eb0f5c3842f0bd813e0b3fdec00d}{split\+\_\+road} (Road\+::\+Ptr road\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Split a \hyperlink{classgeo_1_1Road}{Road} object into edges. If the road is two-\/way this will return two edges for each direction. Otherwise it will return one edge. \end{DoxyCompactList}\item 
+unsigned char $\ast$ {\bfseries geom\+\_\+bytes\+\_\+from\+\_\+hex\+\_\+string} (const std\+::string \&geom\+\_\+string)\hypertarget{namespacegeo_a3e78cf1df4d58b711a25c5e6c9a85812}{}\label{namespacegeo_a3e78cf1df4d58b711a25c5e6c9a85812}
+
+\item 
+std\+::ostream \& \hyperlink{namespacegeo_aeacc366b289a87165885d3c2ff71207c}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classgeo_1_1Road}{Road} \&road)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr double {\bfseries k\+N\+AN} = std\+::nan(\char`\"{}\char`\"{})\hypertarget{namespacegeo_ad6b949270e55049e34ca803748edf9b3}{}\label{namespacegeo_ad6b949270e55049e34ca803748edf9b3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace for geospatial and geodesic tool functions. 
+
+\subsection{Function Documentation}
+\index{geo@{geo}!copy\+\_\+line\+\_\+string@{copy\+\_\+line\+\_\+string}}
+\index{copy\+\_\+line\+\_\+string@{copy\+\_\+line\+\_\+string}!geo@{geo}}
+\subsubsection[{\texorpdfstring{copy\+\_\+line\+\_\+string(const O\+G\+R\+Line\+String \&line\+\_\+string, bool invert, O\+G\+R\+Line\+String \&out)}{copy_line_string(const OGRLineString &line_string, bool invert, OGRLineString &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void geo\+::copy\+\_\+line\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const O\+G\+R\+Line\+String \&}]{line\+\_\+string, }
+\item[{bool}]{invert, }
+\item[{O\+G\+R\+Line\+String \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegeo_aa39955dae49af31671bf8eac3e2d46d9}{}\label{namespacegeo_aa39955dae49af31671bf8eac3e2d46d9}
+
+
+Copy a O\+G\+R\+Line\+String to another line string. Allows for reversal (inversion) of the string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+string} & the O\+G\+R\+Line\+String to copy \\
+\hline
+{\em invert} & option to reverse the order of points for the new line \\
+\hline
+{\em out} & the output O\+G\+R\+Line\+String \\
+\hline
+\end{DoxyParams}
+\index{geo@{geo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!geo@{geo}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const Road \&road)}{operator<<(std::ostream &os, const Road &road)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& geo\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Road} \&}]{road}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegeo_aeacc366b289a87165885d3c2ff71207c}{}\label{namespacegeo_aeacc366b289a87165885d3c2ff71207c}
+
+\begin{DoxyParams}{Parameters}
+{\em os} & the stream object where the point will be written \\
+\hline
+{\em road} & the road to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the given stream object 
+\end{DoxyReturn}
+\index{geo@{geo}!split\+\_\+road@{split\+\_\+road}}
+\index{split\+\_\+road@{split\+\_\+road}!geo@{geo}}
+\subsubsection[{\texorpdfstring{split\+\_\+road(\+Road\+::\+Ptr road\+\_\+ptr)}{split_road(Road::Ptr road_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}const Edge\+List geo\+::split\+\_\+road (
+\begin{DoxyParamCaption}
+\item[{Road\+::\+Ptr}]{road\+\_\+ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegeo_a4542eb0f5c3842f0bd813e0b3fdec00d}{}\label{namespacegeo_a4542eb0f5c3842f0bd813e0b3fdec00d}
+
+
+Split a \hyperlink{classgeo_1_1Road}{Road} object into edges. If the road is two-\/way this will return two edges for each direction. Otherwise it will return one edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em road\+\_\+ptr} & pointer to the \hyperlink{classgeo_1_1Road}{Road} object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of edge pointers 
+\end{DoxyReturn}

@@ -1,0 +1,78 @@
+\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL}{}\section{spdlog\+:\+:sinks\+:\+:S\+P\+D\+L\+O\+G\+\_\+\+F\+I\+N\+AL$<$ Mutex $>$ Class Template Reference}
+\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL}\index{spdlog\+::sinks\+::\+S\+P\+D\+L\+O\+G\+\_\+\+F\+I\+N\+A\+L$<$ Mutex $>$@{spdlog\+::sinks\+::\+S\+P\+D\+L\+O\+G\+\_\+\+F\+I\+N\+A\+L$<$ Mutex $>$}}
+Inheritance diagram for spdlog\+:\+:sinks\+:\+:S\+P\+D\+L\+O\+G\+\_\+\+F\+I\+N\+AL$<$ Mutex $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.349398cm]{classspdlog_1_1sinks_1_1SPDLOG__FINAL}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries simple\+\_\+file\+\_\+sink} (const filename\+\_\+t \&filename, bool truncate=false)\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5ff638ba10e03d41addf2d7fc3c507d8}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5ff638ba10e03d41addf2d7fc3c507d8}
+
+\item 
+void {\bfseries set\+\_\+force\+\_\+flush} (bool force\+\_\+flush)\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a28f6227240d4d917709525a585bbdf07}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a28f6227240d4d917709525a585bbdf07}
+
+\item 
+{\bfseries rotating\+\_\+file\+\_\+sink} (const filename\+\_\+t \&base\+\_\+filename, std\+::size\+\_\+t max\+\_\+size, std\+::size\+\_\+t max\+\_\+files)\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a81b2df294efda8665ca1584da2848792}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a81b2df294efda8665ca1584da2848792}
+
+\item 
+{\bfseries daily\+\_\+file\+\_\+sink} (const filename\+\_\+t \&base\+\_\+filename, int rotation\+\_\+hour, int rotation\+\_\+minute)\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a048ff6a125be61c6fe8bdc27cdd0b74d}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a048ff6a125be61c6fe8bdc27cdd0b74d}
+
+\item 
+{\bfseries stdout\+\_\+sink} ()\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_ab924fb02724bc43ed8ce1942afc8a015}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_ab924fb02724bc43ed8ce1942afc8a015}
+
+\item 
+{\bfseries stderr\+\_\+sink} ()\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_aa85e066b48b919be0c33ecdc83820ec7}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_aa85e066b48b919be0c33ecdc83820ec7}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ My\+Type $>$ {\bfseries instance} ()\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_af1dc7069d3f624867d0e41b86dd0c7dd}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_af1dc7069d3f624867d0e41b86dd0c7dd}
+
+\item 
+static std\+::shared\+\_\+ptr$<$ My\+Type $>$ {\bfseries instance} ()\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_af1dc7069d3f624867d0e41b86dd0c7dd}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_af1dc7069d3f624867d0e41b86dd0c7dd}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries \+\_\+sink\+\_\+it} (const \hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&msg) override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}
+
+\item 
+void {\bfseries \+\_\+flush} () override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}
+
+\item 
+void {\bfseries \+\_\+sink\+\_\+it} (const \hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&msg) override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}
+
+\item 
+void {\bfseries \+\_\+flush} () override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}
+
+\item 
+void {\bfseries \+\_\+sink\+\_\+it} (const \hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&msg) override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}
+
+\item 
+void {\bfseries \+\_\+flush} () override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}
+
+\item 
+void {\bfseries \+\_\+sink\+\_\+it} (const \hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&msg) override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}
+
+\item 
+void {\bfseries \+\_\+flush} () override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}
+
+\item 
+void {\bfseries \+\_\+sink\+\_\+it} (const \hyperlink{structspdlog_1_1details_1_1log__msg}{details\+::log\+\_\+msg} \&msg) override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a17212ed6f80d4f2de4eb4ea271c9a86f}
+
+\item 
+void {\bfseries \+\_\+flush} () override\hypertarget{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}{}\label{classspdlog_1_1sinks_1_1SPDLOG__FINAL_a5abffe858401059eeee6619f9d8a376f}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/sinks/file\+\_\+sinks.\+h\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/sinks/stdout\+\_\+sinks.\+h\end{DoxyCompactItemize}

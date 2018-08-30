@@ -1,0 +1,74 @@
+\hypertarget{classfmt_1_1BasicFormatter}{}\section{fmt\+:\+:Basic\+Formatter$<$ Char\+Type, Arg\+Formatter $>$ Class Template Reference}
+\label{classfmt_1_1BasicFormatter}\index{fmt\+::\+Basic\+Formatter$<$ Char\+Type, Arg\+Formatter $>$@{fmt\+::\+Basic\+Formatter$<$ Char\+Type, Arg\+Formatter $>$}}
+
+
+{\ttfamily \#include $<$format.\+h$>$}
+
+Inheritance diagram for fmt\+:\+:Basic\+Formatter$<$ Char\+Type, Arg\+Formatter $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classfmt_1_1BasicFormatter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Char\+Type \hyperlink{classfmt_1_1BasicFormatter_af8270b25395aeb82b8c72c370c5cf13a}{Char}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfmt_1_1BasicFormatter_a2b190901681ff0413dc60522fe158fdc}{Basic\+Formatter} (const \hyperlink{classfmt_1_1ArgList}{Arg\+List} \&args, \hyperlink{classfmt_1_1BasicWriter}{Basic\+Writer}$<$ \hyperlink{classfmt_1_1BasicFormatter_af8270b25395aeb82b8c72c370c5cf13a}{Char} $>$ \&w)
+\item 
+\hyperlink{classfmt_1_1BasicWriter}{Basic\+Writer}$<$ \hyperlink{classfmt_1_1BasicFormatter_af8270b25395aeb82b8c72c370c5cf13a}{Char} $>$ \& \hyperlink{classfmt_1_1BasicFormatter_abd5692d2f2123b27da7941d56fc6073c}{writer} ()
+\item 
+void \hyperlink{classfmt_1_1BasicFormatter_a63acecbbf9681005f3c7eb4d42a54bf7}{format} (\hyperlink{classfmt_1_1BasicCStringRef}{Basic\+C\+String\+Ref}$<$ \hyperlink{classfmt_1_1BasicFormatter_af8270b25395aeb82b8c72c370c5cf13a}{Char} $>$ format\+\_\+str)
+\item 
+const \hyperlink{classfmt_1_1BasicFormatter_af8270b25395aeb82b8c72c370c5cf13a}{Char} $\ast$ {\bfseries format} (const \hyperlink{classfmt_1_1BasicFormatter_af8270b25395aeb82b8c72c370c5cf13a}{Char} $\ast$\&format\+\_\+str, const \hyperlink{structfmt_1_1internal_1_1Arg}{internal\+::\+Arg} \&arg)\hypertarget{classfmt_1_1BasicFormatter_ab436d449f9a0678badb672af2a8ecb32}{}\label{classfmt_1_1BasicFormatter_ab436d449f9a0678badb672af2a8ecb32}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Char\+Type, typename Arg\+Formatter$>$\\*
+class fmt\+::\+Basic\+Formatter$<$ Char\+Type, Arg\+Formatter $>$}
+
+This template formats data and writes the output to a writer. 
+
+\subsection{Member Typedef Documentation}
+\index{fmt\+::\+Basic\+Formatter@{fmt\+::\+Basic\+Formatter}!Char@{Char}}
+\index{Char@{Char}!fmt\+::\+Basic\+Formatter@{fmt\+::\+Basic\+Formatter}}
+\subsubsection[{\texorpdfstring{Char}{Char}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char\+Type, typename Arg\+Formatter$>$ typedef Char\+Type {\bf fmt\+::\+Basic\+Formatter}$<$ Char\+Type, {\bf Arg\+Formatter} $>$\+::{\bf Char}}\hypertarget{classfmt_1_1BasicFormatter_af8270b25395aeb82b8c72c370c5cf13a}{}\label{classfmt_1_1BasicFormatter_af8270b25395aeb82b8c72c370c5cf13a}
+The character type for the output. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{fmt\+::\+Basic\+Formatter@{fmt\+::\+Basic\+Formatter}!Basic\+Formatter@{Basic\+Formatter}}
+\index{Basic\+Formatter@{Basic\+Formatter}!fmt\+::\+Basic\+Formatter@{fmt\+::\+Basic\+Formatter}}
+\subsubsection[{\texorpdfstring{Basic\+Formatter(const Arg\+List \&args, Basic\+Writer$<$ Char $>$ \&w)}{BasicFormatter(const ArgList &args, BasicWriter< Char > &w)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char\+Type, typename Arg\+Formatter$>$ {\bf fmt\+::\+Basic\+Formatter}$<$ Char\+Type, {\bf Arg\+Formatter} $>$\+::{\bf Basic\+Formatter} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Arg\+List} \&}]{args, }
+\item[{{\bf Basic\+Writer}$<$ {\bf Char} $>$ \&}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicFormatter_a2b190901681ff0413dc60522fe158fdc}{}\label{classfmt_1_1BasicFormatter_a2b190901681ff0413dc60522fe158fdc}
+Constructs a {\ttfamily \hyperlink{classfmt_1_1BasicFormatter}{Basic\+Formatter}} object. References to the arguments and the writer are stored in the formatter object so make sure they have appropriate lifetimes.  
+
+\subsection{Member Function Documentation}
+\index{fmt\+::\+Basic\+Formatter@{fmt\+::\+Basic\+Formatter}!format@{format}}
+\index{format@{format}!fmt\+::\+Basic\+Formatter@{fmt\+::\+Basic\+Formatter}}
+\subsubsection[{\texorpdfstring{format(\+Basic\+C\+String\+Ref$<$ Char $>$ format\+\_\+str)}{format(BasicCStringRef< Char > format_str)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char , typename AF $>$ void {\bf fmt\+::\+Basic\+Formatter}$<$ {\bf Char}, AF $>$\+::format (
+\begin{DoxyParamCaption}
+\item[{{\bf Basic\+C\+String\+Ref}$<$ {\bf Char} $>$}]{format\+\_\+str}
+\end{DoxyParamCaption}
+)}\hypertarget{classfmt_1_1BasicFormatter_a63acecbbf9681005f3c7eb4d42a54bf7}{}\label{classfmt_1_1BasicFormatter_a63acecbbf9681005f3c7eb4d42a54bf7}
+Formats stored arguments and writes the output to the writer. \index{fmt\+::\+Basic\+Formatter@{fmt\+::\+Basic\+Formatter}!writer@{writer}}
+\index{writer@{writer}!fmt\+::\+Basic\+Formatter@{fmt\+::\+Basic\+Formatter}}
+\subsubsection[{\texorpdfstring{writer()}{writer()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char\+Type, typename Arg\+Formatter$>$ {\bf Basic\+Writer}$<${\bf Char}$>$\& {\bf fmt\+::\+Basic\+Formatter}$<$ Char\+Type, {\bf Arg\+Formatter} $>$\+::writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfmt_1_1BasicFormatter_abd5692d2f2123b27da7941d56fc6073c}{}\label{classfmt_1_1BasicFormatter_abd5692d2f2123b27da7941d56fc6073c}
+Returns a reference to the writer associated with this formatter. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\end{DoxyCompactItemize}

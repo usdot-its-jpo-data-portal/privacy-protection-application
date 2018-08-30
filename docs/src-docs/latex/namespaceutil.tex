@@ -1,0 +1,115 @@
+\hypertarget{namespaceutil}{}\section{util Namespace Reference}
+\label{namespaceutil}\index{util@{util}}
+
+
+Namespace for utility functions.  
+
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Str\+Vector} = std\+::vector$<$ std\+::string $>$\hypertarget{namespaceutil_ade77d5ddac1eaaad1bba55987e71a4d7}{}\label{namespaceutil_ade77d5ddac1eaaad1bba55987e71a4d7}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Str\+Vector \hyperlink{namespaceutil_aa854bf66d010486b1cbb1e0ee63eb6f3}{split\+\_\+string} (const std\+::string \&s, char delim= \textquotesingle{},\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Split the provided string at every occurrence of delimiter and return the components in a vector of strings. \end{DoxyCompactList}\item 
+std\+::string \& \hyperlink{namespaceutil_a8119e330269073c45052eff3685a2aee}{rstrip} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Remove the whitespace from the right side of the string; this is done in-\/place; no copy happens. \end{DoxyCompactList}\item 
+std\+::string \& \hyperlink{namespaceutil_a153364ee5c66d54d28f697ac2497fad7}{lstrip} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Remove the whitespace from the left side of the string to the first non-\/whitespace character; this is done in-\/place; no copy happens. \end{DoxyCompactList}\item 
+std\+::string \& \hyperlink{namespaceutil_a3449c39263dedd9264e2db8ceb706f81}{strip} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Remove the whitespace surrounding the string; this is done in-\/place; no copy happens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string {\bfseries D\+E\+L\+I\+M\+I\+T\+E\+RS} = \char`\"{} \textbackslash{}f\textbackslash{}n\textbackslash{}r\textbackslash{}t\textbackslash{}v\char`\"{}\hypertarget{namespaceutil_a3af548eb1b262117f1b75a60167addee}{}\label{namespaceutil_a3af548eb1b262117f1b75a60167addee}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace for utility functions. 
+
+\subsection{Function Documentation}
+\index{util@{util}!lstrip@{lstrip}}
+\index{lstrip@{lstrip}!util@{util}}
+\subsubsection[{\texorpdfstring{lstrip(std\+::string \&s)}{lstrip(std::string &s)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string \& util\+::lstrip (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutil_a153364ee5c66d54d28f697ac2497fad7}{}\label{namespaceutil_a153364ee5c66d54d28f697ac2497fad7}
+
+
+Remove the whitespace from the left side of the string to the first non-\/whitespace character; this is done in-\/place; no copy happens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to trim. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new string without the whitespace on the left side. 
+\end{DoxyReturn}
+\index{util@{util}!rstrip@{rstrip}}
+\index{rstrip@{rstrip}!util@{util}}
+\subsubsection[{\texorpdfstring{rstrip(std\+::string \&s)}{rstrip(std::string &s)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string \& util\+::rstrip (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutil_a8119e330269073c45052eff3685a2aee}{}\label{namespaceutil_a8119e330269073c45052eff3685a2aee}
+
+
+Remove the whitespace from the right side of the string; this is done in-\/place; no copy happens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to trim. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new string without the whitespace on the right side. 
+\end{DoxyReturn}
+\index{util@{util}!split\+\_\+string@{split\+\_\+string}}
+\index{split\+\_\+string@{split\+\_\+string}!util@{util}}
+\subsubsection[{\texorpdfstring{split\+\_\+string(const std\+::string \&s, char delim= \textquotesingle{},\textquotesingle{})}{split_string(const std::string &s, char delim= ',')}}]{\setlength{\rightskip}{0pt plus 5cm}Str\+Vector util\+::split\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s, }
+\item[{char}]{delim = {\ttfamily \textquotesingle{},\textquotesingle{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutil_aa854bf66d010486b1cbb1e0ee63eb6f3}{}\label{namespaceutil_aa854bf66d010486b1cbb1e0ee63eb6f3}
+
+
+Split the provided string at every occurrence of delimiter and return the components in a vector of strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to split. \\
+\hline
+{\em delim} & the char where the splits are to be performed; default is \textquotesingle{},\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of strings. 
+\end{DoxyReturn}
+\index{util@{util}!strip@{strip}}
+\index{strip@{strip}!util@{util}}
+\subsubsection[{\texorpdfstring{strip(std\+::string \&s)}{strip(std::string &s)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string \& util\+::strip (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutil_a3449c39263dedd9264e2db8ceb706f81}{}\label{namespaceutil_a3449c39263dedd9264e2db8ceb706f81}
+
+
+Remove the whitespace surrounding the string; this is done in-\/place; no copy happens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to trim. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new string with the whitespace before and after removed. 
+\end{DoxyReturn}

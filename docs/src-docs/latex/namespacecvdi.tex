@@ -1,0 +1,108 @@
+\hypertarget{namespacecvdi}{}\section{cvdi Namespace Reference}
+\label{namespacecvdi}\index{cvdi@{cvdi}}
+
+
+Connected vehicle de-\/identification routines.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcvdi_1_1AreaFitter}{Area\+Fitter}
+\begin{DoxyCompactList}\small\item\em Annotate a trace with fit area edges for each edge. \end{DoxyCompactList}\item 
+class \hyperlink{classcvdi_1_1IntersectionCounter}{Intersection\+Counter}
+\begin{DoxyCompactList}\small\item\em Annotate a trace with a cumulative count of intersection out degree. \end{DoxyCompactList}\item 
+struct \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter}
+\begin{DoxyCompactList}\small\item\em A class to gather statistics about a trace. \end{DoxyCompactList}\item 
+class \hyperlink{classcvdi_1_1PrivacyIntervalFinder}{Privacy\+Interval\+Finder}
+\begin{DoxyCompactList}\small\item\em Define the intervals that \char`\"{}hide\char`\"{} critical intervals. Instances of this class determine the portion of a trace extended from the ends of the previously defined critical intervals to protect those locations. This is done using intersection out degree, direct distance, and Manhattan distance. \end{DoxyCompactList}\item 
+class \hyperlink{classcvdi_1_1StartEndIntervals}{Start\+End\+Intervals}
+\begin{DoxyCompactList}\small\item\em A method that builds two intervals, one for the beginning point of a trip and one for the end point of a trip. \end{DoxyCompactList}\item 
+class \hyperlink{classcvdi_1_1Stop}{Stop}
+\begin{DoxyCompactList}\small\item\em A class that detects stop behavior within a trace. \end{DoxyCompactList}\item 
+class \hyperlink{classcvdi_1_1TurnAround}{Turn\+Around}
+\begin{DoxyCompactList}\small\item\em A class that detects turnaround behavior within a trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacecvdi_a94bb499641f7ef65cc27480323ff679c}{count\+\_\+points} (const geo\+\_\+data\+::\+Sample\+::\+Trace \&raw\+\_\+trace, \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} \&counter\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Count the points (samples) for the trace. Counts invalid G\+PS points, headings, C\+SV fields, and critical and privacy points. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{namespacecvdi_a6667f0eb4ecabc10d863886583887aba}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classcvdi_1_1Stop_1_1Deque}{Stop\+::\+Deque} \&q)
+\item 
+std\+::ostream \& \hyperlink{namespacecvdi_ab68079d0fc81108c9b4e7dbfe12a2867}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} \&point\+\_\+counter)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr uint32\+\_\+t {\bfseries k\+Critical\+Interval\+Type} = 1\hypertarget{namespacecvdi_af346249bdf0583f34521cb7c464b9ea4}{}\label{namespacecvdi_af346249bdf0583f34521cb7c464b9ea4}
+
+\item 
+constexpr uint32\+\_\+t {\bfseries k\+Privacy\+Interval\+Type} = 2\hypertarget{namespacecvdi_aaa8cf356834e3f82b55f901cadb99c41}{}\label{namespacecvdi_aaa8cf356834e3f82b55f901cadb99c41}
+
+\item 
+const std\+::string \hyperlink{namespacecvdi_a9b82c2fca46ec45ef40f19bd2b569451}{k\+Point\+Count\+Header} = \char`\"{}total\+\_\+points,field\+\_\+error\+\_\+points,geo\+\_\+error\+\_\+points,heading\+\_\+error\+\_\+points,ci\+\_\+points,pi\+\_\+points\char`\"{}\hypertarget{namespacecvdi_a9b82c2fca46ec45ef40f19bd2b569451}{}\label{namespacecvdi_a9b82c2fca46ec45ef40f19bd2b569451}
+
+\begin{DoxyCompactList}\small\item\em Header for point count C\+SV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Connected vehicle de-\/identification routines. 
+
+\subsection{Function Documentation}
+\index{cvdi@{cvdi}!count\+\_\+points@{count\+\_\+points}}
+\index{count\+\_\+points@{count\+\_\+points}!cvdi@{cvdi}}
+\subsubsection[{\texorpdfstring{count\+\_\+points(const geo\+\_\+data\+::\+Sample\+::\+Trace \&raw\+\_\+trace, Point\+Counter \&counter\+\_\+out)}{count_points(const geo_data::Sample::Trace &raw_trace, PointCounter &counter_out)}}]{\setlength{\rightskip}{0pt plus 5cm}void cvdi\+::count\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{const geo\+\_\+data\+::\+Sample\+::\+Trace \&}]{raw\+\_\+trace, }
+\item[{{\bf Point\+Counter} \&}]{counter\+\_\+out}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecvdi_a94bb499641f7ef65cc27480323ff679c}{}\label{namespacecvdi_a94bb499641f7ef65cc27480323ff679c}
+
+
+Count the points (samples) for the trace. Counts invalid G\+PS points, headings, C\+SV fields, and critical and privacy points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+\_\+trace} & trace with invalid samples \\
+\hline
+{\em counter\+\_\+out} & the resulting point count \\
+\hline
+\end{DoxyParams}
+\index{cvdi@{cvdi}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvdi@{cvdi}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const Stop\+::\+Deque \&q)}{operator<<(std::ostream &os, const Stop::Deque &q)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& cvdi\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Stop\+::\+Deque} \&}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecvdi_a6667f0eb4ecabc10d863886583887aba}{}\label{namespacecvdi_a6667f0eb4ecabc10d863886583887aba}
+
+\begin{DoxyParams}{Parameters}
+{\em os} & the output stream \\
+\hline
+{\em q} & the \hyperlink{classcvdi_1_1Stop}{Stop} Deque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the output stream after printing for chaining 
+\end{DoxyReturn}
+\index{cvdi@{cvdi}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvdi@{cvdi}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const Point\+Counter \&point\+\_\+counter)}{operator<<(std::ostream &os, const PointCounter &point_counter)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& cvdi\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Point\+Counter} \&}]{point\+\_\+counter}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecvdi_ab68079d0fc81108c9b4e7dbfe12a2867}{}\label{namespacecvdi_ab68079d0fc81108c9b4e7dbfe12a2867}
+The form of the output is a comma-\/delimited list of the various values managed by the \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & the output stream to write the string form of this \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} \\
+\hline
+{\em point\+\_\+counter} & the \hyperlink{structcvdi_1_1PointCounter}{Point\+Counter} to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the output stream after the write 
+\end{DoxyReturn}

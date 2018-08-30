@@ -1,0 +1,55 @@
+\hypertarget{structfmt_1_1internal_1_1BasicData}{}\section{fmt\+:\+:internal\+:\+:Basic\+Data$<$ T $>$ Struct Template Reference}
+\label{structfmt_1_1internal_1_1BasicData}\index{fmt\+::internal\+::\+Basic\+Data$<$ T $>$@{fmt\+::internal\+::\+Basic\+Data$<$ T $>$}}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t {\bfseries P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+32} \mbox{[}$\,$\mbox{]}
+\item 
+static const uint64\+\_\+t {\bfseries P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+64} \mbox{[}$\,$\mbox{]}
+\item 
+static const char {\bfseries D\+I\+G\+I\+TS} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\index{fmt\+::internal\+::\+Basic\+Data@{fmt\+::internal\+::\+Basic\+Data}!D\+I\+G\+I\+TS@{D\+I\+G\+I\+TS}}
+\index{D\+I\+G\+I\+TS@{D\+I\+G\+I\+TS}!fmt\+::internal\+::\+Basic\+Data@{fmt\+::internal\+::\+Basic\+Data}}
+\subsubsection[{\texorpdfstring{D\+I\+G\+I\+TS}{DIGITS}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = void$>$ const char {\bf fmt\+::internal\+::\+Basic\+Data}$<$ T $>$\+::D\+I\+G\+I\+TS\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structfmt_1_1internal_1_1BasicData_abc0f1b67b25a98d0aa1f2b25c8649e59}{}\label{structfmt_1_1internal_1_1BasicData_abc0f1b67b25a98d0aa1f2b25c8649e59}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+    \textcolor{stringliteral}{"0001020304050607080910111213141516171819"}
+    \textcolor{stringliteral}{"2021222324252627282930313233343536373839"}
+    \textcolor{stringliteral}{"4041424344454647484950515253545556575859"}
+    \textcolor{stringliteral}{"6061626364656667686970717273747576777879"}
+    \textcolor{stringliteral}{"8081828384858687888990919293949596979899"}
+\end{DoxyCode}
+\index{fmt\+::internal\+::\+Basic\+Data@{fmt\+::internal\+::\+Basic\+Data}!P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+32@{P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+32}}
+\index{P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+32@{P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+32}!fmt\+::internal\+::\+Basic\+Data@{fmt\+::internal\+::\+Basic\+Data}}
+\subsubsection[{\texorpdfstring{P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+32}{POWERS_OF_10_32}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = void$>$ const uint32\+\_\+t {\bf fmt\+::internal\+::\+Basic\+Data}$<$ T $>$\+::P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+32\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structfmt_1_1internal_1_1BasicData_abbc4c0076211263be3f19cce9655caf7}{}\label{structfmt_1_1internal_1_1BasicData_abbc4c0076211263be3f19cce9655caf7}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  0, FMT\_POWERS\_OF\_10(1)
+\}
+\end{DoxyCode}
+\index{fmt\+::internal\+::\+Basic\+Data@{fmt\+::internal\+::\+Basic\+Data}!P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+64@{P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+64}}
+\index{P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+64@{P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+64}!fmt\+::internal\+::\+Basic\+Data@{fmt\+::internal\+::\+Basic\+Data}}
+\subsubsection[{\texorpdfstring{P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+64}{POWERS_OF_10_64}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = void$>$ const uint64\+\_\+t {\bf fmt\+::internal\+::\+Basic\+Data}$<$ T $>$\+::P\+O\+W\+E\+R\+S\+\_\+\+O\+F\+\_\+10\+\_\+64\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structfmt_1_1internal_1_1BasicData_a5f4f238cffad6816fbdc621e96b0e1d2}{}\label{structfmt_1_1internal_1_1BasicData_a5f4f238cffad6816fbdc621e96b0e1d2}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  0,
+  FMT\_POWERS\_OF\_10(1),
+  FMT\_POWERS\_OF\_10(fmt::ULongLong(1000000000)),
+  
+  
+  fmt::ULongLong(1000000000) * fmt::ULongLong(1000000000) * 10
+\}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+h\item 
+cvdi-\/src/cvdi-\/cl/include/spdlog/fmt/bundled/format.\+cc\end{DoxyCompactItemize}
