@@ -12,7 +12,7 @@ minimum for processing.
 - [Release Notes](#release-notes)
 - [Dependencies and Prerequisites](#dependancies-and-prerequisites)
 - [Building the OSM CSV Network File](#building-the-osm-csv-network-file)
-- [Running the Privacy Protection Container](#running-the-privacy-protection-container)
+- [Running the Privacy Protection Container](#running-the-privacy-protection-algorithm-container)
 - [Issues, Comments, and Additional Inquiries](#issues-and-questions)
 
 # Getting Involved
