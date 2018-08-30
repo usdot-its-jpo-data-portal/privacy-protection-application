@@ -10,7 +10,7 @@ minimum for processing.
 # Table of Contents
 - [Getting Involved](#getting-involved)
 - [Release Notes](#release-notes)
-- [Dependencies and Prerequisites](#dependancies-and-prerequisitives)
+- [Dependencies and Prerequisites](#dependancies-and-prerequisites)
 - [Building the OSM CSV Network File](#building-the-osm-csv-network-file)
 - [Running the Privacy Protection Container](#running-the-privacy-protection-container)
 - [Issues, Comments, and Additional Inquiries](#issues-and-questions)
@@ -190,7 +190,7 @@ Convert the database to an OSM CSV network file.
 
 If multiple network files are needed, re-run ```map/host_import.sh``` and ```run_osm_convert.sh``` using different OSM PBF files.
 
-# Running the Privacy Protection Algorithm (PPA) Container
+# Running the Privacy Protection Algorithm Container
 
 De-identify trajectory data within the PPA container.
 
