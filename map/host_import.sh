@@ -26,7 +26,11 @@ if [ -z $1 ] || [ ! -f $1 ]; then
     exit 1
 fi
 
-DOCKER_DIR=/tmp/cvdi-postgis
+DOCKER_DIR=/tmp/ppa-postgis
+
+if [ ! -d $DOCKER_DIR ]; then
+    mkdir $DOCKER_DIR
+fi
 
 cp $1 $DOCKER_DIR/input.pbf
 
@@ -36,4 +40,4 @@ fi
 
 # Note: DO NOT ADD -it to this command. 
 # It will cause issues.
-docker exec cvdi_postgis /root/import.sh
+docker exec ppa_postgis /root/import.sh

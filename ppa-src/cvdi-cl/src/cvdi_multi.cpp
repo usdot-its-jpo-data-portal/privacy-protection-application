@@ -332,8 +332,7 @@ void CVDIParallel::Thread(unsigned thread_num, MultiThread::SharedQueue<FileInfo
                     out_file << sample->raw_index() << ",";
 
                     if (sample->matched_edge() != nullptr) {
-                        //out_file << sample->matched_edge()->road()->osm_id();
-                        out_file << sample->matched_edge()->road()->id();
+                        out_file << sample->matched_edge()->road()->osm_id();
                     } 
  
                     out_file << "," << sample->is_explicit_fit() << "," << sample->out_degree() << std::endl;
